@@ -6,6 +6,7 @@ using DG.Tweening;
 using System.Collections;
 using System;
 
+
 public class InkManager : MonoBehaviour
 {
     [SerializeField] private TextAsset inkJsonAsset;
@@ -15,31 +16,13 @@ public class InkManager : MonoBehaviour
     private Story story;
     [SerializeField] private GameObject dialoguePrefabPlayer, dialoguePrefabOther;
     [SerializeField] private GameObject choicePrefab;
-    [SerializeField] private GameObject otherCharacterPanel, playerCharacterPanel;
+    [SerializeField] private GameObject playerCharacterPanel;
     [SerializeField] private GameObject continueButton;
-    public enum character
-    {
-        doe,
-        owl,
-        toad
-    }
+    [SerializeField] private CharacterSpriteHolder characterSpriteHolder;
+    
     private character currentCharacter;
 
-    public enum expression
-    {
-        neutral,
-        smile,
-        frown,
-        notes
-    }
-
-    [Serializable]
-    public struct expressionPair
-    {
-        public expression characterExpression;
-        public Sprite characterSprite;
-    }
-    [SerializeField] private expressionPair[] expressionPairs;
+    [SerializeField] private expressionPair[] doeExpressionPairs, owlExpressionPairs, toadExpressionPairs;
 
     void Start()
     {
@@ -54,7 +37,6 @@ public class InkManager : MonoBehaviour
         ClearChoices();
         narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
         narratorPanel.transform.DOLocalMoveY(-840, 0f);
-        otherCharacterPanel.transform.DOLocalMoveX(1300, 0f);
         choicePanel.transform.DOLocalMoveY(-840, 0f);
         continueButton.SetActive(false);
         DisplayNextLine();
@@ -78,8 +60,19 @@ public class InkManager : MonoBehaviour
                 {
                     if (parts[1] == "deer")
                     {
-                        currentCharacter = character.doe;
-                        otherCharacterPanel.transform.DOLocalMoveX(600, 0.5f).SetEase(Ease.OutBack);
+                        characterSpriteHolder.ShowCharacter(character.doe);
+                        DisplayNextLine();
+                        return;
+                    }
+                    else if (parts[1] == "owl")
+                    {
+                        characterSpriteHolder.ShowCharacter(character.owl);
+                        DisplayNextLine();
+                        return;
+                    }
+                    else if (parts[1] == "toad")
+                    {
+                        characterSpriteHolder.ShowCharacter(character.toad);
                         DisplayNextLine();
                         return;
                     }
@@ -87,7 +80,7 @@ public class InkManager : MonoBehaviour
                 else if (parts[0] == "exp")
                 {
                     print($"change {currentCharacter}'s expression to {parts[1]}");
-                    StartCoroutine(ChangeExpression(currentCharacter, (expression)Enum.Parse(typeof(expression), parts[1])));
+                    characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
                 }
             }
 
@@ -108,7 +101,7 @@ public class InkManager : MonoBehaviour
             }
             else if (story.currentTags.Contains("narrator"))
             {
-                // Handle narrator dialogue if needed
+                // Handle narrator dialogue
                 StartCoroutine(DisplayNarratorText(text));
                 return;
             }
@@ -129,47 +122,11 @@ public class InkManager : MonoBehaviour
         {
             Debug.Log("End of story reached.");
             continueButton.SetActive(false);
-            otherCharacterPanel.transform.DOLocalMoveX(1300, 0.5f).SetEase(Ease.OutBack);
+            // otherCharacterPanel.transform.DOLocalMoveX(1300, 0.5f).SetEase(Ease.OutBack);
+            characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
             ClearDialogue();
         }
         
-    }
-
-    private IEnumerator ChangeExpression(character character, expression newExpression)
-    {
-        Sprite newSprite = null;
-        foreach (var pair in expressionPairs)
-        {
-            if (pair.characterExpression == newExpression)
-            {
-                newSprite = pair.characterSprite;
-                break;
-            }
-        }
-
-        if (newSprite != null)
-        {
-            switch (character)
-            {
-                case character.doe:
-                    otherCharacterPanel.GetComponent<Image>().sprite = newSprite;
-                    break;
-                case character.owl:
-                    // Change owl's sprite
-                    break;
-                case character.toad:
-                    // Change toad's sprite
-                    break;
-            }
-        }
-        else
-        {
-            Debug.LogWarning($"No sprite found for expression {newExpression}");
-        }
-
-        yield return new WaitForSeconds(1.5f); // Wait for 0.5 seconds before continuing
-        // change back to neutral expression
-        otherCharacterPanel.GetComponent<Image>().sprite = expressionPairs[0].characterSprite; // Assuming the first pair is neutral
     }
 
     private IEnumerator DisplayNarratorText(string text)
@@ -189,33 +146,7 @@ public class InkManager : MonoBehaviour
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
         
         dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = "";
-        // Tween talkAnim = null;
-        Sequence otherTalkAnimation = DOTween.Sequence();
-        GameObject target = null;
-        int originalY = 0;
-        if (player)
-        {
-            target = playerCharacterPanel;
-            originalY = -440;
-        }
-        else
-        {
-            target = otherCharacterPanel;
-            originalY = -590;
-        }
-
-         // animate other character for duration of typewriter text
-            int random = UnityEngine.Random.Range(3, 7);
-            int value = UnityEngine.Random.value > 0.5f ? random : -random;
-            otherTalkAnimation.Append(target.transform.DOLocalRotate(new Vector3(0, 0, value), 1f)
-            .SetLoops(-1, LoopType.Yoyo)
-            .SetEase(Ease.InOutSine));
-
-            // add bobbing animation to other character panel
-            otherTalkAnimation.Insert(0, 
-            target.transform.DOLocalMoveY(originalY - 10, 0.2f)
-            .SetLoops(-1, LoopType.Yoyo)
-            .SetEase(Ease.InOutSine)); 
+        characterSpriteHolder.StartTalkingAnimation();
 
         foreach(char c in text)
         {
@@ -235,11 +166,7 @@ public class InkManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
-        otherTalkAnimation.Kill(); // stop the talk animation
-        // reset character position and rotations
-        target.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.5f);
-        otherCharacterPanel.transform.DOLocalMoveY(-590, 0.5f);
-        playerCharacterPanel.transform.DOLocalMoveY(-440, 0.5f);
+        characterSpriteHolder.StopTalkingAnimation();
         continueButton.SetActive(true);
     }
 
