@@ -1,4 +1,4 @@
--> receptionist
+-> expressionLoop
 === receptionist ===
 You enter an unfamiliar place. #narrator
 //  #entrance:deer
@@ -22,11 +22,35 @@ Still wondering what's going on, huh? #narrator
 Oh, really? #player
 Wow.
 * [Challenge]
-    -> knot
+    // -> knot
 * [Accept]
-Whatever.
+-Whatever.
 -> DONE
 
-=== knot
-
+=== expressionLoop
+Here I am. #player
+#entrance:player
+Said the player. And made a choice... #narrator
+Ok. #player
++ [Doe]
+    #entrance:deer
+    Hello!
++ [Owl]
+    #entrance:owl
+    Hello!
+-Hello!
+-> expr
 -> DONE
+
+=== expr 
++ [Happy]
+    Yay! #exp:smile
++ [Sad]
+    Aww. #exp:frown
++ [Notes]
+    Interesting... #exp:notes
++ [change character]
+    -> expressionLoop
+--> expr
+-> DONE
+
