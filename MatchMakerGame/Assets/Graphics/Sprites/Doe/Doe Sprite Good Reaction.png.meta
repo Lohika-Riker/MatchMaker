@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 127cd0bef79434ded8898f73a5dfc219
+guid: a265869267be04541aebd28283a4f961
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3205010364455775368
-    second: Doe Sprite Real_0
+      213: 3484705178013893535
+    second: Doe Sprite Good Reaction_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Doe Sprite Real_0
+      name: Doe Sprite Good Reaction_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 3
-        width: 771
-        height: 807
+        y: 5
+        width: 254
+        height: 472
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88ce4d212fb7a7c20800000000000000
-      internalID: 3205010364455775368
+      spriteID: f938b7a85e82c5030800000000000000
+      internalID: 3484705178013893535
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Doe Sprite Real_0: 3205010364455775368
+      Doe Sprite Good Reaction_0: 3484705178013893535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

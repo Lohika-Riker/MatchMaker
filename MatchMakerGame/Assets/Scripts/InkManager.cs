@@ -4,6 +4,7 @@ using Ink.Runtime;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections;
+using System;
 
 public class InkManager : MonoBehaviour
 {
@@ -16,6 +17,29 @@ public class InkManager : MonoBehaviour
     [SerializeField] private GameObject choicePrefab;
     [SerializeField] private GameObject otherCharacterPanel, playerCharacterPanel;
     [SerializeField] private GameObject continueButton;
+    public enum character
+    {
+        doe,
+        owl,
+        toad
+    }
+    private character currentCharacter;
+
+    public enum expression
+    {
+        neutral,
+        smile,
+        frown,
+        notes
+    }
+
+    [Serializable]
+    public struct expressionPair
+    {
+        public expression characterExpression;
+        public Sprite characterSprite;
+    }
+    [SerializeField] private expressionPair[] expressionPairs;
 
     void Start()
     {
@@ -54,10 +78,16 @@ public class InkManager : MonoBehaviour
                 {
                     if (parts[1] == "deer")
                     {
+                        currentCharacter = character.doe;
                         otherCharacterPanel.transform.DOLocalMoveX(600, 0.5f).SetEase(Ease.OutBack);
                         DisplayNextLine();
                         return;
                     }
+                }
+                else if (parts[0] == "exp")
+                {
+                    print($"change {currentCharacter}'s expression to {parts[1]}");
+                    StartCoroutine(ChangeExpression(currentCharacter, (expression)Enum.Parse(typeof(expression), parts[1])));
                 }
             }
 
@@ -105,6 +135,43 @@ public class InkManager : MonoBehaviour
         
     }
 
+    private IEnumerator ChangeExpression(character character, expression newExpression)
+    {
+        Sprite newSprite = null;
+        foreach (var pair in expressionPairs)
+        {
+            if (pair.characterExpression == newExpression)
+            {
+                newSprite = pair.characterSprite;
+                break;
+            }
+        }
+
+        if (newSprite != null)
+        {
+            switch (character)
+            {
+                case character.doe:
+                    otherCharacterPanel.GetComponent<Image>().sprite = newSprite;
+                    break;
+                case character.owl:
+                    // Change owl's sprite
+                    break;
+                case character.toad:
+                    // Change toad's sprite
+                    break;
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"No sprite found for expression {newExpression}");
+        }
+
+        yield return new WaitForSeconds(1.5f); // Wait for 0.5 seconds before continuing
+        // change back to neutral expression
+        otherCharacterPanel.GetComponent<Image>().sprite = expressionPairs[0].characterSprite; // Assuming the first pair is neutral
+    }
+
     private IEnumerator DisplayNarratorText(string text)
     {
         narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
@@ -138,8 +205,8 @@ public class InkManager : MonoBehaviour
         }
 
          // animate other character for duration of typewriter text
-            int random = Random.Range(3, 7);
-            int value = Random.value > 0.5f ? random : -random;
+            int random = UnityEngine.Random.Range(3, 7);
+            int value = UnityEngine.Random.value > 0.5f ? random : -random;
             otherTalkAnimation.Append(target.transform.DOLocalRotate(new Vector3(0, 0, value), 1f)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.InOutSine));

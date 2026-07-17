@@ -7,7 +7,7 @@ Well, hello there!
 Welcome to Match Maker. #exp:smile
 Thanks. #player
 Nice to meet you. #exp:frown
-What's your name? #exp:takenotes:long
+What's your name? #exp:notes
 * [button text] my name is button. #player
     sjedfkjsenfg#player
     dslfkmv#player
