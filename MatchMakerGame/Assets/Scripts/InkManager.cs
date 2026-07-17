@@ -24,12 +24,9 @@ public class InkManager : MonoBehaviour
     {
         story = new Story(inkJsonAsset.text);
         
-        foreach (Transform child in dialoguePanel.transform)
-        {
-            Destroy(child.gameObject);
-        }
+        ClearDialogue();
         ClearChoices();
-        otherCharacterPanel.transform.DOLocalMoveX(1200, 0f);
+        otherCharacterPanel.transform.DOLocalMoveX(1300, 0f);
         DisplayNextLine();
     }
 
@@ -58,7 +55,11 @@ public class InkManager : MonoBehaviour
             }
 
             // dialogue speech bubble
-
+            if (text == null || text == "")
+            {
+                print("No text to display.");
+                return;
+            }
             GameObject prefab;
 
             if (story.currentTags.Contains("player"))
@@ -82,7 +83,8 @@ public class InkManager : MonoBehaviour
         else
         {
             Debug.Log("End of story reached.");
-            otherCharacterPanel.transform.DOLocalMoveX(1200, 0.5f).SetEase(Ease.OutBack);
+            otherCharacterPanel.transform.DOLocalMoveX(1300, 0.5f).SetEase(Ease.OutBack);
+            ClearDialogue();
         }
         
     }
@@ -122,6 +124,14 @@ public class InkManager : MonoBehaviour
     public void ClearChoices()
     {
         foreach (Transform child in choicePanel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    public void ClearDialogue()
+    {
+        foreach (Transform child in dialoguePanel.transform)
         {
             Destroy(child.gameObject);
         }
