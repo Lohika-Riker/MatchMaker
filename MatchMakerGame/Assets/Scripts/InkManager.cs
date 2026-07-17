@@ -20,6 +20,8 @@ public class InkManager : MonoBehaviour
     [SerializeField] private GameObject continueButton;
     [SerializeField] private CharacterSpriteHolder characterSpriteHolder;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
+    private CanvasGroup playerCharacterCanvasGroup;
+    private Vector3 playerCharacterVisiblePosition;
     
     private character currentCharacter;
 
@@ -28,6 +30,7 @@ public class InkManager : MonoBehaviour
     void Start()
     {
         playerTalkingBounceAnimator = GetOrAddTalkingBounceAnimator(playerCharacterPanel);
+        SetupPlayerCharacterPanel();
         StartStory();
     }
 
@@ -75,6 +78,12 @@ public class InkManager : MonoBehaviour
                     else if (parts[1] == "toad")
                     {
                         characterSpriteHolder.ShowCharacter(character.toad);
+                        DisplayNextLine();
+                        return;
+                    }
+                    else if (parts[1] == "player")
+                    {
+                        ShowPlayerCharacter();
                         DisplayNextLine();
                         return;
                     }
@@ -126,6 +135,7 @@ public class InkManager : MonoBehaviour
             continueButton.SetActive(false);
             // otherCharacterPanel.transform.DOLocalMoveX(1300, 0.5f).SetEase(Ease.OutBack);
             characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
+            HidePlayerCharacter();
             ClearDialogue();
         }
         
@@ -201,6 +211,66 @@ public class InkManager : MonoBehaviour
         }
 
         return animator;
+    }
+
+    private void SetupPlayerCharacterPanel()
+    {
+        if (playerCharacterPanel == null)
+        {
+            Debug.LogWarning("No player character panel is assigned.");
+            return;
+        }
+
+        playerCharacterVisiblePosition = playerCharacterPanel.transform.localPosition;
+        playerCharacterCanvasGroup = playerCharacterPanel.GetComponent<CanvasGroup>();
+        if (playerCharacterCanvasGroup == null)
+        {
+            playerCharacterCanvasGroup = playerCharacterPanel.AddComponent<CanvasGroup>();
+        }
+
+        HidePlayerCharacterInstantly();
+    }
+
+    private void HidePlayerCharacterInstantly()
+    {
+        playerTalkingBounceAnimator?.StopTalkingImmediately();
+
+        playerCharacterPanel.transform.localPosition = GetPlayerHiddenPosition();
+        playerCharacterCanvasGroup.alpha = 0f;
+    }
+
+    private void HidePlayerCharacter()
+    {
+        if (playerCharacterPanel == null || playerCharacterCanvasGroup == null)
+        {
+            return;
+        }
+
+        playerTalkingBounceAnimator?.StopTalkingImmediately();
+        playerCharacterPanel.transform.DOKill();
+        playerCharacterCanvasGroup.alpha = 1f;
+        playerCharacterPanel.transform.DOLocalMoveX(GetPlayerHiddenPosition().x, 0.5f)
+            .SetEase(Ease.InBack)
+            .OnComplete(() => playerCharacterCanvasGroup.alpha = 0f);
+    }
+
+    private void ShowPlayerCharacter()
+    {
+        if (playerCharacterPanel == null || playerCharacterCanvasGroup == null)
+        {
+            return;
+        }
+
+        playerCharacterPanel.transform.DOKill();
+        playerCharacterCanvasGroup.alpha = 1f;
+        playerCharacterPanel.transform.DOLocalMoveX(playerCharacterVisiblePosition.x, 0.5f).SetEase(Ease.OutBack);
+    }
+
+    private Vector3 GetPlayerHiddenPosition()
+    {
+        Vector3 hiddenPosition = playerCharacterVisiblePosition;
+        hiddenPosition.x -= 1300f;
+        return hiddenPosition;
     }
 
     public void DisplayOptions()

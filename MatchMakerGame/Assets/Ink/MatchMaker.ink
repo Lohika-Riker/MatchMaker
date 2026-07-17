@@ -2,8 +2,9 @@
 === receptionist ===
 You enter an unfamiliar place. #narrator
 //  #entrance:deer
-#entrance:owl
+#entrance:player
 Hi. #player
+#entrance:owl
 Well, hello there!
 Welcome to Match Maker. #exp:smile
 Thanks. #player
