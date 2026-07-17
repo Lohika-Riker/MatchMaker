@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
-
+using UnityEngine.UI;
 
 public class InkManager : MonoBehaviour
 {
@@ -52,12 +52,15 @@ public class InkManager : MonoBehaviour
 
     public void DisplayOptions()
     {
+        if (choicePanel.GetComponentsInChildren<Button>().Length > 0) return;
         if (story.currentChoices.Count > 0)
         {
             foreach (var choice in story.currentChoices)
             {
                 GameObject choiceInstance = Instantiate(choicePrefab, choicePanel.transform);
                 choiceInstance.GetComponentInChildren<TextMeshProUGUI>().text = choice.text;
+                
+                LayoutRebuilder.ForceRebuildLayoutImmediate(choiceInstance.GetComponent<RectTransform>());
                 choiceInstance.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => OnClickChoice(choice));
             }
         }
