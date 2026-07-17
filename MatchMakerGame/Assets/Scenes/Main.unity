@@ -446,6 +446,15 @@ MonoBehaviour:
   otherCharacterPanel: {fileID: 622422504}
   playerCharacterPanel: {fileID: 926250765}
   continueButton: {fileID: 190968203}
+  expressionPairs:
+  - characterExpression: 0
+    characterSprite: {fileID: 21300000, guid: 54e8731fa3f7d4bb8b8f0b3b01e4d291, type: 3}
+  - characterExpression: 1
+    characterSprite: {fileID: 21300000, guid: a265869267be04541aebd28283a4f961, type: 3}
+  - characterExpression: 2
+    characterSprite: {fileID: 21300000, guid: 55ac4f909e3f24af7a2eb550cee6fb51, type: 3}
+  - characterExpression: 3
+    characterSprite: {fileID: 21300000, guid: cbac969ed0e0d4e6a8f4ad81aec17273, type: 3}
 --- !u!4 &271763598
 Transform:
   m_ObjectHideFlags: 0
@@ -1911,10 +1920,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 926250766}
   - {fileID: 622422505}
-  - {fileID: 1937154581}
   - {fileID: 1105147778}
+  - {fileID: 926250766}
+  - {fileID: 1937154581}
   - {fileID: 1783861635}
   - {fileID: 190968204}
   m_Father: {fileID: 0}
