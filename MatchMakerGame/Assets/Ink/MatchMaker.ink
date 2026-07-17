@@ -1,3 +1,4 @@
+-> receptionist
 === receptionist ===
 Well, hello there!
 Welcome to Match Maker. #smile
@@ -7,4 +8,9 @@ What's your name? #takenotes
 * [B]
 * [C]
 - That's it. 
+Oh, really?
+Wow.
+* [Challenge]
+* [Accept]
+-Whatever.
 -> DONE
