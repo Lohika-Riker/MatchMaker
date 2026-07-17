@@ -35,9 +35,14 @@ public struct characterExpressionPair
 }
 public class CharacterSpriteHolder : MonoBehaviour
 {
+    private const float VisibleX = 600f;
+    private const float HiddenX = 1300f;
+    private const float TransitionTime = 0.5f;
+
     [SerializeField] private characterExpressionPair[] characterExpressionPairs;
     private character currentCharacter;
     private TalkingBounceAnimator talkingBounceAnimator;
+    private Sequence characterTransition;
 
     void Awake()
     {
@@ -88,22 +93,34 @@ public class CharacterSpriteHolder : MonoBehaviour
 
     public void ShowCharacter(character character)
     {
+        if (!HasCharacter(character))
+        {
+            Debug.LogWarning($"No character panel is configured for {character}.");
+            return;
+        }
+
+        talkingBounceAnimator.StopTalkingImmediately();
+        characterTransition?.Kill();
         transform.DOKill();
 
-        foreach (var characterPair in characterExpressionPairs)
+        if (currentCharacter != character.none && currentCharacter != character)
         {
-            if (characterPair.character == character)
-            {
-                characterPair.characterPanel.GetComponent<CanvasGroup>().alpha = 1f;
-                currentCharacter = character;
-            }
+            characterTransition = DOTween.Sequence()
+                .Append(transform.DOLocalMoveX(HiddenX, TransitionTime).SetEase(Ease.InBack))
+                .AppendCallback(() => SetVisibleCharacter(character))
+                .Append(transform.DOLocalMoveX(VisibleX, TransitionTime).SetEase(Ease.OutBack));
+
+            return;
         }
-        transform.DOLocalMoveX(600, 0.5f).SetEase(Ease.OutBack);
+
+        SetVisibleCharacter(character);
+        transform.DOLocalMoveX(VisibleX, TransitionTime).SetEase(Ease.OutBack);
     }
 
     public IEnumerator HideCharacter(bool instant = true)
     {
         talkingBounceAnimator.StopTalkingImmediately();
+        characterTransition?.Kill();
 
         currentCharacter = character.none;
         float transitionTime = 0.5f;
@@ -112,7 +129,7 @@ public class CharacterSpriteHolder : MonoBehaviour
             transitionTime = 0f;
         }
 
-        transform.DOLocalMoveX(1300, transitionTime).SetEase(Ease.InBack);
+        transform.DOLocalMoveX(HiddenX, transitionTime).SetEase(Ease.InBack);
 
         yield return new WaitForSeconds(transitionTime);
         foreach (var characterPair in characterExpressionPairs)
@@ -125,13 +142,37 @@ public class CharacterSpriteHolder : MonoBehaviour
     {
         currentCharacter = character.none;
         Vector3 hiddenPosition = transform.localPosition;
-        hiddenPosition.x = 1300f;
+        hiddenPosition.x = HiddenX;
         transform.localPosition = hiddenPosition;
 
         foreach (var characterPair in characterExpressionPairs)
         {
             characterPair.characterPanel.GetComponent<CanvasGroup>().alpha = 0f;
         }
+    }
+
+    private bool HasCharacter(character character)
+    {
+        foreach (var characterPair in characterExpressionPairs)
+        {
+            if (characterPair.character == character)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void SetVisibleCharacter(character character)
+    {
+        foreach (var characterPair in characterExpressionPairs)
+        {
+            CanvasGroup canvasGroup = characterPair.characterPanel.GetComponent<CanvasGroup>();
+            canvasGroup.alpha = characterPair.character == character ? 1f : 0f;
+        }
+
+        currentCharacter = character;
     }
 
     public void StartTalkingAnimation(bool player = false)
