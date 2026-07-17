@@ -288,6 +288,7 @@ MonoBehaviour:
   dialoguePrefabOther: {fileID: 2390236305413259913, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
   choicePrefab: {fileID: 8998427943304157945, guid: 666910a504f68475f936225ba69f09a8, type: 3}
   otherCharacterPanel: {fileID: 622422504}
+  continueButton: {fileID: 190968203}
 --- !u!4 &271763598
 Transform:
   m_ObjectHideFlags: 0
@@ -1932,8 +1933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 250}
+  m_AnchoredPosition: {x: 0, y: -29.7}
+  m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1937154582
 MonoBehaviour:
@@ -2002,8 +2003,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 1500
     m_Right: 1500
-    m_Top: 100
-    m_Bottom: 100
+    m_Top: 0
+    m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 50
   m_ChildForceExpandWidth: 1
@@ -2087,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023079471941047287, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -125
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 6023079471941047287, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

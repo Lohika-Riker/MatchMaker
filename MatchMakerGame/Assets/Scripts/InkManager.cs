@@ -14,6 +14,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePrefabPlayer, dialoguePrefabOther;
     [SerializeField] private GameObject choicePrefab;
     [SerializeField] private GameObject otherCharacterPanel;
+    [SerializeField] private GameObject continueButton;
 
     void Start()
     {
@@ -28,7 +29,7 @@ public class InkManager : MonoBehaviour
         ClearChoices();
         otherCharacterPanel.transform.DOLocalMoveX(1300, 0f);
         choicePanel.transform.DOLocalMoveY(-840, 0f);
-        
+        continueButton.SetActive(false);
         DisplayNextLine();
     }
 
@@ -50,6 +51,7 @@ public class InkManager : MonoBehaviour
                     if (parts[1] == "deer")
                     {
                         otherCharacterPanel.transform.DOLocalMoveX(600, 0.5f).SetEase(Ease.OutBack);
+                        DisplayNextLine();
                         return;
                     }
                 }
@@ -59,6 +61,7 @@ public class InkManager : MonoBehaviour
             if (text == null || text == "")
             {
                 print("No text to display.");
+                continueButton.SetActive(true);
                 return;
             }
             GameObject prefab;
@@ -84,6 +87,7 @@ public class InkManager : MonoBehaviour
         else
         {
             Debug.Log("End of story reached.");
+            continueButton.SetActive(false);
             otherCharacterPanel.transform.DOLocalMoveX(1300, 0.5f).SetEase(Ease.OutBack);
             ClearDialogue();
         }
@@ -94,12 +98,15 @@ public class InkManager : MonoBehaviour
     {
         yield return null; // Wait for one frame to ensure the UI is updated
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
+        yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
+        continueButton.SetActive(true);
     }
 
     public void DisplayOptions()
     {
         if (choicePanel.GetComponentsInChildren<Button>().Length > 0) return;
 
+        continueButton.SetActive(false);
         choicePanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
 
         if (story.currentChoices.Count > 0)
