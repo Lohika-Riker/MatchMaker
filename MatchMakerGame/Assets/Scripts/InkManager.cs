@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.UI;
+using DG.Tweening;
+using System.Collections;
 
 public class InkManager : MonoBehaviour
 {
@@ -49,6 +51,8 @@ public class InkManager : MonoBehaviour
 
             GameObject dialogueInstance = Instantiate(prefab, dialoguePanel.transform);
             dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = text; // sets the current text to the dialogue instance
+
+            StartCoroutine(DisplayText(dialogueInstance));
         }
         else if (story.currentChoices.Count > 0)
         {
@@ -59,6 +63,12 @@ public class InkManager : MonoBehaviour
             Debug.Log("End of story reached.");
         }
         
+    }
+
+    private IEnumerator DisplayText(GameObject dialogueInstance)
+    {
+        yield return null; // Wait for one frame to ensure the UI is updated
+        LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
     }
 
     public void DisplayOptions()
