@@ -13,6 +13,7 @@ public class InkManager : MonoBehaviour
     private Story story;
     [SerializeField] private GameObject dialoguePrefabPlayer, dialoguePrefabOther;
     [SerializeField] private GameObject choicePrefab;
+    [SerializeField] private GameObject otherCharacterPanel;
 
     void Start()
     {
@@ -22,11 +23,13 @@ public class InkManager : MonoBehaviour
     private void StartStory()
     {
         story = new Story(inkJsonAsset.text);
+        
         foreach (Transform child in dialoguePanel.transform)
         {
             Destroy(child.gameObject);
         }
         ClearChoices();
+        otherCharacterPanel.transform.DOLocalMoveX(1200, 0f);
         DisplayNextLine();
     }
 
@@ -37,6 +40,24 @@ public class InkManager : MonoBehaviour
             ClearChoices();
             string text = story.Continue(); 
             text = text?.Trim(); 
+
+            // character entrance
+
+            foreach (var tag in story.currentTags)
+            {
+                string[] parts = tag.Split(':');
+
+                if (parts[0] == "entrance")
+                {
+                    if (parts[1] == "deer")
+                    {
+                        otherCharacterPanel.transform.DOLocalMoveX(600, 0.5f).SetEase(Ease.OutBack);
+                        return;
+                    }
+                }
+            }
+
+            // dialogue speech bubble
 
             GameObject prefab;
 
@@ -61,6 +82,7 @@ public class InkManager : MonoBehaviour
         else
         {
             Debug.Log("End of story reached.");
+            otherCharacterPanel.transform.DOLocalMoveX(1200, 0.5f).SetEase(Ease.OutBack);
         }
         
     }
