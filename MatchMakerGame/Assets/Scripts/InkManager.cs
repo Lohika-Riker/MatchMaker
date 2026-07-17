@@ -14,7 +14,7 @@ public class InkManager : MonoBehaviour
     private Story story;
     [SerializeField] private GameObject dialoguePrefabPlayer, dialoguePrefabOther;
     [SerializeField] private GameObject choicePrefab;
-    [SerializeField] private GameObject otherCharacterPanel;
+    [SerializeField] private GameObject otherCharacterPanel, playerCharacterPanel;
     [SerializeField] private GameObject continueButton;
 
     void Start()
@@ -122,6 +122,33 @@ public class InkManager : MonoBehaviour
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
         
         dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        // Tween talkAnim = null;
+        Sequence otherTalkAnimation = DOTween.Sequence();
+        GameObject target = null;
+        int originalY = 0;
+        if (player)
+        {
+            target = playerCharacterPanel;
+            originalY = -440;
+        }
+        else
+        {
+            target = otherCharacterPanel;
+            originalY = -590;
+        }
+
+         // animate other character for duration of typewriter text
+            int random = Random.Range(3, 7);
+            int value = Random.value > 0.5f ? random : -random;
+            otherTalkAnimation.Append(target.transform.DOLocalRotate(new Vector3(0, 0, value), 1f)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine));
+
+            // add bobbing animation to other character panel
+            otherTalkAnimation.Insert(0, 
+            target.transform.DOLocalMoveY(originalY - 10, 0.2f)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine)); 
 
         foreach(char c in text)
         {
@@ -141,6 +168,11 @@ public class InkManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
+        otherTalkAnimation.Kill(); // stop the talk animation
+        // reset character position and rotations
+        target.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.5f);
+        otherCharacterPanel.transform.DOLocalMoveY(-590, 0.5f);
+        playerCharacterPanel.transform.DOLocalMoveY(-440, 0.5f);
         continueButton.SetActive(true);
     }
 
