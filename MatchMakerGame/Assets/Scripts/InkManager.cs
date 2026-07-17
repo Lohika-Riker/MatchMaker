@@ -27,6 +27,8 @@ public class InkManager : MonoBehaviour
         ClearDialogue();
         ClearChoices();
         otherCharacterPanel.transform.DOLocalMoveX(1300, 0f);
+        choicePanel.transform.DOLocalMoveY(-840, 0f);
+        
         DisplayNextLine();
     }
 
@@ -34,7 +36,6 @@ public class InkManager : MonoBehaviour
     {
         if (story.canContinue)
         {
-            ClearChoices();
             string text = story.Continue(); 
             text = text?.Trim(); 
 
@@ -98,6 +99,9 @@ public class InkManager : MonoBehaviour
     public void DisplayOptions()
     {
         if (choicePanel.GetComponentsInChildren<Button>().Length > 0) return;
+
+        choicePanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
+
         if (story.currentChoices.Count > 0)
         {
             foreach (var choice in story.currentChoices)
@@ -118,6 +122,8 @@ public class InkManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        choicePanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.InBack);
+        ClearChoices();
         DisplayNextLine();
     }
     
