@@ -200,7 +200,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 190968209}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1443,7 +1443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2586914711395858573, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -74.18
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 4430332884710934407, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
       propertyPath: m_Pivot.x
@@ -1511,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4430332884710934407, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -74.18
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 4430332884710934407, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1547,7 +1547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5165601765552624672, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -74.18
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 6105780567397661708, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1591,7 +1591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7307002702313744874, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -74.18
+      value: -17.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

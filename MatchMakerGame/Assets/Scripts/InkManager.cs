@@ -76,9 +76,8 @@ public class InkManager : MonoBehaviour
             }
 
             GameObject dialogueInstance = Instantiate(prefab, dialoguePanel.transform);
-            dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = text; // sets the current text to the dialogue instance
 
-            StartCoroutine(DisplayText(dialogueInstance));
+            StartCoroutine(DisplayText(dialogueInstance, text));
         }
         else if (story.currentChoices.Count > 0)
         {
@@ -94,10 +93,31 @@ public class InkManager : MonoBehaviour
         
     }
 
-    private IEnumerator DisplayText(GameObject dialogueInstance)
+    private IEnumerator DisplayText(GameObject dialogueInstance, string text)
     {
+        dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
         yield return null; // Wait for one frame to ensure the UI is updated
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
+        
+        dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = "";
+
+        foreach(char c in text)
+        {
+            dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text += c;
+            if (c == '.' || c == '!' || c == '?')
+            {
+                yield return new WaitForSeconds(0.2f); // Add a longer pause after punctuation
+            }
+            else if (c == ' ')
+            {
+                yield return new WaitForSeconds(0.1f); 
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.05f); 
+            }
+        }
+
         yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
         continueButton.SetActive(true);
     }
