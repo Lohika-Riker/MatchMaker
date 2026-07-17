@@ -9,7 +9,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject choicePanel;
     private Story story;
-    [SerializeField] private GameObject dialoguePrefab;
+    [SerializeField] private GameObject dialoguePrefabPlayer, dialoguePrefabOther;
     [SerializeField] private GameObject choicePrefab;
 
     void Start()
@@ -36,7 +36,18 @@ public class InkManager : MonoBehaviour
             string text = story.Continue(); 
             text = text?.Trim(); 
 
-            GameObject dialogueInstance = Instantiate(dialoguePrefab, dialoguePanel.transform);
+            GameObject prefab;
+
+            if (story.currentTags.Contains("player"))
+            {
+                prefab = dialoguePrefabPlayer;
+            }
+            else
+            {
+                prefab = dialoguePrefabOther;
+            }
+
+            GameObject dialogueInstance = Instantiate(prefab, dialoguePanel.transform);
             dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = text; // sets the current text to the dialogue instance
         }
         else if (story.currentChoices.Count > 0)

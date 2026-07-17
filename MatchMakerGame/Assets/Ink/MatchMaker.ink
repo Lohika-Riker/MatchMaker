@@ -1,9 +1,11 @@
 -> receptionist
 === receptionist ===
 Well, hello there!
-Welcome to Match Maker. #smile
-Nice to meet you. #frown
-What's your name? #takenotes
+Hi. #player
+Welcome to Match Maker. #exp:smile
+Thanks. #player
+Nice to meet you. #exp:frown
+What's your name? #exp:takenotes
 * [A]
 * [B]
 * [C]
