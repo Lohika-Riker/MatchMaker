@@ -2,6 +2,7 @@
 === receptionist ===
 #entrance:deer
 Well, hello there!
+You enter an unfamiliar place. #narrator
 Hi. #player
 Welcome to Match Maker. #exp:smile
 Thanks. #player
@@ -14,6 +15,7 @@ What's your name? #exp:takenotes:long
     
 * [C]
 -That's it. 
+Still wondering what's going on, huh? #narrator
 Oh, really?
 Wow.
 * [Challenge]

@@ -10,6 +10,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private TextAsset inkJsonAsset;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject choicePanel;
+    [SerializeField] private GameObject narratorPanel;
     private Story story;
     [SerializeField] private GameObject dialoguePrefabPlayer, dialoguePrefabOther;
     [SerializeField] private GameObject choicePrefab;
@@ -27,6 +28,8 @@ public class InkManager : MonoBehaviour
         
         ClearDialogue();
         ClearChoices();
+        narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        narratorPanel.transform.DOLocalMoveY(-840, 0f);
         otherCharacterPanel.transform.DOLocalMoveX(1300, 0f);
         choicePanel.transform.DOLocalMoveY(-840, 0f);
         continueButton.SetActive(false);
@@ -37,6 +40,7 @@ public class InkManager : MonoBehaviour
     {
         if (story.canContinue)
         {
+            narratorPanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.OutBack);
             string text = story.Continue(); 
             text = text?.Trim(); 
 
@@ -66,9 +70,17 @@ public class InkManager : MonoBehaviour
             }
             GameObject prefab;
 
+            bool player = false;
             if (story.currentTags.Contains("player"))
             {
                 prefab = dialoguePrefabPlayer;
+                player = true;  
+            }
+            else if (story.currentTags.Contains("narrator"))
+            {
+                // Handle narrator dialogue if needed
+                StartCoroutine(DisplayNarratorText(text));
+                return;
             }
             else
             {
@@ -77,7 +89,7 @@ public class InkManager : MonoBehaviour
 
             GameObject dialogueInstance = Instantiate(prefab, dialoguePanel.transform);
 
-            StartCoroutine(DisplayText(dialogueInstance, text));
+            StartCoroutine(DisplayText(dialogueInstance, text, player));
         }
         else if (story.currentChoices.Count > 0)
         {
@@ -93,7 +105,17 @@ public class InkManager : MonoBehaviour
         
     }
 
-    private IEnumerator DisplayText(GameObject dialogueInstance, string text)
+    private IEnumerator DisplayNarratorText(string text)
+    {
+        narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
+        // slide in narrator panel
+        narratorPanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
+        yield return new WaitForSeconds(0.5f); // Wait for the narrator panel to finish sliding in
+        StartCoroutine(DisplayText(narratorPanel, text, false));
+        yield return null;
+    }
+
+    private IEnumerator DisplayText(GameObject dialogueInstance, string text, bool player)
     {
         dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
         yield return null; // Wait for one frame to ensure the UI is updated
