@@ -19,6 +19,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private GameObject playerCharacterPanel;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private CharacterSpriteHolder characterSpriteHolder;
+    private TalkingBounceAnimator playerTalkingBounceAnimator;
     
     private character currentCharacter;
 
@@ -26,6 +27,7 @@ public class InkManager : MonoBehaviour
 
     void Start()
     {
+        playerTalkingBounceAnimator = GetOrAddTalkingBounceAnimator(playerCharacterPanel);
         StartStory();
     }
 
@@ -146,7 +148,14 @@ public class InkManager : MonoBehaviour
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
         
         dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = "";
-        characterSpriteHolder.StartTalkingAnimation();
+        if (player)
+        {
+            playerTalkingBounceAnimator?.StartTalking();
+        }
+        else
+        {
+            characterSpriteHolder.StartTalkingAnimation();
+        }
 
         foreach(char c in text)
         {
@@ -166,8 +175,32 @@ public class InkManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
-        characterSpriteHolder.StopTalkingAnimation();
+        if (player)
+        {
+            playerTalkingBounceAnimator?.StopTalking();
+        }
+        else
+        {
+            characterSpriteHolder.StopTalkingAnimation();
+        }
         continueButton.SetActive(true);
+    }
+
+    private TalkingBounceAnimator GetOrAddTalkingBounceAnimator(GameObject target)
+    {
+        if (target == null)
+        {
+            Debug.LogWarning("No target was assigned for talking bounce animation.");
+            return null;
+        }
+
+        TalkingBounceAnimator animator = target.GetComponent<TalkingBounceAnimator>();
+        if (animator == null)
+        {
+            animator = target.AddComponent<TalkingBounceAnimator>();
+        }
+
+        return animator;
     }
 
     public void DisplayOptions()

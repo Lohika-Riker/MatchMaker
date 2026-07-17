@@ -37,10 +37,17 @@ public class CharacterSpriteHolder : MonoBehaviour
 {
     [SerializeField] private characterExpressionPair[] characterExpressionPairs;
     private character currentCharacter;
-    private Sequence talkAnimation;
-    void Start()
+    private TalkingBounceAnimator talkingBounceAnimator;
+
+    void Awake()
     {
-        StartCoroutine(HideCharacter());
+        talkingBounceAnimator = GetComponent<TalkingBounceAnimator>();
+        if (talkingBounceAnimator == null)
+        {
+            talkingBounceAnimator = gameObject.AddComponent<TalkingBounceAnimator>();
+        }
+
+        SetHiddenInstantly();
     }
 
     void Update()
@@ -81,6 +88,8 @@ public class CharacterSpriteHolder : MonoBehaviour
 
     public void ShowCharacter(character character)
     {
+        transform.DOKill();
+
         foreach (var characterPair in characterExpressionPairs)
         {
             if (characterPair.character == character)
@@ -94,6 +103,8 @@ public class CharacterSpriteHolder : MonoBehaviour
 
     public IEnumerator HideCharacter(bool instant = true)
     {
+        talkingBounceAnimator.StopTalkingImmediately();
+
         currentCharacter = character.none;
         float transitionTime = 0.5f;
         if (instant)
@@ -110,34 +121,27 @@ public class CharacterSpriteHolder : MonoBehaviour
         }
     }
 
+    private void SetHiddenInstantly()
+    {
+        currentCharacter = character.none;
+        Vector3 hiddenPosition = transform.localPosition;
+        hiddenPosition.x = 1300f;
+        transform.localPosition = hiddenPosition;
+
+        foreach (var characterPair in characterExpressionPairs)
+        {
+            characterPair.characterPanel.GetComponent<CanvasGroup>().alpha = 0f;
+        }
+    }
+
     public void StartTalkingAnimation(bool player = false)
     {
-        GameObject target = transform.gameObject; // Use the current GameObject for the talking animation
-        float originalY = target.transform.localPosition.y;
-
-        talkAnimation = DOTween.Sequence();
-        int random = UnityEngine.Random.Range(3, 7);
-        int value = UnityEngine.Random.value > 0.5f ? random : -random;
-        talkAnimation.Append(target.transform.DOLocalRotate(new Vector3(0, 0, value), 1f)
-        .SetLoops(-1, LoopType.Yoyo)
-        .SetEase(Ease.InOutSine));
-
-        talkAnimation.Insert(0,
-        target.transform.DOLocalMoveY(originalY - 10, 0.2f)
-        .SetLoops(-1, LoopType.Yoyo)
-        .SetEase(Ease.InOutSine));
+        talkingBounceAnimator.StartTalking();
     }
 
     public void StopTalkingAnimation()
     {
-        if (talkAnimation != null)
-        {
-            talkAnimation.Kill();
-            talkAnimation = null;
-        }
-        // reset character position and rotations
-        transform.DOLocalRotate(new Vector3(0, 0, 0), 0.5f);
-        transform.DOLocalMoveY(-590, 0.5f);
+        talkingBounceAnimator.StopTalking();
     }
 
     public IEnumerator SetExpression(expression expression)
