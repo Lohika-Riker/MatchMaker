@@ -757,3 +757,1717 @@ Memory consumption went from 159.7 MB to 157.1 MB.
 Total: 10.154875 ms (FindLiveObjects: 0.552000 ms CreateObjectMapping: 1.133333 ms MarkObjects: 6.779792 ms  DeleteObjects: 1.689542 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1043.545118 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c391582d739b6e62a5220f35cbb167ac') in 0.011734 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.913767 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/DebugMetadata.cs
+  artifactKey: Guid(c1ae8e933de9541df9d12af663906aaf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/DebugMetadata.cs using Guid(c1ae8e933de9541df9d12af663906aaf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9c9ea9258b2796c4a238e5fa98b3920b') in 0.064312416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/VariableAssignment.cs
+  artifactKey: Guid(fb2c978a16e604e18b1c0ca3ea64db84) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/VariableAssignment.cs using Guid(fb2c978a16e604e18b1c0ca3ea64db84) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9d4eec845c02cdd61457bd7675909043') in 0.002348083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Ink/README.md
+  artifactKey: Guid(e68150e01eeab4632b252ce854b20dd2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/README.md using Guid(e68150e01eeab4632b252ce854b20dd2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '121a8d100594312a2cbff7dd188eb271') in 0.004056417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/StoryException.cs
+  artifactKey: Guid(83b6443aded8c49e1960594d5f64e114) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/StoryException.cs using Guid(83b6443aded8c49e1960594d5f64e114) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b2c812dbf5a9e5382496c4463e656133') in 0.002831042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Expression.cs
+  artifactKey: Guid(476809ca3ec8f4743afd6fa33bd6e442) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Expression.cs using Guid(476809ca3ec8f4743afd6fa33bd6e442) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bc959700eda8813ce7dbab6a13d9dfee') in 0.002436542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs
+  artifactKey: Guid(2383f2e1b977347c2b6fb596e9af6d97) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs using Guid(2383f2e1b977347c2b6fb596e9af6d97) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3c495a02465b16f2b7e73889acb19d40') in 0.002048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Ink/Editor
+  artifactKey: Guid(68ec26d182ed34567bc7d90ad6bba5fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor using Guid(68ec26d182ed34567bc7d90ad6bba5fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c2d338eb1d25cfd89d3106d09d829b53') in 0.0019685 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Ink/Editor/Tools/File Icons/Resources/InkChildIcon-Large.psd
+  artifactKey: Guid(f4e541342c07c476094e04dc118fed7b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/File Icons/Resources/InkChildIcon-Large.psd using Guid(f4e541342c07c476094e04dc118fed7b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b45708eada9bb0b3baa0719f03f1ac85') in 0.0458765 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Ink/Demos/Basic Demo
+  artifactKey: Guid(36fb6d04b0b2d3b478161622da3f094c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Demos/Basic Demo using Guid(36fb6d04b0b2d3b478161622da3f094c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '18a3c5277526a33645512b9e31f5fe1e') in 0.001852 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/StatePatch.cs
+  artifactKey: Guid(be1efe20e2058440e8efa8927902041f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/StatePatch.cs using Guid(be1efe20e2058440e8efa8927902041f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '50bdafc1279f98d1e4f64ff55bbdd6b1') in 0.001981042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/Plugins/Plugin.cs
+  artifactKey: Guid(afc85318112c14186b267528f5930957) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/Plugins/Plugin.cs using Guid(afc85318112c14186b267528f5930957) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '18d7fbda38ed313ffca8e49ff75d18b5') in 0.002213541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/StringParser/StringParser.cs
+  artifactKey: Guid(604abcb1d19ba4d28a071f968011e743) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/StringParser/StringParser.cs using Guid(604abcb1d19ba4d28a071f968011e743) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f2b8fc92a98973cdb8ac7e218e0fdb73') in 0.002272 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/List.cs
+  artifactKey: Guid(672f1903584d34411b719aea4d59f1b7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/List.cs using Guid(672f1903584d34411b719aea4d59f1b7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '35535814dfdcd4631f9fab69eaef05a8') in 0.001917958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs
+  artifactKey: Guid(aa9a6c9127e3f4eb8a46f532557ccd2b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs using Guid(aa9a6c9127e3f4eb8a46f532557ccd2b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '25a0e2f81f25641f23236a6bc8b5bf30') in 0.002101417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/InkList.cs
+  artifactKey: Guid(3a56f188ddfd3452386a797f878ab7ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/InkList.cs using Guid(3a56f188ddfd3452386a797f878ab7ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ae1aa0db2fe0dbd385c8bf904fd60897') in 0.003605209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/Editor/Tools/Player Window/InkHistoryContentItem.cs
+  artifactKey: Guid(9eeba5396eb679a4fbf1e275b4da1b2c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/Player Window/InkHistoryContentItem.cs using Guid(9eeba5396eb679a4fbf1e275b4da1b2c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a36a4dd43fbe4e53ad21aec92f1d4e32') in 0.002302625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/ListDefinition.cs
+  artifactKey: Guid(848e06b169a60427cbf371a506af2b8d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/ListDefinition.cs using Guid(848e06b169a60427cbf371a506af2b8d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e71d036121090a1d64a4d83062ff12dd') in 0.002171917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Tags.cs
+  artifactKey: Guid(fed5929e88fa3480e8f02d3f686c0c2a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Tags.cs using Guid(fed5929e88fa3480e8f02d3f686c0c2a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0c5164769be3dedb24e5f6e25d684271') in 0.002303458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Ink/Editor/Tools/File Icons
+  artifactKey: Guid(85ab59a4efadf214e9f4f8d59cd3a1f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/File Icons using Guid(85ab59a4efadf214e9f4f8d59cd3a1f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '681676cecd53042b2cd0425e9f37a508') in 0.001855875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/Error.cs
+  artifactKey: Guid(5119822ad16c24c40b1f80c639c17671) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/Error.cs using Guid(5119822ad16c24c40b1f80c639c17671) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'db35afacc4334a870bac46535a9379ac') in 0.001931458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Ink/Demos/Basic Demo/Scripts/QuitGameOnKeypress.cs
+  artifactKey: Guid(7ce0d8573e1b2ff42af74cb80f3e5ece) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Demos/Basic Demo/Scripts/QuitGameOnKeypress.cs using Guid(7ce0d8573e1b2ff42af74cb80f3e5ece) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3ac62b02bfa972107d499d60758c4262') in 0.001936667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Ink/Editor/Tools/File Icons/Resources/InkCompileManualIcon.psd
+  artifactKey: Guid(1e91fdbfb2b154a18b675257bc4d43d9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/File Icons/Resources/InkCompileManualIcon.psd using Guid(1e91fdbfb2b154a18b675257bc4d43d9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cbde03cb6617d584238272c2b2ebc269') in 0.006256042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_AuthorWarning.cs
+  artifactKey: Guid(5a2f15af905c94ac9bdfb197799eec41) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_AuthorWarning.cs using Guid(5a2f15af905c94ac9bdfb197799eec41) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '194fd68f265399196b6f2d263ff996b8') in 0.00201025 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/CallStack.cs
+  artifactKey: Guid(152213b0affe5410c9b7ef8eac085a64) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/CallStack.cs using Guid(152213b0affe5410c9b7ef8eac085a64) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '09fffd1f4573eb50bae250967f0fdcd3') in 0.002509667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Ink/Editor/Tools/File Icons/Resources/InkFileIcon.psd
+  artifactKey: Guid(8e6b218461abe4192baeeabfbe7a9ced) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/File Icons/Resources/InkFileIcon.psd using Guid(8e6b218461abe4192baeeabfbe7a9ced) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9acaedf437cdc90bc607e7a138fd747b') in 0.006630417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/Stats.cs
+  artifactKey: Guid(13f65af28ab16d04a982dfcd855a2ccc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/Stats.cs using Guid(13f65af28ab16d04a982dfcd855a2ccc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8c941038aa657c7626b8646c48dc01bf') in 0.002086708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Ink/Editor/Core/Compiler
+  artifactKey: Guid(483e7deaddfc03f4f95e75aba1bb31d3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Core/Compiler using Guid(483e7deaddfc03f4f95e75aba1bb31d3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'daf3efea5c429823c89b3d72f82f03e1') in 0.001892417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ink/Editor/Tools/Player Window
+  artifactKey: Guid(42fddf9341b244a45b71760272099c94) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/Player Window using Guid(42fddf9341b244a45b71760272099c94) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ca8141daa8cc4e96fbd120ee82eeef08') in 0.001571125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ink/Demos/Basic Demo/Ink
+  artifactKey: Guid(29fc0cbe08c0d4f87975cc7a62f72510) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Demos/Basic Demo/Ink using Guid(29fc0cbe08c0d4f87975cc7a62f72510) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6bd64f3b262b4fd526eb02e0daea691a') in 0.001623833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ink/Editor/Tools/Build Validation/InkPreBuildValidationCheck.cs
+  artifactKey: Guid(260430d96c5f0aa46a31363984dc9088) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/Build Validation/InkPreBuildValidationCheck.cs using Guid(260430d96c5f0aa46a31363984dc9088) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ac3ab5cb8bfde0901d74f4efca81686f') in 0.001854959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Wrap.cs
+  artifactKey: Guid(01c402ee24cb74892a82fb28f502dfac) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Wrap.cs using Guid(01c402ee24cb74892a82fb28f502dfac) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cc95348ce53ee29f68da4598ae843e51') in 0.001870083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/Choice.cs
+  artifactKey: Guid(8db545ff917fa46d7aa5f472a9fdbad8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/Choice.cs using Guid(8db545ff917fa46d7aa5f472a9fdbad8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e7e79e6249bc7f364c6b78888dc17bbf') in 0.001870584 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy
+  artifactKey: Guid(0c759d64ce2896d4d8e18223920b5160) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy using Guid(0c759d64ce2896d4d8e18223920b5160) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '99c71ec198cd234b726d73936b56763d') in 0.001937209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Ink/Demos/Basic Demo/Ink/story.ink
+  artifactKey: Guid(1460e815e969b43b8a83a7caa8b48c27) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Demos/Basic Demo/Ink/story.ink using Guid(1460e815e969b43b8a83a7caa8b48c27) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '658a1e207b89ebd5377bcf5ef4156b64') in 0.001758417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/CharacterRange.cs
+  artifactKey: Guid(f3d8ce43e51d74eb791e0665c2ba4fc7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/CharacterRange.cs using Guid(f3d8ce43e51d74eb791e0665c2ba4fc7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '94c039679792193eac6eb10fb52de370') in 0.002091583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/ListDefinition.cs
+  artifactKey: Guid(efacbd9aad3e9480d9c82bbd58922944) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/ListDefinition.cs using Guid(efacbd9aad3e9480d9c82bbd58922944) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '064e4243f3022f56f537fcec29f7dfa3') in 0.002055916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Ink/Demos/Basic Demo/Scripts/Editor/BasicInkExampleEditor.cs
+  artifactKey: Guid(1c04f2595983345ab86d4ef0eea06dea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Demos/Basic Demo/Scripts/Editor/BasicInkExampleEditor.cs using Guid(1c04f2595983345ab86d4ef0eea06dea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f058698726e88f551938ba4d7e4c06f2') in 0.002483958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Stitch.cs
+  artifactKey: Guid(bc4bd341820aa4690b360e54951da250) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Stitch.cs using Guid(bc4bd341820aa4690b360e54951da250) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a249fd0e7d56a6cd413ce14c39bbcaed') in 0.002125541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Ink
+  artifactKey: Guid(1bf17f10e03c1924dbfdd18d35932e2a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink using Guid(1bf17f10e03c1924dbfdd18d35932e2a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '43bdc9a68cca3072dd4b1c79ec8c3961') in 0.00166675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/Void.cs
+  artifactKey: Guid(28e3cd581fd59451fb8dacea1b19f477) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/Void.cs using Guid(28e3cd581fd59451fb8dacea1b19f477) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8e83f2d0b1f431d03f142e2a38204cb1') in 0.002215875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/StringParser
+  artifactKey: Guid(0dd9607fdeb20594ea0a083ecc4262a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/StringParser using Guid(0dd9607fdeb20594ea0a083ecc4262a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bc4f0b07592716bdd13b84302a6d61c6') in 0.001621208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Knot.cs
+  artifactKey: Guid(004df9f5aa1804ff1b359d44aa670019) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Knot.cs using Guid(004df9f5aa1804ff1b359d44aa670019) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8f03a56bbcab90a6271e4168bb1a59cc') in 0.001840041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Sequence.cs
+  artifactKey: Guid(c69e88da4e89a46e7a7f0ae08b5b08e4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Sequence.cs using Guid(c69e88da4e89a46e7a7f0ae08b5b08e4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cb7d7d516af62199b6ffb1e79a8893fc') in 0.003579458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/Flow.cs
+  artifactKey: Guid(625dee430631288439017a5dc0349c86) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/Flow.cs using Guid(625dee430631288439017a5dc0349c86) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '20a1d380cbca5e43b78e7131bf2ba93e') in 0.002461792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/FileHandler.cs
+  artifactKey: Guid(beb7e0e9816ad714290ca610ac174808) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/FileHandler.cs using Guid(beb7e0e9816ad714290ca610ac174808) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4f892f95f1c817a79c1fca4f86703227') in 0.002019667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Ink/Demos/Basic Demo/Scripts/Editor
+  artifactKey: Guid(9afc9fe3049ac409e886991c340e1a33) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Demos/Basic Demo/Scripts/Editor using Guid(9afc9fe3049ac409e886991c340e1a33) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '13b1589b0ee02c3e1f807452c54cb642') in 0.001944583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Ink/Documentation/API Documentation.pdf
+  artifactKey: Guid(5d61fdab16c0247cdb5775f69fe450b5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Documentation/API Documentation.pdf using Guid(5d61fdab16c0247cdb5775f69fe450b5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd17c297adf1063562e9dab70586fef26') in 0.001693708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Ink/Editor/Tools/File Icons/Resources/InkTodoIcon.psd
+  artifactKey: Guid(73b0b2e787c654227845ff231c5eab5d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/File Icons/Resources/InkTodoIcon.psd using Guid(73b0b2e787c654227845ff231c5eab5d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9d919c18bca9c35bf57aa60a20485a3d') in 0.005351417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/Divert.cs
+  artifactKey: Guid(e98dd0cea4d0a4ddcbc9a1f135b486d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/Divert.cs using Guid(e98dd0cea4d0a4ddcbc9a1f135b486d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3bc5427da7995b9cf9c179c2fd0213cf') in 0.001644791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/Tag.cs
+  artifactKey: Guid(b8a631dc795b748dfbe8f53304cd9675) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/Tag.cs using Guid(b8a631dc795b748dfbe8f53304cd9675) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '54a85e11adf25462d57a6f24c8f55160') in 0.001640125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/ProceduralUIImage/Scripts/ProceduralImageModifier.cs
+  artifactKey: Guid(cd3dc79489c3ee540859c99623006e48) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Scripts/ProceduralImageModifier.cs using Guid(cd3dc79489c3ee540859c99623006e48) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e30c06a442b90f00c0dc3c99c89cb8b5') in 0.002491083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/Editor/Core
+  artifactKey: Guid(590f15c431c61ee46bced395763bb375) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Core using Guid(590f15c431c61ee46bced395763bb375) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f4f220afef99d4ecbe1e1f758cf0cf6f') in 0.001611834 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/StringJoinExtension.cs
+  artifactKey: Guid(4c907c30d0b7c4e5aa2dfe477bba8a89) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/StringJoinExtension.cs using Guid(4c907c30d0b7c4e5aa2dfe477bba8a89) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5a8ad6683afcec80b620588ec76d458d') in 0.001989708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Return.cs
+  artifactKey: Guid(4af7a89511e7e44b1b38d2bdafdeaad1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Return.cs using Guid(4af7a89511e7e44b1b38d2bdafdeaad1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '81812a91e7f64868c336cc990b9c9227') in 0.002033333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Ink/Extras
+  artifactKey: Guid(bec9d9dfddbc949a1bb82168c6c6ac54) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Extras using Guid(bec9d9dfddbc949a1bb82168c6c6ac54) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3c8edda9871ca957db20b07074074cea') in 0.001552292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/CommentEliminator.cs
+  artifactKey: Guid(59b3b9369a2a7481aab00ef369b7c4a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/CommentEliminator.cs using Guid(59b3b9369a2a7481aab00ef369b7c4a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1a130f63fed96a1748c19eba8b66c114') in 0.001918667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/ProceduralUIImage/Scripts/Attributes
+  artifactKey: Guid(8fa7014f72d5c3242baf47d498e9f5d9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Scripts/Attributes using Guid(8fa7014f72d5c3242baf47d498e9f5d9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '63a7a6d1222744b7472995aba78c0ea0') in 0.001577625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CommandLineInput.cs
+  artifactKey: Guid(5ca27cda0c9364bfbaf37f8db278563f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CommandLineInput.cs using Guid(5ca27cda0c9364bfbaf37f8db278563f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'acc51b59199331dd34dd8bc372030ca7') in 0.002040166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs
+  artifactKey: Guid(77e8119b05a284a889e4b2978c6b1617) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs using Guid(77e8119b05a284a889e4b2978c6b1617) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0598a81f7409af7710c37c843c3d8291') in 0.002045959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Tag.cs
+  artifactKey: Guid(a81b913377e924be08c114624ff42b3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Tag.cs using Guid(a81b913377e924be08c114624ff42b3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8edb98df660b7ff73aa519693277d48f') in 0.002058667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Ink/Editor/Tools/Startup Window/Resources/InkLogoIcon.png
+  artifactKey: Guid(09746d3311e36764faa38d0e982f6a2d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/Startup Window/Resources/InkLogoIcon.png using Guid(09746d3311e36764faa38d0e982f6a2d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '563d2a6cec563dd8f155272e7a48c70c') in 0.0054715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Ink/Editor/Tools/File Icons/Resources
+  artifactKey: Guid(77c0c460b9d6abb41a89e631ab6c2117) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/File Icons/Resources using Guid(77c0c460b9d6abb41a89e631ab6c2117) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fd8feccf4b06697253e2841022ca8426') in 0.001371209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ink/Editor/Tools/File Icons/Resources/InkWarningIcon.psd
+  artifactKey: Guid(efc1324f6160840a9a4c26231cc2d304) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/File Icons/Resources/InkWarningIcon.psd using Guid(efc1324f6160840a9a4c26231cc2d304) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f021c71ce9c9a095a5459be4e595f1ab') in 0.006359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Ink/LICENCE.md
+  artifactKey: Guid(636564827e7d54437b2ff17be1838cf5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/LICENCE.md using Guid(636564827e7d54437b2ff17be1838cf5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fa6fb9aae08ae460e8be208e930d59d3') in 0.001886959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Content.cs
+  artifactKey: Guid(8af10c051a6c942b1a43cb31ceb18114) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Content.cs using Guid(8af10c051a6c942b1a43cb31ceb18114) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '97d6621af8390a897d1c746ab0bc2438') in 0.002361 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/ConstantDeclaration.cs
+  artifactKey: Guid(d6c599566895c444da36111b8aa6bd5e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/ConstantDeclaration.cs using Guid(d6c599566895c444da36111b8aa6bd5e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'deb7c8a3afc007a3ea8e481322d6ac98') in 0.002079666 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/FlowLevel.cs
+  artifactKey: Guid(b3e0618d06b104e3a82b27f11b68ad54) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/FlowLevel.cs using Guid(b3e0618d06b104e3a82b27f11b68ad54) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '46707c9bcadfb470faef981a2ae8c035') in 0.001701084 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/ProceduralUIImage/Demo/Icons/plus.png
+  artifactKey: Guid(ff2f00f5bd16c6a49a5d0255606b27f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Demo/Icons/plus.png using Guid(ff2f00f5bd16c6a49a5d0255606b27f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bea8b6f0fdd6845a71d4fb00f869c823') in 0.011291084 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs
+  artifactKey: Guid(7ea84180e05064c52bb98a05546a7ddb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs using Guid(7ea84180e05064c52bb98a05546a7ddb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c80f9b6e12193242afb00e732c7d081b') in 0.002043542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_heart.png
+  artifactKey: Guid(d173388c1d9c32a418b5b777dd89d71a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_heart.png using Guid(d173388c1d9c32a418b5b777dd89d71a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0b58d0ccb491e03991f10c2911717f46') in 0.005105834 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/ProceduralUIImage/Editor/ModifierUtility.cs
+  artifactKey: Guid(e79fcbba9d695e540aca7087556cc6a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Editor/ModifierUtility.cs using Guid(e79fcbba9d695e540aca7087556cc6a1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1497e0dfc3473de65a5a33590406b76d') in 0.002082583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/ProceduralUIImage/Editor/ProceduralImageEditor.cs
+  artifactKey: Guid(4efb7abc9537550408326677069473d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Editor/ProceduralImageEditor.cs using Guid(4efb7abc9537550408326677069473d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ceaa67b95e9fa3d8d6facd45f0f11b21') in 0.001940542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/ProceduralUIImage/Demo/Icons/copy.png
+  artifactKey: Guid(5a984bff39e031944bdd8fc5ae443bd8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Demo/Icons/copy.png using Guid(5a984bff39e031944bdd8fc5ae443bd8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd0b4753f6f8daf30da9b928113c86e92') in 0.007144542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll.mdb
+  artifactKey: Guid(d719ed2e2c87eae4e8dd520e2df659c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll.mdb using Guid(d719ed2e2c87eae4e8dd520e2df659c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c28a8977b871b904b585ffd1b086bf84') in 0.001912083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteDot.png
+  artifactKey: Guid(ed7cb8f9a27664e48896c904189f0e2c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteDot.png using Guid(ed7cb8f9a27664e48896c904189f0e2c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'db7be3c1ddb7a7ff07c20b09e9110516') in 0.005335875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.045506 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(7c2423cdc6fdb4ead8d454948d5956f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(7c2423cdc6fdb4ead8d454948d5956f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b22d9a6bfee14af7a5cfdc1d7945b86c') in 0.000505083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.282027 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_optionsDropdown.png
+  artifactKey: Guid(62a48d93e78c63b4ea9b46537c7c0091) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_optionsDropdown.png using Guid(62a48d93e78c63b4ea9b46537c7c0091) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6ed272e9c15927267b3aab77dbd36970') in 0.005232625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignCL.png
+  artifactKey: Guid(2a8208d8e80f90944b8ff2978292b03b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignCL.png using Guid(2a8208d8e80f90944b8ff2978292b03b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cb1df03cb1c55e6ce394c377d84ec414') in 0.005133416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/DOTweenAnimation.cs
+  artifactKey: Guid(4d0390bd8b8ffd640b34fe25065ff1df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/DOTweenAnimation.cs using Guid(4d0390bd8b8ffd640b34fe25065ff1df) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '20f74b6713f023ffceae4838db236e77') in 0.002028166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/tileBars_slanted.png
+  artifactKey: Guid(c99a391f381fe534c80a193fe9f307a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/tileBars_slanted.png using Guid(c99a391f381fe534c80a193fe9f307a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ec082e5088cb5410365d9bd01f2850c1') in 0.00516 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteSquareAlpha50.png
+  artifactKey: Guid(ef40b00a83f7bd34f84851386b3321f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteSquareAlpha50.png using Guid(ef40b00a83f7bd34f84851386b3321f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f37f7543cd33f12e147ac0188abc38b4') in 0.006117541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_foldout_open.png
+  artifactKey: Guid(18a5a7cde794cc04b9b446f0feedb3a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_foldout_open.png using Guid(18a5a7cde794cc04b9b446f0feedb3a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '27042dfaf86fe229dbe0b0352e272888') in 0.005047042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs
+  artifactKey: Guid(230fe34542e175245ba74b4659dae700) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs using Guid(230fe34542e175245ba74b4659dae700) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '10f552ab421b4d58c7dd1695d640ee8f') in 0.00176175 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/circle.png
+  artifactKey: Guid(af28470bd0e2e9543a6dfa9a1a4b348d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/circle.png using Guid(af28470bd0e2e9543a6dfa9a1a4b348d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b9d13bb3b60bab30a6b3dba0b38df76a') in 0.005083958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.322371 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_models.png
+  artifactKey: Guid(09a0cde07b4d75f49b4c817932791b81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_models.png using Guid(09a0cde07b4d75f49b4c817932791b81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7c1686206d09e614343c4d6a1838f046') in 0.005748417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro Examples/Examples Assets
+  artifactKey: Guid(2add6a5374e55e642a55ed3b43fd9db4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro Examples/Examples Assets using Guid(2add6a5374e55e642a55ed3b43fd9db4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b1c665f9e09fbafcf179cc4ea04f7292') in 0.001659875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignTC.png
+  artifactKey: Guid(0f79253104349f44cb73978f6c8e93de) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignTC.png using Guid(0f79253104349f44cb73978f6c8e93de) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e05c1a38bb98b291fbf4522901f5175f') in 0.006166917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/DOTweenTextMeshPro.cs
+  artifactKey: Guid(8fb0d65aa5b048649a3a785b82b8f8db) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/DOTweenTextMeshPro.cs using Guid(8fb0d65aa5b048649a3a785b82b8f8db) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fe2aa27cbe2a34789d4e1688b20856ce') in 0.001912958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_play.png
+  artifactKey: Guid(2a563a43c33f0f3428d02b3a43886fc2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_play.png using Guid(2a563a43c33f0f3428d02b3a43886fc2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9b6f48b4a56f61fcfdc1579a77ec0526') in 0.0055465 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteSquareCurved02.png
+  artifactKey: Guid(282d742ce2ddf9f458812ab84ea6fa88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteSquareCurved02.png using Guid(282d742ce2ddf9f458812ab84ea6fa88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '223eed27dd09c51bd3a4b1fe63b504aa') in 0.005682833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/orangeSquare.png
+  artifactKey: Guid(3e730492361eb6e45be5c5fdafac23be) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/orangeSquare.png using Guid(3e730492361eb6e45be5c5fdafac23be) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fc04763b2afe88b17e2b18f6fd27c242') in 0.005720792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderCurved.png
+  artifactKey: Guid(4896b5aa9d63dec498136c21ffce735b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderCurved.png using Guid(4896b5aa9d63dec498136c21ffce735b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b1130fd048d2f92dae6583a95dd77224') in 0.005312917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.318550 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/DOTween.dll.mdb
+  artifactKey: Guid(4f007001a22b3d24dae350342c4d19c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/DOTween.dll.mdb using Guid(4f007001a22b3d24dae350342c4d19c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4b06c32470afdce4037a65127a9a6f02') in 0.001790208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareCorners03.png
+  artifactKey: Guid(dec3ea647707588408ec0d11ab130b73) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareCorners03.png using Guid(dec3ea647707588408ec0d11ab130b73) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9c01b22dee4f08cbb5f33ec7d9b39c3c') in 0.006017916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1325ec0fc634d4d09da8e1f1807923ad') in 0.005558708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.XML
+  artifactKey: Guid(db7d7ef84c388bc4fbc3835d31a15306) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.XML using Guid(db7d7ef84c388bc4fbc3835d31a15306) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'be9587e68e11ae65097a23c3d5c2b93f') in 0.001726709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenPath.unity
+  artifactKey: Guid(a351b59ca54a0bc4083c35844da13a61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenPath.unity using Guid(a351b59ca54a0bc4083c35844da13a61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1f520ce76dfb404b248863d757d088ec') in 0.003645625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_audio.png
+  artifactKey: Guid(e1af8927fb6f5634896d59aed409a589) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_audio.png using Guid(e1af8927fb6f5634896d59aed409a589) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f984199f7f55da313ed46a2b756905aa') in 0.005066291 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs
+  artifactKey: Guid(7bcaf917d9cf5b84090421a5a2abe42e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs using Guid(7bcaf917d9cf5b84090421a5a2abe42e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1ea988ec838c71639d8aeab095317d2d') in 0.002180417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_prefab.png
+  artifactKey: Guid(ed3789262161efa4fa33c85ca534590e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_prefab.png using Guid(ed3789262161efa4fa33c85ca534590e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'adc8bc41ed8f9d8533eb8ce772bbca24') in 0.005296583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.328635 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_folder.png
+  artifactKey: Guid(4f2c4b43188596b47866d41e1dc13c8a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_folder.png using Guid(4f2c4b43188596b47866d41e1dc13c8a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '71a13bc20ed8367ff4080cd17168d433') in 0.005963167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_comment.png
+  artifactKey: Guid(622fdb780ae13e840938631c5ed708f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_comment.png using Guid(622fdb780ae13e840938631c5ed708f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c566fbb4382fae2de5e6e4c0ff517eb4') in 0.005863667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_demigiant.png
+  artifactKey: Guid(229d0d11465a822449f78a50dbf7104d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_demigiant.png using Guid(229d0d11465a822449f78a50dbf7104d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3fb294050e13439c7b982e784cb2a939') in 0.005457542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_comment_border.png
+  artifactKey: Guid(d98b8847646169c4fb5af28dd84c4179) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_comment_border.png using Guid(d98b8847646169c4fb5af28dd84c4179) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '35127233d641539e78f627595bf38f0f') in 0.004959417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs
+  artifactKey: Guid(a060394c03331a64392db53a10e7f2d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs using Guid(a060394c03331a64392db53a10e7f2d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5a5894f3576e3dd326fb2e0018b5cc72') in 0.002120125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignHC.png
+  artifactKey: Guid(b9e0e5a8836018e4c810fbceba55a1b4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignHC.png using Guid(b9e0e5a8836018e4c810fbceba55a1b4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b1a038f34f495b54a96f5194d7976a36') in 0.005351542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_textures.png
+  artifactKey: Guid(3e6b96a975eba1c43b2bad66fb7f8b4a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_textures.png using Guid(3e6b96a975eba1c43b2bad66fb7f8b4a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c00db0aa42a3521a95be5df4eef0993f') in 0.00688025 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll.mdb
+  artifactKey: Guid(ee3a420017f129443896310d9fab256b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll.mdb using Guid(ee3a420017f129443896310d9fab256b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0f7982576770ec70a4837b57ee181c88') in 0.001672458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.322487 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_todo.png
+  artifactKey: Guid(c561c878c05ceb1448966fe706740008) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_todo.png using Guid(c561c878c05ceb1448966fe706740008) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ad802130e68d76b52393d41415f917c7') in 0.00647125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderThickEmpty.png
+  artifactKey: Guid(c456d5ac01d2aa843a63985497b04931) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderThickEmpty.png using Guid(c456d5ac01d2aa843a63985497b04931) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4f22c16112aeb583b193bef799330b70') in 0.005019458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenAnimation_Basics.unity
+  artifactKey: Guid(6a2ad353325ffe64983c28d69a8738f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenAnimation_Basics.unity using Guid(6a2ad353325ffe64983c28d69a8738f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7b7dd59e9ea8db2ca3ad3d45d2a01c59') in 0.003115334 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_distributeHAlignT.png
+  artifactKey: Guid(1ccb12a4b0bf8f447b2cc114851732f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_distributeHAlignT.png using Guid(1ccb12a4b0bf8f447b2cc114851732f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '172d59c5102f045a642ab35a26493a6c') in 0.0049855 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blueSquare.png
+  artifactKey: Guid(05cfe010378336646ad6c721f66543d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blueSquare.png using Guid(05cfe010378336646ad6c721f66543d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c2b4031ff66413b4212686eb6332b936') in 0.005086125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_nodeArrow.png
+  artifactKey: Guid(4aa34055b1d36ef479af3d7b5701b28a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_nodeArrow.png using Guid(4aa34055b1d36ef479af3d7b5701b28a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b26df05cea581cb59cf20d17eeda34ff') in 0.005085417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha25.png
+  artifactKey: Guid(f7ff421f40d548444864a01cd7f47112) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha25.png using Guid(f7ff421f40d548444864a01cd7f47112) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '464a4257472567ca2cf028e130b111b4') in 0.006221167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignBR.png
+  artifactKey: Guid(eeac3acbf7d1cd54fabfb1c4a12f9fc8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignBR.png using Guid(eeac3acbf7d1cd54fabfb1c4a12f9fc8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5981c9f1e4e6059f285f5c7b79df101d') in 0.005258541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.317521 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_heart_border.png
+  artifactKey: Guid(669c487f3c9c5fe4abb6459f9c2628f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_heart_border.png using Guid(669c487f3c9c5fe4abb6459f9c2628f0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'aa0986fe7ee59912a2f3922ef242b928') in 0.005054125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib
+  artifactKey: Guid(5a499e4809836274eb38cd99b370a2c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib using Guid(5a499e4809836274eb38cd99b370a2c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bb02346bbe9b1c5369d112a6afc04c98') in 0.002272708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_camera.png
+  artifactKey: Guid(37639be6148186645bca3fce45d5aa22) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_camera.png using Guid(37639be6148186645bca3fce45d5aa22) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b62565e4e267da9334500b8d2fd9fab2') in 0.00521675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/DOTween.dll
+  artifactKey: Guid(a811bde74b26b53498b4f6d872b09b6d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/DOTween.dll using Guid(a811bde74b26b53498b4f6d872b09b6d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3c432527b803ac27ea9ede898c8f455b') in 0.004048917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor
+  artifactKey: Guid(b27f58ae5d5c33a4bb2d1f4f34bd036d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor using Guid(b27f58ae5d5c33a4bb2d1f4f34bd036d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6af6d93567e36d45473135d5599e13ae') in 0.001591 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenAnimation_Advanced.unity
+  artifactKey: Guid(a5f7a56d339da84449899ecf95fbe33d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenAnimation_Advanced.unity using Guid(a5f7a56d339da84449899ecf95fbe33d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b34ca9944b70a54f27196bbf493a2360') in 0.00502225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_lock_open.png
+  artifactKey: Guid(8d60feae84bdb2d4eb16a0037056c588) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_lock_open.png using Guid(8d60feae84bdb2d4eb16a0037056c588) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd0dabb24dbc7fa74f09cb0d201bfb44f') in 0.005077041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/redSquare.png
+  artifactKey: Guid(fbdd7ecf39c13bf48a5bd02a1159c90b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/redSquare.png using Guid(fbdd7ecf39c13bf48a5bd02a1159c90b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'dc7fab6313c1b3b9dd782f7bc41abe1b') in 0.004912166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.330349 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg
+  artifactKey: Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg using Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '066a010dfb434fc3f8023be6ee68ace9') in 0.005684625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_cog.png
+  artifactKey: Guid(fb605a2688b31194887f2e7a6769235b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_cog.png using Guid(fb605a2688b31194887f2e7a6769235b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ab118018eff758d584f4d1ef59823710') in 0.004816833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/tileBars_empty.png
+  artifactKey: Guid(d1278357b25e10442b6ca6c24edc9781) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/tileBars_empty.png using Guid(d1278357b25e10442b6ca6c24edc9781) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ed7f213e4b046fbdf53569f345cf586e') in 0.005251375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Plugins
+  artifactKey: Guid(b553640282668494fb145f66b352b44b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins using Guid(b553640282668494fb145f66b352b44b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '36cfb7bc10747cf44757d384b8811b61') in 0.001677292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenPreviewManager.cs
+  artifactKey: Guid(22292a5f27a9a644ba9e6ad1bf863531) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenPreviewManager.cs using Guid(22292a5f27a9a644ba9e6ad1bf863531) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a9e7cbc910327a2e47f4d3af8f2bb0de') in 0.002504375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Plugins/Demigiant/DOTween
+  artifactKey: Guid(a50bd9a009c8dfc4ebd88cc8101225a7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween using Guid(a50bd9a009c8dfc4ebd88cc8101225a7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5a929a2acac65fed5d325027018fa713') in 0.003108708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_demigiantLogo_color.png
+  artifactKey: Guid(49aff6a3a3f09e74dbfa52a8291f97d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_demigiantLogo_color.png using Guid(49aff6a3a3f09e74dbfa52a8291f97d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '819020a71a4833a95227b9e8b152aefd') in 0.005245458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderEmpty.png
+  artifactKey: Guid(8db54efcce998554c86b796b37a7cdfa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderEmpty.png using Guid(8db54efcce998554c86b796b37a7cdfa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '775691b9c42f38584b2aba6d06818688') in 0.005186292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.327939 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquare.png
+  artifactKey: Guid(7ba4b2810f605d945af87e032ca2957b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquare.png using Guid(7ba4b2810f605d945af87e032ca2957b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '40e907e434ff53f95985b512a1b3e31f') in 0.005070292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignVC.png
+  artifactKey: Guid(d1d45eadab0e41c4a82cdffb6396b1d7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignVC.png using Guid(d1d45eadab0e41c4a82cdffb6396b1d7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0a4af3ae2113b00c6b58b43a1dadf529') in 0.005093167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_skull.png
+  artifactKey: Guid(01976ad42d31f494e8040d3e32e283dc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_skull.png using Guid(01976ad42d31f494e8040d3e32e283dc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e3e100b77c9a1b815637c393cfde4aeb') in 0.00491825 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderCurved02.png
+  artifactKey: Guid(ff88be84254fb1f4b9a81a27ae0b2e81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderCurved02.png using Guid(ff88be84254fb1f4b9a81a27ae0b2e81) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '93cd99891386cefdab95bbebce88006f') in 0.0063225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_visibility.png
+  artifactKey: Guid(55c2b426022dac44f9b25f0cba28aa45) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_visibility.png using Guid(55c2b426022dac44f9b25f0cba28aa45) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0a23809c022f06dc0ca1d17d0957d074') in 0.005148583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_distributeVAlignL.png
+  artifactKey: Guid(32eaa0efb2b38774ea9705b40fdcc00a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_distributeVAlignL.png using Guid(32eaa0efb2b38774ea9705b40fdcc00a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '173cb119f0e567882f4ac8619fba2de4') in 0.005275959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteSquareAlpha25.png
+  artifactKey: Guid(511f6b24c50557a40a09633b12b8b8ef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/whiteSquareAlpha25.png using Guid(511f6b24c50557a40a09633b12b8b8ef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6ab6ab328d07b8dad312335e06716eb6') in 0.004844958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro
+  artifactKey: Guid(af55cfd0e7084ab4884c5a4f29b62d9f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro using Guid(af55cfd0e7084ab4884c5a4f29b62d9f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '45454089a232f6c279769b10a64201d4') in 0.001684958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.327759 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha80.png
+  artifactKey: Guid(595b166389c8db546a199430284ebc9b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha80.png using Guid(595b166389c8db546a199430284ebc9b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f2e5d8d2cef71f9847f2783372cba0d0') in 0.005660667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_end.png
+  artifactKey: Guid(a248c8288afb9184f953d9aa07a696b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_end.png using Guid(a248c8288afb9184f953d9aa07a696b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3b2f9326935454c7a09c72661e00ca0c') in 0.005786916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_flipV.png
+  artifactKey: Guid(c44ae4a96937e2c4b8be481648364682) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_flipV.png using Guid(c44ae4a96937e2c4b8be481648364682) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '75e08a1d29909269f68aa27699affd68') in 0.004925292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_skull.png
+  artifactKey: Guid(d563d6ce25cd2ca48b185ec47a74a3fb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_skull.png using Guid(d563d6ce25cd2ca48b185ec47a74a3fb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9c6b3e1a6069f90fa72a59f146bb7ef8') in 0.005426916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUIToolkit.cs
+  artifactKey: Guid(0c0a6d2683fb84e4193f2aa968264881) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUIToolkit.cs using Guid(0c0a6d2683fb84e4193f2aa968264881) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '63f64d79a94dfd4ca8466d205fa1e822') in 0.00213375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha15.png
+  artifactKey: Guid(53d696c01f6ca524383f11fcc34dd13c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha15.png using Guid(53d696c01f6ca524383f11fcc34dd13c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7d44e544f9604488387a20e0c9ec331a') in 0.005117125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs
+  artifactKey: Guid(63c02322328255542995bd02b47b0457) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs using Guid(63c02322328255542995bd02b47b0457) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5bc30f8aaf7c86aa9c62c9fae5731eca') in 0.001938 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_shaders.png
+  artifactKey: Guid(f252c69cd0163714eba038403f61b09e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_shaders.png using Guid(f252c69cd0163714eba038403f61b09e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '12cd13f9d34b5584710161baf30dc322') in 0.005281458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.315774 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll
+  artifactKey: Guid(aa0b1eebb5db27a419fa4564bbe5c9c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll using Guid(aa0b1eebb5db27a419fa4564bbe5c9c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '43947c2862f2a6e606e706fcb464fc7d') in 0.003921 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_ui.png
+  artifactKey: Guid(cb46e1d925af22d43a6f8bf0e1d459e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_ui.png using Guid(cb46e1d925af22d43a6f8bf0e1d459e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6ba73bbe098ee4e3b448be3299f210bb') in 0.006465917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderEmpty03.png
+  artifactKey: Guid(c0a56b88a1b449045b3fe5f561aa12fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderEmpty03.png using Guid(c0a56b88a1b449045b3fe5f561aa12fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '94c1de6ce9d656cf008f54bb4c1b8fa2') in 0.005198375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenAnimation_AdvancedSettings.lighting
+  artifactKey: Guid(a3e64b3b138264cf0a12d0d4b9046acd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro Examples/DOTweenAnimation_AdvancedSettings.lighting using Guid(a3e64b3b138264cf0a12d0d4b9046acd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e2e89d50df51e1e38a3082d40ead8d18') in 0.008166666 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll
+  artifactKey: Guid(54be29b67d0d29a478da2c6e5c62f091) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll using Guid(54be29b67d0d29a478da2c6e5c62f091) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5f660251e4b30b5ceaa2b46c69db8efb') in 0.002403667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_audio.png
+  artifactKey: Guid(7ca5908fd6c3dd34181c26e6d543ab70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_audio.png using Guid(7ca5908fd6c3dd34181c26e6d543ab70) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2658a302ca82a1dacf32601491ebfba0') in 0.004948958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_audio_border.png
+  artifactKey: Guid(e79d03aaa0883d44ebf5ba732febde10) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_audio_border.png using Guid(e79d03aaa0883d44ebf5ba732febde10) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ae50f6d13cfc49c51a68e6719765d6bb') in 0.006182959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs
+  artifactKey: Guid(188918ab119d93148aa0de59ccf5286b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs using Guid(188918ab119d93148aa0de59ccf5286b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd0d462fef2d34736c23368a42e689274') in 0.002411625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.323375 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll
+  artifactKey: Guid(a6402d4311c862b4eb1325590d6466af) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll using Guid(a6402d4311c862b4eb1325590d6466af) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '648c1c76671534ab246b85baa1c27589') in 0.004072917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Plugins/Demigiant/DOTweenPro/Editor
+  artifactKey: Guid(34ca5bde92f87fa4dbeb9593d201fde2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTweenPro/Editor using Guid(34ca5bde92f87fa4dbeb9593d201fde2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8d01ccba89f37a8594aa2ea94664cfcd') in 0.00154025 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Ink/MatchMaker.ink
+  artifactKey: Guid(6f5fe74acb9224e5a81fa82a710bd926) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/MatchMaker.ink using Guid(6f5fe74acb9224e5a81fa82a710bd926) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fb9fc4efa79f4eea6903cbbfd79cd005') in 0.00214325 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_camera_border.png
+  artifactKey: Guid(358cddede8023574191e0aae610a4645) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_camera_border.png using Guid(358cddede8023574191e0aae610a4645) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a46e64d4443b06ab6aac57d4541e8914') in 0.005307 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML
+  artifactKey: Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML using Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '28b21cc5238491337c581cde00f483a1') in 0.0018705 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha10.png
+  artifactKey: Guid(8c9cfa1dbe00a1d41ae9d14f5ac543ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/blackSquareAlpha10.png using Guid(8c9cfa1dbe00a1d41ae9d14f5ac543ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6fe7c4dc20878c9ae9e6d2f34625f53b') in 0.005049333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Ink/MatchMaker.json
+  artifactKey: Guid(bef0034184f8146dc962b9c545b6c433) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/MatchMaker.json using Guid(bef0034184f8146dc962b9c545b6c433) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ec53454c898a8c1357691a131215bfd9') in 0.00237425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core
+  artifactKey: Guid(03513cf143bb144409fbb3a51ec77b1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core using Guid(03513cf143bb144409fbb3a51ec77b1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '67b2b9e4f73e51e0e0f38774311c4daf') in 0.001672542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Resources
+  artifactKey: Guid(2d77ba35bbfe64624aff9e092d3cceea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Resources using Guid(2d77ba35bbfe64624aff9e092d3cceea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8312027055e24b2f88313ff61d0d5ae7') in 0.001537584 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Prepare
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7060 unused Assets / (2.8 MB). Loaded Objects now: 7917.
+Memory consumption went from 149.7 MB to 146.9 MB.
+Total: 8.911750 ms (FindLiveObjects: 0.534042 ms CreateObjectMapping: 0.434709 ms MarkObjects: 6.273583 ms  DeleteObjects: 1.669125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.980943 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs
+  artifactKey: Guid(7aec7c9fb87244b3a8c64753c8a2f9b7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs using Guid(7aec7c9fb87244b3a8c64753c8a2f9b7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'edbb949616ad480b6576ca4886ee3b61') in 0.002173167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_materials.png
+  artifactKey: Guid(e02713e10d7aced44a7a651231f0adef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/project/ico_materials.png using Guid(e02713e10d7aced44a7a651231f0adef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f53d5c0c7e3b09a2dde1e782d6bc549a') in 0.006303208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderCurved_darkBordersAlpha.png
+  artifactKey: Guid(f536c51d3da3f2e4ca93ac8773ec2ad8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/squareBorderCurved_darkBordersAlpha.png using Guid(f536c51d3da3f2e4ca93ac8773ec2ad8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '360ead1ab6c1d036007a9fe8dc8dae2c') in 0.00700625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/ProceduralUIImage/Demo/Icons/play.png
+  artifactKey: Guid(4c19521764d32504abd3836bf4f6a0ce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Demo/Icons/play.png using Guid(4c19521764d32504abd3836bf4f6a0ce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '72fa9fbf13757c398037081ee17be2d5') in 0.007406333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018183 seconds.
+  path: Assets/ProceduralUIImage/Demo/demo_examples.unity
+  artifactKey: Guid(306db2aa0cadecd4a82e2332d694d2c4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Demo/demo_examples.unity using Guid(306db2aa0cadecd4a82e2332d694d2c4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'db8f01407b223d3a71b9e18f9e81ac41') in 0.003884083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/ProceduralUIImage/Scripts/ProceduralImage.cs
+  artifactKey: Guid(41f1c5417c9d7ab4b84e531f83f60a4b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Scripts/ProceduralImage.cs using Guid(41f1c5417c9d7ab4b84e531f83f60a4b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a41522d8a2b1ec2a8e64552522b50c9c') in 0.002415333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignTL.png
+  artifactKey: Guid(6efe1c8569d975640ba0c9f2ac4a9d61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignTL.png using Guid(6efe1c8569d975640ba0c9f2ac4a9d61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ea0a080f41c9391dc33a627864726ff2') in 0.005012416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/ProceduralUIImage/Demo/Icons/send.png
+  artifactKey: Guid(b31073eee0a30d44d88a0164ab644996) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Demo/Icons/send.png using Guid(b31073eee0a30d44d88a0164ab644996) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '24e5bc1e4aff3835bd61d652177d6d8c') in 0.006271875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/grid_bright.png
+  artifactKey: Guid(93b1287b4a087f84c95c72f49ec94e83) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/grid_bright.png using Guid(93b1287b4a087f84c95c72f49ec94e83) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '28a18b244fc47793f7bb4efa04018d33') in 0.004911209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.xml
+  artifactKey: Guid(9bf2564c9817bb34988453ae948954d2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.xml using Guid(9bf2564c9817bb34988453ae948954d2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '38ead4ec9936181218bcb441bbb1f3be') in 0.002019292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/greenSquare.png
+  artifactKey: Guid(789ef07ba2573f6448fa8b5dc5224c44) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/greenSquare.png using Guid(789ef07ba2573f6448fa8b5dc5224c44) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '03b3a7367224fcca6ce01ff11ff7bf02') in 0.006231 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignBL.png
+  artifactKey: Guid(abf8a615f379ef44b9ac872a13b7712f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/ico_alignBL.png using Guid(abf8a615f379ef44b9ac872a13b7712f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '65dc6b8f857ac382f9477535fda3928e') in 0.00500925 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/ProceduralUIImage/Resources/procedural_ui_image_default_sprite.png
+  artifactKey: Guid(3f91331724a9da84197e9b6d94f0483c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Resources/procedural_ui_image_default_sprite.png using Guid(3f91331724a9da84197e9b6d94f0483c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '804be28175329dcf4b8e9fb1e11f0dbc') in 0.005325625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/FunctionCall.cs
+  artifactKey: Guid(1308e59f4c6e3430797ed5278369c5a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/FunctionCall.cs using Guid(1308e59f4c6e3430797ed5278369c5a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '68ba2e8f31d343a9a4d356ba0c6cdd06') in 0.001922791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Object.cs
+  artifactKey: Guid(bfde668c261f944e08e08a5b097043ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Object.cs using Guid(bfde668c261f944e08e08a5b097043ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ed71e9e6a6f60367d90e5406126e03b9') in 0.00201225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs
+  artifactKey: Guid(ea21bfef8977a4907b49628d9b651ebf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs using Guid(ea21bfef8977a4907b49628d9b651ebf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e43b5c871ed2d015767c3f1a30abec7e') in 0.002225666 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/CommandLineInput.cs
+  artifactKey: Guid(c05786c433ce449658bbeffe36e74ffd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/CommandLineInput.cs using Guid(c05786c433ce449658bbeffe36e74ffd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4754b9e1baac7f99b912b2c2c69b499f') in 0.002498917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/INamedContent.cs
+  artifactKey: Guid(db1f7c668efd4422d8437ac965745242) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/INamedContent.cs using Guid(db1f7c668efd4422d8437ac965745242) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9d4f9cfbc800888307324db1dc6e816e') in 0.001990333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Ink/Demos/Basic Demo/Prefabs/Button.prefab
+  artifactKey: Guid(37c108a6c38964f79a6621eccb33ddc1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Demos/Basic Demo/Prefabs/Button.prefab using Guid(37c108a6c38964f79a6621eccb33ddc1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '20e18e271ad60251abbfffa8065e4016') in 0.046531292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs
+  artifactKey: Guid(bf969d7f2c98e470c9797844e20b20ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs using Guid(bf969d7f2c98e470c9797844e20b20ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd17c0ac19742335e1a7c5ae274b9cbed') in 0.002012084 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs
+  artifactKey: Guid(97d6f86dbb9994db6bd0572b69f53f25) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs using Guid(97d6f86dbb9994db6bd0572b69f53f25) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a5886cbedef55dccec62012388b829af') in 0.00190325 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Ink/Editor/Core/Compiler/InkCompiler.cs
+  artifactKey: Guid(430cb8f71c23c438cb8b0ce85cc80fa6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Core/Compiler/InkCompiler.cs using Guid(430cb8f71c23c438cb8b0ce85cc80fa6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '721f97b84ae15a25f25ae46b0f900f4f') in 0.002576584 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Ink/InkLibs/InkRuntime/SimpleJson.cs
+  artifactKey: Guid(5f2b378ccb9e148929c90bae41bb2c9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkRuntime/SimpleJson.cs using Guid(5f2b378ccb9e148929c90bae41bb2c9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '05d76533df8202a143fce3a36d454f8e') in 0.002075833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Ink/Editor/Tools/Ink Inspector/DefaultAssetEditor.cs
+  artifactKey: Guid(fe3507ae5d970447197e131c39ac31b6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Tools/Ink Inspector/DefaultAssetEditor.cs using Guid(fe3507ae5d970447197e131c39ac31b6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '265c37e0e1cecb151a4793a724fa3383') in 0.002009125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Ink/Editor/Core/Ink Library/InkFile.cs
+  artifactKey: Guid(b497ccd4b61cb4fee8b8f0ce86302e83) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/Editor/Core/Ink Library/InkFile.cs using Guid(b497ccd4b61cb4fee8b8f0ce86302e83) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e00cb475a0fb34d5e10dc79b80d5de4f') in 0.005454083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/InkStringConversionExtensions.cs
+  artifactKey: Guid(12f91c70015a64a2ba10b2e2fd5d25b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/InkStringConversionExtensions.cs using Guid(12f91c70015a64a2ba10b2e2fd5d25b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd56ee2441cd3a4f78c47560a2e8f1f34') in 0.002011709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/FlowBase.cs
+  artifactKey: Guid(573f03d14273b46a29e16c5ff9ec8059) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/FlowBase.cs using Guid(573f03d14273b46a29e16c5ff9ec8059) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c9ea2d0b391d222140e43f8100a53a29') in 0.001964375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/ProceduralUIImage/Demo/Icons/checkmark.png
+  artifactKey: Guid(4a5934b590c8f06498d1bda2d5a53a2a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Demo/Icons/checkmark.png using Guid(4a5934b590c8f06498d1bda2d5a53a2a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e0fff621e087bdf74110736bb783fdbb') in 0.006077625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/tileCheckerboard.png
+  artifactKey: Guid(1954196ce2bc5c3478b215b39212c3cd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Plugins/Demigiant/DemiLib/Core/Editor/Imgs/tileCheckerboard.png using Guid(1954196ce2bc5c3478b215b39212c3cd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6c964a679a7507ee0adfb2d014aba629') in 0.0060625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/Compiler.cs
+  artifactKey: Guid(041ad81bb22094b95bec754d7d480a82) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/Compiler.cs using Guid(041ad81bb22094b95bec754d7d480a82) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'aeb7a2eec34f4c71922154209e2a131b') in 0.002180709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/ConditionalSingleBranch.cs
+  artifactKey: Guid(5a9e4e9e3b695418f92d259e9d047fb1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/ConditionalSingleBranch.cs using Guid(5a9e4e9e3b695418f92d259e9d047fb1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8e7d95d6c13cd194e94a27308da22c55') in 0.001959541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Ink/InkLibs/Ink-Libraries.asmdef
+  artifactKey: Guid(58bed0e7c5306824586d7eda03609289) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/Ink-Libraries.asmdef using Guid(58bed0e7c5306824586d7eda03609289) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e81a8ed3cf8ab6b6c1f52bd0d4519696') in 0.002366833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Conditional.cs
+  artifactKey: Guid(a6cda85f80c124e12b215fdbc95b33bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Conditional.cs using Guid(a6cda85f80c124e12b215fdbc95b33bb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b4a088a3b13c49b0de3da57f323ee563') in 0.002008292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/ProceduralUIImage/Editor/procedural_image_inspector_icon.png
+  artifactKey: Guid(29ecb3369e6be3248b883b6909683b0e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/ProceduralUIImage/Editor/procedural_image_inspector_icon.png using Guid(29ecb3369e6be3248b883b6909683b0e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '162f3457ab1a31d929324750a7bca70b') in 0.006091458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.356866 seconds.
+  path: Assets/Scripts/InkManager.cs
+  artifactKey: Guid(8ea4a4f0907514321985a95d7e5e6eb3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/InkManager.cs using Guid(8ea4a4f0907514321985a95d7e5e6eb3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '92f04a3fe741f0b15fbecef82f4144cc') in 0.00302025 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.493952 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(7c2423cdc6fdb4ead8d454948d5956f7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts using Guid(7c2423cdc6fdb4ead8d454948d5956f7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7a765982bdac17a5bbfdeae9bb19c7b1') in 0.001594958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-TV5N-XB4E-K2H7-753E-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 2832726-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Thread 0x16d9e7000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.635 seconds
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.606 seconds
+Domain Reload Profiling: 1245ms
+	BeginReloadAssembly (182ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (16ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (399ms)
+		LoadAssemblies (269ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (148ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (607ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (498ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (137ms)
+			ProcessInitializeOnLoadAttributes (299ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7071 unused Assets / (3.5 MB). Loaded Objects now: 7922.
+Memory consumption went from 160.9 MB to 157.4 MB.
+Total: 7.082834 ms (FindLiveObjects: 0.415167 ms CreateObjectMapping: 0.348416 ms MarkObjects: 4.861042 ms  DeleteObjects: 1.458000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 114.785779 seconds.
+  path: Assets/Scripts/InkManager.cs
+  artifactKey: Guid(8ea4a4f0907514321985a95d7e5e6eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/InkManager.cs using Guid(8ea4a4f0907514321985a95d7e5e6eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a3bb0a4515e7721572e28d42f3eb0310') in 0.005739583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
