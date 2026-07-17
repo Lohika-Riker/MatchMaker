@@ -1,20 +1,24 @@
 -> receptionist
 === receptionist ===
-#entrance:deer
-Well, hello there!
+You enter an unfamiliar place. #narrator
+ #entrance:deer
+// #entrance:owl
 Hi. #player
+Well, hello there!
 Welcome to Match Maker. #exp:smile
 Thanks. #player
 Nice to meet you. #exp:frown
-What's your name? #exp:takenotes:long
+What's your name? #exp:notes
 * [button text] my name is button. #player
-    sjedfkjsenfg
-    dslfkmv
-* [B]
-    
-* [C]
+    sjedfkjsenfg#player
+    dslfkmv#player
+* [I don't wan't to talk]
+    I don't wan't to talk #player
+* [I'm ok actually]
+    I'm ok actually #player
 -That's it. 
-Oh, really?
+Still wondering what's going on, huh? #narrator
+Oh, really? #player
 Wow.
 * [Challenge]
     -> knot
