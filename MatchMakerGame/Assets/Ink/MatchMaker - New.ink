@@ -1,9 +1,11 @@
 VAR insight = 0
 VAR receptionist = 0
 VAR psychicOwl = 0
+VAR nonbeliever = false
 
 -> scene1
 === scene1 ===
+.#entrance:player
 A Match Made in Meadows. This place has a bit of a reputation for unorthodox methods, but you have no other options. #narrator
 #entrance:deer
 Can I help you?
@@ -11,12 +13,12 @@ Oh, hello. I didn't see you there. #player
 Are you here for a screening?
 * Screening? #player
 The intake questionnaire.
-Oh. Yes.
+Oh. Yes. #player
 * That's right. #player
 - Excellent. Welcome to A Match Made in Meadows. #exp:smile
 Let's begin. I'm going to say a word, then you tell me the first word you think of.
 * Okay. #player
-* Shouldn't you ask my name or something? #player
+* [Shouldn't you ask my name?] Shouldn't you ask my name or something? #player
 Stop questioning the process. First word: <> #exp:raisedeyebrow
 - Love.
 * Hate. #player
@@ -78,7 +80,7 @@ And your living situation? Are you planning to stay where you are forever? Are y
 * [Not sure.] I don't know yet. #player
 - Good. Thank you. 
 
-VAR nonbeliever = false
+
 
 That's it for the intake questionnaire. Next we'll need you to see the psychic.
 * I'm ready. #player
@@ -91,8 +93,8 @@ That's it for the intake questionnaire. Next we'll need you to see the psychic.
 
 = What_Im_Looking_For
 You need to trust the process, or you'll be alone in this place forever. #exp:raisedeyebrow
-* Sorry, it's just a bit strange. #player
-* Fine, but I hope someone asks me what I want before this is over. #player
+* [Sorry.] Sorry, it's just a bit strange. #player
+* [Whatever.] Fine, but I hope someone asks me what I want before this is over. #player
 - -> Psychic
 
 = Dont_Believe
