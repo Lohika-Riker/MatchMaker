@@ -2,6 +2,9 @@ VAR insight = 0
 VAR receptionist = 0
 VAR psychicOwl = 0
 VAR nonbeliever = false
+VAR cardPicked = false
+VAR questioningTheProcess = 0
+VAR weirdFactor = 0
 
 -> scene1
 === scene1 ===
@@ -20,6 +23,7 @@ Let's begin. I'm going to say a word, then you tell me the first word you think 
 * Okay. #player
 * [Shouldn't you ask my name?] Shouldn't you ask my name or something? #player
 Stop questioning the process. First word: <> #exp:raisedeyebrow
+~ questioningTheProcess = questioningTheProcess + 1
 - Love.
 * Hate. #player
 * Heart. #player
@@ -93,6 +97,7 @@ That's it for the intake questionnaire. Next we'll need you to see the psychic.
 
 = What_Im_Looking_For
 You need to trust the process, or you'll be alone in this place forever. #exp:raisedeyebrow
+~ questioningTheProcess = questioningTheProcess + 1
 * [Sorry.] Sorry, it's just a bit strange. #player
 * [Whatever.] Fine, but I hope someone asks me what I want before this is over. #player
 - -> Psychic
@@ -113,13 +118,12 @@ That doesn't matter. The Great Glaucus doesn't need you to believe. Go on.
 === Psychic ===
 The psychic's room is dark, and a bit cramped. #narrator
 #entrance:owl
-VAR cardPicked = false
 Hoo-hoo! #exp:glitch
 * Hello?
-Oh, yes, hello! Excuse the mess. 
+- Oh, yes, hello! Excuse the mess. 
 * Uhh  #player
 - Not that I'm surprised that you're here or anything. The Great Glaucus knows all.
-Ah, yes. I can see it. You are here to be assessed. Your innards exposed for destiny to see. #exp:psychic
+Ah, yes. I can see it. You are here to be assessed. Your innards exposed for destiny to see. #exp:takenotes
 * {nonbeliever} [I know this is a sham.] No need to pretend with me. I know this is a sham.  #player
 ~ psychicOwl = psychicOwl - 1
 A non-believer! Disappointing. Nonetheless, the Great Glaucus will dig into your soul and pull from it what is needed.
@@ -143,12 +147,12 @@ Which of these speak to you?
 
 == After_Card_Picks
 Ah, yes, life. The card tells me that you value life and the living. 
-* Is this going to help you match me? #player
+* [Does this help me?] Is this going to help you match me? #player
 Ah, I see your doubt, but you must perservere on this path. Learning about you will help us learn about the one you are meant to be with. So says the Great Glaucus!
-* I do care about life and the living! #player
+* [That's true!] I do care about life and the living! #player
 Of course you do! So it is written!
 ~ psychicOwl = psychicOwl + 1
-* What does the Imprisoned Man mean? #player
+* [Imprisoned Man?] What does the Imprisoned Man mean? #player
 Do not worry yourself about that. It means nothing. It was not supposed to be in there. You can trust the Great Glaucus!
 - Now, let me look into my crystal ball, and see your future!
 
@@ -183,8 +187,8 @@ Sorrow? I don't believe I know what you mean! A bright future with a wonderful p
 - ->Last_Psychic_Questions
 == Last_Psychic_Questions
 
-Ah, wait! #exp:psychic
-Your future partner is trying to connect to me via the paths of destiny. But I need your help! Concentrate on your match, and send that energy to me via the crystal ball! What do you see? #exp:psychic
+Ah, wait! #exp:takenotes
+Your future partner is trying to connect to me via the paths of destiny. But I need your help! Concentrate on your match, and send that energy to me via the crystal ball! What do you see? #exp:takenotes
 * A brave soul
 * A kind soul
 * [A lonely island] A lo... a loving soul.
@@ -194,6 +198,71 @@ Your future partner is trying to connect to me via the paths of destiny. But I n
 ->Interim
 
 == Interim
+//{insight}
+You return to reception. #narrator
+#entrance:doe
+The Great Glaucus has passed on his findings.
+// can do an exchange about a negative relationship score with the owl
+
+//{psychicOwl}
+* [You have my match?] He said you'll have my match. Do you? #player
+
+* {psychicOwl <= 0} [I'm excited!]  I'm excited to meet the match he saw in his visions! #player
+
+* {psychicOwl > 0} [He said strange things.] He said some strange things. Something about sorrow and an empty landscape. #player
+What was that about? #player
+The ways of the Great Glaucus are mysterious.
+There is nothing to worry about. #exp:glitch
+~ insight = insight + 1
+{questioningTheProcess > 0: 
+I thought I told you to stop questioning the process. #exp:frown
+}
+{questioningTheProcess == 0: 
+Stop questioning the process. #exp:raisedeyebrow
+}
+ The future you've always wanted is possible if you stop fighting it.
+- You don't have to wait much longer. We have found your perfect match.
+Wait here while we prepare your date.
+#exit:other
+The doe leaves you alone in the waiting room. #narrator
+->Waiting_In_The_Waiting_Room
+== Waiting_In_The_Waiting_Room
++ [Wait patiently]
+->Wait_Patiently
++ [Leave the agency]
+->Leave_Agency(->Waiting_In_The_Waiting_Room)
++ [Look around]
+->Look_Around_Waiting_Room
+
+= Wait_Patiently
+You sit down and wait to be called. #narrator
+
+= Look_Around_Waiting_Room
+There are a couple of plants here, some of them coming out of the walls. #narrator
+* [Leave them be.]
+->Wait_Patiently
+* [Check plants.]
+- 
+== Leave_Agency(->return_to)
+{insight > 10:
+You hear someone behind you, but urgency pushes you forward and you yank open the door. #narrator
+->END
+}
+-else:
+You try the door, but it doesn't budge. #narrator
+#entrance:doe
+Where are you going? #exp:frown
+* [I'm leaving.] I'm leaving. What about it?
+* [Just looking around.] Nowhere. I'm just looking around.
+- You are in a very fragile state, so we can't let you leave at this moment. Please stay in the waiting room until we call you.
+#exit:doe
+->return_to
+}
+
+
+
+
+
 
 
 ->END
