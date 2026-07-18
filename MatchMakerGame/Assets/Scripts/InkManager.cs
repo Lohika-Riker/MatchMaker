@@ -25,7 +25,7 @@ public class InkManager : MonoBehaviour
     
     private character currentCharacter;
 
-    [SerializeField] private expressionPair[] doeExpressionPairs, owlExpressionPairs, toadExpressionPairs;
+    // [SerializeField] private expressionPair[] doeExpressionPairs, owlExpressionPairs, toadExpressionPairs;
 
     void Start()
     {
@@ -91,7 +91,16 @@ public class InkManager : MonoBehaviour
                 else if (parts[0] == "exp")
                 {
                     print($"change {currentCharacter}'s expression to {parts[1]}");
-                    characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
+                    // catch any errors that might occur during the parsing of the expression
+                    try
+                    {
+                        characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
+                    }
+                    catch (ArgumentException e)
+                    {
+                        Debug.LogError($"Invalid expression '{parts[1]}' for character '{currentCharacter}'. Please check the Ink script and ensure the expression is defined correctly. Error: {e.Message}");      
+                    // characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
+                    }
                 }
             }
 
