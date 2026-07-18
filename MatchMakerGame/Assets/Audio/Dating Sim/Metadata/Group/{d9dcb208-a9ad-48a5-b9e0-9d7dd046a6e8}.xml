@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="MixerGroup" id="{d9dcb208-a9ad-48a5-b9e0-9d7dd046a6e8}">
+		<property name="volume">
+			<value>1</value>
+		</property>
+		<property name="name">
+			<value>Diagetic</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{658c3364-45f4-44a1-822c-1fd57fef6f6c}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{eabb7b92-99bf-4742-a195-d960da67888c}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{6c4b18ad-5a01-4948-bfd3-3ed3f2a370d5}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{658c3364-45f4-44a1-822c-1fd57fef6f6c}">
+		<relationship name="effects">
+			<destination>{0c677c3c-ecac-4524-a0e1-6a47fc5fb778}</destination>
+			<destination>{a3298135-094a-4199-ab52-073c5596a8fa}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{eabb7b92-99bf-4742-a195-d960da67888c}" />
+	<object class="MixerSend" id="{0c677c3c-ecac-4524-a0e1-6a47fc5fb778}">
+		<property name="level">
+			<value>-2.5</value>
+		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{24d88bb0-ef5a-4a74-848f-68b393ae5155}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{a3298135-094a-4199-ab52-073c5596a8fa}" />
+</objects>

@@ -5,7 +5,7 @@
 			<value>2</value>
 		</property>
 		<property name="name">
-			<value>Reverb</value>
+			<value>Dialogue reverb</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{a570bffc-3923-4db1-b807-cde5be300367}</destination>
@@ -25,8 +25,26 @@
 	</object>
 	<object class="MixerBusPanner" id="{2603d2a7-f36f-4c5d-829b-86c461f8c47b}" />
 	<object class="SFXReverbEffect" id="{dbddb936-ac54-447d-9845-8903e0b5888e}">
+		<property name="decayTime">
+			<value>400</value>
+		</property>
+		<property name="earlyDelay">
+			<value>2</value>
+		</property>
+		<property name="lateDelay">
+			<value>3</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>83</value>
+		</property>
+		<property name="highCut">
+			<value>6050</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>88</value>
+		</property>
 		<property name="wetLevel">
-			<value>0</value>
+			<value>-9.39999962</value>
 		</property>
 		<property name="dryLevel">
 			<value>-80</value>
