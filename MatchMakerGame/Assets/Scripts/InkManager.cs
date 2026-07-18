@@ -17,7 +17,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePrefabPlayer, dialoguePrefabOther;
     [SerializeField] private GameObject choicePrefab;
     [SerializeField] private GameObject playerCharacterPanel;
-    [SerializeField] private GameObject continueButton;
+    // [SerializeField] private GameObject continueButton;
     [SerializeField] private CharacterSpriteHolder characterSpriteHolder;
     [SerializeField] private MusicManager musicManager;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
@@ -35,6 +35,15 @@ public class InkManager : MonoBehaviour
         StartStory();
     }
 
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            print("click to continue");
+            DisplayNextLine();
+        }
+    }
+
     private void StartStory()
     {
         story = new Story(inkJsonAsset.text);
@@ -44,7 +53,7 @@ public class InkManager : MonoBehaviour
         narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
         narratorPanel.transform.DOLocalMoveY(-840, 0f);
         choicePanel.transform.DOLocalMoveY(-840, 0f);
-        continueButton.SetActive(false);
+        // continueButton.SetActive(false);
         DisplayNextLine();
     }
 
@@ -111,7 +120,7 @@ public class InkManager : MonoBehaviour
             if (text == null || text == "")
             {
                 print("No text to display.");
-                continueButton.SetActive(true);
+                // continueButton.SetActive(true);
                 return;
             }
             GameObject prefab;
@@ -144,7 +153,7 @@ public class InkManager : MonoBehaviour
         else
         {
             Debug.Log("End of story reached.");
-            continueButton.SetActive(false);
+            // continueButton.SetActive(false);
             // otherCharacterPanel.transform.DOLocalMoveX(1300, 0.5f).SetEase(Ease.OutBack);
             characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
             HidePlayerCharacter();
@@ -212,7 +221,7 @@ public class InkManager : MonoBehaviour
         {
             characterSpriteHolder.StopTalkingAnimation();
         }
-        continueButton.SetActive(true);
+        // continueButton.SetActive(true);
     }
 
     private TalkingBounceAnimator GetOrAddTalkingBounceAnimator(GameObject target)
@@ -296,7 +305,7 @@ public class InkManager : MonoBehaviour
     {
         if (choicePanel.GetComponentsInChildren<Button>().Length > 0) return;
 
-        continueButton.SetActive(false);
+        // continueButton.SetActive(false);
         choicePanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
 
         if (story.currentChoices.Count > 0)

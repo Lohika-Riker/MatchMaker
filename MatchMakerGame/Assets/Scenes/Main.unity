@@ -276,7 +276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &190968204
 RectTransform:
   m_ObjectHideFlags: 0
@@ -507,7 +507,6 @@ MonoBehaviour:
   dialoguePrefabOther: {fileID: 2390236305413259913, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
   choicePrefab: {fileID: 8998427943304157945, guid: 666910a504f68475f936225ba69f09a8, type: 3}
   playerCharacterPanel: {fileID: 926250765}
-  continueButton: {fileID: 190968203}
   characterSpriteHolder: {fileID: 622422508}
   musicManager: {fileID: 721673226}
 --- !u!4 &271763598
