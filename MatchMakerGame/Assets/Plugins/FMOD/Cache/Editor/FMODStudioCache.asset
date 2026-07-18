@@ -20,7 +20,6 @@ MonoBehaviour:
     Data4: -1524099720
   Banks:
   - {fileID: 6976763303532740937}
-  - {fileID: -1152557824861162296}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -29,6 +28,38 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5056
+--- !u!114 &-8684060162868401411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Main_Theme/Weird factor
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Weird factor
+  StudioPath: 
+  Min: 0
+  Max: 7
+  Default: 0
+  ID:
+    data1: 2103001155
+    data2: 1260641227
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Weird0
+  - Weird1
+  - Weird2
+  - Weird3
+  - Weird4
+  - Weird5
+  - Weird6
+  - End
+  Exists: 1
 --- !u!114 &-7417908080671597877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,6 +84,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2846188535440004547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UI_Click
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/UI/UI_Click
+  Guid:
+    Data1: 1965851213
+    Data2: 1130903597
+    Data3: 925900943
+    Data4: 789324537
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2272019641897442523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,26 +135,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-1152557824861162296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/Audio/Dating Sim/Build/Desktop/Desktop/Master.bank
-  Name: Desktop/Master
-  StudioPath: bank:/Master
-  lastModified: 639199947012807513
-  FileSizes:
-  - Name: Desktop
-    Value: 17298336
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,20 +150,20 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 6775244438754098041}
   - {fileID: 6976763303532740937}
-  - {fileID: -1152557824861162296}
   EditorEvents:
   - {fileID: -9101403130058010122}
   - {fileID: 5414207455760902831}
   - {fileID: 3166880237254184509}
   - {fileID: 6453311335307618254}
+  - {fileID: -2846188535440004547}
+  - {fileID: 4512133360770836840}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6976763303532740937}
-  - {fileID: -1152557824861162296}
   StringsBanks:
   - {fileID: 6775244438754098041}
   cacheVersion: 131860
-  cacheTime: 639199947012854767
+  cacheTime: 639199982758725942
   SerializableEventsDict:
   - key: event:/Dialogue/Dialogue_Doe
     index: 0
@@ -135,6 +173,10 @@ MonoBehaviour:
     index: 2
   - key: event:/Dialogue/Dialogue_Owl
     index: 3
+  - key: event:/UI/UI_Click
+    index: 4
+  - key: event:/Ambience/Ambience
+    index: 5
 --- !u!114 &3166880237254184509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +197,6 @@ MonoBehaviour:
     Data4: 229727066
   Banks:
   - {fileID: 6976763303532740937}
-  - {fileID: -1152557824861162296}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -164,6 +205,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5056
+--- !u!114 &4512133360770836840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/Ambience
+  Guid:
+    Data1: -487213144
+    Data2: 1265146006
+    Data3: 2014536065
+    Data4: -1712335729
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5414207455760902831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,14 +252,14 @@ MonoBehaviour:
     Data4: -881831433
   Banks:
   - {fileID: 6976763303532740937}
-  - {fileID: -1152557824861162296}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -8684060162868401411}
   MinDistance: 1
   MaxDistance: 20
-  Length: 316893
+  Length: 549902
 --- !u!114 &6453311335307618254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +280,6 @@ MonoBehaviour:
     Data4: 459627622
   Banks:
   - {fileID: 6976763303532740937}
-  - {fileID: -1152557824861162296}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -260,10 +327,10 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639199943793550871
+  lastModified: 639199982758725942
   FileSizes:
   - Name: Desktop
-    Value: 984
+    Value: 1128
   Exists: 1
 --- !u!114 &6976763303532740937
 MonoBehaviour:
@@ -280,8 +347,8 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639199943793537658
+  lastModified: 639199982758655801
   FileSizes:
   - Name: Desktop
-    Value: 17298336
+    Value: 17318880
   Exists: 1
