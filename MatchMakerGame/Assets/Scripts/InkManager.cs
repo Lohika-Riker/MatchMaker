@@ -19,6 +19,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private GameObject playerCharacterPanel;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private CharacterSpriteHolder characterSpriteHolder;
+    [SerializeField] private MusicManager musicManager;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
     private CanvasGroup playerCharacterCanvasGroup;
     private Vector3 playerCharacterVisiblePosition;
@@ -66,12 +67,14 @@ public class InkManager : MonoBehaviour
                     if (parts[1] == "deer")
                     {
                         characterSpriteHolder.ShowCharacter(character.doe);
+                        currentCharacter = character.doe;
                         DisplayNextLine();
                         return;
                     }
                     else if (parts[1] == "owl")
                     {
                         characterSpriteHolder.ShowCharacter(character.owl);
+                        currentCharacter = character.owl;
                         DisplayNextLine();
                         return;
                     }
@@ -174,6 +177,7 @@ public class InkManager : MonoBehaviour
         else
         {
             characterSpriteHolder.StartTalkingAnimation();
+            if (currentCharacter == character.owl) musicManager.StartOwlTalk();
         }
 
         foreach(char c in text)
@@ -194,6 +198,7 @@ public class InkManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
+        if (currentCharacter == character.owl) musicManager.StopOwlTalk();
         if (player)
         {
             playerTalkingBounceAnimator?.StopTalking();

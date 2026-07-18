@@ -15,7 +15,8 @@ public enum WeirdFactor
 public class MusicManager : MonoBehaviour
 {
 
-    [SerializeField] private FMODUnity.StudioEventEmitter musicEmitter;
+    [SerializeField] private StudioEventEmitter musicEmitter;
+    [SerializeField] private StudioEventEmitter owlTalkEmitter;
     private WeirdFactor currentWeirdFactor;
 
     void Start()
@@ -26,10 +27,28 @@ public class MusicManager : MonoBehaviour
 
     void Update()
     {
+        // DEBUG STUFF
         if (Input.GetKeyDown(KeyCode.M))
         {
             IncreaseWeirdFactor();
         }
+        // if (Input.GetKeyDown(KeyCode.O))
+        // {
+        //     StartOwlTalk();
+        // }
+        // else if (Input.GetKeyDown(KeyCode.P))
+        // {
+        //     StopOwlTalk();
+        // }
+    }
+
+    public void StartOwlTalk()
+    {
+        owlTalkEmitter.Play();
+    }
+    public void StopOwlTalk()
+    {
+        owlTalkEmitter.Stop();
     }
 
     public void IncreaseWeirdFactor()
