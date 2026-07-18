@@ -9,7 +9,7 @@ Well, hello there!
 Welcome to Match Maker. #exp:smile
 Thanks. #player
 Nice to meet you. #exp:frown
-What's your name? #exp:notes
+What's your name? #exp:takenotes
 * [button text] my name is button. #player
     sjedfkjsenfg#player
     dslfkmv#player
@@ -44,11 +44,15 @@ Ok. #player
 
 === expr 
 + [Happy]
-    Yay! #exp:smile
+    Yay! #player #exp:smile
 + [Sad]
-    Aww. #exp:frown
+    Aww. #player #exp:frown
++ [raised Eyebrow (doe)]
+    Huh? #player #exp:raisedEyebrow
 + [Notes]
-    Interesting... #exp:notes
+    Interesting... #player #exp:takenotes
++ [glitch]
+    Bzzzz #player #exp:glitch
 + [change character]
     -> expressionLoop
 --> expr

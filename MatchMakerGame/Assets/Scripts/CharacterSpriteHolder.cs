@@ -17,7 +17,9 @@ public enum expression
     neutral,
     smile,
     frown,
-    notes
+    takenotes,
+    raisedEyebrow,
+    glitch
 }
 [System.Serializable]
 public struct expressionPair
@@ -79,7 +81,7 @@ public class CharacterSpriteHolder : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            StartCoroutine(SetExpression(expression.notes));
+            StartCoroutine(SetExpression(expression.takenotes));
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
@@ -88,6 +90,10 @@ public class CharacterSpriteHolder : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.S))
         {
             StopTalkingAnimation();
+        }
+        else if (Input.GetKeyDown(KeyCode.G))
+        {
+            StartCoroutine(SetExpression(expression.glitch));
         }
     }
 
@@ -202,9 +208,45 @@ public class CharacterSpriteHolder : MonoBehaviour
                     {
                         if (expressionPair.characterExpression == expression)
                         {
-                            characterPair.characterPanel.GetComponentInChildren<Image>().sprite = expressionPair.characterSprite;
-                            yield return new WaitForSeconds(1.5f); // Wait for 1.5 seconds before continuing
-                            // Optionally, you can change back to neutral expression after the wait
+                            if (expression == expression.glitch)
+                            {
+                                print($"Glitching {currentCharacter}'s expression");
+                                characterPair.characterPanel.GetComponentInChildren<Image>().sprite = expressionPair.characterSprite;
+                                yield return new WaitForSeconds(0.07f);
+                                SetCurrentCharacterNeutral();
+                                yield return new WaitForSeconds(0.5f);
+                                characterPair.characterPanel.GetComponentInChildren<Image>().sprite = expressionPair.characterSprite;
+                                yield return new WaitForSeconds(0.15f);
+                                SetCurrentCharacterNeutral();
+                                yield return new WaitForSeconds(0.4f);
+                                characterPair.characterPanel.GetComponentInChildren<Image>().sprite = expressionPair.characterSprite;
+                                yield return new WaitForSeconds(0.06f);
+                                SetCurrentCharacterNeutral();
+                                yield return null;
+                            }
+                            else {
+                                characterPair.characterPanel.GetComponentInChildren<Image>().sprite = expressionPair.characterSprite;
+                                yield return new WaitForSeconds(1.5f); // Wait for 1.5 seconds before continuing
+                                // Optionally, you can change back to neutral expression after the wait
+                                SetCurrentCharacterNeutral();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void SetCurrentCharacterNeutral()
+    {
+        foreach (var characterPair in characterExpressionPairs)
+            {
+                if (characterPair.character == currentCharacter)
+                {
+                    foreach (var expressionPair in characterPair.expressionPairs)
+                    {
+                        if (expressionPair.characterExpression == expression.neutral)
+                        {
                             foreach (var neutralPair in characterPair.expressionPairs)
                             {
                                 if (neutralPair.characterExpression == expression.neutral)
@@ -217,7 +259,6 @@ public class CharacterSpriteHolder : MonoBehaviour
                     }
                 }
             }
-        }
     }
 
 }
