@@ -59,42 +59,42 @@ public class CharacterSpriteHolder : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ShowCharacter(character.doe);
-        }
-        else if (Input.GetKeyDown(KeyCode.H))
-        {
-            StartCoroutine(HideCharacter(false));
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            StartCoroutine(SetExpression(expression.neutral));
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            StartCoroutine(SetExpression(expression.smile));
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            StartCoroutine(SetExpression(expression.frown));
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            StartCoroutine(SetExpression(expression.takenotes));
-        }
-        else if (Input.GetKeyDown(KeyCode.T))
-        {
-            StartTalkingAnimation();
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            StopTalkingAnimation();
-        }
-        else if (Input.GetKeyDown(KeyCode.G))
-        {
-            StartCoroutine(SetExpression(expression.glitch));
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     ShowCharacter(character.doe);
+        // }
+        // else if (Input.GetKeyDown(KeyCode.H))
+        // {
+        //     StartCoroutine(HideCharacter(false));
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha1))
+        // {
+        //     StartCoroutine(SetExpression(expression.neutral));
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha2))
+        // {
+        //     StartCoroutine(SetExpression(expression.smile));
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha3))
+        // {
+        //     StartCoroutine(SetExpression(expression.frown));
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha4))
+        // {
+        //     StartCoroutine(SetExpression(expression.takenotes));
+        // }
+        // else if (Input.GetKeyDown(KeyCode.T))
+        // {
+        //     StartTalkingAnimation();
+        // }
+        // else if (Input.GetKeyDown(KeyCode.S))
+        // {
+        //     StopTalkingAnimation();
+        // }
+        // else if (Input.GetKeyDown(KeyCode.G))
+        // {
+        //     StartCoroutine(SetExpression(expression.glitch));
+        // }
     }
 
     public void ShowCharacter(character character)

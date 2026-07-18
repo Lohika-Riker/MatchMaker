@@ -178,6 +178,8 @@ public class InkManager : MonoBehaviour
         {
             characterSpriteHolder.StartTalkingAnimation();
             if (currentCharacter == character.owl) musicManager.StartOwlTalk();
+            else if (currentCharacter == character.doe) musicManager.StartDoeTalk();
+            else if (currentCharacter == character.toad) musicManager.StartToadTalk();
         }
 
         foreach(char c in text)
@@ -199,6 +201,9 @@ public class InkManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
         if (currentCharacter == character.owl) musicManager.StopOwlTalk();
+        else if (currentCharacter == character.doe) musicManager.StopDoeTalk();
+        else if (currentCharacter == character.toad) musicManager.StopToadTalk();
+
         if (player)
         {
             playerTalkingBounceAnimator?.StopTalking();

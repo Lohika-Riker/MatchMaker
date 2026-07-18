@@ -16,7 +16,7 @@ public class MusicManager : MonoBehaviour
 {
 
     [SerializeField] private StudioEventEmitter musicEmitter;
-    [SerializeField] private StudioEventEmitter owlTalkEmitter;
+    [SerializeField] private StudioEventEmitter owlTalkEmitter, doeTalkEmitter, toadTalkEmitter;
     private WeirdFactor currentWeirdFactor;
 
     void Start()
@@ -28,17 +28,17 @@ public class MusicManager : MonoBehaviour
     void Update()
     {
         // DEBUG STUFF
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            IncreaseWeirdFactor();
-        }
+        // if (Input.GetKeyDown(KeyCode.M))
+        // {
+        //     IncreaseWeirdFactor();
+        // }
         // if (Input.GetKeyDown(KeyCode.O))
         // {
-        //     StartOwlTalk();
+        //     StartToadTalk();
         // }
         // else if (Input.GetKeyDown(KeyCode.P))
         // {
-        //     StopOwlTalk();
+        //     StopToadTalk();
         // }
     }
 
@@ -49,6 +49,26 @@ public class MusicManager : MonoBehaviour
     public void StopOwlTalk()
     {
         owlTalkEmitter.Stop();
+    }
+
+    public void StartDoeTalk()
+    {
+        doeTalkEmitter.Play();
+    }
+
+    public void StopDoeTalk()
+    {
+        doeTalkEmitter.Stop();
+    }
+
+    public void StartToadTalk()
+    {
+        toadTalkEmitter.Play();
+    }
+
+    public void StopToadTalk()
+    {
+        toadTalkEmitter.Stop();
     }
 
     public void IncreaseWeirdFactor()
