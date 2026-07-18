@@ -1,13 +1,22 @@
 VAR insight = 0
 VAR receptionist = 0
 VAR psychicOwl = 0
+VAR toad = 0
 VAR nonbeliever = false
 VAR cardPicked = false
 VAR questioningTheProcess = 0
 VAR weirdFactor = 0
+VAR playerHobby = ""
 
--> scene1
-=== scene1 ===
+//Scenes:
+//reception
+//psychic
+//cafe
+
+
+-> Reception_1
+=== Reception_1 ===
+#scene:reception
 .#entrance:player
 A Match Made in Meadows. This place has a bit of a reputation for unorthodox methods, but you have no other options. #narrator
 #entrance:deer
@@ -51,7 +60,7 @@ One word only, please. #exp:raisedeyebrow
 = Madness_loop
 Madness.
 * Inevitable. #player
-* What? #player
+* Excuse me? #player
 I said: <>
 ->Happiness_loop
 - Hmmm. Interesting. #exp:takenotes
@@ -74,8 +83,11 @@ Only one-word answers, please. #exp:frown
 
 Alright. Next, let's get to know you a bit. What are your hobbies?
 * Swimming. #player
+~ playerHobby = "swimming"
 * [Building watercraft.] Uh... building watercraft, I suppose. #player
+~ playerHobby = "building watercraft"
 * Cooking on an open fire.  #player
+~ playerHobby = "cooking"
 - Great. #exp:takenotes
 
 And your living situation? Are you planning to stay where you are forever? Are you planning to do travelling soon?
@@ -110,15 +122,19 @@ That doesn't matter. The Great Glaucus doesn't need you to believe. Go on.
 
 
 
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
 
 
 
 
 
 === Psychic ===
+#scene:psychic
 The psychic's room is dark, and a bit cramped. #narrator
-#entrance:owl
-Hoo-hoo! #exp:glitch
+
+Hoo-hoo! #exp:glitch #entrance:owl
 * Hello?
 - Oh, yes, hello! Excuse the mess. 
 * Uhh  #player
@@ -133,11 +149,11 @@ A non-believer! Disappointing. Nonetheless, the Great Glaucus will dig into your
 - Be not afraid. The Great Glaucus will safely carry you through the waves of time.
 -> Pick_Card_Loop
 == Pick_Card_Loop
-The Great Glaucus {|picks up the cards and }puts {|another} three cards in front of you. #narrator
+The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator
 Which of these speak to you?
-+ [Left]
-+ [Middle]
-+ [Right]
++ [From the left]
++ [From the middle]
++ [From the right]
 - {The card reads: The Imprisoned Man | The card reads: Life}
 {cardPicked == true: -> After_Card_Picks | Oh, I don't know how that got in there. Let me do that again.} 
 ~cardPicked = true
@@ -236,13 +252,143 @@ The doe leaves you alone in the waiting room. #narrator
 
 = Wait_Patiently
 You sit down and wait to be called. #narrator
+* [...]
+- 
+* [...]
+
+- Your date is ready. Follow me. #entrance:doe
+.#exit:other
+.#exit:player
+->Date_1
 
 = Look_Around_Waiting_Room
 There are a couple of plants here, some of them coming out of the walls. #narrator
 * [Leave them be.]
 ->Wait_Patiently
 * [Check plants.]
+- You feel one of the vines coming from the walls. It is slightly warm to the touch, growing out of a crack in the ceiling. #narrator
+//could add something to take here? Flower on the vine?
+->Wait_Patiently
+
+
+
+
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
+
+==Date_1
+~ temp flies = false
+#scene:cafe
+#entrance:player
+The doe ushers you into a small cafe. #narrator
+#entrance:toad
+The toad watches you.
+* Hello. #player
+* [Not saying anything?] Are you not going to say anything? #player
+#exp:frown
+- Hello.
+* Nice to meet you. #player
+- Yup.
+* So you're my match[.], huh? #player
+Yup.
+* How's it going? #player
+Good.
+* What's your name? #player
+Theodore.
 - 
+//{insight}
+
+* Did you go through a screening? #player
+Yup.
+** [What hobby did you give?] What did you say your hobby was? #player
+Flies.
+~ flies = true
+*** Cool. #player
+*** [Flies?] Your hobby is flies? #player
+Yup.
+**** [Elaborate?] Do you want to elaborate? #player
+No, I'm good.
+**** I see. Okay. #player
+----
+---
+--
+* I like your hat. #player
+Okay.
+** Where did you get it? #player
+In a store.
+** It suits you. #player
+Thanks.
+** I had a hat like that[.] once. #player
+Nice.
+--
+* {insight >= 3} [This place is strange.] This place sure is strange, right? #player
+Okay.
+** You don't think so?[] A lot of the questions don't make sense. #player
+How does that help them match us? #player
+I don't know.
+** Something is off. #player
+Okay.
+*** I'm serious.[] It's like things aren't the way they seem. #player
+Okay.
+
+--
+-
+* [You don't look how I imagined.] You look different from how I imagined my soulmate. #player
+Oh.
+** [Not bad, just different.] I don't mean you look bad. You're just different than the person I imagined in my head. #player
+Okay.
+** [Didn't imagine a nice hat.] I didn't imagine you'd have such a nice hat. #player
+Thanks.
+--
+* [Why did they match us?] Why do you think they matched us? #player
+Because I'm you. There's no one else to match you with. #exp:glitch #destroy
+** What do you mean[?] I'm you? What are you talking about?
+I didn't say that.
+I don't know. #replace
+*** Yeah, you did. #player
+Okay.
+**** [Leave cafe] I'm going to leave now. #player
+Okay.
+-> End_Of_Date_1
+**** [Let's start over.] Okay, fine. Let's just start over. #player
+----
+*** I guess I misheard.[] Okay, let's just start over. #player
+--- Okay.
+* [Leave cafe] I'm going to leave now. #player
+Okay.
+-> End_Of_Date_1
+-
+* Do you like {playerHobby}? #player
+Not really.
+* What's your favourite food?[] {flies == true |Is it flies?|}  #player
+Flies.
+** {flies == true} I knew it.
+Nice.
+** {flies == false} Just... just flies?
+Yup.
+** Me too!
+Nice.
+* [Leave cafe] I'm going to leave now. #player
+Okay.
+-> End_Of_Date_1
+-
+* [I should get back] Well, I guess I should get back.
+-
+-> End_Of_Date_1
+
+
+
+->DONE
+
+= End_Of_Date_1
+#scene:reception
+You return to the reception with the date fresh in mind. #narrator
+#entrance:doe
+How did it go?
+* It was terrible. #player
+-> END
+
 == Leave_Agency(->return_to)
 {insight > 10:
 You hear someone behind you, but urgency pushes you forward and you yank open the door. #narrator
@@ -258,9 +404,6 @@ Where are you going? #exp:frown
 #exit:doe
 ->return_to
 }
-
-
-
 
 
 
