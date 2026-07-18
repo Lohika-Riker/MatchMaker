@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{3d896d3f-11aa-42dd-804a-c0d89f7f5d75}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
 		<property name="assetPath">
 			<value>Dialogue/Dialogue_Owl_03.wav</value>
 		</property>
