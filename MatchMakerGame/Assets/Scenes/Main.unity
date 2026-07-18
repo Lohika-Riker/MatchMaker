@@ -1804,6 +1804,7 @@ GameObject:
   - component: {fileID: 926250766}
   - component: {fileID: 926250768}
   - component: {fileID: 926250767}
+  - component: {fileID: 926250769}
   m_Layer: 5
   m_Name: PlayerCharacterPanel
   m_TagString: Untagged
@@ -1868,6 +1869,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926250765}
   m_CullTransparentMesh: 1
+--- !u!114 &926250769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926250765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4281bd3feee8417da6de07a45fd84f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TalkingBounceAnimator
+  bounceDistance: 10
+  rotationRange: {x: 3, y: 7}
+  rotationDuration: 1
+  bounceDuration: 0.2
+  resetDuration: 0.5
 --- !u!1 &1048019423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,7 +2393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1783861635
 RectTransform:
   m_ObjectHideFlags: 0

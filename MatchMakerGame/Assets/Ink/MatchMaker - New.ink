@@ -4,6 +4,7 @@ VAR psychicOwl = 0
 
 -> scene1
 === scene1 ===
+.#entrance:player
 A Match Made in Meadows. This place has a bit of a reputation for unorthodox methods, but you have no other options. #narrator
 #entrance:deer
 Can I help you?
