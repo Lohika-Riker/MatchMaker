@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{965abe46-8fc4-44ee-80b9-d5cf8e07380a}">
+		<property name="name">
+			<value>Dialogue Stop</value>
+		</property>
+		<relationship name="folder">
+			<destination>{25ab32aa-84b8-4039-b8e8-af92e1738699}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a99d1387-dbfe-4c5d-b361-27d19dd4a676}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a99d1387-dbfe-4c5d-b361-27d19dd4a676}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

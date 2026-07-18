@@ -1,13 +1,15 @@
--> receptionist
+-> expressionLoop
 === receptionist ===
-// You enter an unfamiliar place. #narrator
- #entrance:deer
+You enter an unfamiliar place. #narrator
+//  #entrance:deer
+#entrance:player
 Hi. #player
+#entrance:owl
 Well, hello there!
 Welcome to Match Maker. #exp:smile
 Thanks. #player
 Nice to meet you. #exp:frown
-What's your name? #exp:notes
+What's your name? #exp:takenotes
 * [button text] my name is button. #player
     sjedfkjsenfg#player
     dslfkmv#player
@@ -20,11 +22,39 @@ Still wondering what's going on, huh? #narrator
 Oh, really? #player
 Wow.
 * [Challenge]
-    -> knot
+    // -> knot
 * [Accept]
-Whatever.
+-Whatever.
 -> DONE
 
-=== knot
-
+=== expressionLoop
+Here I am. #player
+#entrance:player
+Said the player. And made a choice... #narrator
+Ok. #player
++ [Doe]
+    #entrance:deer
+    Hello!
++ [Owl]
+    #entrance:owl
+    Hello!
+-Hello!
+-> expr
 -> DONE
+
+=== expr 
++ [Happy]
+    Yay! #player #exp:smile
++ [Sad]
+    Aww. #player #exp:frown
++ [raised Eyebrow (doe)]
+    Huh? #player #exp:raisedEyebrow
++ [Notes]
+    Interesting... #player #exp:takenotes
++ [glitch]
+    Bzzzz #player #exp:glitch
++ [change character]
+    -> expressionLoop
+--> expr
+-> DONE
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{30bbe16b-a0f0-408e-bca2-cdd068e7d01d}">
+		<property name="color">
+			<value>Magenta</value>
+		</property>
+		<property name="assetPath">
+			<value>Music/Music_Kick.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>316.89319727891154</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5ce1be8b-7506-492e-ae16-2213a411f642}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{48e74ed9-0f57-4e5c-82f7-97e35ba37b16}">
+		<property name="name">
+			<value>Weird factor</value>
+		</property>
+		<relationship name="folder">
+			<destination>{25ab32aa-84b8-4039-b8e8-af92e1738699}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{94d3ac5b-e546-4a73-aff6-87a55dd5d1e7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{94d3ac5b-e546-4a73-aff6-87a55dd5d1e7}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>8</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Weird0</value>
+			<value>Weird1</value>
+			<value>Weird2</value>
+			<value>Weird3</value>
+			<value>Weird4</value>
+			<value>Weird5</value>
+			<value>Weird6</value>
+			<value>End</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
