@@ -211,7 +211,7 @@
 			<value>2.25</value>
 		</property>
 		<property name="length">
-			<value>0.42562358276644013</value>
+			<value>0.375</value>
 		</property>
 		<property name="pitch">
 			<value>0.5</value>
@@ -380,7 +380,7 @@
 			<value>true</value>
 		</property>
 		<property name="triggerProbability">
-			<value>17</value>
+			<value>14.5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{8d2e29ff-827e-4574-b723-1be4218f9456}</destination>
@@ -629,7 +629,7 @@
 	</object>
 	<object class="TransitionMarker" id="{c88f4038-a6d9-49cb-9c57-847f7caae164}">
 		<property name="position">
-			<value>2.75</value>
+			<value>2.625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -870,7 +870,7 @@
 	</object>
 	<object class="AutomationPoint" id="{d18d742c-6c49-4351-afcb-2df1bc1368c1}">
 		<property name="position">
-			<value>2.600000000000001</value>
+			<value>2.5493764172335611</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -881,7 +881,7 @@
 	</object>
 	<object class="AutomationPoint" id="{1d52577c-326f-4dc8-aea0-0f844fac4b10}">
 		<property name="position">
-			<value>2.6756235827664399</value>
+			<value>2.6249999999999996</value>
 		</property>
 		<property name="value">
 			<value>0</value>

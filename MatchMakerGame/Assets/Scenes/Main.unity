@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea4a4f0907514321985a95d7e5e6eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  inkJsonAsset: {fileID: 4900000, guid: e1b419b1dba734338b395d879b9fafdb, type: 3}
+  inkJsonAsset: {fileID: 4900000, guid: bef0034184f8146dc962b9c545b6c433, type: 3}
   dialoguePanel: {fileID: 1105147777}
   choicePanel: {fileID: 1937154580}
   narratorPanel: {fileID: 1783861634}
@@ -446,19 +446,6 @@ MonoBehaviour:
   playerCharacterPanel: {fileID: 926250765}
   continueButton: {fileID: 190968203}
   characterSpriteHolder: {fileID: 622422508}
-  doeExpressionPairs:
-  - characterExpression: 0
-    characterSprite: {fileID: 21300000, guid: 54e8731fa3f7d4bb8b8f0b3b01e4d291, type: 3}
-  - characterExpression: 1
-    characterSprite: {fileID: 21300000, guid: a265869267be04541aebd28283a4f961, type: 3}
-  - characterExpression: 2
-    characterSprite: {fileID: 21300000, guid: 55ac4f909e3f24af7a2eb550cee6fb51, type: 3}
-  - characterExpression: 3
-    characterSprite: {fileID: 21300000, guid: cbac969ed0e0d4e6a8f4ad81aec17273, type: 3}
-  owlExpressionPairs:
-  - characterExpression: 0
-    characterSprite: {fileID: 0}
-  toadExpressionPairs: []
 --- !u!4 &271763598
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,7 +1139,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 54e8731fa3f7d4bb8b8f0b3b01e4d291, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1191,7 +1178,11 @@ MonoBehaviour:
     - characterExpression: 2
       characterSprite: {fileID: 21300000, guid: 55ac4f909e3f24af7a2eb550cee6fb51, type: 3}
     - characterExpression: 3
+      characterSprite: {fileID: 21300000, guid: cbac969ed0e0d4e6a8f4ad81aec17273, type: 3}
+    - characterExpression: 4
       characterSprite: {fileID: 21300000, guid: 530d6644f8f7b4f68b5185ec19fd4d4c, type: 3}
+    - characterExpression: 5
+      characterSprite: {fileID: 21300000, guid: 127cd0bef79434ded8898f73a5dfc219, type: 3}
   - character: 1
     characterPanel: {fileID: 1437943799}
     expressionPairs:
@@ -1203,6 +1194,8 @@ MonoBehaviour:
       characterSprite: {fileID: 21300000, guid: ee1249f5cd2574cd29c183b422202560, type: 3}
     - characterExpression: 3
       characterSprite: {fileID: 21300000, guid: 43927697771b84bb998ac3071f91f798, type: 3}
+    - characterExpression: 5
+      characterSprite: {fileID: 21300000, guid: ffac340735fbe451ea9188801ffea205, type: 3}
 --- !u!1 &652333734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,10 +2137,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 622422505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 157.6, y: -488}
+  m_SizeDelta: {x: 776, y: 976}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1216108821
 MonoBehaviour:
@@ -2367,7 +2360,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437943799}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0

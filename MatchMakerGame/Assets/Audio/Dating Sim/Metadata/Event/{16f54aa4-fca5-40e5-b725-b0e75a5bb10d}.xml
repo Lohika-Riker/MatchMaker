@@ -384,7 +384,7 @@
 	</object>
 	<object class="TransitionMarker" id="{2fabe535-b4f3-4585-9cbe-3738ed4fb881}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.15625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -404,7 +404,7 @@
 	</object>
 	<object class="TransitionMarker" id="{3ec6890c-eabb-4ce2-aa06-4ba7c8774839}">
 		<property name="position">
-			<value>1.1500000000000001</value>
+			<value>1.0625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -536,7 +536,7 @@
 	</object>
 	<object class="TransitionMarker" id="{2b24e587-8d04-4c5a-930b-b66d8466169a}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.15625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -556,7 +556,7 @@
 	</object>
 	<object class="TransitionMarker" id="{d096dbf9-06f9-4cf3-902c-0ec9d4fc11e1}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.15625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -576,7 +576,7 @@
 	</object>
 	<object class="TransitionMarker" id="{35884111-20fb-46e6-b9bf-b59376e4ed8c}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.15625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -596,7 +596,7 @@
 	</object>
 	<object class="TransitionMarker" id="{a2066475-1252-446b-a434-2b8b3a870711}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.15625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -616,7 +616,7 @@
 	</object>
 	<object class="TransitionMarker" id="{1ca8316d-26c7-4c45-bc75-2fac4e9bca0c}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.15625</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -633,7 +633,7 @@
 	</object>
 	<object class="TransitionMarker" id="{73da2a5a-5736-4e79-bab5-fa5ed82efafe}">
 		<property name="position">
-			<value>0.22</value>
+			<value>0.15625</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{2a96702c-2e64-4802-ae0f-eabde685e5fd}</destination>
