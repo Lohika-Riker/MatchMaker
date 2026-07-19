@@ -12,7 +12,7 @@ public class Card : MonoBehaviour
 
     private bool raised = false;
     private bool selected = false;
-    private float distance = 50f;
+    private float distance = 70f;
     private Sequence selectionSequence;
     private int selectedNumber;
 
@@ -56,6 +56,7 @@ public class Card : MonoBehaviour
 
         RectTransform cardRect = (RectTransform)transform;
         Vector2 centeredPosition = GetCenteredPosition(cardRect);
+        centeredPosition.y = -100;
 
         selectionSequence?.Kill();
         selectionSequence = DOTween.Sequence()
