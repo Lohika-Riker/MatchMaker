@@ -28,6 +28,11 @@ public class InkManager : MonoBehaviour
     private TalkingBounceAnimator playerTalkingBounceAnimator;
     private CanvasGroup playerCharacterCanvasGroup;
     private Vector3 playerCharacterVisiblePosition;
+    private bool isSceneTransitioning;
+    private bool isTyping;
+    private bool skipTypewriter;
+    private TextMeshProUGUI activeDialogueText;
+    private string activeDialogueLine;
 
     private character currentCharacter;
 
@@ -69,6 +74,17 @@ public class InkManager : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        if (isSceneTransitioning)
+        {
+            return;
+        }
+
+        if (isTyping)
+        {
+            CompleteActiveDialogueLine();
+            return;
+        }
+
         if (story.canContinue)
         {
             narratorPanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.OutBack);
@@ -133,6 +149,7 @@ public class InkManager : MonoBehaviour
                 }
                 else if (parts[0] == "scene" && parts.Length > 1)
                 {
+                    isSceneTransitioning = true;
                     StartCoroutine(SceneTransition(parts[1]));
                     return;
                 }
@@ -239,6 +256,7 @@ public class InkManager : MonoBehaviour
         else
         {
             Debug.LogWarning($"{sceneName} not implemented");
+            isSceneTransitioning = false;
             yield break; 
         }
         yield return new WaitForSeconds(1); // waiting for dialogue line to be displayed
@@ -255,6 +273,7 @@ public class InkManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         // characterSpriteHolder.ShowCharacter(newCharacter);
         // yield return new WaitForSeconds(0.5f);
+        isSceneTransitioning = false;
         DisplayNextLine();
 
     }
@@ -264,18 +283,26 @@ public class InkManager : MonoBehaviour
         narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
         // slide in narrator panel
         narratorPanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
-        yield return new WaitForSeconds(0.5f); // Wait for the narrator panel to finish sliding in
-        StartCoroutine(DisplayText(narratorPanel, text, false));
-        yield return null;
+        yield return DisplayText(narratorPanel, text, false, 0.5f);
     }
 
-    private IEnumerator DisplayText(GameObject dialogueInstance, string text, bool player)
+    private IEnumerator DisplayText(GameObject dialogueInstance, string text, bool player, float initialDelay = 0f)
     {
-        dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
+        activeDialogueText = dialogueInstance.GetComponentInChildren<TextMeshProUGUI>();
+        activeDialogueLine = text;
+        skipTypewriter = false;
+        isTyping = true;
+
+        activeDialogueText.text = " "; // sets the current text to the dialogue instance
         yield return null; // Wait for one frame to ensure the UI is updated
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
 
-        dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        activeDialogueText.text = "";
+        if (initialDelay > 0f)
+        {
+            yield return new WaitForSeconds(initialDelay);
+        }
+
         if (player)
         {
             playerTalkingBounceAnimator?.StartTalking();
@@ -290,7 +317,12 @@ public class InkManager : MonoBehaviour
 
         foreach (char c in text)
         {
-            dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text += c;
+            if (skipTypewriter)
+            {
+                break;
+            }
+
+            activeDialogueText.text += c;
             if (c == '.' || c == '!' || c == '?')
             {
                 yield return new WaitForSeconds(0.2f); // Add a longer pause after punctuation
@@ -305,7 +337,11 @@ public class InkManager : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(0.5f); // Wait for 0.5 seconds before showing the continue button
+        activeDialogueText.text = text;
+        isTyping = false;
+        activeDialogueText = null;
+        activeDialogueLine = null;
+
         if (currentCharacter == character.owl) musicManager.StopOwlTalk();
         else if (currentCharacter == character.doe) musicManager.StopDoeTalk();
         else if (currentCharacter == character.toad) musicManager.StopToadTalk();
@@ -319,6 +355,15 @@ public class InkManager : MonoBehaviour
             characterSpriteHolder.StopTalkingAnimation();
         }
         // continueButton.SetActive(true);
+    }
+
+    private void CompleteActiveDialogueLine()
+    {
+        skipTypewriter = true;
+        if (activeDialogueText != null)
+        {
+            activeDialogueText.text = activeDialogueLine;
+        }
     }
 
     private TalkingBounceAnimator GetOrAddTalkingBounceAnimator(GameObject target)
