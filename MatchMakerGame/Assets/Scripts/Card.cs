@@ -37,11 +37,11 @@ public class Card : MonoBehaviour
         transform.DOLocalMoveX(1200, 1f).SetEase(Ease.OutBack);
     }
 
-    public void SelectCard(int select)
+    public bool SelectCard(int select)
     {
         if (selected)
         {
-            return;
+            return false;
         }
 
         selectedNumber = select;
@@ -63,6 +63,8 @@ public class Card : MonoBehaviour
                 selectionDuration,
                 RotateMode.FastBeyond360).SetEase(Ease.InOutQuad))
             .InsertCallback(selectionDuration * 0.5f, ChangeCardImage);
+
+        return true;
     }
 
     private static Vector2 GetCenteredPosition(RectTransform cardRect)

@@ -1,7 +1,6 @@
-// using System.Numerics;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CardGame : MonoBehaviour
 {
@@ -10,39 +9,74 @@ public class CardGame : MonoBehaviour
     [SerializeField] private float gap = 10f;
     [SerializeField] private int cardsCount = 22;
 
+    [Header("Fan Animation")]
+    [SerializeField] private float fanDuration = 0.1f;
+
     // create an array to store the cards
     private Card [] cards;
     int cardNumber;
     private int cardCounter = 0;
     private Sequence fanSequence;
+    private bool isDeckAnimating;
+    private bool isCollapsed;
 
     void Start()
     {
-        cards = new Card[cardsCount];
-        cardNumber = Random.Range(0,cardsCount);
-        GenerateDeck();
+        cards = System.Array.Empty<Card>();
     }
 
 
     void Update()
     {
+        if (isDeckAnimating)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            GenerateDeck();
+            return;
+        }
+
+        if (!HasDeck())
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             cardNumber = Random.Range(0,cardsCount);
-            cards[cardNumber].SelectCard(cardCounter);
-            cardCounter++;
+            if (cards[cardNumber].SelectCard(cardCounter))
+            {
+                cardCounter++;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             cards[cardNumber].DiscardCard();
+            CollapseDeck();
         }
     }
 
-    private void GenerateDeck()
+    public void GenerateDeck()
     {
-        fanSequence = DOTween.Sequence();
-        Vector2 prevPosition = new Vector2();
-        // animate -> move from previous card position to current
+        if (isDeckAnimating || HasDeck())
+        {
+            return;
+        }
+
+        cards = new Card[cardsCount];
+        cardNumber = Random.Range(0, cardsCount);
+        isCollapsed = false;
+        StartCoroutine(GenerateDeckRoutine());
+    }
+
+    private IEnumerator GenerateDeckRoutine()
+    {
+        fanSequence?.Kill();
+        isDeckAnimating = true;
+
         for (int i = 0; i < cardsCount; i++)
         {
             GameObject instance = Instantiate(cardPrefab, transform);
@@ -50,18 +84,95 @@ public class CardGame : MonoBehaviour
 
             float offsetFromCenter = i - ((cardsCount - 1) * 0.5f);
 
-            Vector2 position = cardRect.anchoredPosition;
-            position.x = offsetFromCenter * gap;
+            Vector2 targetPosition = cardRect.anchoredPosition;
+            targetPosition.x = offsetFromCenter * gap;
+            Vector3 targetRotation = new Vector3(0f, 0f, -offsetFromCenter * angle);
 
-            // use dotween to move card from prevPos to new pos
-            
-            cardRect.anchoredPosition = position;
-            cardRect.localRotation = Quaternion.Euler(0f, 0f, -offsetFromCenter * angle);
-            
+            // Each card enters from the previous card's pose, then advances one
+            // position along the fan. The first card begins in its final slot.
+            float previousOffset = i == 0
+                ? offsetFromCenter
+                : (i - 1) - ((cardsCount - 1) * 0.5f);
 
-            prevPosition = position;
+            Vector2 startPosition = cardRect.anchoredPosition;
+            startPosition.x = previousOffset * gap;
+            cardRect.anchoredPosition = startPosition;
+            cardRect.localRotation = Quaternion.Euler(
+                0f,
+                0f,
+                -previousOffset * angle);
 
             cards[i] = instance.GetComponent<Card>();
+
+            // The first card is already in its final pose. Every following card
+            // must finish moving before the next card is instantiated.
+            if (i == 0)
+            {
+                continue;
+            }
+
+            fanSequence = DOTween.Sequence()
+                .Join(cardRect.DOAnchorPos(targetPosition, fanDuration).SetEase(Ease.OutCubic))
+                .Join(cardRect.DOLocalRotate(targetRotation, fanDuration).SetEase(Ease.OutCubic));
+
+            yield return fanSequence.WaitForCompletion();
         }
+
+        isDeckAnimating = false;
+    }
+
+    public void CollapseDeck()
+    {
+        if (isDeckAnimating || isCollapsed || !HasDeck())
+        {
+            return;
+        }
+
+        StartCoroutine(CollapseDeckRoutine());
+    }
+
+    private IEnumerator CollapseDeckRoutine()
+    {
+        isDeckAnimating = true;
+
+        // Move each card onto its left neighbour and remove it once it lands.
+        for (int slot = cardsCount - 1; slot > 0; slot--)
+        {
+            float previousOffset = (slot - 1) - ((cardsCount - 1) * 0.5f);
+            Vector3 targetRotation = new Vector3(0f, 0f, -previousOffset * angle);
+            RectTransform cardRect = (RectTransform)cards[slot].transform;
+            Vector2 targetPosition = cardRect.anchoredPosition;
+            targetPosition.x = previousOffset * gap;
+
+            fanSequence = DOTween.Sequence()
+                .Join(
+                    cardRect.DOAnchorPos(targetPosition, fanDuration).SetEase(Ease.InOutCubic));
+            fanSequence.Join(
+                cardRect.DOLocalRotate(targetRotation, fanDuration).SetEase(Ease.InOutCubic));
+
+            yield return fanSequence.WaitForCompletion();
+
+            Destroy(cards[slot].gameObject);
+            cards[slot] = null;
+        }
+
+        Destroy(cards[0].gameObject);
+        cards[0] = null;
+        cards = System.Array.Empty<Card>();
+        isCollapsed = true;
+        isDeckAnimating = false;
+    }
+
+    private bool HasDeck()
+    {
+        return cards != null
+            && cards.Length == cardsCount
+            && cards.Length > 0
+            && cards[0] != null;
+    }
+
+    private void OnDestroy()
+    {
+        fanSequence?.Kill();
     }
 }
