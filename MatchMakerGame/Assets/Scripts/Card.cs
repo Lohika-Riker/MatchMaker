@@ -8,11 +8,15 @@ public class Card : MonoBehaviour
     [SerializeField] private Graphic cardImage;
     [SerializeField] private Color selectedColor = Color.white;
     [SerializeField] private float selectionDuration = 1f;
+    [SerializeField] private Sprite hangedManCard, loversCard;
 
     private bool raised = false;
     private bool selected = false;
-    private float distance = 50f;
+    private float distance = 70f;
     private Sequence selectionSequence;
+    private int selectedNumber;
+
+    public bool IsSelected => selected;
 
     private void Awake()
     {
@@ -24,12 +28,25 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void SelectCard()
+    public void DiscardCard()
+    {
+        if (!selected)
+        {
+            print("can't discard a card that is not selected");
+            return;
+        }
+        // move card off screen
+        transform.DOLocalMoveX(1200, 1f).SetEase(Ease.OutBack);
+    }
+
+    public bool SelectCard(int select)
     {
         if (selected)
         {
-            return;
+            return false;
         }
+
+        selectedNumber = select;
 
         selected = true;
         raised = false;
@@ -39,6 +56,7 @@ public class Card : MonoBehaviour
 
         RectTransform cardRect = (RectTransform)transform;
         Vector2 centeredPosition = GetCenteredPosition(cardRect);
+        centeredPosition.y = -100;
 
         selectionSequence?.Kill();
         selectionSequence = DOTween.Sequence()
@@ -48,6 +66,8 @@ public class Card : MonoBehaviour
                 selectionDuration,
                 RotateMode.FastBeyond360).SetEase(Ease.InOutQuad))
             .InsertCallback(selectionDuration * 0.5f, ChangeCardImage);
+
+        return true;
     }
 
     private static Vector2 GetCenteredPosition(RectTransform cardRect)
@@ -63,7 +83,16 @@ public class Card : MonoBehaviour
     {
         if (cardImage != null)
         {
+            // TODO; change sprite 
             cardImage.color = selectedColor;
+            if (selectedNumber == 0)
+            {
+                cardImage.GetComponent<Image>().sprite = hangedManCard;
+            }
+            else
+            {
+                cardImage.GetComponent<Image>().sprite = loversCard;
+            }
         }
     }
 
@@ -75,11 +104,7 @@ public class Card : MonoBehaviour
     public void RaiseCard()
     {
         if (selected) return;
-
-        if (raised) {
-            LowerCard();
-            return;
-        }
+        if (raised) return;
         
         Vector2 targetPosition = transform.position + (transform.up * distance);
         transform.DOMove(targetPosition, 0.2f);
@@ -89,11 +114,7 @@ public class Card : MonoBehaviour
     public void LowerCard()
     {
         if (selected) return;
-
-        if (!raised) {
-            RaiseCard();
-            return;
-        }
+        if (!raised) return;
         Vector2 targetPosition = transform.position + (-transform.up * distance);
         transform.DOMove(targetPosition, 0.2f);
         raised = false;

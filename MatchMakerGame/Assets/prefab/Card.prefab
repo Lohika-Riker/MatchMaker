@@ -105,6 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed62524da32f47fca193b77cf7eeb9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cardImage: {fileID: 0}
+  selectedColor: {r: 1, g: 1, b: 1, a: 1}
+  selectionDuration: 1
+  hangedManCard: {fileID: 156872168369216711, guid: 8de672c248cc843caa63f1e1378d2693, type: 3}
+  loversCard: {fileID: 5143386987665815921, guid: ddb7d8645f162405ea1d855414bb083a, type: 3}
 --- !u!1 &7724998481360241007
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,14 +169,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.UI.ProceduralImage.ProceduralImage
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3f91331724a9da84197e9b6d94f0483c, type: 3}
+  m_Sprite: {fileID: -1195247578148136464, guid: af339163e642c46929efc7a47e740a9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -8,7 +8,9 @@ public enum character
 {
     doe,
     owl,
-    toad,
+    toad1,
+    toad2,
+    toad3,
     none
 }
 
@@ -19,7 +21,8 @@ public enum expression
     frown,
     takenotes,
     raisedEyebrow,
-    glitch
+    glitch,
+    ribbit
 }
 [System.Serializable]
 public struct expressionPair
@@ -191,6 +194,11 @@ public class CharacterSpriteHolder : MonoBehaviour
         talkingBounceAnimator.StopTalking();
     }
 
+    public void StopTalkingAnimationImmediately()
+    {
+        talkingBounceAnimator.StopTalkingImmediately();
+    }
+
     public IEnumerator SetExpression(expression expression)
     {
         if (currentCharacter == character.none)
@@ -223,6 +231,19 @@ public class CharacterSpriteHolder : MonoBehaviour
                                 yield return new WaitForSeconds(0.06f);
                                 SetCurrentCharacterNeutral();
                                 yield return null;
+                            }
+                            else if (expression == expression.ribbit)
+                            {
+                                Image characterImage = characterPair.characterPanel.GetComponentInChildren<Image>();
+
+                                characterImage.sprite = expressionPair.characterSprite;
+                                yield return new WaitForSeconds(0.2f);
+                                SetCurrentCharacterNeutral();
+                                yield return new WaitForSeconds(0.1f);
+
+                                characterImage.sprite = expressionPair.characterSprite;
+                                yield return new WaitForSeconds(0.2f);
+                                SetCurrentCharacterNeutral();
                             }
                             else {
                                 characterPair.characterPanel.GetComponentInChildren<Image>().sprite = expressionPair.characterSprite;
