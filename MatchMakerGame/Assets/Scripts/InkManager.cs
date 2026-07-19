@@ -58,7 +58,6 @@ public class InkManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            print("click to continue");
             DisplayNextLine();
         }
     }
@@ -72,7 +71,6 @@ public class InkManager : MonoBehaviour
         narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
         narratorPanel.transform.DOLocalMoveY(-840, 0f);
         choicePanel.transform.DOLocalMoveY(-840, 0f);
-        // continueButton.SetActive(false);
         DisplayNextLine();
     }
 
@@ -95,7 +93,6 @@ public class InkManager : MonoBehaviour
             string text = story.Continue();
             text = text?.Trim();
 
-            // Handle cleanup before tags such as scene/entrance can return early.
             if (story.currentTags.Exists(tag =>
                 string.Equals(tag.Trim(), "clearDialogue", StringComparison.OrdinalIgnoreCase)))
             {
@@ -114,21 +111,18 @@ public class InkManager : MonoBehaviour
                     {
                         characterSpriteHolder.ShowCharacter(character.doe);
                         currentCharacter = character.doe;
-                        // DisplayNextLine();
                         return;
                     }
                     else if (parts[1] == "owl")
                     {
                         characterSpriteHolder.ShowCharacter(character.owl);
                         currentCharacter = character.owl;
-                        // DisplayNextLine();
                         return;
                     }
                     else if (parts[1] == "toad" || parts[1] == "toad1")
                     {
                         characterSpriteHolder.ShowCharacter(character.toad1);
                         currentCharacter = character.toad1;
-                        // DisplayNextLine();
                         return;
                     }
                     else if (parts[1] == "toad2")
@@ -146,14 +140,12 @@ public class InkManager : MonoBehaviour
                     else if (parts[1] == "player")
                     {
                         ShowPlayerCharacter();
-                        // DisplayNextLine();
                         return;
                     }
                 }
                 else if (parts[0] == "exp")
                 {
                     print($"change {currentCharacter}'s expression to {parts[1]}");
-                    // catch any errors that might occur during the parsing of the expression
                     try
                     {
                         characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
@@ -161,7 +153,6 @@ public class InkManager : MonoBehaviour
                     catch (ArgumentException e)
                     {
                         Debug.LogError($"Invalid expression '{parts[1]}' for character '{currentCharacter}'. Please check the Ink script and ensure the expression is defined correctly. Error: {e.Message}");
-                        // characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
                     }
                 }
                 else if (parts[0] == "scene" && parts.Length > 1)
@@ -234,7 +225,6 @@ public class InkManager : MonoBehaviour
             if (text == null || text == "")
             {
                 print("No text to display.");
-                // continueButton.SetActive(true);
                 return;
             }
             GameObject prefab;
@@ -247,7 +237,6 @@ public class InkManager : MonoBehaviour
             }
             else if (story.currentTags.Contains("narrator"))
             {
-                // Handle narrator dialogue
                 StartCoroutine(DisplayNarratorText(text));
                 return;
             }
@@ -276,22 +265,22 @@ public class InkManager : MonoBehaviour
 
     private IEnumerator SceneTransition(string sceneName)
     {
-        Sprite newBackground = null;
-        character newCharacter = character.none;
+        Sprite newBackground;
+        // character newCharacter = character.none;
         if (sceneName == "psychic")
         {
             newBackground = psychicBackground;
-            newCharacter = character.owl;
+            // newCharacter = character.owl;
         }
         else if (sceneName == "reception")
         {
             newBackground = recptionBackground;
-            newCharacter = character.doe;
+            // newCharacter = character.doe;
         }
         else if (sceneName == "cafe")
         {
             newBackground = cafeBackground;
-            newCharacter = character.toad1;
+            // newCharacter = character.toad1;
         }
         else
         {
@@ -320,13 +309,10 @@ public class InkManager : MonoBehaviour
 
     private IEnumerator DisplayNarratorText(string text)
     {
-        // Narration has no speaker, so make sure neither character carries a
-        // talking animation into the narrator line.
         playerTalkingBounceAnimator?.StopTalkingImmediately();
         characterSpriteHolder.StopTalkingAnimationImmediately();
 
-        narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
-        // slide in narrator panel
+        narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = " ";
         narratorPanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
         yield return DisplayText(narratorPanel, text, false, 0.5f, false);
     }
@@ -344,8 +330,8 @@ public class InkManager : MonoBehaviour
         skipTypewriter = false;
         isTyping = true;
 
-        activeDialogueText.text = " "; // sets the current text to the dialogue instance
-        yield return null; // Wait for one frame to ensure the UI is updated
+        activeDialogueText.text = " "; 
+        yield return null; 
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
 
         activeDialogueText.text = "";
@@ -376,7 +362,7 @@ public class InkManager : MonoBehaviour
             activeDialogueText.text += c;
             if (c == '.' || c == '!' || c == '?')
             {
-                yield return new WaitForSeconds(0.2f); // Add a longer pause after punctuation
+                yield return new WaitForSeconds(0.2f);
             }
             else if (c == ' ')
             {
@@ -406,7 +392,6 @@ public class InkManager : MonoBehaviour
         {
             characterSpriteHolder.StopTalkingAnimation();
         }
-        // continueButton.SetActive(true);
     }
 
     private void CompleteActiveDialogueLine()
@@ -518,7 +503,6 @@ public class InkManager : MonoBehaviour
     {
         if (choicePanel.GetComponentsInChildren<Button>().Length > 0) return;
 
-        // continueButton.SetActive(false);
         choicePanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
 
         if (story.currentChoices.Count > 0)

@@ -1,4 +1,5 @@
 VAR cardPicked = false
+VAR weirdFactor = 0
 -> LocationSelect
 // -> Pick_Card_Loop
 
@@ -11,10 +12,7 @@ Where to go now?#player
     Oh hi there. 
     -> rorschachTest
 + [psychic]
-    .#scene:psychic
-    Welcome to the psychic. #narrator
-    .#entrance:owl
-    Hoo!
+    -> Psychic
 + [cafe]
     .#scene:cafe
     Welcome to the cafe. #narrator
@@ -27,6 +25,17 @@ Where to go now?#player
     Ugh. #exp:glitch
 -Nice... #player
 -> LocationSelect
+
+=== Psychic
+.#scene:psychic
+    Welcome to the psychic. #narrator
+    .#entrance:owl
+    Hoo!
+    + [increase weirdness]
+        ~weirdFactor++
+    + [leave]
+        -> LocationSelect
+--> Psychic
 
 === rorschachTest
 Can I interest you in a test? 
