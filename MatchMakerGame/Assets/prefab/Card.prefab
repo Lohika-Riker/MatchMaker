@@ -105,6 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed62524da32f47fca193b77cf7eeb9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cardImage: {fileID: 0}
+  selectedColor: {r: 1, g: 1, b: 1, a: 1}
+  selectionDuration: 1
+  hangedManCard: {fileID: 21300000, guid: 6405a33e26d384bb4b0ceba36bb9f195, type: 3}
+  loversCard: {fileID: 21300000, guid: a281bd1f8585e445fb84b0be01e7a498, type: 3}
 --- !u!1 &7724998481360241007
 GameObject:
   m_ObjectHideFlags: 0

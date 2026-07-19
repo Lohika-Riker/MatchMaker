@@ -8,11 +8,13 @@ public class Card : MonoBehaviour
     [SerializeField] private Graphic cardImage;
     [SerializeField] private Color selectedColor = Color.white;
     [SerializeField] private float selectionDuration = 1f;
+    [SerializeField] private Sprite hangedManCard, loversCard;
 
     private bool raised = false;
     private bool selected = false;
     private float distance = 50f;
     private Sequence selectionSequence;
+    private int selectedNumber;
 
     private void Awake()
     {
@@ -24,12 +26,25 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void SelectCard()
+    public void DiscardCard()
+    {
+        if (!selected)
+        {
+            print("can't discard a card that is not selected");
+            return;
+        }
+        // move card off screen
+        transform.DOLocalMoveX(1200, 1f).SetEase(Ease.OutBack);
+    }
+
+    public void SelectCard(int select)
     {
         if (selected)
         {
             return;
         }
+
+        selectedNumber = select;
 
         selected = true;
         raised = false;
@@ -63,7 +78,16 @@ public class Card : MonoBehaviour
     {
         if (cardImage != null)
         {
+            // TODO; change sprite 
             cardImage.color = selectedColor;
+            if (selectedNumber == 0)
+            {
+                cardImage.GetComponent<Image>().sprite = hangedManCard;
+            }
+            else
+            {
+                cardImage.GetComponent<Image>().sprite = loversCard;
+            }
         }
     }
 
