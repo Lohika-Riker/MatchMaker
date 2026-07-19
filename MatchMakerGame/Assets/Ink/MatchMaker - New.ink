@@ -16,6 +16,7 @@ VAR playerHobby = ""
 
 // -> Reception_1
 === Reception_1 ===
+~weirdFactor = 0
 #scene:reception
 .#entrance:player
 A Match Made in Meadows. This place has a bit of a reputation for unorthodox methods, but you have no other options. #narrator
@@ -31,7 +32,7 @@ Oh. Yes. #player
 Let's begin. I'm going to say a word, then you tell me the first word you think of.
 * Okay. #player
 * [Shouldn't you ask my name?] Shouldn't you ask my name or something? #player
-Stop questioning the process. First word: <> #exp:raisedeyebrow
+Stop questioning the process. First word: <> #exp:raisedEyebrow
 ~ questioningTheProcess = questioningTheProcess + 1
 - Love.
 * Hate. #player
@@ -54,7 +55,7 @@ Alone.
 * Lonely. #player
 * Together. #player
 * How is this relevant? #player
-One word only, please. #exp:raisedeyebrow
+One word only, please. #exp:raisedEyebrow
 -> Alone_loop
 - ->Madness_loop
 = Madness_loop
@@ -108,7 +109,7 @@ That's it for the intake questionnaire. Next we'll need you to see the psychic.
 - ->Psychic
 
 = What_Im_Looking_For
-You need to trust the process, or you'll be alone in this place forever. #exp:raisedeyebrow
+You need to trust the process, or you'll be alone in this place forever. #exp:raisedEyebrow
 ~ questioningTheProcess = questioningTheProcess + 1
 * [Sorry.] Sorry, it's just a bit strange. #player
 * [Whatever.] Fine, but I hope someone asks me what I want before this is over. #player
@@ -150,7 +151,7 @@ A non-believer! Disappointing. Nonetheless, the Great Glaucus will dig into your
 -> Pick_Card_Loop
 == Pick_Card_Loop
 The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator
-Which of these speak to you?
+Which of these speak to you? #cards:fan
 + [From the left]
 + [From the middle]
 + [From the right]
@@ -234,7 +235,7 @@ There is nothing to worry about. #exp:glitch
 I thought I told you to stop questioning the process. #exp:frown
 }
 {questioningTheProcess == 0: 
-Stop questioning the process. #exp:raisedeyebrow
+Stop questioning the process. #exp:raisedEyebrow
 }
  The future you've always wanted is possible if you stop fighting it.
 - You don't have to wait much longer. We have found your perfect match.

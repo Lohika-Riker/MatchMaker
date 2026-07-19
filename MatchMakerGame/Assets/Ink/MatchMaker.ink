@@ -17,6 +17,8 @@ What do you want to do?
 
 === LocationSelect
 Where to go now?#player
++ [Game]
+    ->Reception_1
 + [reception]
     .#scene:reception
     Welcome to the reception. #narrator
@@ -40,6 +42,12 @@ Where to go now?#player
     Ribbit! #exp:ribbit
     Ugh. #exp:frown
     Ugh. #exp:glitch
+    ++ [swap frog]
+    .#entrance:toad3
+    Ribbit! #exp:ribbit
+    Ugh. #exp:frown
+    Ugh. #exp:glitch
+    -> LocationSelect
 --Nice... #player
 -> LocationSelect
 
@@ -55,7 +63,7 @@ Where to go now?#player
     + [leave]
         -> LocationSelect
     + [Tarot]
-        ->Pick_Card_Loop
+        ->Card_Loop
 --> RikerPsychic
 
 === rorschachTest
