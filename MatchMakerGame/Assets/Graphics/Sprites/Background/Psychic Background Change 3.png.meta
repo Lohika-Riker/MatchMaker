@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 9947984e66a1a4ce09d9c8834f48f088
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3965955240946936030
+    second: Psychic Background Change 3_0
+  - first:
+      213: -8707724641046333453
+    second: Psychic Background Change 3_1
+  - first:
+      213: -283235619057593569
+    second: Psychic Background Change 3_2
+  - first:
+      213: 8569205769990412487
+    second: Psychic Background Change 3_3
+  - first:
+      213: -2379338033372409692
+    second: Psychic Background Change 3_4
+  - first:
+      213: 6019039298247552007
+    second: Psychic Background Change 3_5
+  - first:
+      213: 6732143209579933740
+    second: Psychic Background Change 3_6
+  - first:
+      213: 2436277851240092196
+    second: Psychic Background Change 3_7
+  - first:
+      213: 3799722937045594428
+    second: Psychic Background Change 3_8
+  - first:
+      213: 3325692147145673450
+    second: Psychic Background Change 3_9
+  - first:
+      213: -2937983275678926615
+    second: Psychic Background Change 3_10
+  - first:
+      213: 2650120904919137924
+    second: Psychic Background Change 3_11
+  - first:
+      213: -3502569510175091476
+    second: Psychic Background Change 3_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Psychic Background Change 3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 891
+        width: 91
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8adb37747e90730800000000000000
+      internalID: 3965955240946936030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 1180
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f774801392f72780800000000000000
+      internalID: -8707724641046333453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_2
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 1009
+        width: 109
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13955284beb11cf0800000000000000
+      internalID: -283235619057593569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_3
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 1055
+        width: 57
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c891870f3febe670800000000000000
+      internalID: 8569205769990412487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_4
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 333
+        width: 563
+        height: 747
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0d2483aa4eafed0800000000000000
+      internalID: -2379338033372409692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 136
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c692df95ce78350800000000000000
+      internalID: 6019039298247552007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_6
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 127
+        width: 235
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20f118a4906d6d50800000000000000
+      internalID: 6732143209579933740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_7
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 435
+        width: 107
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42251593cc56fc120800000000000000
+      internalID: 2436277851240092196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_8
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 609
+        width: 131
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31b18321e35bb430800000000000000
+      internalID: 3799722937045594428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_9
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 0
+        width: 603
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea8ce6336b372e20800000000000000
+      internalID: 3325692147145673450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 65
+        width: 16
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e87e11e6cf2a37d0800000000000000
+      internalID: -2937983275678926615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_11
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 11
+        width: 151
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48eba8d0cee17c420800000000000000
+      internalID: 2650120904919137924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Psychic Background Change 3_12
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 0
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce456e0869f546fc0800000000000000
+      internalID: -3502569510175091476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Psychic Background Change 3_0: 3965955240946936030
+      Psychic Background Change 3_1: -8707724641046333453
+      Psychic Background Change 3_10: -2937983275678926615
+      Psychic Background Change 3_11: 2650120904919137924
+      Psychic Background Change 3_12: -3502569510175091476
+      Psychic Background Change 3_2: -283235619057593569
+      Psychic Background Change 3_3: 8569205769990412487
+      Psychic Background Change 3_4: -2379338033372409692
+      Psychic Background Change 3_5: 6019039298247552007
+      Psychic Background Change 3_6: 6732143209579933740
+      Psychic Background Change 3_7: 2436277851240092196
+      Psychic Background Change 3_8: 3799722937045594428
+      Psychic Background Change 3_9: 3325692147145673450
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

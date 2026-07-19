@@ -20,7 +20,7 @@ Where to go now?#player
     Welcome to the cafe. #narrator
     // .#entrance:toad1
     // .#entrance:toad2
-    .#entrance:toad3
+    .#entrance:toad1
     Ribbit! #exp:ribbit
     Hmmm.
     Ugh. #exp:frown

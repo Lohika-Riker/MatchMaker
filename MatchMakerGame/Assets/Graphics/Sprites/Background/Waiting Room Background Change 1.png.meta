@@ -1,0 +1,1651 @@
+fileFormatVersion: 2
+guid: bf9370825f31f4eaf939aaeb790d1590
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3695898445568924289
+    second: Waiting Room Background Change 1_0
+  - first:
+      213: 5414396924841783055
+    second: Waiting Room Background Change 1_1
+  - first:
+      213: 4480102958428579555
+    second: Waiting Room Background Change 1_2
+  - first:
+      213: 8588568812268425142
+    second: Waiting Room Background Change 1_3
+  - first:
+      213: -4153343056783965532
+    second: Waiting Room Background Change 1_4
+  - first:
+      213: -2064657880875126239
+    second: Waiting Room Background Change 1_5
+  - first:
+      213: -2168995832015117772
+    second: Waiting Room Background Change 1_6
+  - first:
+      213: 1590797076536731727
+    second: Waiting Room Background Change 1_7
+  - first:
+      213: 5915982964454756108
+    second: Waiting Room Background Change 1_8
+  - first:
+      213: -2272237124645072942
+    second: Waiting Room Background Change 1_9
+  - first:
+      213: 4729880989532345559
+    second: Waiting Room Background Change 1_10
+  - first:
+      213: -6410688144344005401
+    second: Waiting Room Background Change 1_11
+  - first:
+      213: 1045012331258051059
+    second: Waiting Room Background Change 1_12
+  - first:
+      213: 5798773849472103260
+    second: Waiting Room Background Change 1_13
+  - first:
+      213: 6711333881238161581
+    second: Waiting Room Background Change 1_14
+  - first:
+      213: 3578177085156464186
+    second: Waiting Room Background Change 1_15
+  - first:
+      213: 1786853145759621540
+    second: Waiting Room Background Change 1_16
+  - first:
+      213: 7019902596325606828
+    second: Waiting Room Background Change 1_17
+  - first:
+      213: 2542036628832349834
+    second: Waiting Room Background Change 1_18
+  - first:
+      213: 7584574475921106649
+    second: Waiting Room Background Change 1_19
+  - first:
+      213: -4620281648503171280
+    second: Waiting Room Background Change 1_20
+  - first:
+      213: 8096442288556220553
+    second: Waiting Room Background Change 1_21
+  - first:
+      213: -6664703577616517169
+    second: Waiting Room Background Change 1_22
+  - first:
+      213: -9183315572647549017
+    second: Waiting Room Background Change 1_23
+  - first:
+      213: -5874847572527621395
+    second: Waiting Room Background Change 1_24
+  - first:
+      213: 2114598010886226066
+    second: Waiting Room Background Change 1_25
+  - first:
+      213: -2732811061783462616
+    second: Waiting Room Background Change 1_26
+  - first:
+      213: -890771789764187971
+    second: Waiting Room Background Change 1_27
+  - first:
+      213: 5748251388810414051
+    second: Waiting Room Background Change 1_28
+  - first:
+      213: 9173896477742092439
+    second: Waiting Room Background Change 1_29
+  - first:
+      213: 6246380392361150208
+    second: Waiting Room Background Change 1_30
+  - first:
+      213: 5227236802358892006
+    second: Waiting Room Background Change 1_31
+  - first:
+      213: 5205562805891181603
+    second: Waiting Room Background Change 1_32
+  - first:
+      213: -3778068278840033132
+    second: Waiting Room Background Change 1_33
+  - first:
+      213: -7872609672498907057
+    second: Waiting Room Background Change 1_34
+  - first:
+      213: -9138139108149763272
+    second: Waiting Room Background Change 1_35
+  - first:
+      213: -2361898712690712031
+    second: Waiting Room Background Change 1_36
+  - first:
+      213: -5331743674176995844
+    second: Waiting Room Background Change 1_37
+  - first:
+      213: -2065697986400613157
+    second: Waiting Room Background Change 1_38
+  - first:
+      213: -1281954076992861801
+    second: Waiting Room Background Change 1_39
+  - first:
+      213: -3678701285668117702
+    second: Waiting Room Background Change 1_40
+  - first:
+      213: -7599090550308962554
+    second: Waiting Room Background Change 1_41
+  - first:
+      213: -1340062975547496574
+    second: Waiting Room Background Change 1_42
+  - first:
+      213: -4090234546483940436
+    second: Waiting Room Background Change 1_43
+  - first:
+      213: -9134195521952450673
+    second: Waiting Room Background Change 1_44
+  - first:
+      213: -1824990047699757144
+    second: Waiting Room Background Change 1_45
+  - first:
+      213: -8584263279409856824
+    second: Waiting Room Background Change 1_46
+  - first:
+      213: 7132183095200315261
+    second: Waiting Room Background Change 1_47
+  - first:
+      213: 6657019836882084375
+    second: Waiting Room Background Change 1_48
+  - first:
+      213: -5495409819561356414
+    second: Waiting Room Background Change 1_49
+  - first:
+      213: 7939501586192140577
+    second: Waiting Room Background Change 1_50
+  - first:
+      213: 5535803429611872204
+    second: Waiting Room Background Change 1_51
+  - first:
+      213: -1595433919755573135
+    second: Waiting Room Background Change 1_52
+  - first:
+      213: -1535440039031166691
+    second: Waiting Room Background Change 1_53
+  - first:
+      213: 4435080213167927495
+    second: Waiting Room Background Change 1_54
+  - first:
+      213: 8493554508129485976
+    second: Waiting Room Background Change 1_55
+  - first:
+      213: -134289655470150976
+    second: Waiting Room Background Change 1_56
+  - first:
+      213: 8707533033099713440
+    second: Waiting Room Background Change 1_57
+  - first:
+      213: 8954668538122048376
+    second: Waiting Room Background Change 1_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_0
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1018
+        width: 109
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18add06fd087a4330800000000000000
+      internalID: 3695898445568924289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 88
+        width: 512
+        height: 961
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f6922015dc32b40800000000000000
+      internalID: 5414396924841783055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_2
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 980
+        width: 121
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6ef4277e58c2e30800000000000000
+      internalID: 4480102958428579555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_3
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 991
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf0240a4d9b03770800000000000000
+      internalID: 8588568812268425142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_4
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1005
+        width: 88
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a28e06ce7c5c56c0800000000000000
+      internalID: -4153343056783965532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_5
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1047
+        width: 68
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1223abba89cd853e0800000000000000
+      internalID: -2064657880875126239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_6
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 565
+        width: 19
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432af6958cd26e1e0800000000000000
+      internalID: -2168995832015117772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_7
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 708
+        width: 60
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48a3b04385a31610800000000000000
+      internalID: 1590797076536731727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_8
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 408
+        width: 110
+        height: 672
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f8695792bc91250800000000000000
+      internalID: 5915982964454756108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_9
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 878
+        width: 88
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df431cbf546770e0800000000000000
+      internalID: -2272237124645072942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_10
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 909
+        width: 18
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4d2f233b9e3a140800000000000000
+      internalID: 4729880989532345559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_11
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 781
+        width: 64
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e441961919a807a0800000000000000
+      internalID: -6410688144344005401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_12
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 877
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9f986bd21a08e00800000000000000
+      internalID: 1045012331258051059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 790
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53fb96c712697050800000000000000
+      internalID: 5798773849472103260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_14
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 742
+        width: 26
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da88e385b92732d50800000000000000
+      internalID: 6711333881238161581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_15
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 783
+        width: 16
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a369138d91d38a130800000000000000
+      internalID: 3578177085156464186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_16
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 625
+        width: 15
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1aaca087d2cc810800000000000000
+      internalID: 1786853145759621540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_17
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 745
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca584d3e734bb6160800000000000000
+      internalID: 7019902596325606828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_18
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 755
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e659b78d0274320800000000000000
+      internalID: 2542036628832349834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_19
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 695
+        width: 6
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6a5c11d42d14960800000000000000
+      internalID: 7584574475921106649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_20
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 674
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03756bae15671efb0800000000000000
+      internalID: -4620281648503171280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_21
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 564
+        width: 46
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98028d95d575c5070800000000000000
+      internalID: 8096442288556220553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_22
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 713
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc774e248673283a0800000000000000
+      internalID: -6664703577616517169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_23
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 607
+        width: 24
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7a708542f4e8080800000000000000
+      internalID: -9183315572647549017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_24
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 619
+        width: 81
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deadce15249587ea0800000000000000
+      internalID: -5874847572527621395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_25
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 519
+        width: 8
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2900f91ffaf885d10800000000000000
+      internalID: 2114598010886226066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_26
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 578
+        width: 14
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d732081da131ad0800000000000000
+      internalID: -2732811061783462616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_27
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 472
+        width: 13
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8aa27d6c753a3f0800000000000000
+      internalID: -890771789764187971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_28
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 537
+        width: 22
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e7c0bdbe24e5cf40800000000000000
+      internalID: 5748251388810414051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_29
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 292
+        width: 13
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790560abd3a305f70800000000000000
+      internalID: 9173896477742092439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_30
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 421
+        width: 158
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007c6a24fd99fa650800000000000000
+      internalID: 6246380392361150208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_31
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 390
+        width: 40
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e553793d20ea8840800000000000000
+      internalID: 5227236802358892006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_32
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 368
+        width: 18
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c212daacfdd3840800000000000000
+      internalID: 5205562805891181603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_33
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 460
+        width: 174
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490819edaea919bc0800000000000000
+      internalID: -3778068278840033132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_34
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 408
+        width: 181
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48f567b63fdeb290800000000000000
+      internalID: -7872609672498907057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_35
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 445
+        width: 88
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833e0a6a5eece2180800000000000000
+      internalID: -9138139108149763272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_36
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 219
+        width: 162
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1222e9a72a9d83fd0800000000000000
+      internalID: -2361898712690712031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_37
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 306
+        width: 134
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd7e3b8067d106b0800000000000000
+      internalID: -5331743674176995844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_38
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 83
+        width: 87
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc0a5b30aa2553e0800000000000000
+      internalID: -2065697986400613157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_39
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 126
+        width: 18
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7990a7e1f85953ee0800000000000000
+      internalID: -1281954076992861801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_40
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 193
+        width: 42
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33aaf8dba0a2fcc0800000000000000
+      internalID: -3678701285668117702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_41
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 320
+        width: 27
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f7eccf76b9a8690800000000000000
+      internalID: -7599090550308962554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_42
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 177
+        width: 37
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287a6ddd2d3276de0800000000000000
+      internalID: -1340062975547496574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_43
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 0
+        width: 34
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca33bc8d9519c37c0800000000000000
+      internalID: -4090234546483940436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_44
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 50
+        width: 69
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f877f0d5191dc3180800000000000000
+      internalID: -9134195521952450673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_45
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 99
+        width: 57
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a79b3888355ca6e0800000000000000
+      internalID: -1824990047699757144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_46
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 150
+        width: 13
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce785c57029ed880800000000000000
+      internalID: -8584263279409856824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_47
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 90
+        width: 90
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77f576bcba9af260800000000000000
+      internalID: 7132183095200315261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_48
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 154
+        width: 7
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712e510754c726c50800000000000000
+      internalID: 6657019836882084375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_49
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 63
+        width: 45
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2831ad192e16cb3b0800000000000000
+      internalID: -5495409819561356414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_50
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 123
+        width: 21
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12902aa90a6ce2e60800000000000000
+      internalID: 7939501586192140577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_51
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 124
+        width: 16
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf9768a3ef13dc40800000000000000
+      internalID: 5535803429611872204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_52
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 184
+        width: 12
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1782c5e8d41ebd9e0800000000000000
+      internalID: -1595433919755573135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 47
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19a2ab6b6501bae0800000000000000
+      internalID: -1535440039031166691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_54
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 32
+        width: 121
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0fc30b4f19c8d30800000000000000
+      internalID: 4435080213167927495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_55
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 4
+        width: 68
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894c97903da2fd570800000000000000
+      internalID: 8493554508129485976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_56
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 32
+        width: 64
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca21b41548e22ef0800000000000000
+      internalID: -134289655470150976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_57
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 0
+        width: 266
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab53ebb82f57d870800000000000000
+      internalID: 8707533033099713440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waiting Room Background Change 1_58
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 0
+        width: 46
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8739120779f554c70800000000000000
+      internalID: 8954668538122048376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Waiting Room Background Change 1_0: 3695898445568924289
+      Waiting Room Background Change 1_1: 5414396924841783055
+      Waiting Room Background Change 1_10: 4729880989532345559
+      Waiting Room Background Change 1_11: -6410688144344005401
+      Waiting Room Background Change 1_12: 1045012331258051059
+      Waiting Room Background Change 1_13: 5798773849472103260
+      Waiting Room Background Change 1_14: 6711333881238161581
+      Waiting Room Background Change 1_15: 3578177085156464186
+      Waiting Room Background Change 1_16: 1786853145759621540
+      Waiting Room Background Change 1_17: 7019902596325606828
+      Waiting Room Background Change 1_18: 2542036628832349834
+      Waiting Room Background Change 1_19: 7584574475921106649
+      Waiting Room Background Change 1_2: 4480102958428579555
+      Waiting Room Background Change 1_20: -4620281648503171280
+      Waiting Room Background Change 1_21: 8096442288556220553
+      Waiting Room Background Change 1_22: -6664703577616517169
+      Waiting Room Background Change 1_23: -9183315572647549017
+      Waiting Room Background Change 1_24: -5874847572527621395
+      Waiting Room Background Change 1_25: 2114598010886226066
+      Waiting Room Background Change 1_26: -2732811061783462616
+      Waiting Room Background Change 1_27: -890771789764187971
+      Waiting Room Background Change 1_28: 5748251388810414051
+      Waiting Room Background Change 1_29: 9173896477742092439
+      Waiting Room Background Change 1_3: 8588568812268425142
+      Waiting Room Background Change 1_30: 6246380392361150208
+      Waiting Room Background Change 1_31: 5227236802358892006
+      Waiting Room Background Change 1_32: 5205562805891181603
+      Waiting Room Background Change 1_33: -3778068278840033132
+      Waiting Room Background Change 1_34: -7872609672498907057
+      Waiting Room Background Change 1_35: -9138139108149763272
+      Waiting Room Background Change 1_36: -2361898712690712031
+      Waiting Room Background Change 1_37: -5331743674176995844
+      Waiting Room Background Change 1_38: -2065697986400613157
+      Waiting Room Background Change 1_39: -1281954076992861801
+      Waiting Room Background Change 1_4: -4153343056783965532
+      Waiting Room Background Change 1_40: -3678701285668117702
+      Waiting Room Background Change 1_41: -7599090550308962554
+      Waiting Room Background Change 1_42: -1340062975547496574
+      Waiting Room Background Change 1_43: -4090234546483940436
+      Waiting Room Background Change 1_44: -9134195521952450673
+      Waiting Room Background Change 1_45: -1824990047699757144
+      Waiting Room Background Change 1_46: -8584263279409856824
+      Waiting Room Background Change 1_47: 7132183095200315261
+      Waiting Room Background Change 1_48: 6657019836882084375
+      Waiting Room Background Change 1_49: -5495409819561356414
+      Waiting Room Background Change 1_5: -2064657880875126239
+      Waiting Room Background Change 1_50: 7939501586192140577
+      Waiting Room Background Change 1_51: 5535803429611872204
+      Waiting Room Background Change 1_52: -1595433919755573135
+      Waiting Room Background Change 1_53: -1535440039031166691
+      Waiting Room Background Change 1_54: 4435080213167927495
+      Waiting Room Background Change 1_55: 8493554508129485976
+      Waiting Room Background Change 1_56: -134289655470150976
+      Waiting Room Background Change 1_57: 8707533033099713440
+      Waiting Room Background Change 1_58: 8954668538122048376
+      Waiting Room Background Change 1_6: -2168995832015117772
+      Waiting Room Background Change 1_7: 1590797076536731727
+      Waiting Room Background Change 1_8: 5915982964454756108
+      Waiting Room Background Change 1_9: -2272237124645072942
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
