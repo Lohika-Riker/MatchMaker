@@ -20,6 +20,7 @@ public class InkManager : MonoBehaviour
     // [SerializeField] private GameObject continueButton;
     [SerializeField] private CharacterSpriteHolder characterSpriteHolder;
     [SerializeField] private MusicManager musicManager;
+    [SerializeField] private CardGame cardGame;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
     private CanvasGroup playerCharacterCanvasGroup;
     private Vector3 playerCharacterVisiblePosition;
@@ -30,6 +31,11 @@ public class InkManager : MonoBehaviour
 
     void Start()
     {
+        if (cardGame == null)
+        {
+            cardGame = FindFirstObjectByType<CardGame>();
+        }
+
         playerTalkingBounceAnimator = GetOrAddTalkingBounceAnimator(playerCharacterPanel);
         SetupPlayerCharacterPanel();
         StartStory();
@@ -113,6 +119,44 @@ public class InkManager : MonoBehaviour
                         Debug.LogError($"Invalid expression '{parts[1]}' for character '{currentCharacter}'. Please check the Ink script and ensure the expression is defined correctly. Error: {e.Message}");      
                     // characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
                     }
+                }
+                else if (parts[0] == "cards" && parts.Length > 1)
+                {
+                    if (cardGame != null)
+                    {
+                        switch (parts[1])
+                        {
+                            case "fan":
+                                cardGame.GenerateDeck();
+                                break;
+                            case "selectLeft":
+                                cardGame.SelectLeftCard();
+                                break;
+                            case "selectMiddle":
+                                cardGame.SelectMiddleCard();
+                                break;
+                            case "selectRight":
+                                cardGame.SelectRightCard();
+                                break;
+                            case "discard":
+                                cardGame.DiscardSelectedCard();
+                                break;
+                            case "collapse":
+                                cardGame.CollapseDeck();
+                                break;
+                            default:
+                                Debug.LogWarning($"Unknown cards tag action: '{parts[1]}'.");
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError($"Cannot process '{tag}': no CardGame was found in the scene.");
+                    }
+                }
+                else if (parts[0] == "clearDialogue")
+                {
+                    ClearDialogue();
                 }
             }
 

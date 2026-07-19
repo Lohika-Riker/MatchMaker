@@ -54,8 +54,7 @@ public class CardGame : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            cards[cardNumber].DiscardCard();
-            CollapseDeck();
+            DiscardSelectedCard();
         }
     }
 
@@ -129,6 +128,77 @@ public class CardGame : MonoBehaviour
         }
 
         StartCoroutine(CollapseDeckRoutine());
+    }
+
+    public void DiscardSelectedCard()
+    {
+        if (isDeckAnimating || !HasDeck()
+            || cardNumber < 0 || cardNumber >= cards.Length
+            || cards[cardNumber] == null || !cards[cardNumber].IsSelected)
+        {
+            return;
+        }
+
+        cards[cardNumber].DiscardCard();
+        CollapseDeck();
+    }
+
+    public void SelectLeftCard()
+    {
+        SelectRandomCardFromThird(0);
+    }
+
+    public void SelectMiddleCard()
+    {
+        SelectRandomCardFromThird(1);
+    }
+
+    public void SelectRightCard()
+    {
+        SelectRandomCardFromThird(2);
+    }
+
+    private void SelectRandomCardFromThird(int third)
+    {
+        if (isDeckAnimating || !HasDeck())
+        {
+            return;
+        }
+
+        int startIndex = cards.Length * third / 3;
+        int endIndex = cards.Length * (third + 1) / 3;
+        int availableCards = 0;
+
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            if (cards[i] != null && !cards[i].IsSelected)
+            {
+                availableCards++;
+            }
+        }
+
+        if (availableCards == 0)
+        {
+            Debug.LogWarning($"There are no unselected cards left in deck third {third + 1}.");
+            return;
+        }
+
+        int randomAvailableIndex = Random.Range(0, availableCards);
+
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            if (cards[i] == null || cards[i].IsSelected)
+            {
+                continue;
+            }
+
+            if (randomAvailableIndex-- == 0 && cards[i].SelectCard(cardCounter))
+            {
+                cardNumber = i;
+                cardCounter++;
+                return;
+            }
+        }
     }
 
     private IEnumerator CollapseDeckRoutine()

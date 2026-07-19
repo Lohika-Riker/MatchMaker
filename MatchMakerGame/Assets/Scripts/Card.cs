@@ -16,6 +16,8 @@ public class Card : MonoBehaviour
     private Sequence selectionSequence;
     private int selectedNumber;
 
+    public bool IsSelected => selected;
+
     private void Awake()
     {
         if (cardImage == null)
