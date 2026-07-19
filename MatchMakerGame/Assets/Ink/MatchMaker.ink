@@ -1,5 +1,6 @@
 VAR cardPicked = false
 -> LocationSelect
+// -> Pick_Card_Loop
 
 === LocationSelect
 Where to go now?#player
@@ -8,13 +9,7 @@ Where to go now?#player
     Welcome to the reception. #narrator
     .#entrance:deer
     Oh hi there. 
-    Can I interest you in a test? 
-    The doe pulls out a piece of paper. #narrator
-    #test:2
-    So what do you see here? #clearDialogue
-    ++ Something #player
-    ++ Nothing #player
-    --ok #test:complete #exp:takenotes
+    -> rorschachTest
 + [psychic]
     .#scene:psychic
     Welcome to the psychic. #narrator
@@ -31,6 +26,20 @@ Where to go now?#player
     Ugh. #exp:frown
     Ugh. #exp:glitch
 -Nice... #player
+-> LocationSelect
+
+=== rorschachTest
+Can I interest you in a test? 
+    The doe pulls out a piece of paper. #narrator
+    #test:1
+    So what do you see here? #clearDialogue
+    + A Plane #test:hoverPlane #player
+    + A puppy #test:hoverPuppy #player
+    -Yes, you do... #test:complete #exp:takenotes
+    #test:2
+    And now? #clearDialogue
+    + Happiness? #player
+    -Sure... #test:complete #exp:takenotes
 -> LocationSelect
 
 

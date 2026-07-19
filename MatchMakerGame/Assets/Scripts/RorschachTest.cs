@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,11 +6,9 @@ using UnityEngine.UI;
 public class RorschachTest : MonoBehaviour
 {
     [SerializeField] private Sprite rorschach1,rorschach2, rorschach3; 
-    [SerializeField] private Image testImage;
+    [SerializeField] private Image testImageA, testImageB;
     [SerializeField] private float slideDuration = 0.5f;
-    [SerializeField] private KeyCode showKey = KeyCode.S;
-    [SerializeField] private KeyCode hideKey = KeyCode.H;
-    [SerializeField] private KeyCode swapImageKey = KeyCode.Space;
+
     [SerializeField] private float pulseScale = 1.03f;
     [SerializeField] private float pulseDuration = 1.25f;
     [SerializeField] private float rotationAngle = 2f;
@@ -21,6 +20,7 @@ public class RorschachTest : MonoBehaviour
     private Vector2 hiddenPosition;
     private Vector3 restingScale;
     private Vector3 restingRotation;
+    private float fadeTime = 1.5f;
 
     void Awake()
     {
@@ -41,20 +41,7 @@ public class RorschachTest : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(showKey))
-        {
-            Show();
-        }
 
-        if (Input.GetKeyDown(hideKey))
-        {
-            Hide();
-        }
-
-        if (Input.GetKeyDown(swapImageKey))
-        {
-            SwapImage();
-        }
     }
 
     public void Hide()
@@ -116,19 +103,35 @@ public class RorschachTest : MonoBehaviour
 
         if (testNumber == 1)
         {
-            testImage.sprite = rorschach1;
+            testImageA.sprite = rorschach1;
+            testImageB.sprite = rorschach2;
+            testImageB.DOFade(0, 0);
+
         }
         else if (testNumber == 2)
         {
-            testImage.sprite = rorschach2;
+            testImageA.sprite = rorschach3;
         }
-        else if (testNumber == 3)
-        {
-            testImage.sprite = rorschach3;
-        }
+        // else if (testNumber == 3)
+        // {
+        //     testImageA.sprite = rorschach3;
+        // }
         else
         {
             Debug.LogWarning($"Rorschach test {testNumber} does not exist.");
         }
     }
+
+    public void FadeImageA()
+    {
+        testImageA.DOFade(1, fadeTime).SetEase(Ease.OutSine);
+        testImageB.DOFade(0, fadeTime).SetEase(Ease.OutSine);
+    }
+
+    public void FadeImageB()
+    {
+        testImageB.DOFade(1, fadeTime).SetEase(Ease.OutSine);
+        testImageA.DOFade(0, fadeTime).SetEase(Ease.OutSine);
+    }
+ 
 }

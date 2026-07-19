@@ -531,6 +531,7 @@ public class InkManager : MonoBehaviour
                 LayoutRebuilder.ForceRebuildLayoutImmediate(choiceInstance.GetComponent<RectTransform>());
                 choiceInstance.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => OnClickChoice(choice));
                 ConfigureCardChoiceHover(choiceInstance, choice);
+                ConfigureTestChoiceHover(choiceInstance, choice);
             }
         }
     }
@@ -566,6 +567,32 @@ public class InkManager : MonoBehaviour
         EventTrigger.Entry exit = new EventTrigger.Entry { eventID = EventTriggerType.PointerExit };
         exit.callback.AddListener(_ => cardGame.StopPreviewingCard(capturedThird));
         trigger.triggers.Add(exit);
+    }
+
+    private void ConfigureTestChoiceHover(GameObject choiceInstance, Choice choice)
+    {
+        if (choice.tags == null)
+        {
+            return;
+        }
+        EventTrigger trigger = choiceInstance.GetComponent<EventTrigger>();
+        if (trigger == null)
+        {
+            trigger = choiceInstance.AddComponent<EventTrigger>();
+        }
+
+        if (choice.tags.Contains("test:hoverPlane"))
+        {
+            EventTrigger.Entry enter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
+            enter.callback.AddListener(_ => rorschachTest.FadeImageB());
+            trigger.triggers.Add(enter);
+        }
+        else if (choice.tags.Contains("test:hoverPuppy"))
+        {
+            EventTrigger.Entry enter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
+            enter.callback.AddListener(_ => rorschachTest.FadeImageA());
+            trigger.triggers.Add(enter);
+        }
     }
 
     public void OnClickChoice(Choice choice)
