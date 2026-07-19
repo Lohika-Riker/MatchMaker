@@ -1,11 +1,28 @@
 VAR cardPicked = false
--> Pick_Card_Loop
+-> LocationSelect
+
+=== LocationSelect
+Where to go now?#player
++ [reception]
+    .#scene:reception
+    Welcome to the reception. #narrator
+    .#entrance:deer
+    Oh hi there. 
++ [psychic]
+    .#scene:psychic
+    Welcome to the psychic. #narrator
+    .#entrance:owl
+    Hoo!
+-Nice... #player
+-> LocationSelect
+
+
 === receptionist ===
 You enter an unfamiliar place. #narrator
 //  #entrance:deer
 #entrance:player
 Hi. #player
-#entrance:owl
+// #entrance:owl
 Well, hello there!
 Welcome to Match Maker. #exp:smile
 Thanks. #player
@@ -62,7 +79,8 @@ Ok. #player
 
 
 == Pick_Card_Loop
-.#entrance:owl
+#scene:psychic
+// .#entrance:owl
 Are you ready? #clearDialogue
 The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator #cards:fan
 Which of these speak to you?
@@ -74,7 +92,8 @@ Which of these speak to you?
     #cards:selectRight
 - Let's see... #clearDialogue
 {The card reads: The Imprisoned Man | The card reads: Life}
-{cardPicked == true: -> After_Card_Picks | Oh, I don't know how that got in there. Let me do that again.} #cards:discard
+{cardPicked == true: -> After_Card_Picks | Oh, I don't know how that got in there. Let me do that again.}
+#cards:discard
 ~cardPicked = true
 
 ->Pick_Card_Loop

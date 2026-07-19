@@ -22,10 +22,13 @@ public class InkManager : MonoBehaviour
     [SerializeField] private CharacterSpriteHolder characterSpriteHolder;
     [SerializeField] private MusicManager musicManager;
     [SerializeField] private CardGame cardGame;
+    [SerializeField] private Image background;
+    [SerializeField] private Sprite recptionBackground, psychicBackground, cafeBackground;
+    [SerializeField] private FadeToBlack fadeToBlack;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
     private CanvasGroup playerCharacterCanvasGroup;
     private Vector3 playerCharacterVisiblePosition;
-    
+
     private character currentCharacter;
 
     // [SerializeField] private expressionPair[] doeExpressionPairs, owlExpressionPairs, toadExpressionPairs;
@@ -54,7 +57,7 @@ public class InkManager : MonoBehaviour
     private void StartStory()
     {
         story = new Story(inkJsonAsset.text);
-        
+
         ClearDialogue();
         ClearChoices();
         narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
@@ -69,8 +72,8 @@ public class InkManager : MonoBehaviour
         if (story.canContinue)
         {
             narratorPanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.OutBack);
-            string text = story.Continue(); 
-            text = text?.Trim(); 
+            string text = story.Continue();
+            text = text?.Trim();
 
             // character entrance
 
@@ -84,26 +87,26 @@ public class InkManager : MonoBehaviour
                     {
                         characterSpriteHolder.ShowCharacter(character.doe);
                         currentCharacter = character.doe;
-                        DisplayNextLine();
+                        // DisplayNextLine();
                         return;
                     }
                     else if (parts[1] == "owl")
                     {
                         characterSpriteHolder.ShowCharacter(character.owl);
                         currentCharacter = character.owl;
-                        DisplayNextLine();
+                        // DisplayNextLine();
                         return;
                     }
                     else if (parts[1] == "toad")
                     {
                         characterSpriteHolder.ShowCharacter(character.toad);
-                        DisplayNextLine();
+                        // DisplayNextLine();
                         return;
                     }
                     else if (parts[1] == "player")
                     {
                         ShowPlayerCharacter();
-                        DisplayNextLine();
+                        // DisplayNextLine();
                         return;
                     }
                 }
@@ -117,9 +120,14 @@ public class InkManager : MonoBehaviour
                     }
                     catch (ArgumentException e)
                     {
-                        Debug.LogError($"Invalid expression '{parts[1]}' for character '{currentCharacter}'. Please check the Ink script and ensure the expression is defined correctly. Error: {e.Message}");      
-                    // characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
+                        Debug.LogError($"Invalid expression '{parts[1]}' for character '{currentCharacter}'. Please check the Ink script and ensure the expression is defined correctly. Error: {e.Message}");
+                        // characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
                     }
+                }
+                else if (parts[0] == "scene" && parts.Length > 1)
+                {
+                    StartCoroutine(SceneTransition(parts[1]));
+                    return;
                 }
                 else if (parts[0] == "cards" && parts.Length > 1)
                 {
@@ -154,6 +162,7 @@ public class InkManager : MonoBehaviour
                     {
                         Debug.LogError($"Cannot process '{tag}': no CardGame was found in the scene.");
                     }
+                    return;
                 }
                 else if (parts[0] == "clearDialogue")
                 {
@@ -174,7 +183,7 @@ public class InkManager : MonoBehaviour
             if (story.currentTags.Contains("player"))
             {
                 prefab = dialoguePrefabPlayer;
-                player = true;  
+                player = true;
             }
             else if (story.currentTags.Contains("narrator"))
             {
@@ -198,13 +207,53 @@ public class InkManager : MonoBehaviour
         else
         {
             Debug.Log("End of story reached.");
-            // continueButton.SetActive(false);
-            // otherCharacterPanel.transform.DOLocalMoveX(1300, 0.5f).SetEase(Ease.OutBack);
             characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
             HidePlayerCharacter();
             ClearDialogue();
         }
-        
+
+    }
+
+    private IEnumerator SceneTransition(string sceneName)
+    {
+        Sprite newBackground = null;
+        character newCharacter = character.none;
+        if (sceneName == "psychic")
+        {
+            newBackground = psychicBackground;
+            newCharacter = character.owl;
+        }
+        else if (sceneName == "reception")
+        {
+            newBackground = recptionBackground;
+            newCharacter = character.doe;
+        }
+        else if (sceneName == "cafe")
+        {
+            newBackground = cafeBackground;
+            newCharacter = character.toad;
+        }
+        else
+        {
+            Debug.LogWarning($"{sceneName} not implemented");
+            yield break; 
+        }
+        yield return new WaitForSeconds(1); // waiting for dialogue line to be displayed
+        StartCoroutine(characterSpriteHolder.HideCharacter(false));
+        HidePlayerCharacter();
+        fadeToBlack.Fade(true);
+        yield return new WaitForSeconds(2);
+        background.sprite = newBackground;
+        yield return new WaitForSeconds(0.1f);
+        ClearDialogue();
+        fadeToBlack.Fade(false);
+        yield return new WaitForSeconds(1);
+        ShowPlayerCharacter();
+        yield return new WaitForSeconds(1);
+        // characterSpriteHolder.ShowCharacter(newCharacter);
+        // yield return new WaitForSeconds(0.5f);
+        DisplayNextLine();
+
     }
 
     private IEnumerator DisplayNarratorText(string text)
@@ -222,7 +271,7 @@ public class InkManager : MonoBehaviour
         dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
         yield return null; // Wait for one frame to ensure the UI is updated
         LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueInstance.GetComponent<RectTransform>());
-        
+
         dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text = "";
         if (player)
         {
@@ -236,7 +285,7 @@ public class InkManager : MonoBehaviour
             else if (currentCharacter == character.toad) musicManager.StartToadTalk();
         }
 
-        foreach(char c in text)
+        foreach (char c in text)
         {
             dialogueInstance.GetComponentInChildren<TextMeshProUGUI>().text += c;
             if (c == '.' || c == '!' || c == '?')
@@ -245,11 +294,11 @@ public class InkManager : MonoBehaviour
             }
             else if (c == ' ')
             {
-                yield return new WaitForSeconds(0.1f); 
+                yield return new WaitForSeconds(0.1f);
             }
             else
             {
-                yield return new WaitForSeconds(0.05f); 
+                yield return new WaitForSeconds(0.05f);
             }
         }
 
@@ -359,7 +408,7 @@ public class InkManager : MonoBehaviour
             {
                 GameObject choiceInstance = Instantiate(choicePrefab, choicePanel.transform);
                 choiceInstance.GetComponentInChildren<TextMeshProUGUI>().text = choice.text;
-                
+
                 LayoutRebuilder.ForceRebuildLayoutImmediate(choiceInstance.GetComponent<RectTransform>());
                 choiceInstance.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => OnClickChoice(choice));
                 ConfigureCardChoiceHover(choiceInstance, choice);
@@ -411,7 +460,7 @@ public class InkManager : MonoBehaviour
         ClearChoices();
         DisplayNextLine();
     }
-    
+
     public void ClearChoices()
     {
         foreach (Transform child in choicePanel.transform)
@@ -427,7 +476,7 @@ public class InkManager : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
-    
+
 
     public void OnClickContinue()
     {
