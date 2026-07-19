@@ -33,29 +33,30 @@ public class CardGame : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            GenerateDeck();
-            return;
-        }
+        // DEBUG 
+        // if (Input.GetKeyDown(KeyCode.LeftArrow))
+        // {
+        //     GenerateDeck();
+        //     return;
+        // }
 
-        if (!HasDeck())
-        {
-            return;
-        }
+        // if (!HasDeck())
+        // {
+        //     return;
+        // }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            cardNumber = Random.Range(0,cardsCount);
-            if (cards[cardNumber].SelectCard(cardCounter))
-            {
-                cardCounter++;
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            DiscardSelectedCard();
-        }
+        // if (Input.GetKeyDown(KeyCode.UpArrow))
+        // {
+        //     cardNumber = Random.Range(0,cardsCount);
+        //     if (cards[cardNumber].SelectCard(cardCounter))
+        //     {
+        //         cardCounter++;
+        //     }
+        // }
+        // else if (Input.GetKeyDown(KeyCode.RightArrow))
+        // {
+        //     DiscardSelectedCard();
+        // }
     }
 
     public void GenerateDeck()
