@@ -26,6 +26,9 @@ public class InkManager : MonoBehaviour
     [SerializeField] private CardGame cardGame;
     [SerializeField] private Image background;
     [SerializeField] private Sprite recptionBackground, psychicBackground, cafeBackground;
+    [SerializeField] private Texture2D[] receptionBackgroundOverlays;
+    [SerializeField] private Texture2D[] psychicBackgroundOverlays;
+    [SerializeField] private Texture2D[] cafeBackgroundOverlays;
     [SerializeField] private FadeToBlack fadeToBlack;
     [SerializeField] private RorschachTest rorschachTest;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
@@ -38,6 +41,9 @@ public class InkManager : MonoBehaviour
     private RectTransform activeDialogueRect;
     private string activeDialogueLine;
     private character currentCharacter;
+    private int currentWeirdFactor;
+    private GameObject backgroundOverlay;
+    private Sprite backgroundOverlaySprite;
 
     void Start()
     {
@@ -92,13 +98,15 @@ public class InkManager : MonoBehaviour
 
     private void OnWeirdFactorChanged(string variableName, object newValue)
     {
+        currentWeirdFactor = Convert.ToInt32(newValue);
+
         if (musicManager == null)
         {
             Debug.LogWarning("Cannot update the music weird factor: no MusicManager is assigned.");
             return;
         }
 
-        musicManager.SetWeirdFactor(Convert.ToInt32(newValue));
+        musicManager.SetWeirdFactor(currentWeirdFactor);
     }
 
     public void DisplayNextLine()
@@ -293,20 +301,24 @@ public class InkManager : MonoBehaviour
     private IEnumerator SceneTransition(string sceneName)
     {
         Sprite newBackground;
+        Texture2D[] backgroundOverlays;
         // character newCharacter = character.none;
         if (sceneName == "psychic")
         {
             newBackground = psychicBackground;
+            backgroundOverlays = psychicBackgroundOverlays;
             // newCharacter = character.owl;
         }
         else if (sceneName == "reception")
         {
             newBackground = recptionBackground;
+            backgroundOverlays = receptionBackgroundOverlays;
             // newCharacter = character.doe;
         }
         else if (sceneName == "cafe")
         {
             newBackground = cafeBackground;
+            backgroundOverlays = cafeBackgroundOverlays;
             // newCharacter = character.toad1;
         }
         else
@@ -321,7 +333,7 @@ public class InkManager : MonoBehaviour
         ClearDialogue();
         fadeToBlack.Fade(true);
         yield return new WaitForSeconds(2);
-        background.sprite = newBackground;
+        AssembleBackground(newBackground, backgroundOverlays);
         yield return new WaitForSeconds(0.1f);
         fadeToBlack.Fade(false);
         yield return new WaitForSeconds(1);
@@ -332,6 +344,44 @@ public class InkManager : MonoBehaviour
         isSceneTransitioning = false;
         DisplayNextLine();
 
+    }
+
+    private void AssembleBackground(Sprite baseBackground, Texture2D[] overlays)
+    {
+        background.sprite = baseBackground;
+
+        if (backgroundOverlay != null)
+        {
+            Destroy(backgroundOverlay);
+            Destroy(backgroundOverlaySprite);
+        }
+
+        int overlayIndex = (currentWeirdFactor - 1) / 2;
+        if (currentWeirdFactor <= 0 || overlays == null || overlayIndex >= overlays.Length || overlays[overlayIndex] == null)
+        {
+            backgroundOverlay = null;
+            backgroundOverlaySprite = null;
+            return;
+        }
+
+        Texture2D overlayTexture = overlays[overlayIndex];
+        backgroundOverlaySprite = Sprite.Create(
+            overlayTexture,
+            new Rect(0f, 0f, overlayTexture.width, overlayTexture.height),
+            new Vector2(0.5f, 0.5f),
+            100f);
+
+        backgroundOverlay = new GameObject($"Background Overlay {overlayIndex + 1}", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+        RectTransform overlayTransform = backgroundOverlay.GetComponent<RectTransform>();
+        overlayTransform.SetParent(background.rectTransform, false);
+        overlayTransform.anchorMin = Vector2.zero;
+        overlayTransform.anchorMax = Vector2.one;
+        overlayTransform.offsetMin = Vector2.zero;
+        overlayTransform.offsetMax = Vector2.zero;
+
+        Image overlayImage = backgroundOverlay.GetComponent<Image>();
+        overlayImage.sprite = backgroundOverlaySprite;
+        overlayImage.raycastTarget = false;
     }
 
     private IEnumerator DisplayNarratorText(string text)
