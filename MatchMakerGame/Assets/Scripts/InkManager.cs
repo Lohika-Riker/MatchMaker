@@ -32,6 +32,7 @@ public class InkManager : MonoBehaviour
     private bool isTyping;
     private bool skipTypewriter;
     private TextMeshProUGUI activeDialogueText;
+    private RectTransform activeDialogueRect;
     private string activeDialogueLine;
 
     private character currentCharacter;
@@ -289,6 +290,7 @@ public class InkManager : MonoBehaviour
     private IEnumerator DisplayText(GameObject dialogueInstance, string text, bool player, float initialDelay = 0f)
     {
         activeDialogueText = dialogueInstance.GetComponentInChildren<TextMeshProUGUI>();
+        activeDialogueRect = dialogueInstance.GetComponent<RectTransform>();
         activeDialogueLine = text;
         skipTypewriter = false;
         isTyping = true;
@@ -340,6 +342,7 @@ public class InkManager : MonoBehaviour
         activeDialogueText.text = text;
         isTyping = false;
         activeDialogueText = null;
+        activeDialogueRect = null;
         activeDialogueLine = null;
 
         if (currentCharacter == character.owl) musicManager.StopOwlTalk();
@@ -363,6 +366,18 @@ public class InkManager : MonoBehaviour
         if (activeDialogueText != null)
         {
             activeDialogueText.text = activeDialogueLine;
+            activeDialogueText.ForceMeshUpdate();
+            Canvas.ForceUpdateCanvases();
+
+            if (activeDialogueRect != null)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(activeDialogueRect);
+
+                if (activeDialogueRect.parent is RectTransform dialogueContainerRect)
+                {
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueContainerRect);
+                }
+            }
         }
     }
 
