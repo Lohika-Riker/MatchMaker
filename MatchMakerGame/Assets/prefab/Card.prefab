@@ -108,8 +108,8 @@ MonoBehaviour:
   cardImage: {fileID: 0}
   selectedColor: {r: 1, g: 1, b: 1, a: 1}
   selectionDuration: 1
-  hangedManCard: {fileID: 21300000, guid: 6405a33e26d384bb4b0ceba36bb9f195, type: 3}
-  loversCard: {fileID: 21300000, guid: a281bd1f8585e445fb84b0be01e7a498, type: 3}
+  hangedManCard: {fileID: 156872168369216711, guid: 8de672c248cc843caa63f1e1378d2693, type: 3}
+  loversCard: {fileID: 5143386987665815921, guid: ddb7d8645f162405ea1d855414bb083a, type: 3}
 --- !u!1 &7724998481360241007
 GameObject:
   m_ObjectHideFlags: 0

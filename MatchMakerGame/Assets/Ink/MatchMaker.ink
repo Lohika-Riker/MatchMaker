@@ -1,5 +1,5 @@
 VAR cardPicked = false
--> LocationSelect
+-> Pick_Card_Loop
 
 === LocationSelect
 Where to go now?#player
@@ -80,9 +80,12 @@ Ok. #player
 
 == Pick_Card_Loop
 #scene:psychic
-// .#entrance:owl
-Are you ready? #clearDialogue
-The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator #cards:fan
+.#clearDialogue
+Are you ready? 
++ [Yes] #entrance:owl
+    Hoo!
+-The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator 
+#cards:fan
 Which of these speak to you?
 + From the left #cards:hoverLeft
     #cards:selectLeft

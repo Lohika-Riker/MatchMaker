@@ -75,6 +75,13 @@ public class InkManager : MonoBehaviour
             string text = story.Continue();
             text = text?.Trim();
 
+            // Handle cleanup before tags such as scene/entrance can return early.
+            if (story.currentTags.Exists(tag =>
+                string.Equals(tag.Trim(), "clearDialogue", StringComparison.OrdinalIgnoreCase)))
+            {
+                ClearDialogue();
+            }
+
             // character entrance
 
             foreach (var tag in story.currentTags)
@@ -163,10 +170,6 @@ public class InkManager : MonoBehaviour
                         Debug.LogError($"Cannot process '{tag}': no CardGame was found in the scene.");
                     }
                     return;
-                }
-                else if (parts[0] == "clearDialogue")
-                {
-                    ClearDialogue();
                 }
             }
 
@@ -473,6 +476,7 @@ public class InkManager : MonoBehaviour
     {
         foreach (Transform child in dialoguePanel.transform)
         {
+            child.gameObject.SetActive(false);
             Destroy(child.gameObject);
         }
     }
