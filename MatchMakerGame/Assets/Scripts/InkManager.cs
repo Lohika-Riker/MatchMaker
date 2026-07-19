@@ -25,6 +25,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private Image background;
     [SerializeField] private Sprite recptionBackground, psychicBackground, cafeBackground;
     [SerializeField] private FadeToBlack fadeToBlack;
+    [SerializeField] private RorschachTest rorschachTest;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
     private CanvasGroup playerCharacterCanvasGroup;
     private Vector3 playerCharacterVisiblePosition;
@@ -34,16 +35,18 @@ public class InkManager : MonoBehaviour
     private TextMeshProUGUI activeDialogueText;
     private RectTransform activeDialogueRect;
     private string activeDialogueLine;
-
     private character currentCharacter;
-
-    // [SerializeField] private expressionPair[] doeExpressionPairs, owlExpressionPairs, toadExpressionPairs;
 
     void Start()
     {
         if (cardGame == null)
         {
             cardGame = FindFirstObjectByType<CardGame>();
+        }
+
+        if (rorschachTest == null)
+        {
+            rorschachTest = FindFirstObjectByType<RorschachTest>();
         }
 
         playerTalkingBounceAnimator = GetOrAddTalkingBounceAnimator(playerCharacterPanel);
@@ -201,6 +204,29 @@ public class InkManager : MonoBehaviour
                         Debug.LogError($"Cannot process '{tag}': no CardGame was found in the scene.");
                     }
                     return;
+                }
+                else if (string.Equals(parts[0].Trim(), "test", StringComparison.OrdinalIgnoreCase) && parts.Length > 1)
+                {
+                    string testAction = parts[1].Trim();
+
+                    if (rorschachTest == null)
+                    {
+                        Debug.LogError($"Cannot process '{tag}': no RorschachTest was found in the scene.");
+                        continue;
+                    }
+
+                    if (string.Equals(testAction, "complete", StringComparison.OrdinalIgnoreCase))
+                    {
+                        rorschachTest.Hide();
+                    }
+                    else if (int.TryParse(testAction, out int testNumber) && testNumber >= 1 && testNumber <= 3)
+                    {
+                        rorschachTest.ShowTest(testNumber);
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Unknown test tag action: '{testAction}'.");
+                    }
                 }
             }
 

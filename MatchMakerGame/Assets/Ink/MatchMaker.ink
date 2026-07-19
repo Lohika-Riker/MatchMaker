@@ -8,6 +8,13 @@ Where to go now?#player
     Welcome to the reception. #narrator
     .#entrance:deer
     Oh hi there. 
+    Can I interest you in a test? 
+    The doe pulls out a piece of paper. #narrator
+    #test:2
+    So what do you see here? #clearDialogue
+    ++ Something #player
+    ++ Nothing #player
+    --ok #test:complete #exp:takenotes
 + [psychic]
     .#scene:psychic
     Welcome to the psychic. #narrator
