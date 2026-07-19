@@ -191,6 +191,11 @@ public class CharacterSpriteHolder : MonoBehaviour
         talkingBounceAnimator.StopTalking();
     }
 
+    public void StopTalkingAnimationImmediately()
+    {
+        talkingBounceAnimator.StopTalkingImmediately();
+    }
+
     public IEnumerator SetExpression(expression expression)
     {
         if (currentCharacter == character.none)

@@ -281,13 +281,23 @@ public class InkManager : MonoBehaviour
 
     private IEnumerator DisplayNarratorText(string text)
     {
+        // Narration has no speaker, so make sure neither character carries a
+        // talking animation into the narrator line.
+        playerTalkingBounceAnimator?.StopTalkingImmediately();
+        characterSpriteHolder.StopTalkingAnimationImmediately();
+
         narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = " "; // sets the current text to the dialogue instance
         // slide in narrator panel
         narratorPanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
-        yield return DisplayText(narratorPanel, text, false, 0.5f);
+        yield return DisplayText(narratorPanel, text, false, 0.5f, false);
     }
 
-    private IEnumerator DisplayText(GameObject dialogueInstance, string text, bool player, float initialDelay = 0f)
+    private IEnumerator DisplayText(
+        GameObject dialogueInstance,
+        string text,
+        bool player,
+        float initialDelay = 0f,
+        bool animateSpeaker = true)
     {
         activeDialogueText = dialogueInstance.GetComponentInChildren<TextMeshProUGUI>();
         activeDialogueRect = dialogueInstance.GetComponent<RectTransform>();
@@ -305,11 +315,11 @@ public class InkManager : MonoBehaviour
             yield return new WaitForSeconds(initialDelay);
         }
 
-        if (player)
+        if (animateSpeaker && player)
         {
             playerTalkingBounceAnimator?.StartTalking();
         }
-        else
+        else if (animateSpeaker)
         {
             characterSpriteHolder.StartTalkingAnimation();
             if (currentCharacter == character.owl) musicManager.StartOwlTalk();
@@ -349,11 +359,11 @@ public class InkManager : MonoBehaviour
         else if (currentCharacter == character.doe) musicManager.StopDoeTalk();
         else if (currentCharacter == character.toad) musicManager.StopToadTalk();
 
-        if (player)
+        if (animateSpeaker && player)
         {
             playerTalkingBounceAnimator?.StopTalking();
         }
-        else
+        else if (animateSpeaker)
         {
             characterSpriteHolder.StopTalkingAnimation();
         }
