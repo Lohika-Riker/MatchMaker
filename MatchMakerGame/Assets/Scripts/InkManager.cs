@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using DG.Tweening;
 using System.Collections;
 using System;
@@ -361,8 +362,42 @@ public class InkManager : MonoBehaviour
                 
                 LayoutRebuilder.ForceRebuildLayoutImmediate(choiceInstance.GetComponent<RectTransform>());
                 choiceInstance.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => OnClickChoice(choice));
+                ConfigureCardChoiceHover(choiceInstance, choice);
             }
         }
+    }
+
+    private void ConfigureCardChoiceHover(GameObject choiceInstance, Choice choice)
+    {
+        if (choice.tags == null || cardGame == null)
+        {
+            return;
+        }
+
+        int third = -1;
+        if (choice.tags.Contains("cards:hoverLeft")) third = 0;
+        else if (choice.tags.Contains("cards:hoverMiddle")) third = 1;
+        else if (choice.tags.Contains("cards:hoverRight")) third = 2;
+
+        if (third < 0)
+        {
+            return;
+        }
+
+        EventTrigger trigger = choiceInstance.GetComponent<EventTrigger>();
+        if (trigger == null)
+        {
+            trigger = choiceInstance.AddComponent<EventTrigger>();
+        }
+
+        int capturedThird = third;
+        EventTrigger.Entry enter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
+        enter.callback.AddListener(_ => cardGame.PreviewCardThird(capturedThird));
+        trigger.triggers.Add(enter);
+
+        EventTrigger.Entry exit = new EventTrigger.Entry { eventID = EventTriggerType.PointerExit };
+        exit.callback.AddListener(_ => cardGame.StopPreviewingCard(capturedThird));
+        trigger.triggers.Add(exit);
     }
 
     public void OnClickChoice(Choice choice)

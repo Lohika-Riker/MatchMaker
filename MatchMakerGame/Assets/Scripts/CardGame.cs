@@ -19,6 +19,8 @@ public class CardGame : MonoBehaviour
     private Sequence fanSequence;
     private bool isDeckAnimating;
     private bool isCollapsed;
+    private readonly int[] previewCardIndices = { -1, -1, -1 };
+    private int activePreviewThird = -1;
 
     void Start()
     {
@@ -67,6 +69,11 @@ public class CardGame : MonoBehaviour
         }
 
         cards = new Card[cardsCount];
+        for (int i = 0; i < previewCardIndices.Length; i++)
+        {
+            previewCardIndices[i] = -1;
+        }
+        activePreviewThird = -1;
         cardNumber = Random.Range(0, cardsCount);
         isCollapsed = false;
         StartCoroutine(GenerateDeckRoutine());
@@ -184,6 +191,17 @@ public class CardGame : MonoBehaviour
             return;
         }
 
+        int previewIndex = previewCardIndices[third];
+        if (previewIndex >= startIndex && previewIndex < endIndex
+            && cards[previewIndex] != null && !cards[previewIndex].IsSelected
+            && cards[previewIndex].SelectCard(cardCounter))
+        {
+            cardNumber = previewIndex;
+            cardCounter++;
+            activePreviewThird = -1;
+            return;
+        }
+
         int randomAvailableIndex = Random.Range(0, availableCards);
 
         for (int i = startIndex; i < endIndex; i++)
@@ -199,6 +217,69 @@ public class CardGame : MonoBehaviour
                 cardCounter++;
                 return;
             }
+        }
+    }
+
+    public void PreviewCardThird(int third)
+    {
+        if (third < 0 || third > 2 || isDeckAnimating || !HasDeck())
+        {
+            return;
+        }
+
+        if (activePreviewThird >= 0 && activePreviewThird != third)
+        {
+            StopPreviewingCard(activePreviewThird);
+        }
+
+        int startIndex = cards.Length * third / 3;
+        int endIndex = cards.Length * (third + 1) / 3;
+        int index = previewCardIndices[third];
+
+        if (index < startIndex || index >= endIndex
+            || cards[index] == null || cards[index].IsSelected)
+        {
+            int randomOffset = Random.Range(0, endIndex - startIndex);
+            index = -1;
+
+            for (int offset = 0; offset < endIndex - startIndex; offset++)
+            {
+                int candidate = startIndex + ((randomOffset + offset) % (endIndex - startIndex));
+                if (cards[candidate] != null && !cards[candidate].IsSelected)
+                {
+                    index = candidate;
+                    break;
+                }
+            }
+
+            if (index < 0)
+            {
+                return;
+            }
+
+            previewCardIndices[third] = index;
+        }
+
+        cards[index].RaiseCard();
+        activePreviewThird = third;
+    }
+
+    public void StopPreviewingCard(int third)
+    {
+        if (third < 0 || third > 2)
+        {
+            return;
+        }
+
+        int index = previewCardIndices[third];
+        if (HasDeck() && index >= 0 && index < cards.Length && cards[index] != null)
+        {
+            cards[index].LowerCard();
+        }
+
+        if (activePreviewThird == third)
+        {
+            activePreviewThird = -1;
         }
     }
 

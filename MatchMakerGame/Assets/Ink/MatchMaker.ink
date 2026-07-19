@@ -66,11 +66,11 @@ Ok. #player
 Are you ready? #clearDialogue
 The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator #cards:fan
 Which of these speak to you?
-+ [From the left]
++ From the left #cards:hoverLeft
     #cards:selectLeft
-+ [From the middle]
++ From the middle #cards:hoverMiddle
     #cards:selectMiddle
-+ [From the right]
++ From the right #cards:hoverRight
     #cards:selectRight
 - Let's see... #clearDialogue
 {The card reads: The Imprisoned Man | The card reads: Life}

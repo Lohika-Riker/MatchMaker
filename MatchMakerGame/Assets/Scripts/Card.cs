@@ -103,11 +103,7 @@ public class Card : MonoBehaviour
     public void RaiseCard()
     {
         if (selected) return;
-
-        if (raised) {
-            LowerCard();
-            return;
-        }
+        if (raised) return;
         
         Vector2 targetPosition = transform.position + (transform.up * distance);
         transform.DOMove(targetPosition, 0.2f);
@@ -117,11 +113,7 @@ public class Card : MonoBehaviour
     public void LowerCard()
     {
         if (selected) return;
-
-        if (!raised) {
-            RaiseCard();
-            return;
-        }
+        if (!raised) return;
         Vector2 targetPosition = transform.position + (-transform.up * distance);
         transform.DOMove(targetPosition, 0.2f);
         raised = false;
