@@ -1,5 +1,5 @@
 VAR cardPicked = false
--> Pick_Card_Loop
+-> LocationSelect
 
 === LocationSelect
 Where to go now?#player
@@ -13,6 +13,15 @@ Where to go now?#player
     Welcome to the psychic. #narrator
     .#entrance:owl
     Hoo!
++ [cafe]
+    .#scene:cafe
+    Welcome to the cafe. #narrator
+    .#entrance:toad1
+    // .#entrance:toad2
+    // .#entrance:toad3
+    Ribbit! #exp:ribbit
+    Hmmm.
+    Ugh. #exp:frown
 -Nice... #player
 -> LocationSelect
 

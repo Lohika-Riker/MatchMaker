@@ -121,10 +121,23 @@ public class InkManager : MonoBehaviour
                         // DisplayNextLine();
                         return;
                     }
-                    else if (parts[1] == "toad")
+                    else if (parts[1] == "toad" || parts[1] == "toad1")
                     {
-                        characterSpriteHolder.ShowCharacter(character.toad);
+                        characterSpriteHolder.ShowCharacter(character.toad1);
+                        currentCharacter = character.toad1;
                         // DisplayNextLine();
+                        return;
+                    }
+                    else if (parts[1] == "toad2")
+                    {
+                        characterSpriteHolder.ShowCharacter(character.toad2);
+                        currentCharacter = character.toad2;
+                        return;
+                    }
+                    else if (parts[1] == "toad3")
+                    {
+                        characterSpriteHolder.ShowCharacter(character.toad3);
+                        currentCharacter = character.toad3;
                         return;
                     }
                     else if (parts[1] == "player")
@@ -252,7 +265,7 @@ public class InkManager : MonoBehaviour
         else if (sceneName == "cafe")
         {
             newBackground = cafeBackground;
-            newCharacter = character.toad;
+            newCharacter = character.toad1;
         }
         else
         {
@@ -263,11 +276,11 @@ public class InkManager : MonoBehaviour
         yield return new WaitForSeconds(1); // waiting for dialogue line to be displayed
         StartCoroutine(characterSpriteHolder.HideCharacter(false));
         HidePlayerCharacter();
+        ClearDialogue();
         fadeToBlack.Fade(true);
         yield return new WaitForSeconds(2);
         background.sprite = newBackground;
         yield return new WaitForSeconds(0.1f);
-        ClearDialogue();
         fadeToBlack.Fade(false);
         yield return new WaitForSeconds(1);
         ShowPlayerCharacter();
@@ -324,7 +337,7 @@ public class InkManager : MonoBehaviour
             characterSpriteHolder.StartTalkingAnimation();
             if (currentCharacter == character.owl) musicManager.StartOwlTalk();
             else if (currentCharacter == character.doe) musicManager.StartDoeTalk();
-            else if (currentCharacter == character.toad) musicManager.StartToadTalk();
+            else if (IsToad(currentCharacter)) musicManager.StartToadTalk();
         }
 
         foreach (char c in text)
@@ -357,7 +370,7 @@ public class InkManager : MonoBehaviour
 
         if (currentCharacter == character.owl) musicManager.StopOwlTalk();
         else if (currentCharacter == character.doe) musicManager.StopDoeTalk();
-        else if (currentCharacter == character.toad) musicManager.StopToadTalk();
+        else if (IsToad(currentCharacter)) musicManager.StopToadTalk();
 
         if (animateSpeaker && player)
         {
@@ -389,6 +402,13 @@ public class InkManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private static bool IsToad(character characterToCheck)
+    {
+        return characterToCheck == character.toad1
+            || characterToCheck == character.toad2
+            || characterToCheck == character.toad3;
     }
 
     private TalkingBounceAnimator GetOrAddTalkingBounceAnimator(GameObject target)
