@@ -23,8 +23,7 @@ public class CardGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             int cardNumber = Random.Range(0,cardsCount);
-            cards[cardNumber].RaiseCard();
-            // RaiseMiddleCard(17);
+            cards[cardNumber].SelectCard();
         }
     }
 
@@ -32,7 +31,7 @@ public class CardGame : MonoBehaviour
     {
         // spawn 22 cards rotated at an increasing offset
         float rotationOffset = cardsCount/2 * angle;
-        float positionOffset = 50;
+        float positionOffset = 200;
         for (int i = 0; i < cardsCount; i++)
         {
             GameObject instance = Instantiate(cardPrefab, this.transform);
