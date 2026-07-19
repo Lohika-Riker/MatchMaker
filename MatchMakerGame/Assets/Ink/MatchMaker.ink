@@ -33,6 +33,8 @@ Where to go now?#player
     Hoo!
     + [increase weirdness]
         ~weirdFactor++
+        Weird factor is now {weirdFactor}. #player
+        -> Psychic
     + [leave]
         -> LocationSelect
 --> Psychic

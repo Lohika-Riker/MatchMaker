@@ -10,6 +10,8 @@ using System;
 
 public class InkManager : MonoBehaviour
 {
+    private const string WeirdFactorVariableName = "weirdFactor";
+
     [SerializeField] private TextAsset inkJsonAsset;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject choicePanel;
@@ -64,7 +66,13 @@ public class InkManager : MonoBehaviour
 
     private void StartStory()
     {
+        if (story != null)
+        {
+            story.RemoveVariableObserver(OnWeirdFactorChanged, WeirdFactorVariableName);
+        }
+
         story = new Story(inkJsonAsset.text);
+        story.ObserveVariable(WeirdFactorVariableName, OnWeirdFactorChanged);
 
         ClearDialogue();
         ClearChoices();
@@ -72,6 +80,25 @@ public class InkManager : MonoBehaviour
         narratorPanel.transform.DOLocalMoveY(-840, 0f);
         choicePanel.transform.DOLocalMoveY(-840, 0f);
         DisplayNextLine();
+    }
+
+    private void OnDestroy()
+    {
+        if (story != null)
+        {
+            story.RemoveVariableObserver(OnWeirdFactorChanged, WeirdFactorVariableName);
+        }
+    }
+
+    private void OnWeirdFactorChanged(string variableName, object newValue)
+    {
+        if (musicManager == null)
+        {
+            Debug.LogWarning("Cannot update the music weird factor: no MusicManager is assigned.");
+            return;
+        }
+
+        musicManager.SetWeirdFactor(Convert.ToInt32(newValue));
     }
 
     public void DisplayNextLine()
