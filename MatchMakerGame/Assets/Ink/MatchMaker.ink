@@ -22,6 +22,7 @@ Where to go now?#player
     Ribbit! #exp:ribbit
     Hmmm.
     Ugh. #exp:frown
+    Ugh. #exp:glitch
 -Nice... #player
 -> LocationSelect
 

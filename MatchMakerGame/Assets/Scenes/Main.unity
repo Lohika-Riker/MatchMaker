@@ -1196,6 +1196,8 @@ MonoBehaviour:
       characterSprite: {fileID: -8396381815551688108, guid: 03d9d23992fcb439eab46def9d44db83, type: 3}
     - characterExpression: 6
       characterSprite: {fileID: 7044736311653077653, guid: df12e0b8905614d71936e2c1f6476d8c, type: 3}
+    - characterExpression: 5
+      characterSprite: {fileID: -4133022775993851928, guid: 0d95b58f07f0c408ea1fdff18484ade8, type: 3}
   - character: 3
     characterPanel: {fileID: 1716210963}
     expressionPairs:
@@ -1205,6 +1207,8 @@ MonoBehaviour:
       characterSprite: {fileID: 6209369703969759979, guid: d49b2b585bda54aedb7fcdd1a67d1795, type: 3}
     - characterExpression: 6
       characterSprite: {fileID: -4771858334902350941, guid: d158eee1d3e624e3e8517bead180b156, type: 3}
+    - characterExpression: 5
+      characterSprite: {fileID: -4133022775993851928, guid: 0d95b58f07f0c408ea1fdff18484ade8, type: 3}
   - character: 4
     characterPanel: {fileID: 1731501009}
     expressionPairs:
@@ -1214,6 +1218,8 @@ MonoBehaviour:
       characterSprite: {fileID: 8362449202063110178, guid: d291ba599ffaa4cdc9ba72093123e6d9, type: 3}
     - characterExpression: 6
       characterSprite: {fileID: -5295204618233818659, guid: 7d51f48e124cb4f4288782929d9e781e, type: 3}
+    - characterExpression: 5
+      characterSprite: {fileID: -4133022775993851928, guid: 0d95b58f07f0c408ea1fdff18484ade8, type: 3}
 --- !u!1 &652333734
 GameObject:
   m_ObjectHideFlags: 0
