@@ -23,7 +23,12 @@ Where to go now?#player
     Hmmm.
     Ugh. #exp:frown
     Ugh. #exp:glitch
--Nice... #player
+    ++ [swap frog]
+    .#entrance:toad2
+    Ribbit! #exp:ribbit
+    Ugh. #exp:frown
+    Ugh. #exp:glitch
+--Nice... #player
 -> LocationSelect
 
 === Psychic
@@ -37,6 +42,8 @@ Where to go now?#player
         -> Psychic
     + [leave]
         -> LocationSelect
+    + [Tarot]
+        ->Pick_Card_Loop
 --> Psychic
 
 === rorschachTest
@@ -141,4 +148,4 @@ Which of these speak to you?
 == After_Card_Picks
 Ah, yes, life. The card tells me that you value life and the living. 
 That's all. #cards:discard
--> DONE
+-> LocationSelect
