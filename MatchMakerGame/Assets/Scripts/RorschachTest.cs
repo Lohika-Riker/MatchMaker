@@ -110,6 +110,17 @@ public class RorschachTest : MonoBehaviour
         }
         else if (testNumber == 2)
         {
+            testImageA.DOKill();
+            testImageB.DOKill();
+
+            Color imageAColor = testImageA.color;
+            imageAColor.a = 1f;
+            testImageA.color = imageAColor;
+
+            Color imageBColor = testImageB.color;
+            imageBColor.a = 0f;
+            testImageB.color = imageBColor;
+
             testImageA.sprite = rorschach3;
         }
         // else if (testNumber == 3)
