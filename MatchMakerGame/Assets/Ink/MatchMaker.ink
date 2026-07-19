@@ -1,6 +1,18 @@
-VAR cardPicked = false
-VAR weirdFactor = 0
--> LocationSelect
+INCLUDE MatchMaker - New.ink
+
+-> Start
+
+=== Start
+What do you want to do?
++ [Play Game]
+    -> Reception_1
++ [Try out mechanics]
+    -> LocationSelect
+--> DONE
+
+// VAR cardPicked = false
+// VAR weirdFactor = 0
+// -> LocationSelect
 // -> Pick_Card_Loop
 
 === LocationSelect
@@ -12,7 +24,7 @@ Where to go now?#player
     Oh hi there. 
     -> rorschachTest
 + [psychic]
-    -> Psychic
+    -> RikerPsychic
 + [cafe]
     .#scene:cafe
     Welcome to the cafe. #narrator
@@ -31,7 +43,7 @@ Where to go now?#player
 --Nice... #player
 -> LocationSelect
 
-=== Psychic
+=== RikerPsychic
 .#scene:psychic
     Welcome to the psychic. #narrator
     .#entrance:owl
@@ -39,12 +51,12 @@ Where to go now?#player
     + [increase weirdness]
         ~weirdFactor++
         Weird factor is now {weirdFactor}. #player
-        -> Psychic
+        -> RikerPsychic
     + [leave]
         -> LocationSelect
     + [Tarot]
         ->Pick_Card_Loop
---> Psychic
+--> RikerPsychic
 
 === rorschachTest
 Can I interest you in a test? 
@@ -61,7 +73,7 @@ Can I interest you in a test?
 -> LocationSelect
 
 
-=== receptionist ===
+=== reception ===
 You enter an unfamiliar place. #narrator
 //  #entrance:deer
 #entrance:player
@@ -122,7 +134,7 @@ Ok. #player
 
 
 
-== Pick_Card_Loop
+== Card_Loop
 #scene:psychic
 .#clearDialogue
 Are you ready? 
@@ -139,13 +151,13 @@ Which of these speak to you?
     #cards:selectRight
 - Let's see... #clearDialogue
 {The card reads: The Imprisoned Man | The card reads: Life}
-{cardPicked == true: -> After_Card_Picks | Oh, I don't know how that got in there. Let me do that again.}
+{cardPicked == true: -> After_Card | Oh, I don't know how that got in there. Let me do that again.}
 #cards:discard
 ~cardPicked = true
 
-->Pick_Card_Loop
+-> Card_Loop
 
-== After_Card_Picks
+== After_Card
 Ah, yes, life. The card tells me that you value life and the living. 
 That's all. #cards:discard
 -> LocationSelect

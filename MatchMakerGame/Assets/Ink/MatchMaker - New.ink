@@ -14,7 +14,7 @@ VAR playerHobby = ""
 //cafe
 
 
--> Reception_1
+// -> Reception_1
 === Reception_1 ===
 #scene:reception
 .#entrance:player
