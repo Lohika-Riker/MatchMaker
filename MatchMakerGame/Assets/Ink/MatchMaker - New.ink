@@ -15,6 +15,7 @@ VAR hasCafeBottle = false
 VAR askedAboutFlies = false
 VAR triedToLeave = false
 VAR toldAboutIsolation = false
+VAR matchedSuccessfully = false
 //Scenes:
 //reception
 //psychic
@@ -304,6 +305,7 @@ Your date is ready. Follow me.
 -> Date_1
 
 == Waiting_In_The_Waiting_Room
+{look_around: It looks like there's something written on the wall.}
 + [Wait patiently]
     ->Wait_Patiently
 + {insight <= 6} [Check door]
@@ -312,7 +314,7 @@ Your date is ready. Follow me.
     ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)
 + {bottlesCollected == 3} [Escape]
     ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)    
-+ {not hasReceptionBottle} {insight >=4} [Look around]
++ (look_around) {not hasReceptionBottle} {insight >=4} [Look around]
     ->Look_Around_Waiting_Room
 
 -
@@ -370,10 +372,9 @@ The doe ushers you into {a|the} small cafe. #narrator
 #entrance:toad1
 The toad watches you.
 + Hello. #player
-    Hello.
+    Hello. #exp:ribbit
 + [Not saying anything?] Are you not going to say anything? #player
-    #exp:frown
-    Hello.
+    Hello. #exp:frown
 + (just_met) {nrDates > 1} You again? #player
     We've never met. #exp:glitch
     ** You weren't here before?[] A couple of minutes ago? #player
@@ -403,7 +404,7 @@ The toad watches you.
 + Did you go through a screening? #player
     Yup.
     ** [What hobby did you give?] What did you say your hobby was? #player
-        Flies.
+        Flies. #exp:ribbit
         ~ flies = true
         ~askedAboutFlies = true
         *** Cool. #player
@@ -420,7 +421,7 @@ The toad watches you.
     ** Where did you get it? #player
         In a store.
     ** It suits you. #player
-        Thanks.
+        Thanks. #exp:ribbit
     ** I had a hat like that[.] once. #player
         Nice.
     --
@@ -439,7 +440,7 @@ The toad watches you.
     Oh.
     ** [Not bad, just different.] I don't mean you look bad. You're just different than the person I imagined in my head. #player
         Okay.
-    ** [Didn't imagine a nice hat.] I didn't imagine you'd have such a nice hat. #player
+    ** [Didn't imagine a nice hat.] I didn't imagine you'd have uh... such a nice hat. #player
         Thanks.
     --
 + [Why did they match us?] Why do you think they matched us? #player
@@ -448,8 +449,8 @@ The toad watches you.
         I didn't say that.
         I don't know. #replace
         *** Yeah, you did. #player
-            Ribbit. #exp:glitch
-            Okay.
+            Ribbit. #exp:ribbit
+            Okay. #exp:glitch
             **** [Leave cafe] I'm going to leave now. #player
                 Okay.
                 -> End_Of_Date_1
@@ -466,7 +467,7 @@ The toad watches you.
 + Do you like {playerHobby}? #player
     Not really.
 + What's your favourite food?[] {flies==true:Is it flies?|}  #player
-    Flies.
+    Flies. #exp:ribbit
     ~askedAboutFlies = true
     ** {flies == true} I knew it. #player
         Nice.
@@ -552,7 +553,6 @@ Wait here while I prepare some things.
 #exit:other #clearDialogue
 
 -> Waiting_In_The_Waiting_Room ->
-
 .#entrance:deer
 Alright, let's begin.
 What do you see in this image? It may be unclear, so just say the first thing that comes to mind. 
@@ -571,6 +571,7 @@ Oh. Wow. Okay, sure. #exp:takenotes #test:complete
     ** I guess so. #player
     --
 * Is that wrong? #player
+There are no right or wrong answers.
 -
 
 What about this image?
@@ -585,16 +586,73 @@ Okay, that's it for the advanced questionnaire.
 
 Wait here while I prepare your next date.
 -> Waiting_In_The_Waiting_Room ->
-->Date_2
+->Date_3
 
 ->DONE
 
 = Advanced_Psychic_Reading
-NO CONTENT HERE YET
-->END
+#scene:psychic
+.entrance:owl
+Hoo!
+You are back to see the Great Glaucus!
+I have seen much since your last visit.
+* What have you seen? #player
+* [Match wasn't good.] The match you set me up with was terrible. #player
+    Ah, my vision was cloudy. But worry not.
+* {nonbeliever} Just get it over with. #player
+-
+I have seen the way things truly are. #exp:takenotes
+Your life. Your decisions.
+Do you wish to know the truth, or live in the lie?
+* [The truth.] I want to know the truth. #player
+    ~Inc_Insight()
+    Good. 
+* [The lie.] I don't care about the truth. #player
+    Ah. Then I can help you no further.
+    Do you really wish to live in delusion?
+    ** Yes. #player
+        Very well.
+        Then I see a great love ahead of you. 
+        Eternal.
+        Return from where you've come, and you will get what you wish for.
+        ->End_Of_Advanced_Psychic
+    ** No. #player
+        Good.
+    --
+-
 
+* {bottlesCollected > 0} [Show bottle] Does this bottle have something to do with the truth? #player
+    Ah!
+    You have taken the first step already.
+    Then take this.
+    The Great Glaucus hands you a small bottle with a model airplane inside, both wings torn off. #narrator
+    ~bottlesCollected = bottlesCollected + 1
+    ~hasPsychicBottle = true
+    
+* {bottlesCollected == 0} What is the truth? #player
+    The truth begins in a bottle.
+    The Great Glaucus hands you a small bottle with a model airplane inside, both wings torn off. #narrator
+    ~bottlesCollected = bottlesCollected + 1
+    ~hasPsychicBottle = true
+    
+-
+{
+    - bottlesCollected == 1:
+        Two more rooms, two more bottles. Then the truth will be yours for the taking.
+    - bottlesCollected == 2:
+        One more room, one more bottle. Then the truth will be yours for the taking.
+    - else:
+        With this, the truth is yours for the taking.
+}
+Now go. The truth waits for you.
+->End_Of_Advanced_Psychic
 
-
+//-> Waiting_In_The_Waiting_Room ->
+=End_Of_Advanced_Psychic
+#scene:reception
+#entrance:deer
+Your next date is ready. #exp:smile
+->Date_3
 -> END
 
 //-----------------------------------------------------------
@@ -609,11 +667,11 @@ NO CONTENT HERE YET
 The doe ushers you back into the small cafe. #narrator
 #entrance:toad2
 Greetings and salutations. 
-I am here, at your service.
+I am here, at your service.  #exp:ribbit
 + (just_met) {nrDates > 1} You again? #player
     We've never met, I assure you. #exp:glitch
     ** You weren't here before?[] A couple of minutes ago? #player
-        I was not. 
+        I was not. #exp:ribbit 
         Surely I would remember a person such as you.
         So I assure you, this is our first meeting.
         *** Is this [a joke?] some kind of joke? #player
@@ -625,7 +683,7 @@ I am here, at your service.
 //+ (me_again) {just_met} It's me again.[] New hat, huh? #player
 //    Just my normal hat. #exp:glitch
 + Nice to meet you. #player
-    The pleasure is mine.
+    The pleasure is mine. #exp:ribbit
 - 
 
 * {askedAboutFlies} What's your favourite fly?
@@ -636,27 +694,27 @@ I am here, at your service.
     A beautiful dancer, flitting from fruit to fruit.
     But forget not the mighty horsefly!
     It takes what it wants, even from giants!
-    How could I possibly choose between these glorious insects?
+    How could I possibly choose between these glorious insects? #exp:ribbit
     Each hold a special place in my heart!
 * [Where are you from?] Are you from around here?
     I am from the world! 
     To the edges of the sea, wherever flies can be found!
     Those beautiful creatures, everywhere.
-    I can't stop thinking about them!
+    I can't stop thinking about them! #exp:ribbit
     ** So you've travelled a lot[?] then?
         Oh, I've seen so many flies!
         Blowflies, horseflies, fruitflies.
         Fleshflies, cranefiles, sandflies.
-        Ah.
+        Ah. #exp:ribbit
     ** But do you live here?
         There are flies everywhere!
         Living in harmony with the world.
         Flying about in a beautiful dance.
-        Ah.
+        Ah. #exp:ribbit
     -- 
     ** You sure do like flies[.], huh? 
         Of course!
-        How could I not!
+        How could I not! #exp:ribbit
         They are the most incredible thing!
     --
 //* question about the matchmakers etc.
@@ -668,7 +726,9 @@ I am here, at your service.
         {Inc_Insight()}
         N-not at all! There is nothing to know, you see!
         Did you know that flies taste with their feet?
-        
+        *** Tell me the truth.
+            I-I have to go!
+            ->Toad_Runs_Away(->Waiting_In_Cafe)
     ** You're lying!
         {Inc_Insight()}
         I am most certainly not! #exp:frown
@@ -683,6 +743,8 @@ I am here, at your service.
             I-I have to go!
             ->Toad_Runs_Away(->Waiting_In_Cafe)
     ** I guess you're right.
+        Well, I guess I should get back. #player
+        -> End_Of_Date_2
     --
  
 
@@ -716,9 +778,9 @@ The toad runs away, leaving you alone in the cafe. #narrator
 #scene:reception
 You return to the reception with the date fresh in mind. #narrator
 .#entrance:deer
--> DONE
 //END OF CONTENT FOR NOW
 //->END
+->How_It_Went_Loop
 =How_It_Went_Loop
 {How did it go?|And? How was it?}
 * {nrDates > 1} It was the same person[.] as last time. #player
@@ -782,84 +844,58 @@ Perhaps we should refine your match search a bit.
 #scene:cafe
 #entrance:player
 The doe ushers you back into the small cafe. #narrator
-#entrance:toad2
-Greetings and salutations. 
-I am here, at your service.
-+ (just_met) {nrDates > 1} You again? #player
-    We've never met, I assure you. #exp:glitch
-    ** You weren't here before?[] A couple of minutes ago? #player
-        I was not. 
-        Surely I would remember a person such as you.
-        So I assure you, this is our first meeting.
-        *** Is this [a joke?] some kind of joke? #player
-            I would not jest.
-            Rest assured, I shall be nothing but honest with you. #exp:glitch
-    ** Oh, nevermind.[] I suppose you just look familiar. #player
-        I have that kind of face.
-    -- If you say so. #player
-//+ (me_again) {just_met} It's me again.[] New hat, huh? #player
-//    Just my normal hat. #exp:glitch
-+ Nice to meet you. #player
-    The pleasure is mine.
+#entrance:toad3
+Hello there. #exp:ribbit
++ [You're the same person.] Are you going to pretend we've never met? #player
+    Ah... I am pleased to meet you. Are you well?
+    ->Initial_questions
++ Hello. #player
+    Are you well?
+    ->Initial_questions
+- 
+->Initial_questions
+=Initial_questions
+* Asking questions now? #player
+    I'm just trying to make conversation.
+* I'm fine. #player
+    Glad to hear it. #exp:ribbit
+* I'm not fine.[] Everyone is lying to me. {insight >=6: Weird things are happening.} #player
+    Oh dear.
 - 
 
-* {askedAboutFlies} What's your favourite fly?
-    Ah, I could not possibly choose!
-    The humble blowfly, so sweet and delightful.
-    A crafty scavenger, born to find the tastiest morsels.
-    Ah, but the oft-forgotten fruitfly, taken with citrus and berry.
-    A beautiful dancer, flitting from fruit to fruit.
-    But forget not the mighty horsefly!
-    It takes what it wants, even from giants!
-    How could I possibly choose between these glorious insects?
-    Each hold a special place in my heart!
-* [Where are you from?] Are you from around here?
-    I am from the world! 
-    To the edges of the sea, wherever flies can be found!
-    Those beautiful creatures, everywhere.
-    I can't stop thinking about them!
-    ** So you've travelled a lot[?] then?
-        Oh, I've seen so many flies!
-        Blowflies, horseflies, fruitflies.
-        Fleshflies, cranefiles, sandflies.
-        Ah.
-    ** But do you live here?
-        There are flies everywhere!
-        Living in harmony with the world.
-        Flying about in a beautiful dance.
-        Ah.
-    -- 
-    ** You sure do like flies[.], huh? 
-        Of course!
-        How could I not!
-        They are the most incredible thing!
-    --
-//* question about the matchmakers etc.
+Do you enjoy leisure activities?
+* Yeah[.], I like leisure activities. Especially {playerHobby}. #player
+* What kind of activities? #player
+* Not really. #player
+- I myself partake in leisure activities frequently.
+
+How about flies?
+Do you like them? 
+* Not really. #player
+* I love flies. #player
+* Flies are disgusting. #player
+- Amazing! #exp:ribbit
+I once talked about flies for an entire date!
+
+* The one we were on[?] a few minutes ago? #player
+    Ah, no. This was long, long ago. #exp:glitch
+    ~Inc_Insight()
+* [Sounds great.] Sounds like a great date. #player
 -
-* {insight > 8} [This place is coming apart.] By the way, have you noticed that this place is coming apart? 
-    Not at all!
-    It is sturdy and entirely normal! #exp:glitch
-    ** Do you know something?
-        {Inc_Insight()}
-        N-not at all! There is nothing to know, you see!
-        Did you know that flies taste with their feet?
-        
-    ** You're lying!
-        {Inc_Insight()}
-        I am most certainly not! #exp:frown
-        If I'm lying, then you're lying! #exp:glitch #destroy
-        *** What am I lying about?
-            I didn't say you're lying.
-            I would never lie to you! #replace
-            **** Tell me what's going on!
-                N-nothing is going on! Leave me be!
-                ->Toad_Runs_Away(->Waiting_In_Cafe)
-        *** Tell me the truth.
+Aha! #exp:ribbit
+I find you to be very interesting, yes. 
+I hope you are having a good time? #exp:ribbit
+
+* [Tell me what's going on.] I will have a good time if you tell me what's really going on. #player
+    You must escape, or you'll be stuck in here forever. #exp:glitch #destroy
+    ~Inc_Insight()
+    ** Stuck where? What is this place? #player
+        No one is stuck. We're all free here. #exp:glitch
+        There's nothing to tell! #replace
+        *** You can't fool me anymore. #player
             I-I have to go!
             ->Toad_Runs_Away(->Waiting_In_Cafe)
-    ** I guess you're right.
-    --
- 
+
 
 * [I should get back] Well, I guess I should get back. #player
 -
@@ -872,10 +908,60 @@ The toad runs away, leaving you alone in the cafe. #narrator
 ->DONE
 
 
+== End_Of_Date_3
+#scene:reception
+You return to the reception with the date fresh in mind. #narrator
+#entrance:deer
+->How_It_Went_Loop
+=How_It_Went_Loop
+{How did it go?|And? How was it?}
+* I'm tired of this. #player
+* It was terrible. #player
+    Sorry to hear that. What happened?
+    ** Didn't seem interested[.] in my responses.  #player
+    ** They talked too much.[] Didn't ask me a single question. #player
+    -- 
+    Hm. 
+    That's strange. We've never had three failed dates.
+    ~matchedSuccessfully = false
+* It was great! #player
+    Ah. #exp:takenotes
+    Your match felt the same way!
+    I'm sure the two of you will be happy together forever.
+    ~matchedSuccessfully = true
+-
+{
+    - matchedSuccessfully:
+        We will make all the arrangements. Wait here.
+    - else:
+        Let me check some files. Wait here.
+}
+#exit:other
+-> Waiting_In_The_Waiting_Room->
+
+
+{
+    - matchedSuccessfully:
+        Here we are! Follow me. #exp:smile
+        
+    - else:
+        Our analysis says that you just need some more time together.
+        Don't worry. #exp:glitch
+        You'll never have to face the truth again. #exp:glitch
+        Many dates later... #narrator
+}
+
+#scene:wedding
+->END
+
+
 == Leave_Agency(->return_to)
 ~triedToLeave = true
 {bottlesCollected == 3:
 You hear someone behind you, but the three locks are open, so you yank open the door and rush outside. #narrator
+Sights and smells hit you as you remember the truth.
+Alone again.
+#scene:island
 ->END
 
 -else:
