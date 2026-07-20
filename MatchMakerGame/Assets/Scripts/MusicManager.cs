@@ -17,6 +17,8 @@ public class MusicManager : MonoBehaviour
 
     [SerializeField] private StudioEventEmitter musicEmitter;
     [SerializeField] private StudioEventEmitter owlTalkEmitter, doeTalkEmitter, toadTalkEmitter;
+    [SerializeField] private StudioEventEmitter wooshInEmitter, wooshOutEmitter;
+    [SerializeField] private StudioEventEmitter clickEmitter;
     private WeirdFactor currentWeirdFactor;
 
     void Start()
@@ -40,6 +42,21 @@ public class MusicManager : MonoBehaviour
         // {
         //     StopToadTalk();
         // }
+    }
+
+    public void PlayClickSFX()
+    {
+        clickEmitter.Play();
+    }
+
+    public void PlayCharacterMoveInSFX()
+    {
+        wooshInEmitter.Play();
+    }
+
+     public void PlayCharacterMoveOutSFX()
+    {
+        wooshOutEmitter.Play();
     }
 
     public void StartOwlTalk()

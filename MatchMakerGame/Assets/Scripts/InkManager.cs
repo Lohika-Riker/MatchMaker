@@ -142,6 +142,7 @@ public class InkManager : MonoBehaviour
 
                 if (parts[0] == "entrance")
                 {
+                    musicManager.PlayCharacterMoveInSFX();
                     if (parts[1] == "deer")
                     {
                         characterSpriteHolder.ShowCharacter(character.doe);
@@ -177,13 +178,20 @@ public class InkManager : MonoBehaviour
                         ShowPlayerCharacter();
                         return;
                     }
+                    
+                }
+                else if (parts[0] == "exit" && parts.Length > 1 && parts[1] == "other")
+                {
+                    characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
+                    musicManager.PlayCharacterMoveOutSFX();
+                    currentCharacter = character.none;
                 }
                 else if (parts[0] == "exp")
                 {
                     print($"change {currentCharacter}'s expression to {parts[1]}");
                     try
                     {
-                        characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
+                        characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1], true)));
                     }
                     catch (ArgumentException e)
                     {
@@ -329,6 +337,7 @@ public class InkManager : MonoBehaviour
         }
         yield return new WaitForSeconds(1); // waiting for dialogue line to be displayed
         StartCoroutine(characterSpriteHolder.HideCharacter(false));
+        musicManager.PlayCharacterMoveOutSFX();
         HidePlayerCharacter();
         ClearDialogue();
         fadeToBlack.Fade(true);
@@ -338,6 +347,7 @@ public class InkManager : MonoBehaviour
         fadeToBlack.Fade(false);
         yield return new WaitForSeconds(1);
         ShowPlayerCharacter();
+        musicManager.PlayCharacterMoveInSFX();
         yield return new WaitForSeconds(1);
         // characterSpriteHolder.ShowCharacter(newCharacter);
         // yield return new WaitForSeconds(0.5f);
@@ -666,6 +676,7 @@ public class InkManager : MonoBehaviour
         choicePanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.InBack);
         ClearChoices();
         DisplayNextLine();
+        musicManager.PlayClickSFX();
     }
 
     public void ClearChoices()
