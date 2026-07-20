@@ -26,6 +26,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private CardGame cardGame;
     [SerializeField] private Image background;
     [SerializeField] private Sprite recptionBackground, psychicBackground, cafeBackground;
+    [SerializeField] private Sprite weddingBackground, islandBackground;
     [SerializeField] private Texture2D[] receptionBackgroundOverlays;
     [SerializeField] private Texture2D[] psychicBackgroundOverlays;
     [SerializeField] private Texture2D[] cafeBackgroundOverlays;
@@ -356,10 +357,10 @@ public class InkManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("End of story reached.");
             characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
             HidePlayerCharacter();
             ClearDialogue();
+            Debug.Log("End of story reached.");
         }
 
     }
@@ -386,6 +387,16 @@ public class InkManager : MonoBehaviour
             newBackground = cafeBackground;
             backgroundOverlays = cafeBackgroundOverlays;
             // newCharacter = character.toad1;
+        }
+        else if (sceneName == "wedding")
+        {
+            newBackground = weddingBackground;
+            backgroundOverlays = null;
+        }
+        else if (sceneName == "island")
+        {
+            newBackground = islandBackground;
+            backgroundOverlays = null;
         }
         else
         {
