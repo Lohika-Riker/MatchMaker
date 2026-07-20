@@ -14,7 +14,7 @@ VAR hasPsychicBottle = false
 VAR hasCafeBottle = false
 VAR askedAboutFlies = false
 VAR triedToLeave = false
-
+VAR toldAboutIsolation = false
 //Scenes:
 //reception
 //psychic
@@ -126,7 +126,7 @@ Alright. Next, let's get to know you a bit. What are your hobbies?
     ~ playerHobby = "cooking"
 - Great. #exp:takenotes
 
-And your living situation? Are you planning to stay where you are forever? Are you planning to do travelling soon?
+And your living situation? Are you planning to stay where you are forever? Are you planning on travelling soon?
 * [I'll never leave.] I think I'm comfortable here for now. #player
 * I'll leave here as soon as possible. #player
 * [Not sure.] I don't know yet. #player
@@ -204,6 +204,7 @@ Which of these speak to you?
 ->Pick_Card_Loop
 
 == After_Card_Picks
+.#cards.discard
 Ah, yes, life. The card tells me that you value life and the living. 
 * [Does this help me?] Is this going to help you match me? #player
     Ah, I see your doubt, but you must perservere on this path. 
@@ -332,6 +333,7 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
     {insight >= 8:
         Between two chairs, you find a small glass bottle, filled with white sand. #narrator
         * [Take bottle of sand.]
+            The sand smells like the ocean.
             You put the bottle in your pocket. #narrator
             ~hasReceptionBottle = true
             ~bottlesCollected = bottlesCollected + 1
@@ -505,6 +507,7 @@ How did it go?
         *** <i>I</i> was too boring? #player
             Try not to take it too hard.
             Given your long isolation, it's the best you can come up with. #destroy
+            ~toldAboutIsolation = true
             **** What do you mean[?], my isolation? #player
                 I'm not sure I follow. I said that there's someone out there for you.
                 There's someone out there for you, and we'll find them. #replace
@@ -522,21 +525,29 @@ How did it go?
     ** Oh well. #player
     --
 -
+Enough about that.
 Perhaps we should refine your match search a bit. 
 ->Refinement
 
 
 == Refinement
-What would you like to try?
-* [Advanced questionnaire]
-->Advanced_Questionnaire    
-* [Advanced psychic reading]
-->Advanced_Psychic_Reading
--
+{
+- nrDates == 1:
+    Let's try the adcanced image questionnaire.
+    ->Advanced_Questionnaire    
+
+- nrDates == 2:
+    You should visit the Great Glaucus again.
+    ->Advanced_Psychic_Reading
+- else:
+    NO CONTENT HERE YET
+    ->END
+}
+
 ->DONE
 
 = Advanced_Questionnaire
-Very well. Wait here while I prepare some things.
+Wait here while I prepare some things.
 #exit:other
 
 -> Waiting_In_The_Waiting_Room ->
@@ -576,7 +587,8 @@ Wait here while I prepare your next date.
 ->DONE
 
 = Advanced_Psychic_Reading
-Very well.
+NO CONTENT HERE YET
+->END
 
 
 
@@ -702,32 +714,33 @@ The toad runs away, leaving you alone in the cafe. #narrator
 You return to the reception with the date fresh in mind. #narrator
 #entrance:doe
 
-END OF CONTENT FOR NOW
-->END
-How did it go?
-* It was terrible. #player
-    Sorry to hear that. What happened?
-    ** It was boring. #player
-    ** It was maddening. #player
-    ** {nrDates > 1} It was the same person[.] as last time. #player
+//END OF CONTENT FOR NOW
+//->END
+=How_It_Went_Loop
+{How did it go?|And? How was it?}
+* {nrDates > 1} It was the same person[.] as last time. #player
         No, it was a new match. #exp:glitch
         Now that we've identified your type, you may find that your matches will have some similarities.
         {Inc_Insight()}
+        ->How_It_Went_Loop
+* It was terrible. #player
+    Sorry to hear that. What happened?
+    ** [Only talked about flies.] They spent the whole time going on about flies. #player
+    ** They talked too much.[] Didn't ask me a single question. #player
     -- 
-    
 * It was great! #player
     Ah. #exp:takenotes
     It seems your match didn't feel the same way.
     Sorry.
-    ** What did I do? #player
-        They said you were apparently a bit too boring.
-        *** <i>I</i> was too boring? #player
-            Try not to take it too hard.
-            Given your long isolation, it's the best you can come up with. #destroy
-            **** What do you mean[?], my isolation? #player
+    ** Why? #player
+        They said you didn't seem interested enough in them and their interests.
+        *** They didn't even ask me what I think! #player
+        --- Try not to take it too hard.
+        Given your long isolation, a bit of rambling is normal. #destroy
+            *** {toldAboutIsolation == false} What do you mean[?], my isolation? #player
                 I'm not sure I follow. I said that there's someone out there for you.
                 There's someone out there for you, and we'll find them. #replace
-                ***** That's not what you said.[] #player
+                **** That's not what you said.[] #player
                     {Inc_Insight()}
                     {questioningTheProcess > 0: 
                         You need to stop. Questioning the process can only bring you pain.
@@ -735,15 +748,125 @@ How did it go?
                             Everything will unravel.
                         }
                     }
-                ***** [I hope so.] I hope that's true. That there's someone out there.
-            **** I suppose so. #player
-            ----
+                    
+                **** [I hope so.] I hope that's true. That there's someone out there. #player
+            *** {toldAboutIsolation == true} [Isolation again?] You said the same thing last time. #player
+                That I've had a long isolation. What does that mean? #player
+                I'm not sure I follow. I said that there's someone out there for you.
+                There's someone out there for you, and we'll find them. #replace
+                **** I don't believe you.[] #player
+                    {Inc_Insight()}
+                    Please. Stop.
+                    Everything will unravel. #exp:glitch
+                    
+                **** [I hope so.] I hope that's true. That there's someone out there. #player
+            *** I suppose so. #player
+            ---
     ** Oh well. #player
     --
 -
+We're getting off track. 
 Perhaps we should refine your match search a bit. 
 ->Refinement
 
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
+
+==Date_3
+~ temp flies = false
+~ nrDates = nrDates + 1
+#scene:cafe
+#entrance:player
+The doe ushers you back into the small cafe. #narrator
+#entrance:toad2
+Greetings and salutations. 
+I am here, at your service.
++ (just_met) {nrDates > 1} You again? #player
+    We've never met, I assure you. #exp:glitch
+    ** You weren't here before?[] A couple of minutes ago? #player
+        I was not. 
+        Surely I would remember a person such as you.
+        So I assure you, this is our first meeting.
+        *** Is this [a joke?] some kind of joke? #player
+            I would not jest.
+            Rest assured, I shall be nothing but honest with you. #exp:glitch
+    ** Oh, nevermind.[] I suppose you just look familiar. #player
+        I have that kind of face.
+    -- If you say so. #player
+//+ (me_again) {just_met} It's me again.[] New hat, huh? #player
+//    Just my normal hat. #exp:glitch
++ Nice to meet you. #player
+    The pleasure is mine.
+- 
+
+* {askedAboutFlies} What's your favourite fly?
+    Ah, I could not possibly choose!
+    The humble blowfly, so sweet and delightful.
+    A crafty scavenger, born to find the tastiest morsels.
+    Ah, but the oft-forgotten fruitfly, taken with citrus and berry.
+    A beautiful dancer, flitting from fruit to fruit.
+    But forget not the mighty horsefly!
+    It takes what it wants, even from giants!
+    How could I possibly choose between these glorious insects?
+    Each hold a special place in my heart!
+* [Where are you from?] Are you from around here?
+    I am from the world! 
+    To the edges of the sea, wherever flies can be found!
+    Those beautiful creatures, everywhere.
+    I can't stop thinking about them!
+    ** So you've travelled a lot[?] then?
+        Oh, I've seen so many flies!
+        Blowflies, horseflies, fruitflies.
+        Fleshflies, cranefiles, sandflies.
+        Ah.
+    ** But do you live here?
+        There are flies everywhere!
+        Living in harmony with the world.
+        Flying about in a beautiful dance.
+        Ah.
+    -- 
+    ** You sure do like flies[.], huh? 
+        Of course!
+        How could I not!
+        They are the most incredible thing!
+    --
+//* question about the matchmakers etc.
+-
+* {insight > 8} [This place is coming apart.] By the way, have you noticed that this place is coming apart? 
+    Not at all!
+    It is sturdy and entirely normal! #exp:glitch
+    ** Do you know something?
+        {Inc_Insight()}
+        N-not at all! There is nothing to know, you see!
+        Did you know that flies taste with their feet?
+        
+    ** You're lying!
+        {Inc_Insight()}
+        I am most certainly not! #exp:frown
+        If I'm lying, then you're lying! #exp:glitch #destroy
+        *** What am I lying about?
+            I didn't say you're lying.
+            I would never lie to you! #replace
+            **** Tell me what's going on!
+                N-nothing is going on! Leave me be!
+                ->Toad_Runs_Away(->Waiting_In_Cafe)
+        *** Tell me the truth.
+            I-I have to go!
+            ->Toad_Runs_Away(->Waiting_In_Cafe)
+    ** I guess you're right.
+    --
+ 
+
+* [I should get back] Well, I guess I should get back. #player
+-
+-> End_Of_Date_2
+
+=Toad_Runs_Away(->return_to)
+The toad runs away, leaving you alone in the cafe. #narrator
+
+
+->DONE
 
 
 == Leave_Agency(->return_to)
