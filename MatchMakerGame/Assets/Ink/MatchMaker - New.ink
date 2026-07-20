@@ -21,7 +21,7 @@ VAR matchedSuccessfully = false
 //psychic
 //cafe
 
-// -> Reception_1
+-> Reception_1
 
 == function Inc_Insight
 ~ insight = insight + 1
@@ -971,6 +971,10 @@ I know the drill... #player
 }
 
 .#scene:wedding
+You and the toad get married. #narrator
+Happy, together. #narrator
+Forever? #narrator
+.#scene:start
 ->DONE
 
 
@@ -978,9 +982,12 @@ I know the drill... #player
 ~triedToLeave = true
 {bottlesCollected == 3:
 You hear someone behind you, but the three locks are open, so you yank open the door and rush outside. #narrator
-Sights and smells hit you as you remember the truth.
-Alone again.
 .#scene:island
+Sights and smells hit you as you remember the truth. #narrator
+The plane. #narrator
+The weeks gone by. #narrator
+Alone again. #narrator
+.#scene:start
 ->DONE
 
 -else:
