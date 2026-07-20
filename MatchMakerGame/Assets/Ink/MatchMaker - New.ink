@@ -21,7 +21,7 @@ VAR matchedSuccessfully = false
 //psychic
 //cafe
 
--> Reception_1
+// -> Reception_1
 
 == function Inc_Insight
 ~ insight = insight + 1

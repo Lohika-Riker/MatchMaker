@@ -26,6 +26,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private CardGame cardGame;
     [SerializeField] private Image background;
     [SerializeField] private Sprite recptionBackground, psychicBackground, cafeBackground;
+    [SerializeField] private Sprite weddingBackground, islandBackground;
     [SerializeField] private Texture2D[] receptionBackgroundOverlays;
     [SerializeField] private Texture2D[] psychicBackgroundOverlays;
     [SerializeField] private Texture2D[] cafeBackgroundOverlays;
@@ -356,10 +357,10 @@ public class InkManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("End of story reached.");
             characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
             HidePlayerCharacter();
             ClearDialogue();
+            Debug.Log("End of story reached.");
         }
 
     }
@@ -368,6 +369,7 @@ public class InkManager : MonoBehaviour
     {
         Sprite newBackground;
         Texture2D[] backgroundOverlays;
+        bool showPlayerAfterTransition = true;
         // character newCharacter = character.none;
         if (sceneName == "psychic")
         {
@@ -387,6 +389,18 @@ public class InkManager : MonoBehaviour
             backgroundOverlays = cafeBackgroundOverlays;
             // newCharacter = character.toad1;
         }
+        else if (sceneName == "wedding")
+        {
+            newBackground = weddingBackground;
+            backgroundOverlays = null;
+            showPlayerAfterTransition = false;
+        }
+        else if (sceneName == "island")
+        {
+            newBackground = islandBackground;
+            backgroundOverlays = null;
+            showPlayerAfterTransition = false;
+        }
         else
         {
             Debug.LogWarning($"{sceneName} not implemented");
@@ -404,9 +418,12 @@ public class InkManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         fadeToBlack.Fade(false);
         yield return new WaitForSeconds(1);
-        ShowPlayerCharacter();
-        musicManager.PlayCharacterMoveInSFX();
-        yield return new WaitForSeconds(1);
+        if (showPlayerAfterTransition)
+        {
+            ShowPlayerCharacter();
+            musicManager.PlayCharacterMoveInSFX();
+            yield return new WaitForSeconds(1);
+        }
         // characterSpriteHolder.ShowCharacter(newCharacter);
         // yield return new WaitForSeconds(0.5f);
         isSceneTransitioning = false;

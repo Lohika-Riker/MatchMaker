@@ -17,6 +17,14 @@ What do you want to do?
 
 === LocationSelect
 Where to go now?#player
++ [Wedding]
+    .#scene:wedding
+    And here we are getting married.
+    -> LocationSelect
++ [Island]
+    .#scene:island
+    And here we are on the island.
+    -> LocationSelect
 + [Game]
     ->Reception_1
 + [reception]
