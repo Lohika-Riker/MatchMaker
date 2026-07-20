@@ -29,19 +29,19 @@ VAR matchedSuccessfully = false
 
 == function Calculate_WeirdFactor
 {
-    - insight >= 14:
-        ~ weirdFactor = 6
-    - insight >= 12:
-        ~weirdFactor = 5
-    - insight >= 10:
-        ~weirdFactor = 4
     - insight >= 8:
-        ~weirdFactor = 3
+        ~ weirdFactor = 6
     - insight >= 6:
-        ~weirdFactor = 3
+        ~weirdFactor = 5
+    - insight >= 5:
+        ~weirdFactor = 4
     - insight >= 4:
-        ~weirdFactor = 2
+        ~weirdFactor = 3
+    - insight >= 3:
+        ~weirdFactor = 3
     - insight >= 2:
+        ~weirdFactor = 2
+    - insight >= 1:
         ~weirdFactor = 1
     - else:
         ~weirdFactor = 0
