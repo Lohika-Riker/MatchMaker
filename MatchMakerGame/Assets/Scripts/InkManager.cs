@@ -31,6 +31,7 @@ public class InkManager : MonoBehaviour
     [SerializeField] private Texture2D[] cafeBackgroundOverlays;
     [SerializeField] private FadeToBlack fadeToBlack;
     [SerializeField] private RorschachTest rorschachTest;
+    [SerializeField] private CanvasGroup startScreen;
     private TalkingBounceAnimator playerTalkingBounceAnimator;
     private CanvasGroup playerCharacterCanvasGroup;
     private Vector3 playerCharacterVisiblePosition;
@@ -60,7 +61,7 @@ public class InkManager : MonoBehaviour
 
         playerTalkingBounceAnimator = GetOrAddTalkingBounceAnimator(playerCharacterPanel);
         SetupPlayerCharacterPanel();
-        StartStory();
+        // StartStory();
     }
 
     void Update()
@@ -69,6 +70,15 @@ public class InkManager : MonoBehaviour
         {
             DisplayNextLine();
         }
+    }
+
+    public void StartGame()
+    {
+        musicManager.PlayClickSFX();
+        startScreen.DOFade(0,0.3f);
+        startScreen.interactable= false;
+        startScreen.blocksRaycasts=false;
+        StartStory();
     }
 
     private void StartStory()
