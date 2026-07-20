@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   inkJsonAsset: {fileID: 4900000, guid: bef0034184f8146dc962b9c545b6c433, type: 3}
-  startKnotName: Start
+  startKnotName: Reception_1
   dialoguePanel: {fileID: 1105147777}
   choicePanel: {fileID: 1937154580}
   narratorPanel: {fileID: 1783861634}
@@ -3847,6 +3847,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 931151918}
     m_Modifications:
+    - target: {fileID: 35365033711438249, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: m_MinHeight
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 78326544332291478, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: m_MinHeight
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 493270433385479614, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: radius
       value: 15
@@ -3866,6 +3874,14 @@ PrefabInstance:
     - target: {fileID: 1689817897942378469, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_fontSizeBase
       value: 113.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689817897942378469, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996619401005494282, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6023079471941047287, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_Pivot.x
@@ -3961,7 +3977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6469870644849493792, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 65
+      value: 83.06
       objectReference: {fileID: 0}
     - target: {fileID: 6469870644849493792, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3973,7 +3989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6957707188416943302, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.41960785
       objectReference: {fileID: 0}
     - target: {fileID: 6957707188416943302, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_Color.b
@@ -4008,12 +4024,16 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7390672722328440867, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: ease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390672722328440867, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: hoverScale
       value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 7390672722328440867, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: animationDuration
-      value: 0.3
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7668549373808423202, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4037,7 +4057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7668549373808423202, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32.5
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 8849151118996033069, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
