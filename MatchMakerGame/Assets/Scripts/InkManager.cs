@@ -13,6 +13,7 @@ public class InkManager : MonoBehaviour
     private const string WeirdFactorVariableName = "weirdFactor";
 
     [SerializeField] private TextAsset inkJsonAsset;
+    [SerializeField] private string startKnotName = "Start";
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject choicePanel;
     [SerializeField] private GameObject narratorPanel;
@@ -84,13 +85,7 @@ public class InkManager : MonoBehaviour
 
     private void StartStory()
     {
-        if (story != null)
-        {
-            story.RemoveVariableObserver(OnWeirdFactorChanged, WeirdFactorVariableName);
-        }
-
-        story = new Story(inkJsonAsset.text);
-        story.ObserveVariable(WeirdFactorVariableName, OnWeirdFactorChanged);
+        ResetInkStory();
 
         ClearDialogue();
         ClearChoices();
@@ -98,6 +93,34 @@ public class InkManager : MonoBehaviour
         narratorPanel.transform.DOLocalMoveY(-840, 0f);
         choicePanel.transform.DOLocalMoveY(-840, 0f);
         DisplayNextLine();
+    }
+
+    private void ResetInkStory()
+    {
+        if (story != null)
+        {
+            story.RemoveVariableObserver(OnWeirdFactorChanged, WeirdFactorVariableName);
+        }
+
+        story = new Story(inkJsonAsset.text);
+        if (string.IsNullOrWhiteSpace(startKnotName))
+        {
+            Debug.LogError("Cannot reset the Ink story: no start knot name is assigned.");
+        }
+        else
+        {
+            try
+            {
+                story.ChoosePathString(startKnotName.Trim());
+            }
+            catch (Exception exception)
+            {
+                Debug.LogError($"Cannot reset the Ink story to knot '{startKnotName}': {exception.Message}");
+            }
+        }
+        story.ObserveVariable(WeirdFactorVariableName, OnWeirdFactorChanged);
+        currentWeirdFactor = Convert.ToInt32(story.variablesState[WeirdFactorVariableName]);
+        musicManager?.SetWeirdFactor(currentWeirdFactor);
     }
 
     private void OnDestroy()
@@ -367,6 +390,12 @@ public class InkManager : MonoBehaviour
 
     private IEnumerator SceneTransition(string sceneName)
     {
+        if (sceneName == "start")
+        {
+            yield return ReturnToStartScreen();
+            yield break;
+        }
+
         Sprite newBackground;
         Texture2D[] backgroundOverlays;
         bool showPlayerAfterTransition = true;
@@ -429,6 +458,47 @@ public class InkManager : MonoBehaviour
         isSceneTransitioning = false;
         DisplayNextLine();
 
+    }
+
+    private IEnumerator ReturnToStartScreen()
+    {
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(characterSpriteHolder.HideCharacter(false));
+        musicManager.PlayCharacterMoveOutSFX();
+        HidePlayerCharacter();
+        ClearDialogue();
+        ClearChoices();
+        narratorPanel.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        narratorPanel.transform.DOLocalMoveY(-840, 0f);
+        choicePanel.transform.DOLocalMoveY(-840, 0f);
+
+        fadeToBlack.Fade(true);
+        yield return new WaitForSeconds(2f);
+
+        ClearBackground();
+        ResetInkStory();
+        startScreen.DOKill();
+        startScreen.alpha = 1f;
+        startScreen.interactable = true;
+        startScreen.blocksRaycasts = true;
+
+        fadeToBlack.Fade(false);
+        yield return new WaitForSeconds(2f);
+        isSceneTransitioning = false;
+    }
+
+    private void ClearBackground()
+    {
+        background.sprite = null;
+
+        if (backgroundOverlay != null)
+        {
+            Destroy(backgroundOverlay);
+            Destroy(backgroundOverlaySprite);
+        }
+
+        backgroundOverlay = null;
+        backgroundOverlaySprite = null;
     }
 
     private void AssembleBackground(Sprite baseBackground, Texture2D[] overlays)
