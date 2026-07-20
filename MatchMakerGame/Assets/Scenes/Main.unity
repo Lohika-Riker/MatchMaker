@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 332516444}
   - component: {fileID: 332516443}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,11 +636,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6480ae00b33471fb8d4f3125233643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fly
-  circleRadius: {x: 10, y: 6}
-  circleSpeed: 2.5
-  dartDistance: {x: 14, y: 9}
+  circleRadius: {x: 20, y: 10}
+  circleSpeed: 1
+  dartDistance: {x: 0, y: 0}
   timeBetweenDarts: {x: 0.8, y: 2.2}
-  dartDuration: {x: 0.12, y: 0.28}
+  dartDuration: {x: 0, y: 0}
   movementSmoothing: 16
 --- !u!114 &332516444
 MonoBehaviour:
@@ -2364,23 +2364,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7914f0d652ca44ce7a771e2fa4919f95, type: 3}
---- !u!1 &908450218 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8998427943304157945, guid: 666910a504f68475f936225ba69f09a8, type: 3}
-  m_PrefabInstance: {fileID: 1628714049}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &908450226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908450218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0763ed15a31514c3ebc3e66465711546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1001 &915181399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4024,6 +4007,14 @@ PrefabInstance:
       propertyPath: falloffDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7390672722328440867, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: hoverScale
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390672722328440867, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: animationDuration
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7668549373808423202, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4083,10 +4074,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8998427943304157945, guid: 666910a504f68475f936225ba69f09a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 908450226}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 666910a504f68475f936225ba69f09a8, type: 3}
 --- !u!1 &1670357943
 GameObject:

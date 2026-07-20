@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 78326544332291478}
   - component: {fileID: 6957707188416943302}
   - component: {fileID: 4561138888814410978}
+  - component: {fileID: 7390672722328440867}
   m_Layer: 5
   m_Name: ChoiceButton
   m_TagString: Untagged
@@ -492,3 +493,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniformModifier
   radius: 15
+--- !u!114 &7390672722328440867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998427943304157945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0763ed15a31514c3ebc3e66465711546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScaleOnHover
+  hoverScale: 1.05
+  pressedScale: 0.98
+  animationDuration: 0.15
+  ease: 25
