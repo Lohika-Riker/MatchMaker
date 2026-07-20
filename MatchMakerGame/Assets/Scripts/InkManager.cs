@@ -146,6 +146,11 @@ public class InkManager : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        if (story == null)
+        {
+            return;
+        }
+
         if (isSceneTransitioning)
         {
             return;
