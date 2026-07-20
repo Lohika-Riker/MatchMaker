@@ -204,7 +204,7 @@ Which of these speak to you?
 ->Pick_Card_Loop
 
 == After_Card_Picks
-.#cards.discard
+.#cards:discard
 Ah, yes, life. The card tells me that you value life and the living. 
 * [Does this help me?] Is this going to help you match me? #player
     Ah, I see your doubt, but you must perservere on this path. 
@@ -779,25 +779,15 @@ Perhaps we should refine your match search a bit.
 #scene:cafe
 #entrance:player
 The doe ushers you back into the small cafe. #narrator
-#entrance:toad2
-Greetings and salutations. 
-I am here, at your service.
-+ (just_met) {nrDates > 1} You again? #player
-    We've never met, I assure you. #exp:glitch
-    ** You weren't here before?[] A couple of minutes ago? #player
-        I was not. 
-        Surely I would remember a person such as you.
-        So I assure you, this is our first meeting.
-        *** Is this [a joke?] some kind of joke? #player
-            I would not jest.
-            Rest assured, I shall be nothing but honest with you. #exp:glitch
-    ** Oh, nevermind.[] I suppose you just look familiar. #player
-        I have that kind of face.
-    -- If you say so. #player
-//+ (me_again) {just_met} It's me again.[] New hat, huh? #player
-//    Just my normal hat. #exp:glitch
-+ Nice to meet you. #player
-    The pleasure is mine.
+#entrance:toad3
+Hello there.
++ (just_met) {nrDates > 2} [You're the same person.] Are you going to pretend we've never met? #player
+    Ah... I am pleased to meet you. Are you well?
+    ** Asking questions now?
+        I'm just trying to make conversation.
+    ** I'm fine.
+        Glad to hear it.
+    ** I'm not fine.
 - 
 
 * {askedAboutFlies} What's your favourite fly?
