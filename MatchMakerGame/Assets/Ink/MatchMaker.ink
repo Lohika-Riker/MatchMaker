@@ -24,6 +24,14 @@ Where to go now?#player
     Welcome to the reception. #narrator
     .#entrance:deer
     Oh hi there. 
+    ++ [Replace and destroy]
+        Listen.
+        Watch this space #destroy
+        because I never said that.
+        I said.
+        Listen to me. #replace
+        Wow #player
+        ->LocationSelect
     ++ [Test]
         -> rorschachTest
     ++ [Go away]
