@@ -395,7 +395,7 @@ public class InkManager : MonoBehaviour
 
     private IEnumerator SceneTransition(string sceneName)
     {
-        if (sceneName == "start" || sceneName == "reception")
+        if (sceneName == "start" || sceneName == "reception" || sceneName == "wedding")
         {
             musicManager.SetLocation(Location.Lobby);
         }
@@ -407,7 +407,7 @@ public class InkManager : MonoBehaviour
         {
             musicManager.SetLocation(Location.Psychic);
         }
-        else if (sceneName == "wedding" || sceneName == "island")
+        else if (sceneName == "island")
         {
             musicManager.SetLocation(Location.Beach);
         }
@@ -508,6 +508,7 @@ public class InkManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         ClearBackground();
+        musicManager.RestoreMusic();
         ResetInkStory();
         startScreen.DOKill();
         startScreen.alpha = 1f;
