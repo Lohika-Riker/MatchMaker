@@ -363,7 +363,7 @@ MonoBehaviour:
   background: {fileID: 1548355686}
   recptionBackground: {fileID: -4839670369358242597, guid: 717776a466e0e457c9a642fc0c00c345, type: 3}
   psychicBackground: {fileID: -2771932680225338892, guid: b589bb5710be447d59019cf5c458b699, type: 3}
-  cafeBackground: {fileID: 0}
+  cafeBackground: {fileID: 3733427872582041186, guid: cab2277fd1a844a30a5f06fd5aecd6d6, type: 3}
   receptionBackgroundOverlays:
   - {fileID: 2800000, guid: bf9370825f31f4eaf939aaeb790d1590, type: 3}
   - {fileID: 2800000, guid: 30d73849c69f84b9a9787c26cd879cbc, type: 3}
