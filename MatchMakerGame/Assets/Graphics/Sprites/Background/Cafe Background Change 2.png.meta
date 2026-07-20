@@ -1,0 +1,1807 @@
+fileFormatVersion: 2
+guid: 8cfbf1b7697db401eaf8feb520ff5026
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3087001266870226240
+    second: Cafe Background Change 2_0
+  - first:
+      213: -8035837605615218341
+    second: Cafe Background Change 2_1
+  - first:
+      213: -8633939807608821748
+    second: Cafe Background Change 2_2
+  - first:
+      213: 1899476004507574160
+    second: Cafe Background Change 2_3
+  - first:
+      213: 2963655594222550216
+    second: Cafe Background Change 2_4
+  - first:
+      213: -638308809919673209
+    second: Cafe Background Change 2_5
+  - first:
+      213: -4789770166088948131
+    second: Cafe Background Change 2_6
+  - first:
+      213: -8168982772070525944
+    second: Cafe Background Change 2_7
+  - first:
+      213: -6258137361698233165
+    second: Cafe Background Change 2_8
+  - first:
+      213: -73568847675430372
+    second: Cafe Background Change 2_9
+  - first:
+      213: -6342279233082547286
+    second: Cafe Background Change 2_10
+  - first:
+      213: -3520616756352172827
+    second: Cafe Background Change 2_11
+  - first:
+      213: 3655320690324184688
+    second: Cafe Background Change 2_12
+  - first:
+      213: 6977976808698662396
+    second: Cafe Background Change 2_13
+  - first:
+      213: 2507529218209192768
+    second: Cafe Background Change 2_14
+  - first:
+      213: -6705876332998282999
+    second: Cafe Background Change 2_15
+  - first:
+      213: -1045230162410938792
+    second: Cafe Background Change 2_16
+  - first:
+      213: 8734303194308111940
+    second: Cafe Background Change 2_17
+  - first:
+      213: -5975430294986928542
+    second: Cafe Background Change 2_18
+  - first:
+      213: 6500834762112931324
+    second: Cafe Background Change 2_19
+  - first:
+      213: -996047413038832429
+    second: Cafe Background Change 2_20
+  - first:
+      213: 1877977213416745976
+    second: Cafe Background Change 2_21
+  - first:
+      213: -4114196052613956059
+    second: Cafe Background Change 2_22
+  - first:
+      213: 2788505154457112247
+    second: Cafe Background Change 2_23
+  - first:
+      213: -8921744636887356216
+    second: Cafe Background Change 2_24
+  - first:
+      213: 7671926062227713124
+    second: Cafe Background Change 2_25
+  - first:
+      213: 1538687457304335008
+    second: Cafe Background Change 2_26
+  - first:
+      213: 4845794835740468789
+    second: Cafe Background Change 2_27
+  - first:
+      213: -5813609456571558894
+    second: Cafe Background Change 2_28
+  - first:
+      213: -7809047145941386810
+    second: Cafe Background Change 2_29
+  - first:
+      213: -8095013902912862793
+    second: Cafe Background Change 2_30
+  - first:
+      213: -3342905462782779240
+    second: Cafe Background Change 2_31
+  - first:
+      213: 3022662427826117003
+    second: Cafe Background Change 2_32
+  - first:
+      213: -8975406205125748165
+    second: Cafe Background Change 2_33
+  - first:
+      213: 375642812842568273
+    second: Cafe Background Change 2_34
+  - first:
+      213: 7076612828770265781
+    second: Cafe Background Change 2_35
+  - first:
+      213: -5248413028116924436
+    second: Cafe Background Change 2_36
+  - first:
+      213: -5235467057889285227
+    second: Cafe Background Change 2_37
+  - first:
+      213: -7299687651231154368
+    second: Cafe Background Change 2_38
+  - first:
+      213: 5673074566987271717
+    second: Cafe Background Change 2_39
+  - first:
+      213: -619303953226354224
+    second: Cafe Background Change 2_40
+  - first:
+      213: -1626971546014987876
+    second: Cafe Background Change 2_41
+  - first:
+      213: -5983521408497576767
+    second: Cafe Background Change 2_42
+  - first:
+      213: 890975246702594228
+    second: Cafe Background Change 2_43
+  - first:
+      213: -6953477850725830306
+    second: Cafe Background Change 2_44
+  - first:
+      213: -1147476933619256919
+    second: Cafe Background Change 2_45
+  - first:
+      213: -4668973689882555767
+    second: Cafe Background Change 2_46
+  - first:
+      213: 2905159175476843652
+    second: Cafe Background Change 2_47
+  - first:
+      213: 2249421945958503043
+    second: Cafe Background Change 2_48
+  - first:
+      213: 3061812535867514838
+    second: Cafe Background Change 2_49
+  - first:
+      213: 3622841951175882121
+    second: Cafe Background Change 2_50
+  - first:
+      213: 2583578245429845103
+    second: Cafe Background Change 2_51
+  - first:
+      213: 7722594593634545195
+    second: Cafe Background Change 2_52
+  - first:
+      213: -8324551285599878285
+    second: Cafe Background Change 2_53
+  - first:
+      213: -5112681497119757783
+    second: Cafe Background Change 2_54
+  - first:
+      213: -1350169815069081912
+    second: Cafe Background Change 2_55
+  - first:
+      213: 1012820977782886984
+    second: Cafe Background Change 2_56
+  - first:
+      213: 5070397405267533304
+    second: Cafe Background Change 2_57
+  - first:
+      213: -936828613659509560
+    second: Cafe Background Change 2_58
+  - first:
+      213: 3873511651434251333
+    second: Cafe Background Change 2_59
+  - first:
+      213: 1168170213751795753
+    second: Cafe Background Change 2_60
+  - first:
+      213: -546758340963034194
+    second: Cafe Background Change 2_61
+  - first:
+      213: -7330111978496843331
+    second: Cafe Background Change 2_62
+  - first:
+      213: 2286745652887775750
+    second: Cafe Background Change 2_63
+  - first:
+      213: -5336534661129391313
+    second: Cafe Background Change 2_64
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cafe Background Change 2_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1027
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2f40314b4c825d0800000000000000
+      internalID: -3087001266870226240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1018
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51549cf548fa7090800000000000000
+      internalID: -8035837605615218341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_2
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 978
+        width: 15
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c082f535d751e2880800000000000000
+      internalID: -8633939807608821748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_3
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 940
+        width: 35
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f5d0cbc5b4c5a10800000000000000
+      internalID: 1899476004507574160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_4
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 910
+        width: 31
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccfb329f05012920800000000000000
+      internalID: 2963655594222550216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_5
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 1021
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c4cbfe4854427f0800000000000000
+      internalID: -638308809919673209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_6
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 948
+        width: 135
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5621864961578db0800000000000000
+      internalID: -4789770166088948131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 802
+        width: 213
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804537e2371f1ae80800000000000000
+      internalID: -8168982772070525944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_8
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 884
+        width: 43
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b460600a31a629a0800000000000000
+      internalID: -6258137361698233165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_9
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 951
+        width: 23
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a65c7d581aafef0800000000000000
+      internalID: -73568847675430372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_10
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 682
+        width: 102
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa327cde3a2bbf7a0800000000000000
+      internalID: -6342279233082547286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_11
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 925
+        width: 15
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec375f86b1442fc0800000000000000
+      internalID: -3520616756352172827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_12
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 886
+        width: 19
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e98e61dce4ab230800000000000000
+      internalID: 3655320690324184688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 424
+        width: 115
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdc565cfe0c6d060800000000000000
+      internalID: 6977976808698662396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_14
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 378
+        width: 163
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b954bd9888cc220800000000000000
+      internalID: 2507529218209192768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_15
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 863
+        width: 7
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90130ff1101ffe2a0800000000000000
+      internalID: -6705876332998282999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_16
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 563
+        width: 118
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ed8f484b89e71f0800000000000000
+      internalID: -1045230162410938792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_17
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 612
+        width: 30
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e6b499a7a763970800000000000000
+      internalID: 8734303194308111940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_18
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 633
+        width: 24
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e423f4ec1031da0800000000000000
+      internalID: -5975430294986928542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_19
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 684
+        width: 8
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf59043f5ca973a50800000000000000
+      internalID: 6500834762112931324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_20
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 470
+        width: 355
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4af56b7245d22f0800000000000000
+      internalID: -996047413038832429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 435
+        width: 51
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbabfd535aef0a10800000000000000
+      internalID: 1877977213416745976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_22
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 443
+        width: 67
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e71a3fc7077e6c0800000000000000
+      internalID: -4114196052613956059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_23
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 586
+        width: 60
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be03c1f9a2c2b620800000000000000
+      internalID: 2788505154457112247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_24
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 468
+        width: 62
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc259da5889f2480800000000000000
+      internalID: -8921744636887356216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_25
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 414
+        width: 44
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ce4222b18287a60800000000000000
+      internalID: 7671926062227713124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_26
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 440
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a259f017148a5510800000000000000
+      internalID: 1538687457304335008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_27
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 489
+        width: 112
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536abbe9ab8bf3340800000000000000
+      internalID: 4845794835740468789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_28
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 421
+        width: 16
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21453364009e15fa0800000000000000
+      internalID: -5813609456571558894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_29
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 448
+        width: 11
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9b2efaef0b0a390800000000000000
+      internalID: -7809047145941386810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_30
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 432
+        width: 29
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5c7099ebbb8af80800000000000000
+      internalID: -8095013902912862793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_31
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 228
+        width: 66
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890ae1d613d9b91d0800000000000000
+      internalID: -3342905462782779240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_32
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 364
+        width: 16
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89de7e9677a2f920800000000000000
+      internalID: 3022662427826117003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_33
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 116
+        width: 17
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a94a43c93f07380800000000000000
+      internalID: -8975406205125748165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_34
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 358
+        width: 23
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ae8e5e52d863500800000000000000
+      internalID: 375642812842568273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_35
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 250
+        width: 14
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bae2dfcfdd253260800000000000000
+      internalID: 7076612828770265781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_36
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 415
+        width: 21
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7fe808824e927b0800000000000000
+      internalID: -5248413028116924436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_37
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 159
+        width: 20
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59bef351372e757b0800000000000000
+      internalID: -5235467057889285227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_38
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 133
+        width: 30
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fbf01b1cc42ba90800000000000000
+      internalID: -7299687651231154368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_39
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 144
+        width: 15
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e449de24fcabe40800000000000000
+      internalID: 5673074566987271717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_40
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 259
+        width: 17
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1b2f3f55ac767f0800000000000000
+      internalID: -619303953226354224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_41
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 153
+        width: 13
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99cb1cbff5db69e0800000000000000
+      internalID: -1626971546014987876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_42
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 85
+        width: 41
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c49e842bf246fca0800000000000000
+      internalID: -5983521408497576767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_43
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 41
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8cf5b24416d5c00800000000000000
+      internalID: 890975246702594228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_44
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 45
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51b0f16cb8408f90800000000000000
+      internalID: -6953477850725830306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_45
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 57
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a17ba7fec75310f0800000000000000
+      internalID: -1147476933619256919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_46
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 0
+        width: 76
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ac7e49a29743fb0800000000000000
+      internalID: -4668973689882555767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_47
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 0
+        width: 87
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484934eb0e2315820800000000000000
+      internalID: 2905159175476843652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_48
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 0
+        width: 86
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38213d6875d873f10800000000000000
+      internalID: 2249421945958503043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_49
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 98
+        width: 16
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df9839774ebd7a20800000000000000
+      internalID: 3061812535867514838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_50
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 135
+        width: 18
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985b8395f8be64230800000000000000
+      internalID: 3622841951175882121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_51
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 148
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6cd540d9b6bad320800000000000000
+      internalID: 2583578245429845103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e60f9edda2c2b60800000000000000
+      internalID: 7722594593634545195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_53
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 72
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3734c4b06b0497c80800000000000000
+      internalID: -8324551285599878285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_54
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 0
+        width: 27
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ae67a344b1c09b0800000000000000
+      internalID: -5112681497119757783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_55
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 0
+        width: 14
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce3a5ae4bb334de0800000000000000
+      internalID: -1350169815069081912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_56
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 78
+        width: 83
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84210d920534e0e00800000000000000
+      internalID: 1012820977782886984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_57
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 80
+        width: 82
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd9803739bad5640800000000000000
+      internalID: 5070397405267533304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_58
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 32
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc3763e657bff2f0800000000000000
+      internalID: -936828613659509560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_59
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 0
+        width: 19
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5444311035a71c530800000000000000
+      internalID: 3873511651434251333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_60
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 0
+        width: 15
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9203ed3ce9c263010800000000000000
+      internalID: 1168170213751795753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_61
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 0
+        width: 205
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab9aec8f268968f0800000000000000
+      internalID: -546758340963034194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_62
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 9
+        width: 345
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db12cddfdf5364a90800000000000000
+      internalID: -7330111978496843331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_63
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 7
+        width: 252
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a6b0c3e072cbf10800000000000000
+      internalID: 2286745652887775750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cafe Background Change 2_64
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 25
+        width: 155
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23b2d7fff1d0f5b0800000000000000
+      internalID: -5336534661129391313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cafe Background Change 2_0: -3087001266870226240
+      Cafe Background Change 2_1: -8035837605615218341
+      Cafe Background Change 2_10: -6342279233082547286
+      Cafe Background Change 2_11: -3520616756352172827
+      Cafe Background Change 2_12: 3655320690324184688
+      Cafe Background Change 2_13: 6977976808698662396
+      Cafe Background Change 2_14: 2507529218209192768
+      Cafe Background Change 2_15: -6705876332998282999
+      Cafe Background Change 2_16: -1045230162410938792
+      Cafe Background Change 2_17: 8734303194308111940
+      Cafe Background Change 2_18: -5975430294986928542
+      Cafe Background Change 2_19: 6500834762112931324
+      Cafe Background Change 2_2: -8633939807608821748
+      Cafe Background Change 2_20: -996047413038832429
+      Cafe Background Change 2_21: 1877977213416745976
+      Cafe Background Change 2_22: -4114196052613956059
+      Cafe Background Change 2_23: 2788505154457112247
+      Cafe Background Change 2_24: -8921744636887356216
+      Cafe Background Change 2_25: 7671926062227713124
+      Cafe Background Change 2_26: 1538687457304335008
+      Cafe Background Change 2_27: 4845794835740468789
+      Cafe Background Change 2_28: -5813609456571558894
+      Cafe Background Change 2_29: -7809047145941386810
+      Cafe Background Change 2_3: 1899476004507574160
+      Cafe Background Change 2_30: -8095013902912862793
+      Cafe Background Change 2_31: -3342905462782779240
+      Cafe Background Change 2_32: 3022662427826117003
+      Cafe Background Change 2_33: -8975406205125748165
+      Cafe Background Change 2_34: 375642812842568273
+      Cafe Background Change 2_35: 7076612828770265781
+      Cafe Background Change 2_36: -5248413028116924436
+      Cafe Background Change 2_37: -5235467057889285227
+      Cafe Background Change 2_38: -7299687651231154368
+      Cafe Background Change 2_39: 5673074566987271717
+      Cafe Background Change 2_4: 2963655594222550216
+      Cafe Background Change 2_40: -619303953226354224
+      Cafe Background Change 2_41: -1626971546014987876
+      Cafe Background Change 2_42: -5983521408497576767
+      Cafe Background Change 2_43: 890975246702594228
+      Cafe Background Change 2_44: -6953477850725830306
+      Cafe Background Change 2_45: -1147476933619256919
+      Cafe Background Change 2_46: -4668973689882555767
+      Cafe Background Change 2_47: 2905159175476843652
+      Cafe Background Change 2_48: 2249421945958503043
+      Cafe Background Change 2_49: 3061812535867514838
+      Cafe Background Change 2_5: -638308809919673209
+      Cafe Background Change 2_50: 3622841951175882121
+      Cafe Background Change 2_51: 2583578245429845103
+      Cafe Background Change 2_52: 7722594593634545195
+      Cafe Background Change 2_53: -8324551285599878285
+      Cafe Background Change 2_54: -5112681497119757783
+      Cafe Background Change 2_55: -1350169815069081912
+      Cafe Background Change 2_56: 1012820977782886984
+      Cafe Background Change 2_57: 5070397405267533304
+      Cafe Background Change 2_58: -936828613659509560
+      Cafe Background Change 2_59: 3873511651434251333
+      Cafe Background Change 2_6: -4789770166088948131
+      Cafe Background Change 2_60: 1168170213751795753
+      Cafe Background Change 2_61: -546758340963034194
+      Cafe Background Change 2_62: -7330111978496843331
+      Cafe Background Change 2_63: 2286745652887775750
+      Cafe Background Change 2_64: -5336534661129391313
+      Cafe Background Change 2_7: -8168982772070525944
+      Cafe Background Change 2_8: -6258137361698233165
+      Cafe Background Change 2_9: -73568847675430372
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

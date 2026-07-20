@@ -435,7 +435,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 26050ac4263f7440c925d95151b108f4, type: 3}
   - {fileID: 2800000, guid: f3b0d2cee80dd4ebda0135fc9e59c455, type: 3}
   - {fileID: 2800000, guid: 9947984e66a1a4ce09d9c8834f48f088, type: 3}
-  cafeBackgroundOverlays: []
+  cafeBackgroundOverlays:
+  - {fileID: 2800000, guid: 87621fb4aeeda4d55982a5c8e097285e, type: 3}
+  - {fileID: 2800000, guid: 8cfbf1b7697db401eaf8feb520ff5026, type: 3}
+  - {fileID: 2800000, guid: c42c9d4b69025490fb7c94ca4733dd65, type: 3}
   fadeToBlack: {fileID: 1938928269}
   rorschachTest: {fileID: 0}
 --- !u!4 &271763598
