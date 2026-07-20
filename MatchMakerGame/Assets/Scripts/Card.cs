@@ -14,6 +14,9 @@ public class Card : MonoBehaviour
     private bool selected = false;
     private float distance = 70f;
     private Sequence selectionSequence;
+    private Tween previewTween;
+    private Vector2 restingAnchoredPosition;
+    private bool hasRestingAnchoredPosition;
     private int selectedNumber;
 
     public bool IsSelected => selected;
@@ -50,6 +53,7 @@ public class Card : MonoBehaviour
 
         selected = true;
         raised = false;
+        previewTween?.Kill();
 
         // UI elements later in the panel hierarchy render on top of earlier siblings.
         transform.SetAsLastSibling();
@@ -98,6 +102,7 @@ public class Card : MonoBehaviour
 
     private void OnDestroy()
     {
+        previewTween?.Kill();
         selectionSequence?.Kill();
     }
 
@@ -105,9 +110,17 @@ public class Card : MonoBehaviour
     {
         if (selected) return;
         if (raised) return;
-        
-        Vector2 targetPosition = transform.position + (transform.up * distance);
-        transform.DOMove(targetPosition, 0.2f);
+
+        RectTransform cardRect = (RectTransform)transform;
+        if (!hasRestingAnchoredPosition)
+        {
+            restingAnchoredPosition = cardRect.anchoredPosition;
+            hasRestingAnchoredPosition = true;
+        }
+
+        Vector2 raiseOffset = cardRect.localRotation * (Vector3.up * distance);
+        previewTween?.Kill();
+        previewTween = cardRect.DOAnchorPos(restingAnchoredPosition + raiseOffset, 0.2f);
         raised = true;
     }
 
@@ -115,8 +128,10 @@ public class Card : MonoBehaviour
     {
         if (selected) return;
         if (!raised) return;
-        Vector2 targetPosition = transform.position + (-transform.up * distance);
-        transform.DOMove(targetPosition, 0.2f);
+
+        RectTransform cardRect = (RectTransform)transform;
+        previewTween?.Kill();
+        previewTween = cardRect.DOAnchorPos(restingAnchoredPosition, 0.2f);
         raised = false;
     }
 
