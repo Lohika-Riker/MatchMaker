@@ -54,7 +54,7 @@ VAR toldAboutIsolation = false
 #scene:reception
 .#entrance:player
 A Match Made in Meadows. This place has a bit of a reputation for unorthodox methods, but you have no other options. #narrator
-#entrance:deer
+.#entrance:deer
 Can I help you?
 * Oh, hello. I didn't see you there. #player
 - Are you here for a screening?
@@ -186,7 +186,8 @@ Ah, yes. I can see it. You are here to be assessed. Your innards exposed for des
 -> Pick_Card_Loop
 
 == Pick_Card_Loop
-The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator #clearDialogue #cards:fan
+The Great Glaucus {|picks up the cards and }fans cards in front of you{| again}. #narrator #clearDialogue 
+.#cards:fan
 Which of these speak to you?
 + From the left #cards:hoverLeft
     #cards:selectLeft
@@ -194,29 +195,29 @@ Which of these speak to you?
     #cards:selectLeft
 + From the right #cards:hoverRight
     #cards:selectLeft
-- {The card reads: Imprisonment | The card reads: Life} #narrator
-#clearDialogue
-{cardPicked == true: -> After_Card_Picks | Oh, I don't know how that got in there. Let me do that again.} 
+- Let's see... #clearDialogue
+The card reads: {Imprisonment|Life}. #narrator
+// {cardPicked == true: -> After_Card_Picks | Oh, I don't know how that got in there. Let me do that again.} 
+// ~cardPicked = true
+{ | ->After_Card_Picks}
+Oh, I don't know how that got in there. Let me do that again.
 .#cards:discard
-~cardPicked = true
-
-
 ->Pick_Card_Loop
 
 == After_Card_Picks
-.#cards:discard
 Ah, yes, life. The card tells me that you value life and the living. 
 * [Does this help me?] Is this going to help you match me? #player
     Ah, I see your doubt, but you must perservere on this path. 
     Learning about you will help us learn about the one you are meant to be with. 
     So says the Great Glaucus!
+    .#cards:discard
 * [That's true!] I do care about life and the living! #player
     Of course you do! So it is written!
     ~ psychicOwl = psychicOwl + 1
 * [Imprisonment] What does the Imprisonment card mean? #player
     Do not worry yourself about that. It means nothing. It was not supposed to be in there. 
     You can trust the Great Glaucus!
-- Now, let me look into my crystal ball, and see your future!
+-Now, let me look into my crystal ball, and see your future! 
 
 
 {psychicOwl == -1:
@@ -271,7 +272,8 @@ So says the Great Glaucus.
 //{insight}
 .#scene:reception
 You return to reception. #narrator
-.#entrance:doe
+Hello? #player
+.#entrance:deer
 The Great Glaucus has passed on his findings.
 // can do an exchange about a negative relationship score with the owl
 
@@ -281,24 +283,24 @@ The Great Glaucus has passed on his findings.
 * {psychicOwl <= 0} [I'm excited!]  I'm excited to meet the match he saw in his visions! #player
 
 * {psychicOwl > 0} [He said strange things.] He said some strange things. Something about sorrow and an empty landscape. #player
-What was that about? #player
-The ways of the Great Glaucus are mysterious.
-There is nothing to worry about. #exp:glitch
-{Inc_Insight()}
-{questioningTheProcess > 0: 
-    I thought I told you to stop questioning the process. #exp:frown
-}
-{questioningTheProcess == 0: 
-    Stop questioning the process. #exp:raisedeyebrow
-}
- The future you've always wanted is possible if you stop fighting it.
+    What was that about? #player
+    The ways of the Great Glaucus are mysterious.
+    There is nothing to worry about. #exp:glitch
+    {Inc_Insight()}
+    {questioningTheProcess > 0: 
+        I thought I told you to stop questioning the process. #exp:frown
+    }
+    {questioningTheProcess == 0: 
+        Stop questioning the process. #exp:raisedeyebrow
+    }
+     The future you've always wanted is possible if you stop fighting it.
 - You don't have to wait much longer. We have found your perfect match.
 Wait here while we prepare your date.
 #exit:other
-The doe leaves you alone in the waiting room. #narrator
+The doe leaves you alone in the waiting room. #narrator #clearDialogue
 -> Waiting_In_The_Waiting_Room ->
-- Your date is ready. Follow me. #entrance:doe
-.#exit:other
+- .#entrance:deer
+Your date is ready. Follow me. 
 -> Date_1
 
 == Waiting_In_The_Waiting_Room
@@ -364,7 +366,6 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
 ~ temp flies = false
 ~ nrDates = nrDates + 1
 #scene:cafe
-#entrance:player
 The doe ushers you into {a|the} small cafe. #narrator
 #entrance:toad1
 The toad watches you.
@@ -486,7 +487,7 @@ The toad watches you.
 == End_Of_Date_1
 #scene:reception
 You return to the reception with the date fresh in mind. #narrator
-#entrance:doe
+.#entrance:deer
 How did it go?
 * It was terrible. #player
     Sorry to hear that. What happened?
@@ -533,7 +534,7 @@ Perhaps we should refine your match search a bit.
 == Refinement
 {
 - nrDates == 1:
-    Let's try the adcanced image questionnaire.
+    Let's try the advanced image questionnaire.
     ->Advanced_Questionnaire    
 
 - nrDates == 2:
@@ -547,18 +548,19 @@ Perhaps we should refine your match search a bit.
 ->DONE
 
 = Advanced_Questionnaire
-Wait here while I prepare some things.
-#exit:other
+Wait here while I prepare some things. 
+#exit:other #clearDialogue
 
 -> Waiting_In_The_Waiting_Room ->
 
-#entrance:doe
+.#entrance:deer
 Alright, let's begin.
-What do you see in this image? It may be unclear, so just say the first thing that comes to mind.
-* (plane) Plane crashing into an island. #player
-* (puppy) Puppy. #player
+What do you see in this image? It may be unclear, so just say the first thing that comes to mind. 
+#test:1 #clearDialogue
+* (plane) Plane crashing into an island. #test:hoverPlane #player 
+* (puppy) Puppy. #test:hoverPuppy #player
 - 
-Oh. Wow. Okay, sure. #exp:takenotes
+Oh. Wow. Okay, sure. #exp:takenotes #test:complete
 {plane:
     I wonder if you remember it. #exp:glitch #destroy
 } 
@@ -572,12 +574,13 @@ Oh. Wow. Okay, sure. #exp:takenotes
 -
 
 What about this image?
+#test:2 #clearDialogue
 * A person screaming. #player
 * A person in love. #player
 -
 I see. #exp:takenotes
 Interesting.
-
+#test:complete
 Okay, that's it for the advanced questionnaire. 
 
 Wait here while I prepare your next date.
@@ -712,8 +715,8 @@ The toad runs away, leaving you alone in the cafe. #narrator
 == End_Of_Date_2
 #scene:reception
 You return to the reception with the date fresh in mind. #narrator
-#entrance:doe
-
+.#entrance:deer
+-> DONE
 //END OF CONTENT FOR NOW
 //->END
 =How_It_Went_Loop
@@ -779,15 +782,25 @@ Perhaps we should refine your match search a bit.
 #scene:cafe
 #entrance:player
 The doe ushers you back into the small cafe. #narrator
-#entrance:toad3
-Hello there.
-+ (just_met) {nrDates > 2} [You're the same person.] Are you going to pretend we've never met? #player
-    Ah... I am pleased to meet you. Are you well?
-    ** Asking questions now?
-        I'm just trying to make conversation.
-    ** I'm fine.
-        Glad to hear it.
-    ** I'm not fine.
+#entrance:toad2
+Greetings and salutations. 
+I am here, at your service.
++ (just_met) {nrDates > 1} You again? #player
+    We've never met, I assure you. #exp:glitch
+    ** You weren't here before?[] A couple of minutes ago? #player
+        I was not. 
+        Surely I would remember a person such as you.
+        So I assure you, this is our first meeting.
+        *** Is this [a joke?] some kind of joke? #player
+            I would not jest.
+            Rest assured, I shall be nothing but honest with you. #exp:glitch
+    ** Oh, nevermind.[] I suppose you just look familiar. #player
+        I have that kind of face.
+    -- If you say so. #player
+//+ (me_again) {just_met} It's me again.[] New hat, huh? #player
+//    Just my normal hat. #exp:glitch
++ Nice to meet you. #player
+    The pleasure is mine.
 - 
 
 * {askedAboutFlies} What's your favourite fly?
@@ -877,7 +890,7 @@ You try the door, but it doesn't budge. #narrator
 }
 
 }
-#entrance:doe
+.#entrance:deer
 Where are you going? #exp:frown
 * [I'm leaving.] I'm leaving. What about it? #player
 * [Just looking around.] Nowhere. I'm just looking around. #player
