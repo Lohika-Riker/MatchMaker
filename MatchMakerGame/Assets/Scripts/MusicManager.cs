@@ -169,6 +169,27 @@ public class MusicManager : MonoBehaviour
         musicFadeCoroutine = StartCoroutine(FadeOutMusicCoroutine(duration));
     }
 
+    public void RestoreMusic()
+    {
+        if (musicFadeCoroutine != null)
+        {
+            StopCoroutine(musicFadeCoroutine);
+            musicFadeCoroutine = null;
+        }
+
+        bool allowFadeout = musicEmitter.AllowFadeout;
+        musicEmitter.AllowFadeout = false;
+        musicEmitter.Stop();
+        musicEmitter.AllowFadeout = allowFadeout;
+        musicEmitter.Play();
+
+        FMOD.Studio.EventInstance musicInstance = musicEmitter.EventInstance;
+        if (musicInstance.isValid())
+        {
+            musicInstance.setVolume(1f);
+        }
+    }
+
     private IEnumerator FadeOutMusicCoroutine(float duration)
     {
         FMOD.Studio.EventInstance musicInstance = musicEmitter.EventInstance;
