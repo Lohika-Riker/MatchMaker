@@ -20,7 +20,7 @@ VAR matchedSuccessfully = false
 //reception
 //psychic
 //cafe
-
+-> Interim
 -> Reception_1
 
 == function Inc_Insight
@@ -29,19 +29,19 @@ VAR matchedSuccessfully = false
 
 == function Calculate_WeirdFactor
 {
-    - insight >= 8:
+    - insight >= 14:
         ~ weirdFactor = 6
-    - insight >= 6:
+    - insight >= 12:
         ~weirdFactor = 5
-    - insight >= 5:
+    - insight >= 10:
         ~weirdFactor = 4
+    - insight >= 8:
+        ~weirdFactor = 3
+    - insight >= 6:
+        ~weirdFactor = 3
     - insight >= 4:
-        ~weirdFactor = 3
-    - insight >= 3:
-        ~weirdFactor = 3
-    - insight >= 2:
         ~weirdFactor = 2
-    - insight >= 1:
+    - insight >= 2:
         ~weirdFactor = 1
     - else:
         ~weirdFactor = 0
@@ -53,7 +53,6 @@ VAR matchedSuccessfully = false
 
 === Reception_1 ===
 #scene:reception
-.#entrance:player
 A Match Made in Meadows. This place has a bit of a reputation for unorthodox methods, but you have no other options. #narrator
 .#entrance:deer
 Can I help you?
@@ -173,7 +172,7 @@ The psychic's room is dark, and a bit cramped. #narrator
 
 Hoo-hoo! #exp:glitch 
 .#entrance:owl
-* Hello?
+* Hello? #player
 - Oh, yes, hello! Excuse the mess. 
 * Uhh  #player
 - Not that I'm surprised that you're here or anything. The Great Glaucus knows all.
@@ -301,7 +300,8 @@ Wait here while we prepare your date.
 #exit:other
 The doe leaves you alone in the waiting room. #narrator #clearDialogue
 -> Waiting_In_The_Waiting_Room ->
-- .#entrance:deer
+- 
+.#entrance:deer
 Your date is ready. Follow me. 
 -> Date_1
 
@@ -351,8 +351,8 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
 
 + [Check plants.]
     You feel one of the vines coming from the walls. It is slightly warm to the touch, growing out of a crack in the ceiling. #narrator
-    There is something scratched on the wall.
-    "Get out. Three bottles break three locks."
+    Huh? #player
+    There is something scratched on the wall. "Get out. Three bottles break three locks." #narrator
     //could add something to take here? Flower on the vine?
     ->Waiting_In_The_Waiting_Room
     
@@ -370,8 +370,10 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
 ~ nrDates = nrDates + 1
 #scene:cafe
 The doe ushers you into {a|the} small cafe. #narrator
+The doe ushers you into {a|the} small cafe. #narrator // for some reason this line doesn't load...
 .#entrance:toad1
 The toad watches you. #narrator
+Umm... #player
 + Hello. #player
     Hello. #exp:ribbit
 + [Not saying anything?] Are you not going to say anything? #player
@@ -551,7 +553,8 @@ Perhaps we should refine your match search a bit.
 
 = Advanced_Questionnaire
 Wait here while I prepare some things. 
-#exit:other #clearDialogue
+#clearDialogue
+#exit:other 
 
 -> Waiting_In_The_Waiting_Room ->
 .#entrance:deer
@@ -586,14 +589,17 @@ Interesting.
 Okay, that's it for the advanced questionnaire. 
 
 Wait here while I prepare your next date.
+#clearDialogue
+#exit:other
 -> Waiting_In_The_Waiting_Room ->
-->Date_3
+-> Date_2
 
 ->DONE
 
 = Advanced_Psychic_Reading
-#scene:psychic
-.entrance:owl
+.#scene:psychic
+Back at the psychic. #narrator
+.#entrance:owl
 Hoo!
 You are back to see the Great Glaucus!
 I have seen much since your last visit.
@@ -606,7 +612,7 @@ I have seen the way things truly are. #exp:takenotes
 Your life. Your decisions.
 Do you wish to know the truth, or live in the lie?
 * [The truth.] I want to know the truth. #player
-    ~Inc_Insight()
+    {Inc_Insight()}
     Good. 
 * [The lie.] I don't care about the truth. #player
     Ah. Then I can help you no further.
@@ -651,6 +657,7 @@ Now go. The truth waits for you.
 //-> Waiting_In_The_Waiting_Room ->
 =End_Of_Advanced_Psychic
 #scene:reception
+Back at reception. #narrator
 .#entrance:deer
 Your next date is ready. #exp:smile
 ->Date_3
@@ -664,7 +671,6 @@ Your next date is ready. #exp:smile
 ~ temp flies = false
 ~ nrDates = nrDates + 1
 #scene:cafe
-.#entrance:player
 The doe ushers you back into the small cafe. #narrator
 .#entrance:toad2
 Greetings and salutations. 
@@ -754,10 +760,10 @@ I am here, at your service.  #exp:ribbit
 -> End_Of_Date_2
 
 =Toad_Runs_Away(->return_to)
-The toad runs away, leaving you alone in the cafe. #narrator
-
-
-->DONE
+The toad runs away, leaving you alone in the cafe. #narrator 
+#exit:other
+Okay? #player
+-> Waiting_In_Cafe
 
 ==Waiting_In_Cafe
 * [Return to reception]
@@ -843,7 +849,6 @@ Perhaps we should refine your match search a bit.
 ~ temp flies = false
 ~ nrDates = nrDates + 1
 #scene:cafe
-.#entrance:player
 The doe ushers you back into the small cafe. #narrator
 .#entrance:toad3
 Hello there. #exp:ribbit
@@ -880,7 +885,7 @@ I once talked about flies for an entire date!
 
 * The one we were on[?] a few minutes ago? #player
     Ah, no. This was long, long ago. #exp:glitch
-    ~Inc_Insight()
+    {Inc_Insight()}
 * [Sounds great.] Sounds like a great date. #player
 -
 Aha! #exp:ribbit
@@ -889,7 +894,7 @@ I hope you are having a good time? #exp:ribbit
 
 * [Tell me what's going on.] I will have a good time if you tell me what's really going on. #player
     You must escape, or you'll be stuck in here forever. #exp:glitch #destroy
-    ~Inc_Insight()
+    {Inc_Insight()}
     ** Stuck where? What is this place? #player
         No one is stuck. We're all free here. #exp:glitch
         There's nothing to tell! #replace
@@ -904,9 +909,9 @@ I hope you are having a good time? #exp:ribbit
 
 =Toad_Runs_Away(->return_to)
 The toad runs away, leaving you alone in the cafe. #narrator
-
-
-->DONE
+#exit:other
+Weird... #player
+-> End_Of_Date_3
 
 
 == End_Of_Date_3
@@ -938,8 +943,9 @@ You return to the reception with the date fresh in mind. #narrator
         Let me check some files. Wait here.
 }
 #exit:other
+I know the drill... #player
 -> Waiting_In_The_Waiting_Room->
-
+#entrance:deer
 
 {
     - matchedSuccessfully:
@@ -953,7 +959,7 @@ You return to the reception with the date fresh in mind. #narrator
 }
 
 #scene:wedding
-->END
+->DONE
 
 
 == Leave_Agency(->return_to)
@@ -963,26 +969,27 @@ You hear someone behind you, but the three locks are open, so you yank open the 
 Sights and smells hit you as you remember the truth.
 Alone again.
 #scene:island
-->END
+->DONE
 
 -else:
 You try the door, but it doesn't budge. #narrator
-{
+    {
     - bottlesCollected == 0:
         There are three locks, keeping it closed. #narrator        
     - bottlesCollected == 1:
         There are two locks left, keeping it closed. #narrator        
     - bottlesCollected == 2:
         There is one lock left, keeping it closed. #narrator        
-}
+    }
 
 }
 .#entrance:deer
 Where are you going? #exp:frown
-* [I'm leaving.] I'm leaving. What about it? #player
-* [Just looking around.] Nowhere. I'm just looking around. #player
++ [I'm leaving.] I'm leaving. What about it? #player
++ [Just looking around.] Nowhere. I'm just looking around. #player
 - You are in a very fragile state, so we can't let you leave at this moment. Please stay in the waiting room until we call you.
 #exit:other
+Fine... #player 
 ->->
 ->return_to
 }
