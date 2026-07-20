@@ -676,6 +676,7 @@ public class InkManager : MonoBehaviour
         choicePanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.InBack);
         ClearChoices();
         DisplayNextLine();
+        musicManager.PlayClickSFX();
     }
 
     public void ClearChoices()
