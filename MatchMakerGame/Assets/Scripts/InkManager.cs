@@ -396,6 +396,16 @@ public class InkManager : MonoBehaviour
             yield break;
         }
 
+        if (sceneName == "wedding" || sceneName == "island")
+        {
+            musicManager.SetWeirdFactor(0);
+        }
+
+        if (sceneName == "island")
+        {
+            musicManager.FadeOutMusic(5f);
+        }
+
         Sprite newBackground;
         Texture2D[] backgroundOverlays;
         bool showPlayerAfterTransition = true;

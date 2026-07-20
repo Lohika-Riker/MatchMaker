@@ -1,5 +1,6 @@
 using UnityEngine;
 using FMODUnity;
+using System.Collections;
 
 public enum WeirdFactor
     {
@@ -20,6 +21,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private StudioEventEmitter wooshInEmitter, wooshOutEmitter;
     [SerializeField] private StudioEventEmitter clickEmitter;
     private WeirdFactor currentWeirdFactor;
+    private Coroutine musicFadeCoroutine;
 
     void Start()
     {
@@ -102,6 +104,41 @@ public class MusicManager : MonoBehaviour
         currentWeirdFactor = (WeirdFactor)clampedWeirdFactor;
         print($"Setting weird factor to {currentWeirdFactor}");
         musicEmitter.SetParameter("Weird factor", clampedWeirdFactor);
+    }
+
+    public void FadeOutMusic(float duration)
+    {
+        if (musicFadeCoroutine != null)
+        {
+            StopCoroutine(musicFadeCoroutine);
+        }
+
+        musicFadeCoroutine = StartCoroutine(FadeOutMusicCoroutine(duration));
+    }
+
+    private IEnumerator FadeOutMusicCoroutine(float duration)
+    {
+        FMOD.Studio.EventInstance musicInstance = musicEmitter.EventInstance;
+        if (!musicInstance.isValid())
+        {
+            musicFadeCoroutine = null;
+            yield break;
+        }
+
+        musicInstance.getVolume(out float startingVolume);
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float volume = Mathf.Lerp(startingVolume, 0f, Mathf.Clamp01(elapsed / duration));
+            musicInstance.setVolume(volume);
+            yield return null;
+        }
+
+        musicInstance.setVolume(0f);
+        musicEmitter.Stop();
+        musicFadeCoroutine = null;
     }
 
 }
