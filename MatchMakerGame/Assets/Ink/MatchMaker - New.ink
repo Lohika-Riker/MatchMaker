@@ -371,7 +371,7 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
 #scene:cafe
 The doe ushers you into {a|the} small cafe. #narrator
 .#entrance:toad1
-The toad watches you.
+The toad watches you. #narrator
 + Hello. #player
     Hello. #exp:ribbit
 + [Not saying anything?] Are you not going to say anything? #player
