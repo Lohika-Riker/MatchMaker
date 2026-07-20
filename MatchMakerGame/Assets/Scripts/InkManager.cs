@@ -40,6 +40,7 @@ public class InkManager : MonoBehaviour
     private TextMeshProUGUI activeDialogueText;
     private RectTransform activeDialogueRect;
     private string activeDialogueLine;
+    private GameObject dialogueToReplace;
     private character currentCharacter;
     private int currentWeirdFactor;
     private GameObject backgroundOverlay;
@@ -301,12 +302,15 @@ public class InkManager : MonoBehaviour
             GameObject prefab;
 
             bool player = false;
-            if (story.currentTags.Contains("player"))
+            bool replaceDialogue = HasCurrentTag("replace");
+            bool storeDialogueForReplacement = HasCurrentTag("destroy");
+
+            if (HasCurrentTag("player"))
             {
                 prefab = dialoguePrefabPlayer;
                 player = true;
             }
-            else if (story.currentTags.Contains("narrator"))
+            else if (HasCurrentTag("narrator"))
             {
                 StartCoroutine(DisplayNarratorText(text));
                 return;
@@ -316,7 +320,23 @@ public class InkManager : MonoBehaviour
                 prefab = dialoguePrefabOther;
             }
 
+            if (replaceDialogue && dialogueToReplace != null)
+            {
+                StartCoroutine(ReplaceDialogueText(dialogueToReplace, text, player));
+                return;
+            }
+
+            if (replaceDialogue)
+            {
+                Debug.LogWarning("Cannot replace dialogue: no dialogue bubble has been stored by a #destroy tag. Creating a new bubble instead.");
+            }
+
             GameObject dialogueInstance = Instantiate(prefab, dialoguePanel.transform);
+
+            if (storeDialogueForReplacement)
+            {
+                dialogueToReplace = dialogueInstance;
+            }
 
             StartCoroutine(DisplayText(dialogueInstance, text, player));
         }
@@ -509,6 +529,89 @@ public class InkManager : MonoBehaviour
         }
     }
 
+    private IEnumerator ReplaceDialogueText(GameObject dialogueInstance, string text, bool player)
+    {
+        activeDialogueText = dialogueInstance.GetComponentInChildren<TextMeshProUGUI>();
+        activeDialogueRect = dialogueInstance.GetComponent<RectTransform>();
+        activeDialogueLine = text;
+        skipTypewriter = false;
+        isTyping = true;
+
+        if (player)
+        {
+            playerTalkingBounceAnimator?.StartTalking();
+        }
+        else
+        {
+            characterSpriteHolder.StartTalkingAnimation();
+            if (currentCharacter == character.owl) musicManager.StartOwlTalk();
+            else if (currentCharacter == character.doe) musicManager.StartDoeTalk();
+            else if (IsToad(currentCharacter)) musicManager.StartToadTalk();
+        }
+
+        string previousText = activeDialogueText.text;
+        for (int length = previousText.Length - 1; length >= 1; length--)
+        {
+            if (skipTypewriter)
+            {
+                break;
+            }
+
+            activeDialogueText.text = previousText.Substring(0, length);
+            RebuildActiveDialogueLayout();
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        if (!skipTypewriter)
+        {
+            activeDialogueText.text = text.Substring(0, 1);
+            RebuildActiveDialogueLayout();
+
+            for (int index = 1; index < text.Length; index++)
+            {
+                if (skipTypewriter)
+                {
+                    break;
+                }
+
+                char c = text[index];
+                activeDialogueText.text += c;
+                if (c == '.' || c == '!' || c == '?')
+                {
+                    yield return new WaitForSeconds(0.2f);
+                }
+                else if (c == ' ')
+                {
+                    yield return new WaitForSeconds(0.1f);
+                }
+                else
+                {
+                    yield return new WaitForSeconds(0.05f);
+                }
+            }
+        }
+
+        activeDialogueText.text = text;
+        RebuildActiveDialogueLayout();
+        isTyping = false;
+        activeDialogueText = null;
+        activeDialogueRect = null;
+        activeDialogueLine = null;
+
+        if (currentCharacter == character.owl) musicManager.StopOwlTalk();
+        else if (currentCharacter == character.doe) musicManager.StopDoeTalk();
+        else if (IsToad(currentCharacter)) musicManager.StopToadTalk();
+
+        if (player)
+        {
+            playerTalkingBounceAnimator?.StopTalking();
+        }
+        else
+        {
+            characterSpriteHolder.StopTalkingAnimation();
+        }
+    }
+
     private void CompleteActiveDialogueLine()
     {
         skipTypewriter = true;
@@ -527,6 +630,24 @@ public class InkManager : MonoBehaviour
                     LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueContainerRect);
                 }
             }
+        }
+    }
+
+    private bool HasCurrentTag(string tagName)
+    {
+        return story.currentTags.Exists(tag =>
+            string.Equals(tag.Trim(), tagName, StringComparison.OrdinalIgnoreCase));
+    }
+
+    private void RebuildActiveDialogueLayout()
+    {
+        activeDialogueText.ForceMeshUpdate();
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(activeDialogueRect);
+
+        if (activeDialogueRect.parent is RectTransform dialogueContainerRect)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueContainerRect);
         }
     }
 
@@ -717,6 +838,8 @@ public class InkManager : MonoBehaviour
 
     public void ClearDialogue()
     {
+        dialogueToReplace = null;
+
         foreach (Transform child in dialoguePanel.transform)
         {
             child.gameObject.SetActive(false);
