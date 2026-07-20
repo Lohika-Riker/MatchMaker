@@ -178,6 +178,11 @@ public class InkManager : MonoBehaviour
                         return;
                     }
                 }
+                else if (parts[0] == "exit" && parts.Length > 1 && parts[1] == "other")
+                {
+                    characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
+                    currentCharacter = character.none;
+                }
                 else if (parts[0] == "exp")
                 {
                     print($"change {currentCharacter}'s expression to {parts[1]}");

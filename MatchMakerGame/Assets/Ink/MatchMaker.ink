@@ -24,7 +24,12 @@ Where to go now?#player
     Welcome to the reception. #narrator
     .#entrance:deer
     Oh hi there. 
-    -> rorschachTest
+    ++ [Test]
+        -> rorschachTest
+    ++ [Go away]
+        #exit:other
+        Weird. #player
+        --->LocationSelect
 + [psychic]
     -> RikerPsychic
 + [cafe]
