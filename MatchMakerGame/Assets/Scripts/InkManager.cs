@@ -369,6 +369,7 @@ public class InkManager : MonoBehaviour
     {
         Sprite newBackground;
         Texture2D[] backgroundOverlays;
+        bool showPlayerAfterTransition = true;
         // character newCharacter = character.none;
         if (sceneName == "psychic")
         {
@@ -392,11 +393,13 @@ public class InkManager : MonoBehaviour
         {
             newBackground = weddingBackground;
             backgroundOverlays = null;
+            showPlayerAfterTransition = false;
         }
         else if (sceneName == "island")
         {
             newBackground = islandBackground;
             backgroundOverlays = null;
+            showPlayerAfterTransition = false;
         }
         else
         {
@@ -415,9 +418,12 @@ public class InkManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         fadeToBlack.Fade(false);
         yield return new WaitForSeconds(1);
-        ShowPlayerCharacter();
-        musicManager.PlayCharacterMoveInSFX();
-        yield return new WaitForSeconds(1);
+        if (showPlayerAfterTransition)
+        {
+            ShowPlayerCharacter();
+            musicManager.PlayCharacterMoveInSFX();
+            yield return new WaitForSeconds(1);
+        }
         // characterSpriteHolder.ShowCharacter(newCharacter);
         // yield return new WaitForSeconds(0.5f);
         isSceneTransitioning = false;
