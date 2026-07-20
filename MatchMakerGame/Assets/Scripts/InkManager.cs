@@ -737,6 +737,9 @@ public class InkManager : MonoBehaviour
 
     public void DisplayOptions()
     {
+        narratorPanel.transform.DOKill();
+        narratorPanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.InBack);
+
         if (choicePanel.GetComponentsInChildren<Button>().Length > 0) return;
 
         choicePanel.transform.DOLocalMoveY(-590, 0.5f).SetEase(Ease.OutBack);
