@@ -364,6 +364,15 @@ MonoBehaviour:
   recptionBackground: {fileID: -4839670369358242597, guid: 717776a466e0e457c9a642fc0c00c345, type: 3}
   psychicBackground: {fileID: -2771932680225338892, guid: b589bb5710be447d59019cf5c458b699, type: 3}
   cafeBackground: {fileID: 0}
+  receptionBackgroundOverlays:
+  - {fileID: 2800000, guid: bf9370825f31f4eaf939aaeb790d1590, type: 3}
+  - {fileID: 2800000, guid: 30d73849c69f84b9a9787c26cd879cbc, type: 3}
+  - {fileID: 2800000, guid: 828f367fd846345439141de34fb29bb9, type: 3}
+  psychicBackgroundOverlays:
+  - {fileID: 2800000, guid: 26050ac4263f7440c925d95151b108f4, type: 3}
+  - {fileID: 2800000, guid: f3b0d2cee80dd4ebda0135fc9e59c455, type: 3}
+  - {fileID: 2800000, guid: 9947984e66a1a4ce09d9c8834f48f088, type: 3}
+  cafeBackgroundOverlays: []
   fadeToBlack: {fileID: 1938928269}
   rorschachTest: {fileID: 0}
 --- !u!4 &271763598
@@ -2654,7 +2663,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126573543}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -3313,7 +3322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4839670369358242597, guid: 717776a466e0e457c9a642fc0c00c345, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3406,7 +3415,6 @@ GameObject:
   - component: {fileID: 1687578552}
   - component: {fileID: 1687578551}
   - component: {fileID: 1687578550}
-  - component: {fileID: 1687578549}
   m_Layer: 5
   m_Name: RorschachTestB
   m_TagString: Untagged
@@ -3433,18 +3441,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &1687578549
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687578547}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!114 &1687578550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3471,7 +3467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnityEngine.UI.ProceduralImage.ProceduralImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3546,7 +3542,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716210963}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -3994,7 +3990,6 @@ GameObject:
   - component: {fileID: 2070655550}
   - component: {fileID: 2070655549}
   - component: {fileID: 2070655548}
-  - component: {fileID: 2070655551}
   m_Layer: 5
   m_Name: RorschachTestA
   m_TagString: Untagged
@@ -4074,18 +4069,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070655546}
   m_CullTransparentMesh: 1
---- !u!225 &2070655551
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070655546}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1001 &5489539054040458965
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -75,15 +75,16 @@ public class MusicManager : MonoBehaviour
     {
         if (currentWeirdFactor < WeirdFactor.End)
         {
-            currentWeirdFactor++;
-            SetWeirdFactor(currentWeirdFactor);
+            SetWeirdFactor((int)currentWeirdFactor + 1);
         }
     }
 
-    private void SetWeirdFactor(WeirdFactor weirdFactor)
-    {  
-        print($"Setting weird factor to {weirdFactor}");
-        musicEmitter.SetParameter("Weird factor", (float)weirdFactor);
+    public void SetWeirdFactor(int weirdFactor)
+    {
+        int clampedWeirdFactor = Mathf.Clamp(weirdFactor, (int)WeirdFactor.Weird0, (int)WeirdFactor.End);
+        currentWeirdFactor = (WeirdFactor)clampedWeirdFactor;
+        print($"Setting weird factor to {currentWeirdFactor}");
+        musicEmitter.SetParameter("Weird factor", clampedWeirdFactor);
     }
 
 }
