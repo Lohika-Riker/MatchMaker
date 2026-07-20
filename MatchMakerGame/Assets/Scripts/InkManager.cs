@@ -188,7 +188,7 @@ public class InkManager : MonoBehaviour
                     print($"change {currentCharacter}'s expression to {parts[1]}");
                     try
                     {
-                        characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
+                        characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1], true)));
                     }
                     catch (ArgumentException e)
                     {
