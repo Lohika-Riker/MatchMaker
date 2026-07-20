@@ -52,7 +52,7 @@ VAR matchedSuccessfully = false
 
 
 === Reception_1 ===
-#scene:reception
+.#scene:reception
 A Match Made in Meadows. This place has a bit of a reputation for unorthodox methods, but you have no other options. #narrator
 .#entrance:deer
 Can I help you?
@@ -167,7 +167,7 @@ That doesn't matter. The Great Glaucus doesn't need you to believe. Go on.
 
 
 === Psychic ===
-#scene:psychic
+.#scene:psychic
 The psychic's room is dark, and a bit cramped. #narrator
 
 Hoo-hoo! #exp:glitch 
@@ -306,16 +306,18 @@ Your date is ready. Follow me.
 -> Date_1
 
 == Waiting_In_The_Waiting_Room
-{look_around: It looks like there's something written on the wall.}
+//{insight}
+//{hasReceptionBottle}
+{not look_around: It looks like there's something written on the wall.}
 + [Wait patiently]
     ->Wait_Patiently
-+ {insight <= 6} [Check door]
++ {weirdFactor <= 4} [Check door]
     ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)
-+ {insight > 6 && bottlesCollected < 3 && triedToLeave} [Check escape]
++ {weirdFactor > 4 && bottlesCollected < 3 && triedToLeave} [Check escape]
     ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)
 + {bottlesCollected == 3} [Escape]
     ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)    
-+ (look_around) {not hasReceptionBottle} {insight >=4} [Look around]
++ (look_around) {insight >=4} [Look around]
     ->Look_Around_Waiting_Room
 
 -
@@ -332,29 +334,32 @@ You sit down and wait to be called. #narrator
 
 = Look_Around_Waiting_Room
 There are a couple of plants here, some of them coming out of the walls. #narrator
-
-{hasReceptionBottle == false:
-    //~insight = 9
-    {insight >= 8:
-        Between two chairs, you find a small glass bottle, filled with white sand. #narrator
-        * [Take bottle of sand.]
-            The sand smells like the ocean.
-            You put the bottle in your pocket. #narrator
-            ~hasReceptionBottle = true
-            ~bottlesCollected = bottlesCollected + 1
-            ->Waiting_In_The_Waiting_Room
-        
-            
-    }
-}
-
-
+->Look_Around_Loop
+= Look_Around_Loop
+//{insight}
 + [Check plants.]
     You feel one of the vines coming from the walls. It is slightly warm to the touch, growing out of a crack in the ceiling. #narrator
     Huh? #player
     There is something scratched on the wall. "Get out. Three bottles break three locks." #narrator
     //could add something to take here? Flower on the vine?
-    ->Waiting_In_The_Waiting_Room
+    ->Look_Around_Loop
++ {not hasReceptionBottle} [Check chairs.]
+    //~insight = 9
+    //{insight >= 8:
+        Between two chairs, you find a small glass bottle, filled with white sand. #narrator
+        ** [Take bottle of sand.]
+            The sand smells like the ocean.
+            You put the bottle in your pocket. #narrator
+            ~hasReceptionBottle = true
+            ~bottlesCollected = bottlesCollected + 1
+            ->Look_Around_Loop
+        
+            
+    //}
+
+
+
+
     
 + [Return to your seat.]
     ->Waiting_In_The_Waiting_Room
@@ -368,8 +373,8 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
 ==Date_1
 ~ temp flies = false
 ~ nrDates = nrDates + 1
-#scene:cafe
-The doe ushers you into {a|the} small cafe. #narrator
+.#scene:cafe
+//The doe ushers you into {a|the} small cafe. #narrator
 The doe ushers you into {a|the} small cafe. #narrator // for some reason this line doesn't load...
 .#entrance:toad1
 The toad watches you. #narrator
@@ -430,6 +435,7 @@ Umm... #player
     --
 + {insight >= 3} [This place is strange.] This place sure is strange, right? #player
     Okay.
+    ~Inc_Insight()
     ** You don't think so?[] A lot of the questions don't make sense. #player
         How does that help them match us? #player
         I don't know.
@@ -452,6 +458,7 @@ Umm... #player
         I didn't say that.
         I don't know. #replace
         *** Yeah, you did. #player
+            ~Inc_Insight()
             Ribbit. #exp:ribbit
             Okay. #exp:glitch
             **** [Leave cafe] I'm going to leave now. #player
@@ -489,7 +496,7 @@ Umm... #player
 ->DONE
 
 == End_Of_Date_1
-#scene:reception
+.#scene:reception
 You return to the reception with the date fresh in mind. #narrator
 .#entrance:deer
 How did it go?
@@ -501,7 +508,7 @@ How did it go?
         No, it was a new match. #exp:glitch
         Now that we've identified your type, you may find that your matches will have some similarities.
         {Inc_Insight()}
-    -- 
+    -- That's too bad. #exp:takenotes
     
 * It was great! #player
     Ah. #exp:takenotes
@@ -545,7 +552,7 @@ Perhaps we should refine your match search a bit.
     You should visit the Great Glaucus again.
     ->Advanced_Psychic_Reading
 - else:
-    NO CONTENT HERE YET
+    If the story gets here, something has gone wrong. Check line 552
     ->END
 }
 
@@ -656,7 +663,7 @@ Now go. The truth waits for you.
 
 //-> Waiting_In_The_Waiting_Room ->
 =End_Of_Advanced_Psychic
-#scene:reception
+.#scene:reception
 Back at reception. #narrator
 .#entrance:deer
 Your next date is ready. #exp:smile
@@ -670,7 +677,7 @@ Your next date is ready. #exp:smile
 ==Date_2
 ~ temp flies = false
 ~ nrDates = nrDates + 1
-#scene:cafe
+.#scene:cafe
 The doe ushers you back into the small cafe. #narrator
 .#entrance:toad2
 Greetings and salutations. 
@@ -767,7 +774,12 @@ Okay? #player
 
 ==Waiting_In_Cafe
 * [Return to reception]
-    -> End_Of_Date_2
+{
+    -nrDates==2:
+        -> End_Of_Date_2
+    -nrDates==3:
+        -> End_Of_Date_3
+}
 * {not hasCafeBottle} [Look around]
     The cafe is small, but nice. On a shelf, you find a small glass bottle with a piece of paper rolled up inside.
     ** [Take bottle]
@@ -782,7 +794,7 @@ Okay? #player
 
 
 == End_Of_Date_2
-#scene:reception
+.#scene:reception
 You return to the reception with the date fresh in mind. #narrator
 .#entrance:deer
 //END OF CONTENT FOR NOW
@@ -848,7 +860,7 @@ Perhaps we should refine your match search a bit.
 ==Date_3
 ~ temp flies = false
 ~ nrDates = nrDates + 1
-#scene:cafe
+.#scene:cafe
 The doe ushers you back into the small cafe. #narrator
 .#entrance:toad3
 Hello there. #exp:ribbit
@@ -905,17 +917,17 @@ I hope you are having a good time? #exp:ribbit
 
 * [I should get back] Well, I guess I should get back. #player
 -
--> End_Of_Date_2
+-> End_Of_Date_3
 
 =Toad_Runs_Away(->return_to)
 The toad runs away, leaving you alone in the cafe. #narrator
 #exit:other
 Weird... #player
--> End_Of_Date_3
+-> return_to
 
 
 == End_Of_Date_3
-#scene:reception
+.#scene:reception
 You return to the reception with the date fresh in mind. #narrator
 .#entrance:deer
 ->How_It_Went_Loop
@@ -958,7 +970,7 @@ I know the drill... #player
         Many dates later... #narrator
 }
 
-#scene:wedding
+.#scene:wedding
 ->DONE
 
 
@@ -968,7 +980,7 @@ I know the drill... #player
 You hear someone behind you, but the three locks are open, so you yank open the door and rush outside. #narrator
 Sights and smells hit you as you remember the truth.
 Alone again.
-#scene:island
+.#scene:island
 ->DONE
 
 -else:
