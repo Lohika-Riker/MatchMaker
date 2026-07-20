@@ -13,7 +13,7 @@ VAR hasReceptionBottle = false
 VAR hasPsychicBottle = false
 VAR hasCafeBottle = false
 VAR askedAboutFlies = false
-
+VAR triedToLeave = false
 
 //Scenes:
 //reception
@@ -206,12 +206,15 @@ Which of these speak to you?
 == After_Card_Picks
 Ah, yes, life. The card tells me that you value life and the living. 
 * [Does this help me?] Is this going to help you match me? #player
-    Ah, I see your doubt, but you must perservere on this path. Learning about you will help us learn about the one you are meant to be with. So says the Great Glaucus!
+    Ah, I see your doubt, but you must perservere on this path. 
+    Learning about you will help us learn about the one you are meant to be with. 
+    So says the Great Glaucus!
 * [That's true!] I do care about life and the living! #player
     Of course you do! So it is written!
     ~ psychicOwl = psychicOwl + 1
-* [Imprisoned Man?] What does the Imprisonment card mean? #player
-    Do not worry yourself about that. It means nothing. It was not supposed to be in there. You can trust the Great Glaucus!
+* [Imprisonment] What does the Imprisonment card mean? #player
+    Do not worry yourself about that. It means nothing. It was not supposed to be in there. 
+    You can trust the Great Glaucus!
 - Now, let me look into my crystal ball, and see your future!
 
 
@@ -221,38 +224,46 @@ Ah, yes, life. The card tells me that you value life and the living.
     -> Normal_Future_Read
 }
 {psychicOwl == 0:
-    A cloud obscures my view, but I can see a silhouette! Your partner, waiting for you! I can see you, hesitating on the edge of the cloud.
-    Ah, your hesitation is holding you back. Your love is waiting for you to step over the threshold! #exp:smile
+    A cloud obscures my view, but I can see a silhouette! 
+    Your partner, waiting for you! I can see you, hesitating on the edge of the cloud.
+    Ah, your hesitation is holding you back. 
+    Your love is waiting for you to step over the threshold! #exp:smile
     -> Normal_Future_Read
 -else:
     Hoo-hoo! #exp:glitch
-    A landscape vast and empty! Oh, the sorrow! Lone soul, begging deliverance from the forest! #exp:frown
+    A landscape vast and empty! 
+    Oh, the sorrow! 
+    Lone soul, begging deliverance from the forest! #exp:frown
     Hoo-hoo! #exp:glitch
     Ah yes, a bright future indeed! #exp:smile
 -> Glitch_Future_Read
 }
 == Normal_Future_Read
-* Can you tell me more about this figure?
-* When do I get to meet them?
+* Can you tell me more about this figure? #player
+* When do I get to meet them? #player
 Ah, patience! We shall match you with your partner before long!
 - -> Last_Psychic_Questions
 == Glitch_Future_Read
-* [What about the sorrow?] What do you mean, a bright future? What was all that about sorrow?
+* [What about the sorrow?] What do you mean, a bright future? What was all that about sorrow? #player
 Sorrow? I don't believe I know what you mean! A bright future with a wonderful partner awaits! Never doubt that. So says the Great Glaucus!
 ~Inc_Insight()
-* A bright future sounds great!
+* A bright future sounds great! #player
 
 - ->Last_Psychic_Questions
 == Last_Psychic_Questions
 
 Ah, wait! #exp:takenotes
-Your future partner is trying to connect to me via the paths of destiny. But I need your help! Concentrate on your match, and send that energy to me via the crystal ball! What do you see? #exp:takenotes
+Your future partner is trying to connect to me via the paths of destiny. 
+But I need your help! 
+Concentrate on your match, and send that energy to me via the crystal ball! What do you see? #exp:takenotes
 * A brave soul
 * A kind soul
 * [A lonely island] A lo... a loving soul.
 ~Inc_Insight()
 
-- Yes, I see it! All is done. Return from whence you came, and you will be matched with the one destiny has chosen for you. So says the Great Glaucus.
+- Yes, I see it! All is done. 
+Return from whence you came, and you will be matched with the one destiny has chosen for you. 
+So says the Great Glaucus.
 ->Interim
 
 == Interim
@@ -286,14 +297,17 @@ The doe leaves you alone in the waiting room. #narrator
 -> Waiting_In_The_Waiting_Room ->
 - Your date is ready. Follow me. #entrance:doe
 .#exit:other
-.#exit:player
 -> Date_1
 
 == Waiting_In_The_Waiting_Room
 + [Wait patiently]
     ->Wait_Patiently
-+ [Leave the agency]
++ {insight <= 6} [Check door]
     ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)
++ {insight > 6 && bottlesCollected < 3 && triedToLeave} [Check escape]
+    ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)
++ {bottlesCollected == 3} [Escape]
+    ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)    
 + {not hasReceptionBottle} {insight >=4} [Look around]
     ->Look_Around_Waiting_Room
 
@@ -511,13 +525,14 @@ Perhaps we should refine your match search a bit.
 ->Refinement
 
 
-= Refinement
+== Refinement
 What would you like to try?
-+ [Advanced questionnaire]
+* [Advanced questionnaire]
 ->Advanced_Questionnaire    
-+ [Advanced psychic reading]
+* [Advanced psychic reading]
 ->Advanced_Psychic_Reading
 -
+->DONE
 
 = Advanced_Questionnaire
 Very well. Wait here while I prepare some things.
@@ -726,11 +741,12 @@ How did it go?
     --
 -
 Perhaps we should refine your match search a bit. 
-//->Refinement
+->Refinement
 
 
 
 == Leave_Agency(->return_to)
+~triedToLeave = true
 {bottlesCollected == 3:
 You hear someone behind you, but the three locks are open, so you yank open the door and rush outside. #narrator
 ->END
@@ -743,7 +759,7 @@ You try the door, but it doesn't budge. #narrator
     - bottlesCollected == 1:
         There are two locks left, keeping it closed. #narrator        
     - bottlesCollected == 2:
-        There are one lock left, keeping it closed. #narrator        
+        There is one lock left, keeping it closed. #narrator        
 }
 
 }
