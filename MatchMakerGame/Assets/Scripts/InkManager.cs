@@ -142,6 +142,7 @@ public class InkManager : MonoBehaviour
 
                 if (parts[0] == "entrance")
                 {
+                    musicManager.PlayCharacterMoveInSFX();
                     if (parts[1] == "deer")
                     {
                         characterSpriteHolder.ShowCharacter(character.doe);
@@ -177,10 +178,12 @@ public class InkManager : MonoBehaviour
                         ShowPlayerCharacter();
                         return;
                     }
+                    
                 }
                 else if (parts[0] == "exit" && parts.Length > 1 && parts[1] == "other")
                 {
                     characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
+                    musicManager.PlayCharacterMoveOutSFX();
                     currentCharacter = character.none;
                 }
                 else if (parts[0] == "exp")
@@ -334,6 +337,7 @@ public class InkManager : MonoBehaviour
         }
         yield return new WaitForSeconds(1); // waiting for dialogue line to be displayed
         StartCoroutine(characterSpriteHolder.HideCharacter(false));
+        musicManager.PlayCharacterMoveOutSFX();
         HidePlayerCharacter();
         ClearDialogue();
         fadeToBlack.Fade(true);
@@ -343,6 +347,7 @@ public class InkManager : MonoBehaviour
         fadeToBlack.Fade(false);
         yield return new WaitForSeconds(1);
         ShowPlayerCharacter();
+        musicManager.PlayCharacterMoveInSFX();
         yield return new WaitForSeconds(1);
         // characterSpriteHolder.ShowCharacter(newCharacter);
         // yield return new WaitForSeconds(0.5f);
