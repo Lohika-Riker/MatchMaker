@@ -268,8 +268,9 @@ So says the Great Glaucus.
 
 == Interim
 //{insight}
+.#scene:reception
 You return to reception. #narrator
-#entrance:doe
+.#entrance:doe
 The Great Glaucus has passed on his findings.
 // can do an exchange about a negative relationship score with the owl
 
