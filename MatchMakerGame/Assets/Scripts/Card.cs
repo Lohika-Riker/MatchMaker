@@ -19,11 +19,14 @@ public class Card : MonoBehaviour
     private Vector2 restingAnchoredPosition;
     private bool hasRestingAnchoredPosition;
     private int selectedNumber;
+    private MusicManager musicManager;
 
     public bool IsSelected => selected;
 
     private void Awake()
     {
+        musicManager = FindFirstObjectByType<MusicManager>();
+
         if (cardImage == null)
         {
             cardImage = transform.childCount > 0
@@ -55,6 +58,15 @@ public class Card : MonoBehaviour
         selected = true;
         raised = false;
         previewTween?.Kill();
+
+        if (selectedNumber == 0)
+        {
+            musicManager?.PlayBadCardFlipSFX();
+        }
+        else
+        {
+            musicManager?.PlayGoodCardFlipSFX();
+        }
 
         // UI elements later in the panel hierarchy render on top of earlier siblings.
         transform.SetAsLastSibling();
@@ -128,6 +140,7 @@ public class Card : MonoBehaviour
 
         Vector2 raiseOffset = cardRect.localRotation * (Vector3.up * distance);
         previewTween?.Kill();
+        musicManager?.PlayCardSlideSFX();
         previewTween = cardRect.DOAnchorPos(restingAnchoredPosition + raiseOffset, 0.2f);
         raised = true;
     }
@@ -139,6 +152,7 @@ public class Card : MonoBehaviour
 
         RectTransform cardRect = (RectTransform)transform;
         previewTween?.Kill();
+        musicManager?.PlayCardSlideSFX();
         previewTween = cardRect.DOAnchorPos(restingAnchoredPosition, 0.2f);
         raised = false;
     }

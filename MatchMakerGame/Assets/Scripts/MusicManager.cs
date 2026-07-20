@@ -30,6 +30,8 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private StudioEventEmitter owlTalkEmitter, doeTalkEmitter, toadTalkEmitter;
     [SerializeField] private StudioEventEmitter wooshInEmitter, wooshOutEmitter;
     [SerializeField] private StudioEventEmitter clickEmitter;
+    [SerializeField] private StudioEventEmitter cardFlipGoodEmitter, cardFlipBadEmitter, cardSlideEmitter;
+    [SerializeField] private StudioEventEmitter deckFanEmitter, deckCollapseEmitter, testHoverEmitter;
     private WeirdFactor currentWeirdFactor;
     private Coroutine musicFadeCoroutine;
 
@@ -60,6 +62,36 @@ public class MusicManager : MonoBehaviour
     public void PlayClickSFX()
     {
         clickEmitter.Play();
+    }
+
+    public void PlayGoodCardFlipSFX()
+    {
+        cardFlipGoodEmitter.Play();
+    }
+
+    public void PlayBadCardFlipSFX()
+    {
+        cardFlipBadEmitter.Play();
+    }
+
+    public void PlayCardSlideSFX()
+    {
+        cardSlideEmitter.Play();
+    }
+
+    public void PlayDeckFanSFX()
+    {
+        deckFanEmitter.Play();
+    }
+
+    public void PlayDeckCollapseSFX()
+    {
+        deckCollapseEmitter.Play();
+    }
+
+    public void PlayTestHoverSFX()
+    {
+        testHoverEmitter.Play();
     }
 
     public void PlayCharacterMoveInSFX()
