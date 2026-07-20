@@ -210,14 +210,14 @@ Ah, yes, life. The card tells me that you value life and the living.
     Ah, I see your doubt, but you must perservere on this path. 
     Learning about you will help us learn about the one you are meant to be with. 
     So says the Great Glaucus!
-    .#cards:discard
 * [That's true!] I do care about life and the living! #player
     Of course you do! So it is written!
     ~ psychicOwl = psychicOwl + 1
 * [Imprisonment] What does the Imprisonment card mean? #player
     Do not worry yourself about that. It means nothing. It was not supposed to be in there. 
     You can trust the Great Glaucus!
--Now, let me look into my crystal ball, and see your future! 
+-.#cards:discard
+Now, let me look into my crystal ball, and see your future! 
 
 
 {psychicOwl == -1:
@@ -248,7 +248,7 @@ Ah, patience! We shall match you with your partner before long!
 == Glitch_Future_Read
 * [What about the sorrow?] What do you mean, a bright future? What was all that about sorrow? #player
 Sorrow? I don't believe I know what you mean! A bright future with a wonderful partner awaits! Never doubt that. So says the Great Glaucus!
-~Inc_Insight()
+{Inc_Insight()}
 * A bright future sounds great! #player
 
 - ->Last_Psychic_Questions
@@ -261,7 +261,7 @@ Concentrate on your match, and send that energy to me via the crystal ball! What
 * A brave soul
 * A kind soul
 * [A lonely island] A lo... a loving soul.
-~Inc_Insight()
+{Inc_Insight()}
 
 - Yes, I see it! All is done. 
 Return from whence you came, and you will be matched with the one destiny has chosen for you. 
@@ -703,7 +703,7 @@ The toad runs away, leaving you alone in the cafe. #narrator
     The cafe is small, but nice. On a shelf, you find a small glass bottle with a piece of paper rolled up inside.
     ** [Take bottle]
     - You take the bottle. Unrolling the paper inside, you see it reads "Help me, I'm stranded". 
-    ~Inc_Insight()
+    {Inc_Insight()}
     You return the paper and put the bottle in your pocket.
     ~hasCafeBottle = true
     ~bottlesCollected = bottlesCollected + 1
@@ -895,7 +895,7 @@ Where are you going? #exp:frown
 * [I'm leaving.] I'm leaving. What about it? #player
 * [Just looking around.] Nowhere. I'm just looking around. #player
 - You are in a very fragile state, so we can't let you leave at this moment. Please stay in the waiting room until we call you.
-#exit:doe
+#exit:other
 ->->
 ->return_to
 }
