@@ -171,7 +171,8 @@ That doesn't matter. The Great Glaucus doesn't need you to believe. Go on.
 #scene:psychic
 The psychic's room is dark, and a bit cramped. #narrator
 
-Hoo-hoo! #exp:glitch #entrance:owl
+Hoo-hoo! #exp:glitch 
+.#entrance:owl
 * Hello?
 - Oh, yes, hello! Excuse the mess. 
 * Uhh  #player
@@ -369,7 +370,7 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
 ~ nrDates = nrDates + 1
 #scene:cafe
 The doe ushers you into {a|the} small cafe. #narrator
-#entrance:toad1
+.#entrance:toad1
 The toad watches you.
 + Hello. #player
     Hello. #exp:ribbit
@@ -650,7 +651,7 @@ Now go. The truth waits for you.
 //-> Waiting_In_The_Waiting_Room ->
 =End_Of_Advanced_Psychic
 #scene:reception
-#entrance:deer
+.#entrance:deer
 Your next date is ready. #exp:smile
 ->Date_3
 -> END
@@ -663,9 +664,9 @@ Your next date is ready. #exp:smile
 ~ temp flies = false
 ~ nrDates = nrDates + 1
 #scene:cafe
-#entrance:player
+.#entrance:player
 The doe ushers you back into the small cafe. #narrator
-#entrance:toad2
+.#entrance:toad2
 Greetings and salutations. 
 I am here, at your service.  #exp:ribbit
 + (just_met) {nrDates > 1} You again? #player
@@ -842,9 +843,9 @@ Perhaps we should refine your match search a bit.
 ~ temp flies = false
 ~ nrDates = nrDates + 1
 #scene:cafe
-#entrance:player
+.#entrance:player
 The doe ushers you back into the small cafe. #narrator
-#entrance:toad3
+.#entrance:toad3
 Hello there. #exp:ribbit
 + [You're the same person.] Are you going to pretend we've never met? #player
     Ah... I am pleased to meet you. Are you well?
@@ -911,7 +912,7 @@ The toad runs away, leaving you alone in the cafe. #narrator
 == End_Of_Date_3
 #scene:reception
 You return to the reception with the date fresh in mind. #narrator
-#entrance:deer
+.#entrance:deer
 ->How_It_Went_Loop
 =How_It_Went_Loop
 {How did it go?|And? How was it?}
