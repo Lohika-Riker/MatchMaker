@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e9513073-9516-4811-a13c-bf3e6d75dd36}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
+		<property name="assetPath">
+			<value>SFX/SFX_Card_flip_imprisoned_man.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.3079818594104307</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5ce1be8b-7506-492e-ae16-2213a411f642}</destination>
+		</relationship>
+	</object>
+</objects>

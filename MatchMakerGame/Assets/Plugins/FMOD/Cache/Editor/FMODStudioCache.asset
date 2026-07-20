@@ -27,6 +27,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &-8460683579418780538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Main_Theme/Location
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Location
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1774365083
+    data2: 1755388700
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Lobby
+  - Cafe
+  - Psychic
+  - Beach
+  Exists: 1
+--- !u!114 &-6914327289199415405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Card_slide
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX_Card_slide
+  Guid:
+    Data1: 780800378
+    Data2: 1133740019
+    Data3: -1437441397
+    Data4: -348033150
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 562
 --- !u!114 &-5078307977465787628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,7 +106,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-4904134007889722252
+--- !u!114 &-3533236538618731492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,14 +116,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Ambience_Dynamic
+  m_Name: event:/SFX/SFX_Deck_fanning_out
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Ambience/Ambience_Dynamic
+  Path: event:/SFX/SFX_Deck_fanning_out
   Guid:
-    Data1: -487213144
-    Data2: 1265146006
-    Data3: 2014536065
-    Data4: -1712335729
+    Data1: 1850344735
+    Data2: 1194728469
+    Data3: -2110184046
+    Data4: -186264792
   Banks:
   - {fileID: 6976763303532740937}
   IsStream: 0
@@ -154,9 +209,37 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 5604804302592002325}
+  - {fileID: -8460683579418780538}
   MinDistance: 1
   MaxDistance: 20
   Length: 549902
+--- !u!114 &-838785733059200906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Deck_collapse
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX_Deck_collapse
+  Guid:
+    Data1: -629595980
+    Data2: 1166045131
+    Data3: -752751227
+    Data4: -1705907157
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,15 +262,23 @@ MonoBehaviour:
   - {fileID: -2705917026173560516}
   - {fileID: -1678119953798113702}
   - {fileID: 4345216938355765797}
-  - {fileID: -4904134007889722252}
   - {fileID: 1773153121581382067}
-  EditorParameters: []
+  - {fileID: -3533236538618731492}
+  - {fileID: 7288715476215668291}
+  - {fileID: 77147074950350159}
+  - {fileID: -6914327289199415405}
+  - {fileID: 7715876031280592198}
+  - {fileID: -838785733059200906}
+  - {fileID: 2467425445504576164}
+  - {fileID: 262298279154817307}
+  EditorParameters:
+  - {fileID: 8680113996923020525}
   MasterBanks:
   - {fileID: 6976763303532740937}
   StringsBanks:
   - {fileID: 6775244438754098041}
   cacheVersion: 131860
-  cacheTime: 639200054377371246
+  cacheTime: 639201772400000000
   SerializableEventsDict:
   - key: event:/Dialogue/Dialogue_Doe
     index: 0
@@ -201,10 +292,78 @@ MonoBehaviour:
     index: 4
   - key: event:/Dialogue/Dialogue_Frog
     index: 5
-  - key: event:/Ambience/Ambience_Dynamic
-    index: 6
   - key: event:/Dialogue/Dialogue_Owl
+    index: 6
+  - key: event:/SFX/SFX_Deck_fanning_out
     index: 7
+  - key: event:/SFX/SFX_Rorschach_hover
+    index: 8
+  - key: event:/SFX/SFX_Card_flip_life
+    index: 9
+  - key: event:/SFX/SFX_Card_slide
+    index: 10
+  - key: event:/Ambience/Ambience_Main
+    index: 11
+  - key: event:/SFX/SFX_Deck_collapse
+    index: 12
+  - key: snapshot:/Cafe radio
+    index: 13
+  - key: event:/SFX/SFX_Card_flip_imprisoned_man
+    index: 14
+--- !u!114 &77147074950350159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Card_flip_life
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX_Card_flip_life
+  Guid:
+    Data1: -1638463906
+    Data2: 1171789948
+    Data3: 822204806
+    Data4: 1397914140
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &262298279154817307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Card_flip_imprisoned_man
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX_Card_flip_imprisoned_man
+  Guid:
+    Data1: 145429707
+    Data2: 1309095956
+    Data3: 1644460731
+    Data4: 2005278462
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1773153121581382067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +392,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5056
+--- !u!114 &2446475768219053768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience_Main/Location
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Location
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1774365083
+    data2: 1755388700
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Lobby
+  - Cafe
+  - Psychic
+  - Beach
+  Exists: 1
+--- !u!114 &2467425445504576164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Cafe radio
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/Cafe radio
+  Guid:
+    Data1: -1978445388
+    Data2: 1130636747
+    Data3: 1667793585
+    Data4: -92631140
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &3298837112515454020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,10 +574,10 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639200054377371246
+  lastModified: 639201772400000000
   FileSizes:
   - Name: Desktop
-    Value: 1420
+    Value: 1892
   Exists: 1
 --- !u!114 &6976763303532740937
 MonoBehaviour:
@@ -380,11 +594,66 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639200054377355170
+  lastModified: 639201772400000000
   FileSizes:
   - Name: Desktop
-    Value: 17395392
+    Value: 22374528
   Exists: 1
+--- !u!114 &7288715476215668291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Rorschach_hover
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX_Rorschach_hover
+  Guid:
+    Data1: -1239668422
+    Data2: 1080623585
+    Data3: -1008819833
+    Data4: 474942179
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2012
+--- !u!114 &7715876031280592198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience_Main
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/Ambience_Main
+  Guid:
+    Data1: 959585451
+    Data2: 1177040062
+    Data3: -1543883349
+    Data4: -832864682
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2446475768219053768}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 71304
 --- !u!114 &7879010282586370463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,3 +681,31 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &8680113996923020525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Location
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Location
+  StudioPath: parameter:/Location
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1774365083
+    data2: 1755388700
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Lobby
+  - Cafe
+  - Psychic
+  - Beach
+  Exists: 1
