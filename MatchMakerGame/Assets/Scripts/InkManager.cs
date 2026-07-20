@@ -40,6 +40,7 @@ public class InkManager : MonoBehaviour
     private TextMeshProUGUI activeDialogueText;
     private RectTransform activeDialogueRect;
     private string activeDialogueLine;
+    private GameObject dialogueToReplace;
     private character currentCharacter;
     private int currentWeirdFactor;
     private GameObject backgroundOverlay;
@@ -127,6 +128,7 @@ public class InkManager : MonoBehaviour
             narratorPanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.OutBack);
             string text = story.Continue();
             text = text?.Trim();
+            bool advanceAfterCardChoice = false;
 
             if (story.currentTags.Exists(tag =>
                 string.Equals(tag.Trim(), "clearDialogue", StringComparison.OrdinalIgnoreCase)))
@@ -142,6 +144,7 @@ public class InkManager : MonoBehaviour
 
                 if (parts[0] == "entrance")
                 {
+                    musicManager.PlayCharacterMoveInSFX();
                     if (parts[1] == "deer")
                     {
                         characterSpriteHolder.ShowCharacter(character.doe);
@@ -177,13 +180,20 @@ public class InkManager : MonoBehaviour
                         ShowPlayerCharacter();
                         return;
                     }
+                    
+                }
+                else if (parts[0] == "exit" && parts.Length > 1 && parts[1] == "other")
+                {
+                    characterSpriteHolder.StartCoroutine(characterSpriteHolder.HideCharacter(false));
+                    musicManager.PlayCharacterMoveOutSFX();
+                    currentCharacter = character.none;
                 }
                 else if (parts[0] == "exp")
                 {
                     print($"change {currentCharacter}'s expression to {parts[1]}");
                     try
                     {
-                        characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1])));
+                        characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1], true)));
                     }
                     catch (ArgumentException e)
                     {
@@ -198,6 +208,13 @@ public class InkManager : MonoBehaviour
                 }
                 else if (parts[0] == "cards" && parts.Length > 1)
                 {
+                    bool isChoiceCardTag = parts[1] == "hoverLeft"
+                        || parts[1] == "hoverMiddle"
+                        || parts[1] == "hoverRight"
+                        || parts[1] == "selectLeft"
+                        || parts[1] == "selectMiddle"
+                        || parts[1] == "selectRight";
+
                     if (cardGame != null)
                     {
                         switch (parts[1])
@@ -207,12 +224,22 @@ public class InkManager : MonoBehaviour
                                 break;
                             case "selectLeft":
                                 cardGame.SelectLeftCard();
+                                advanceAfterCardChoice = true;
                                 break;
                             case "selectMiddle":
                                 cardGame.SelectMiddleCard();
+                                advanceAfterCardChoice = true;
                                 break;
                             case "selectRight":
                                 cardGame.SelectRightCard();
+                                advanceAfterCardChoice = true;
+                                break;
+                            case "hoverLeft":
+                            case "hoverMiddle":
+                            case "hoverRight":
+                                // Hover tags configure the choice buttons. Once the
+                                // choice is emitted, its text is UI rather than dialogue.
+                                advanceAfterCardChoice = true;
                                 break;
                             case "discard":
                                 cardGame.DiscardSelectedCard();
@@ -229,7 +256,11 @@ public class InkManager : MonoBehaviour
                     {
                         Debug.LogError($"Cannot process '{tag}': no CardGame was found in the scene.");
                     }
-                    return;
+
+                    if (!isChoiceCardTag)
+                    {
+                        return;
+                    }
                 }
                 else if (string.Equals(parts[0].Trim(), "test", StringComparison.OrdinalIgnoreCase) && parts.Length > 1)
                 {
@@ -256,6 +287,12 @@ public class InkManager : MonoBehaviour
                 }
             }
 
+            if (advanceAfterCardChoice)
+            {
+                DisplayNextLine();
+                return;
+            }
+
             // dialogue speech bubble
             if (text == null || text == "")
             {
@@ -265,12 +302,15 @@ public class InkManager : MonoBehaviour
             GameObject prefab;
 
             bool player = false;
-            if (story.currentTags.Contains("player"))
+            bool replaceDialogue = HasCurrentTag("replace");
+            bool storeDialogueForReplacement = HasCurrentTag("destroy");
+
+            if (HasCurrentTag("player"))
             {
                 prefab = dialoguePrefabPlayer;
                 player = true;
             }
-            else if (story.currentTags.Contains("narrator"))
+            else if (HasCurrentTag("narrator"))
             {
                 StartCoroutine(DisplayNarratorText(text));
                 return;
@@ -280,7 +320,23 @@ public class InkManager : MonoBehaviour
                 prefab = dialoguePrefabOther;
             }
 
+            if (replaceDialogue && dialogueToReplace != null)
+            {
+                StartCoroutine(ReplaceDialogueText(dialogueToReplace, text, player));
+                return;
+            }
+
+            if (replaceDialogue)
+            {
+                Debug.LogWarning("Cannot replace dialogue: no dialogue bubble has been stored by a #destroy tag. Creating a new bubble instead.");
+            }
+
             GameObject dialogueInstance = Instantiate(prefab, dialoguePanel.transform);
+
+            if (storeDialogueForReplacement)
+            {
+                dialogueToReplace = dialogueInstance;
+            }
 
             StartCoroutine(DisplayText(dialogueInstance, text, player));
         }
@@ -329,6 +385,7 @@ public class InkManager : MonoBehaviour
         }
         yield return new WaitForSeconds(1); // waiting for dialogue line to be displayed
         StartCoroutine(characterSpriteHolder.HideCharacter(false));
+        musicManager.PlayCharacterMoveOutSFX();
         HidePlayerCharacter();
         ClearDialogue();
         fadeToBlack.Fade(true);
@@ -338,6 +395,7 @@ public class InkManager : MonoBehaviour
         fadeToBlack.Fade(false);
         yield return new WaitForSeconds(1);
         ShowPlayerCharacter();
+        musicManager.PlayCharacterMoveInSFX();
         yield return new WaitForSeconds(1);
         // characterSpriteHolder.ShowCharacter(newCharacter);
         // yield return new WaitForSeconds(0.5f);
@@ -471,6 +529,89 @@ public class InkManager : MonoBehaviour
         }
     }
 
+    private IEnumerator ReplaceDialogueText(GameObject dialogueInstance, string text, bool player)
+    {
+        activeDialogueText = dialogueInstance.GetComponentInChildren<TextMeshProUGUI>();
+        activeDialogueRect = dialogueInstance.GetComponent<RectTransform>();
+        activeDialogueLine = text;
+        skipTypewriter = false;
+        isTyping = true;
+
+        if (player)
+        {
+            playerTalkingBounceAnimator?.StartTalking();
+        }
+        else
+        {
+            characterSpriteHolder.StartTalkingAnimation();
+            if (currentCharacter == character.owl) musicManager.StartOwlTalk();
+            else if (currentCharacter == character.doe) musicManager.StartDoeTalk();
+            else if (IsToad(currentCharacter)) musicManager.StartToadTalk();
+        }
+
+        string previousText = activeDialogueText.text;
+        for (int length = previousText.Length - 1; length >= 1; length--)
+        {
+            if (skipTypewriter)
+            {
+                break;
+            }
+
+            activeDialogueText.text = previousText.Substring(0, length);
+            RebuildActiveDialogueLayout();
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        if (!skipTypewriter)
+        {
+            activeDialogueText.text = text.Substring(0, 1);
+            RebuildActiveDialogueLayout();
+
+            for (int index = 1; index < text.Length; index++)
+            {
+                if (skipTypewriter)
+                {
+                    break;
+                }
+
+                char c = text[index];
+                activeDialogueText.text += c;
+                if (c == '.' || c == '!' || c == '?')
+                {
+                    yield return new WaitForSeconds(0.2f);
+                }
+                else if (c == ' ')
+                {
+                    yield return new WaitForSeconds(0.1f);
+                }
+                else
+                {
+                    yield return new WaitForSeconds(0.05f);
+                }
+            }
+        }
+
+        activeDialogueText.text = text;
+        RebuildActiveDialogueLayout();
+        isTyping = false;
+        activeDialogueText = null;
+        activeDialogueRect = null;
+        activeDialogueLine = null;
+
+        if (currentCharacter == character.owl) musicManager.StopOwlTalk();
+        else if (currentCharacter == character.doe) musicManager.StopDoeTalk();
+        else if (IsToad(currentCharacter)) musicManager.StopToadTalk();
+
+        if (player)
+        {
+            playerTalkingBounceAnimator?.StopTalking();
+        }
+        else
+        {
+            characterSpriteHolder.StopTalkingAnimation();
+        }
+    }
+
     private void CompleteActiveDialogueLine()
     {
         skipTypewriter = true;
@@ -489,6 +630,24 @@ public class InkManager : MonoBehaviour
                     LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueContainerRect);
                 }
             }
+        }
+    }
+
+    private bool HasCurrentTag(string tagName)
+    {
+        return story.currentTags.Exists(tag =>
+            string.Equals(tag.Trim(), tagName, StringComparison.OrdinalIgnoreCase));
+    }
+
+    private void RebuildActiveDialogueLayout()
+    {
+        activeDialogueText.ForceMeshUpdate();
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(activeDialogueRect);
+
+        if (activeDialogueRect.parent is RectTransform dialogueContainerRect)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(dialogueContainerRect);
         }
     }
 
@@ -666,6 +825,7 @@ public class InkManager : MonoBehaviour
         choicePanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.InBack);
         ClearChoices();
         DisplayNextLine();
+        musicManager.PlayClickSFX();
     }
 
     public void ClearChoices()
@@ -678,6 +838,8 @@ public class InkManager : MonoBehaviour
 
     public void ClearDialogue()
     {
+        dialogueToReplace = null;
+
         foreach (Transform child in dialoguePanel.transform)
         {
             child.gameObject.SetActive(false);
@@ -686,10 +848,10 @@ public class InkManager : MonoBehaviour
     }
 
 
-    public void OnClickContinue()
-    {
-        DisplayNextLine();
-    }
+    // public void OnClickContinue()
+    // {
+    //     DisplayNextLine();
+    // }
 
 
 }
