@@ -1,6 +1,6 @@
 INCLUDE MatchMaker - New.ink
 
--> Start
+// -> Start
 
 === Start
 What do you want to do?
@@ -10,6 +10,10 @@ What do you want to do?
     -> LocationSelect
 --> DONE
 
+=== StartScreen
+.#scene:start
+-> END
+
 // VAR cardPicked = false
 // VAR weirdFactor = 0
 // -> LocationSelect
@@ -17,6 +21,16 @@ What do you want to do?
 
 === LocationSelect
 Where to go now?#player
++ [Wedding]
+    .#scene:wedding
+    And here we are getting married. #narrator
+    .#scene:start
+    -> END
+    // -> StartScreen
++ [Island]
+    .#scene:island
+    And here we are on the island. Oh well... #narrator
+    -> StartScreen
 + [Game]
     ->Reception_1
 + [reception]
