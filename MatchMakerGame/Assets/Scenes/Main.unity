@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   inkJsonAsset: {fileID: 4900000, guid: bef0034184f8146dc962b9c545b6c433, type: 3}
-  startKnotName: Reception_1
+  startKnotName: Start
   dialoguePanel: {fileID: 1105147777}
   choicePanel: {fileID: 1937154580}
   narratorPanel: {fileID: 1783861634}
@@ -1880,6 +1880,7 @@ GameObject:
   - component: {fileID: 721673227}
   - component: {fileID: 721673226}
   - component: {fileID: 721673225}
+  - component: {fileID: 721673228}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -1931,6 +1932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   musicEmitter: {fileID: 721673225}
+  locationEmitter: {fileID: 721673228}
   owlTalkEmitter: {fileID: 1670357944}
   doeTalkEmitter: {fileID: 215344634}
   toadTalkEmitter: {fileID: 489874822}
@@ -1958,6 +1960,37 @@ Transform:
   - {fileID: 135691829}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721673228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721673224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 959585451
+      Data2: 1177040062
+      Data3: -1543883349
+      Data4: -832864682
+    Path: event:/Ambience/Ambience_Main
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &726333141
 GameObject:
   m_ObjectHideFlags: 0

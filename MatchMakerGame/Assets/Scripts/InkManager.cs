@@ -395,6 +395,23 @@ public class InkManager : MonoBehaviour
 
     private IEnumerator SceneTransition(string sceneName)
     {
+        if (sceneName == "start" || sceneName == "reception")
+        {
+            musicManager.SetLocation(Location.Lobby);
+        }
+        else if (sceneName == "cafe")
+        {
+            musicManager.SetLocation(Location.Cafe);
+        }
+        else if (sceneName == "psychic")
+        {
+            musicManager.SetLocation(Location.Psychic);
+        }
+        else if (sceneName == "wedding" || sceneName == "island")
+        {
+            musicManager.SetLocation(Location.Beach);
+        }
+
         if (sceneName == "start")
         {
             yield return ReturnToStartScreen();
