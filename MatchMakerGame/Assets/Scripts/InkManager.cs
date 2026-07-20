@@ -936,13 +936,21 @@ public class InkManager : MonoBehaviour
         if (choice.tags.Contains("test:hoverPlane"))
         {
             EventTrigger.Entry enter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
-            enter.callback.AddListener(_ => rorschachTest.FadeImageB());
+            enter.callback.AddListener(_ =>
+            {
+                musicManager.PlayTestHoverSFX();
+                rorschachTest.FadeImageB();
+            });
             trigger.triggers.Add(enter);
         }
         else if (choice.tags.Contains("test:hoverPuppy"))
         {
             EventTrigger.Entry enter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
-            enter.callback.AddListener(_ => rorschachTest.FadeImageA());
+            enter.callback.AddListener(_ =>
+            {
+                musicManager.PlayTestHoverSFX();
+                rorschachTest.FadeImageA();
+            });
             trigger.triggers.Add(enter);
         }
     }

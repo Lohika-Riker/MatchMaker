@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   inkJsonAsset: {fileID: 4900000, guid: bef0034184f8146dc962b9c545b6c433, type: 3}
-  startKnotName: Start
+  startKnotName: Reception_1
   dialoguePanel: {fileID: 1105147777}
   choicePanel: {fileID: 1937154580}
   narratorPanel: {fileID: 1783861634}
@@ -2055,6 +2055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218b68dfc64314cc8bacf31f2d954705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  musicManager: {fileID: 721673226}
   rorschach1: {fileID: -734908083766318023, guid: 0a7ed398124e6465184529df4a8c39c2, type: 3}
   rorschach2: {fileID: 503619866786401199, guid: 1a495da01b5614063a35aed178daf4ed, type: 3}
   rorschach3: {fileID: 1337635331474404743, guid: fb0069606dd4c43e28c1e066e0719c93, type: 3}

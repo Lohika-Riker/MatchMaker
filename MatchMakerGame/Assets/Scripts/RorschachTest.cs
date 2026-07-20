@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RorschachTest : MonoBehaviour
 {
+    [SerializeField] private MusicManager musicManager;
     [SerializeField] private Sprite rorschach1,rorschach2, rorschach3; 
     [SerializeField] private Image testImageA, testImageB;
     [SerializeField] private float slideDuration = 0.5f;
@@ -47,12 +48,14 @@ public class RorschachTest : MonoBehaviour
     public void Hide()
     {
         StopParentAnimation();
+        musicManager.PlayCharacterMoveOutSFX();
         rectTransform.DOAnchorPos(hiddenPosition, slideDuration).SetEase(Ease.InBack);
     }
 
     public void Show()
     {
         StartParentAnimation();
+        musicManager.PlayCharacterMoveInSFX();
         rectTransform.DOAnchorPos(visiblePosition, slideDuration).SetEase(Ease.OutBack);
     }
 
