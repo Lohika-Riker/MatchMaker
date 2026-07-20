@@ -127,6 +127,7 @@ public class InkManager : MonoBehaviour
             narratorPanel.transform.DOLocalMoveY(-840, 0.5f).SetEase(Ease.OutBack);
             string text = story.Continue();
             text = text?.Trim();
+            bool advanceAfterCardChoice = false;
 
             if (story.currentTags.Exists(tag =>
                 string.Equals(tag.Trim(), "clearDialogue", StringComparison.OrdinalIgnoreCase)))
@@ -206,6 +207,13 @@ public class InkManager : MonoBehaviour
                 }
                 else if (parts[0] == "cards" && parts.Length > 1)
                 {
+                    bool isChoiceCardTag = parts[1] == "hoverLeft"
+                        || parts[1] == "hoverMiddle"
+                        || parts[1] == "hoverRight"
+                        || parts[1] == "selectLeft"
+                        || parts[1] == "selectMiddle"
+                        || parts[1] == "selectRight";
+
                     if (cardGame != null)
                     {
                         switch (parts[1])
@@ -215,12 +223,22 @@ public class InkManager : MonoBehaviour
                                 break;
                             case "selectLeft":
                                 cardGame.SelectLeftCard();
+                                advanceAfterCardChoice = true;
                                 break;
                             case "selectMiddle":
                                 cardGame.SelectMiddleCard();
+                                advanceAfterCardChoice = true;
                                 break;
                             case "selectRight":
                                 cardGame.SelectRightCard();
+                                advanceAfterCardChoice = true;
+                                break;
+                            case "hoverLeft":
+                            case "hoverMiddle":
+                            case "hoverRight":
+                                // Hover tags configure the choice buttons. Once the
+                                // choice is emitted, its text is UI rather than dialogue.
+                                advanceAfterCardChoice = true;
                                 break;
                             case "discard":
                                 cardGame.DiscardSelectedCard();
@@ -237,7 +255,11 @@ public class InkManager : MonoBehaviour
                     {
                         Debug.LogError($"Cannot process '{tag}': no CardGame was found in the scene.");
                     }
-                    return;
+
+                    if (!isChoiceCardTag)
+                    {
+                        return;
+                    }
                 }
                 else if (string.Equals(parts[0].Trim(), "test", StringComparison.OrdinalIgnoreCase) && parts.Length > 1)
                 {
@@ -262,6 +284,12 @@ public class InkManager : MonoBehaviour
                         Debug.LogWarning($"Unknown test tag action: '{testAction}'.");
                     }
                 }
+            }
+
+            if (advanceAfterCardChoice)
+            {
+                DisplayNextLine();
+                return;
             }
 
             // dialogue speech bubble
@@ -697,10 +725,10 @@ public class InkManager : MonoBehaviour
     }
 
 
-    public void OnClickContinue()
-    {
-        DisplayNextLine();
-    }
+    // public void OnClickContinue()
+    // {
+    //     DisplayNextLine();
+    // }
 
 
 }
