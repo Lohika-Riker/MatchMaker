@@ -681,7 +681,7 @@ Your next date is ready. #exp:smile
 ==Date_2
 ~ temp flies = false
 ~ nrDates = nrDates + 1
-{insight}
+//{insight}
 .#scene:cafe
 The doe ushers you back into the small cafe. #narrator
 .#entrance:toad2
