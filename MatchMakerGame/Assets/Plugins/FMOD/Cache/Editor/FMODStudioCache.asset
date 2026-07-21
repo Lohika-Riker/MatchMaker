@@ -106,6 +106,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4355983190918037942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogue_Doe/Dialogue freaky
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Dialogue freaky
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 376819261
+    data2: 567667348
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-3533236538618731492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,14 +295,16 @@ MonoBehaviour:
   - {fileID: -838785733059200906}
   - {fileID: 2467425445504576164}
   - {fileID: 262298279154817307}
+  - {fileID: 8011128050010110193}
   EditorParameters:
   - {fileID: 8680113996923020525}
+  - {fileID: 2746996126224339376}
   MasterBanks:
   - {fileID: 6976763303532740937}
   StringsBanks:
   - {fileID: 6775244438754098041}
   cacheVersion: 131860
-  cacheTime: 639201828592436036
+  cacheTime: 639202349900000000
   SerializableEventsDict:
   - key: event:/Dialogue/Dialogue_Doe
     index: 0
@@ -310,6 +336,8 @@ MonoBehaviour:
     index: 13
   - key: event:/SFX/SFX_Card_flip_imprisoned_man
     index: 14
+  - key: event:/SFX/SFX_Bottle_pick_up
+    index: 15
 --- !u!114 &77147074950350159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +392,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1351187607635624473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogue_Frog/Dialogue freaky
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Dialogue freaky
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 376819261
+    data2: 567667348
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &1773153121581382067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,6 +499,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2746996126224339376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogue freaky
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Dialogue freaky
+  StudioPath: parameter:/Dialogue freaky
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 376819261
+    data2: 567667348
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &3298837112515454020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +548,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -2513580268478719995}
+  - {fileID: -4355983190918037942}
   MinDistance: 1
   MaxDistance: 20
   Length: 5056
@@ -500,6 +577,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 6229311965000918421}
+  - {fileID: 1351187607635624473}
   MinDistance: 1
   MaxDistance: 20
   Length: 5056
@@ -574,10 +652,10 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639201828592436036
+  lastModified: 639202349900000000
   FileSizes:
   - Name: Desktop
-    Value: 1892
+    Value: 2034
   Exists: 1
 --- !u!114 &6976763303532740937
 MonoBehaviour:
@@ -594,10 +672,10 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639201828592286807
+  lastModified: 639202349900000000
   FileSizes:
   - Name: Desktop
-    Value: 22374304
+    Value: 22490400
   Exists: 1
 --- !u!114 &7288715476215668291
 MonoBehaviour:
@@ -681,6 +759,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &8011128050010110193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_Bottle_pick_up
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX_Bottle_pick_up
+  Guid:
+    Data1: -335747567
+    Data2: 1149617594
+    Data3: 35554203
+    Data4: -1360172552
+  Banks:
+  - {fileID: 6976763303532740937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8680113996923020525
 MonoBehaviour:
   m_ObjectHideFlags: 0

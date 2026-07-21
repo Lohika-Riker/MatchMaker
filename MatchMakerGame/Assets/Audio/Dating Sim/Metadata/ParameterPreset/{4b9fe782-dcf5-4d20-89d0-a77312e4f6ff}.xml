@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{4b9fe782-dcf5-4d20-89d0-a77312e4f6ff}">
+		<property name="name">
+			<value>Dialogue freaky</value>
+		</property>
+		<relationship name="folder">
+			<destination>{25ab32aa-84b8-4039-b8e8-af92e1738699}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8c89f651-035b-4b07-abc3-35230854d9bd}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8c89f651-035b-4b07-abc3-35230854d9bd}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

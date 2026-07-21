@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c7299475-0595-4d1b-b5fa-5f3e7e1a22db}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
+		<property name="assetPath">
+			<value>Dialogue/Dialogue_Frog_reverse_01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.37383219954648528</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5ce1be8b-7506-492e-ae16-2213a411f642}</destination>
+		</relationship>
+	</object>
+</objects>
