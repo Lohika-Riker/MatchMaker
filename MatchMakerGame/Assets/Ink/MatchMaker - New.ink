@@ -96,15 +96,13 @@ Alone.
 Madness. #destroy
 * Inevitable. #player
 * Excuse me? #player
+    I said: Happiness.
     Happiness. #replace
-    I said: <>
     ->Happiness_loop
 - Hmmm. Interesting. #exp:takenotes
 -> After_Happiness_Loop
 
-
 = Happiness_loop
-Happiness.
 * [No, you didn't.] No you didn't. You said madness.  #player
     Only one-word answers, please. #exp:frown
     {Inc_Insight()}
@@ -218,6 +216,7 @@ Ah, yes, life. The card tells me that you value life and the living.
     Do not worry yourself about that. It means nothing. It was not supposed to be in there. 
     You can trust the Great Glaucus!
     ~Inc_Insight()
+    ~ psychicOwl = psychicOwl + 1
 -.#cards:discard
 Now, let me look into my crystal ball, and see your future! 
 
@@ -309,18 +308,17 @@ Your date is ready. Follow me.
 == Waiting_In_The_Waiting_Room
 //{insight}
 //{hasReceptionBottle}
-{not look_around: It looks like there's something written on the wall.} #narrator
-+ [Wait patiently]
-    ->Wait_Patiently
+
 + {weirdFactor <= 4} [Check door]
-    ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)
+    ->Leave_Agency(->Waiting_In_The_Waiting_Room)
 + {weirdFactor > 4 && bottlesCollected < 3 && triedToLeave} [Check escape]
-    ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)
+    ->Leave_Agency(->Waiting_In_The_Waiting_Room)
 + {bottlesCollected == 3} [Escape]
-    ->Leave_Agency(->Waiting_In_The_Waiting_Room.Wait_Patiently)    
+    ->Leave_Agency(->Waiting_In_The_Waiting_Room)    
 + (look_around) {insight >=4} [Look around]
     ->Look_Around_Waiting_Room
-
++ [Wait patiently]
+    ->Wait_Patiently
 -
 ->DONE
 
@@ -560,13 +558,13 @@ Perhaps we should refine your match search a bit.
 ->DONE
 
 = Advanced_Questionnaire
-Wait here while I prepare some things. 
-#clearDialogue
-#exit:other 
-Alright. #player #clearDialogue
--> Waiting_In_The_Waiting_Room ->
-.#entrance:deer
-Alright, let's begin.
+//Wait here while I prepare some things. 
+//#clearDialogue
+//#exit:other 
+//Alright. #player #clearDialogue
+//-> Waiting_In_The_Waiting_Room ->
+//.#entrance:deer
+//Alright, let's begin.
 What do you see in this image? It may be unclear, so just say the first thing that comes to mind. 
 #test:1 #clearDialogue
 * (plane) Plane crashing into an island. #test:hoverPlane #player 
@@ -601,6 +599,10 @@ Wait here while I prepare your next date.
 #exit:other
 Very well. #player #clearDialogue
 -> Waiting_In_The_Waiting_Room ->
+.#entrance:deer
+Your next date is ready. #exp:smile
+Follow me.
+
 -> Date_2
 
 ->DONE
@@ -679,6 +681,7 @@ Your next date is ready. #exp:smile
 ==Date_2
 ~ temp flies = false
 ~ nrDates = nrDates + 1
+{insight}
 .#scene:cafe
 The doe ushers you back into the small cafe. #narrator
 .#entrance:toad2
@@ -687,6 +690,7 @@ I am here, at your service.  #exp:ribbit
 + (just_met) {nrDates > 1} You again? #player
     We've never met, I assure you. #exp:glitch
     ** You weren't here before?[] A couple of minutes ago? #player
+        ~Inc_Insight()
         I was not. #exp:ribbit 
         Surely I would remember a person such as you.
         So I assure you, this is our first meeting.
@@ -735,7 +739,7 @@ I am here, at your service.  #exp:ribbit
     --
 //* question about the matchmakers etc.
 -
-* {insight > 6} [This place is coming apart.] By the way, have you noticed that this place is coming apart?  #player
+* {insight >= 6} [This place is coming apart.] By the way, have you noticed that this place is coming apart?  #player
     Not at all!
     It is sturdy and entirely normal! #exp:glitch
     ** Do you know something? #player
@@ -837,8 +841,8 @@ You return to the reception with the date fresh in mind. #narrator
                     
                 **** [I hope so.] I hope that's true. That there's someone out there. #player
             *** {toldAboutIsolation == true} [Isolation again?] You said the same thing last time. #player
-                That I've had a long isolation. What does that mean? #player
-                I'm not sure I follow. I said that there's someone out there for you.
+                What do you mean by long isolation? #player
+                You're imagining things.
                 There's someone out there for you, and we'll find them. #replace
                 **** I don't believe you.[] #player
                     {Inc_Insight()}
@@ -1011,7 +1015,7 @@ Where are you going? #exp:frown
 - You are in a very fragile state, so we can't let you leave at this moment. Please stay in the waiting room until we call you.
 #exit:other
 Fine... #player #clearDialogue
-->->
+//->->
 ->return_to
 }
 
