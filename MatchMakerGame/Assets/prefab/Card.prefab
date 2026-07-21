@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -250}
-  m_SizeDelta: {x: 300, y: 500}
+  m_SizeDelta: {x: 240, y: 400}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1604597008701825556
 CanvasRenderer:
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
   borderWidth: 0
-  falloffDistance: 30.49
+  falloffDistance: 10
 --- !u!114 &966745176873881894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   cardImage: {fileID: 0}
   selectedColor: {r: 1, g: 1, b: 1, a: 1}
   selectionDuration: 1
+  straightenDurationRatio: 0.2
   hangedManCard: {fileID: 156872168369216711, guid: 8de672c248cc843caa63f1e1378d2693, type: 3}
   loversCard: {fileID: 5143386987665815921, guid: ddb7d8645f162405ea1d855414bb083a, type: 3}
 --- !u!1 &7724998481360241007
@@ -146,7 +147,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 500}
+  m_SizeDelta: {x: 240, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7905913023933527394
 CanvasRenderer:
