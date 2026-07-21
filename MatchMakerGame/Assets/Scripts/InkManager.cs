@@ -229,7 +229,7 @@ public class InkManager : MonoBehaviour
                 }
                 else if (parts[0] == "exp")
                 {
-                    print($"change {currentCharacter}'s expression to {parts[1]}");
+                    // print($"change {currentCharacter}'s expression to {parts[1]}");
                     try
                     {
                         characterSpriteHolder.StartCoroutine(characterSpriteHolder.SetExpression((expression)Enum.Parse(typeof(expression), parts[1], true)));
@@ -335,7 +335,7 @@ public class InkManager : MonoBehaviour
             // dialogue speech bubble
             if (text == null || text == "")
             {
-                print("No text to display.");
+                // print("No text to display.");
                 return;
             }
             GameObject prefab;
