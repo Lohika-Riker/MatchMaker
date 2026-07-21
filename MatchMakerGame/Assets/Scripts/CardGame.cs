@@ -81,6 +81,11 @@ public class CardGame : MonoBehaviour
         StartCoroutine(GenerateDeckRoutine());
     }
 
+    public void ResetCardSequence()
+    {
+        cardCounter = 0;
+    }
+
     private IEnumerator GenerateDeckRoutine()
     {
         fanSequence?.Kill();

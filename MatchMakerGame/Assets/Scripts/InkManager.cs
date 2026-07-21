@@ -85,6 +85,7 @@ public class InkManager : MonoBehaviour
 
     private void StartStory()
     {
+        cardGame?.ResetCardSequence();
         ResetInkStory();
 
         ClearDialogue();
