@@ -218,7 +218,7 @@ public class CharacterSpriteHolder : MonoBehaviour
                         {
                             if (expression == expression.glitch)
                             {
-                                print($"Glitching {currentCharacter}'s expression");
+                                // print($"Glitching {currentCharacter}'s expression");
                                 characterPair.characterPanel.GetComponentInChildren<Image>().sprite = expressionPair.characterSprite;
                                 yield return new WaitForSeconds(0.07f);
                                 SetCurrentCharacterNeutral();
