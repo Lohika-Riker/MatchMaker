@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   inkJsonAsset: {fileID: 4900000, guid: bef0034184f8146dc962b9c545b6c433, type: 3}
-  startKnotName: Card_Loop
+  startKnotName: Reception_1
   dialoguePanel: {fileID: 1105147777}
   choicePanel: {fileID: 1937154580}
   narratorPanel: {fileID: 1783861634}
@@ -4239,6 +4239,10 @@ PrefabInstance:
     - target: {fileID: 6957707188416943302, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_Color.r
       value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957707188416943302, guid: 666910a504f68475f936225ba69f09a8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7225810429977226694, guid: 666910a504f68475f936225ba69f09a8, type: 3}
       propertyPath: m_Color.a
