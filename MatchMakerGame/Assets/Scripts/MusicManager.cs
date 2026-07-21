@@ -13,13 +13,25 @@ public enum WeirdFactor
         Weird6 = 6,
         End = 7
     }
+
+public enum Location
+    {
+        Lobby = 0,
+        Cafe = 1,
+        Psychic = 2,
+        Beach = 3
+    }
+
 public class MusicManager : MonoBehaviour
 {
 
     [SerializeField] private StudioEventEmitter musicEmitter;
+    [SerializeField] private StudioEventEmitter locationEmitter;
     [SerializeField] private StudioEventEmitter owlTalkEmitter, doeTalkEmitter, toadTalkEmitter;
     [SerializeField] private StudioEventEmitter wooshInEmitter, wooshOutEmitter;
     [SerializeField] private StudioEventEmitter clickEmitter;
+    [SerializeField] private StudioEventEmitter cardFlipGoodEmitter, cardFlipBadEmitter, cardSlideEmitter;
+    [SerializeField] private StudioEventEmitter deckFanEmitter, deckCollapseEmitter, testHoverEmitter;
     private WeirdFactor currentWeirdFactor;
     private Coroutine musicFadeCoroutine;
 
@@ -27,6 +39,7 @@ public class MusicManager : MonoBehaviour
     {
         currentWeirdFactor = WeirdFactor.Weird0;
         musicEmitter.Play();
+        locationEmitter.Play();
     }
 
     void Update()
@@ -49,6 +62,36 @@ public class MusicManager : MonoBehaviour
     public void PlayClickSFX()
     {
         clickEmitter.Play();
+    }
+
+    public void PlayGoodCardFlipSFX()
+    {
+        cardFlipGoodEmitter.Play();
+    }
+
+    public void PlayBadCardFlipSFX()
+    {
+        cardFlipBadEmitter.Play();
+    }
+
+    public void PlayCardSlideSFX()
+    {
+        cardSlideEmitter.Play();
+    }
+
+    public void PlayDeckFanSFX()
+    {
+        deckFanEmitter.Play();
+    }
+
+    public void PlayDeckCollapseSFX()
+    {
+        deckCollapseEmitter.Play();
+    }
+
+    public void PlayTestHoverSFX()
+    {
+        testHoverEmitter.Play();
     }
 
     public void PlayCharacterMoveInSFX()
@@ -106,6 +149,16 @@ public class MusicManager : MonoBehaviour
         musicEmitter.SetParameter("Weird factor", clampedWeirdFactor);
     }
 
+    public void SetLocation(Location location)
+    {
+        int requestedValue = (int)location;
+        FMOD.Studio.System studioSystem = RuntimeManager.StudioSystem;
+        FMOD.RESULT setResult = studioSystem.setParameterByNameWithLabel("Location", location.ToString());
+        FMOD.RESULT readResult = studioSystem.getParameterByName("Location", out float currentValue, out float finalValue);
+
+        Debug.Log($"Location debug: requested {location} ({requestedValue}); set={setResult}, read={readResult}, current={currentValue}, final={finalValue}.");
+    }
+
     public void FadeOutMusic(float duration)
     {
         if (musicFadeCoroutine != null)
@@ -114,6 +167,27 @@ public class MusicManager : MonoBehaviour
         }
 
         musicFadeCoroutine = StartCoroutine(FadeOutMusicCoroutine(duration));
+    }
+
+    public void RestoreMusic()
+    {
+        if (musicFadeCoroutine != null)
+        {
+            StopCoroutine(musicFadeCoroutine);
+            musicFadeCoroutine = null;
+        }
+
+        bool allowFadeout = musicEmitter.AllowFadeout;
+        musicEmitter.AllowFadeout = false;
+        musicEmitter.Stop();
+        musicEmitter.AllowFadeout = allowFadeout;
+        musicEmitter.Play();
+
+        FMOD.Studio.EventInstance musicInstance = musicEmitter.EventInstance;
+        if (musicInstance.isValid())
+        {
+            musicInstance.setVolume(1f);
+        }
     }
 
     private IEnumerator FadeOutMusicCoroutine(float duration)

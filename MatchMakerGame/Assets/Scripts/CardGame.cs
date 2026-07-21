@@ -5,8 +5,10 @@ using UnityEngine;
 public class CardGame : MonoBehaviour
 {
     [SerializeField] private GameObject cardPrefab;
+    [SerializeField] private MusicManager musicManager;
     [SerializeField] private float angle = 7f;
     [SerializeField] private float gap = 10f;
+    [SerializeField] private float fanVerticalOffset = 0f;
     [SerializeField] private int cardsCount = 22;
 
     [Header("Fan Animation")]
@@ -83,6 +85,7 @@ public class CardGame : MonoBehaviour
     {
         fanSequence?.Kill();
         isDeckAnimating = true;
+        musicManager.PlayDeckFanSFX();
 
         for (int i = 0; i < cardsCount; i++)
         {
@@ -93,6 +96,7 @@ public class CardGame : MonoBehaviour
 
             Vector2 targetPosition = cardRect.anchoredPosition;
             targetPosition.x = offsetFromCenter * gap;
+            targetPosition.y += fanVerticalOffset;
             Vector3 targetRotation = new Vector3(0f, 0f, -offsetFromCenter * angle);
 
             // Each card enters from the previous card's pose, then advances one
@@ -103,6 +107,7 @@ public class CardGame : MonoBehaviour
 
             Vector2 startPosition = cardRect.anchoredPosition;
             startPosition.x = previousOffset * gap;
+            startPosition.y += fanVerticalOffset;
             cardRect.anchoredPosition = startPosition;
             cardRect.localRotation = Quaternion.Euler(
                 0f,
@@ -286,6 +291,7 @@ public class CardGame : MonoBehaviour
     private IEnumerator CollapseDeckRoutine()
     {
         isDeckAnimating = true;
+        musicManager.PlayDeckCollapseSFX();
 
         // Move each card onto its left neighbour and remove it once it lands.
         for (int slot = cardsCount - 1; slot > 0; slot--)
