@@ -167,9 +167,9 @@ That doesn't matter. The Great Glaucus doesn't need you to believe. Go on.
 === Psychic ===
 .#scene:psychic
 The psychic's room is dark, and a bit cramped. #narrator
-
-Hoo-hoo! #exp:glitch 
 .#entrance:owl
+Hoo-hoo! #exp:glitch 
+
 * Hello? #player
 - Oh, yes, hello! Excuse the mess. 
 * Uhh  #player
