@@ -136,11 +136,11 @@ And your living situation? Are you planning to stay where you are forever? Are y
 
 That's it for the intake questionnaire. Next we'll need you to see the psychic.
 * I'm ready. #player
--> Psychic
+    -> Psychic
 * [Nothing about what I'm looking for?] You're not going to ask anything about what kind of person I'm looking for? #player
--> What_Im_Looking_For
+    -> What_Im_Looking_For
 * I don't believe in psychics. #player
-
+    ->Dont_Believe
 - ->Psychic
 
 = What_Im_Looking_For
@@ -217,6 +217,7 @@ Ah, yes, life. The card tells me that you value life and the living.
 * [Imprisonment] What does the Imprisonment card mean? #player
     Do not worry yourself about that. It means nothing. It was not supposed to be in there. 
     You can trust the Great Glaucus!
+    ~Inc_Insight()
 -.#cards:discard
 Now, let me look into my crystal ball, and see your future! 
 
@@ -259,9 +260,9 @@ Ah, wait! #exp:takenotes
 Your future partner is trying to connect to me via the paths of destiny. 
 But I need your help! 
 Concentrate on your match, and send that energy to me via the crystal ball! What do you see? #exp:takenotes
-* A brave soul
-* A kind soul
-* [A lonely island] A lo... a loving soul.
+* A brave soul #player
+* A kind soul #player
+* [A lonely island] A lo... a loving soul. #player
 {Inc_Insight()}
 
 - Yes, I see it! All is done. 
@@ -308,7 +309,7 @@ Your date is ready. Follow me.
 == Waiting_In_The_Waiting_Room
 //{insight}
 //{hasReceptionBottle}
-{not look_around: It looks like there's something written on the wall.}
+{not look_around: It looks like there's something written on the wall.} #narrator
 + [Wait patiently]
     ->Wait_Patiently
 + {weirdFactor <= 4} [Check door]
@@ -348,7 +349,7 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
     //{insight >= 8:
         Between two chairs, you find a small glass bottle, filled with white sand. #narrator
         ** [Take bottle of sand.]
-            The sand smells like the ocean.
+            The sand smells like the ocean. #narrator
             You put the bottle in your pocket. #narrator
             ~hasReceptionBottle = true
             ~bottlesCollected = bottlesCollected + 1
@@ -387,7 +388,7 @@ Umm... #player
     We've never met. #exp:glitch
     ** You weren't here before?[] A couple of minutes ago? #player
         No.
-        *** Is this [a joke?] some kind of joke? 
+        *** Is this [a joke?] some kind of joke?  #player
         Nope.
     ** Oh, nevermind.[] I suppose you just look familiar. #player
         Okay.
@@ -454,7 +455,7 @@ Umm... #player
     --
 + [Why did they match us?] Why do you think they matched us? #player
     There's no one else in this place. #exp:glitch #destroy
-    ** What do you mean[?] there's no one else? What are you talking about?
+    ** What do you mean[?] there's no one else? What are you talking about? #player
         I didn't say that.
         I don't know. #replace
         *** Yeah, you did. #player
@@ -515,7 +516,7 @@ How did it go?
     It seems your match didn't feel the same way.
     Sorry.
     ** What did I do? #player
-        They said you were apparently a bit too boring.
+        They said you were a bit too boring.
         *** <i>I</i> was too boring? #player
             Try not to take it too hard.
             Given your long isolation, it's the best you can come up with. #destroy
@@ -531,7 +532,7 @@ How did it go?
                             Everything will unravel.
                         }
                     }
-                ***** [I hope so.] I hope that's true. That there's someone out there.
+                ***** [I hope so.] I hope that's true. That there's someone out there. #player
             **** I suppose so. #player
             ----
     ** Oh well. #player
@@ -562,7 +563,7 @@ Perhaps we should refine your match search a bit.
 Wait here while I prepare some things. 
 #clearDialogue
 #exit:other 
-
+Alright. #player #clearDialogue
 -> Waiting_In_The_Waiting_Room ->
 .#entrance:deer
 Alright, let's begin.
@@ -582,7 +583,7 @@ Oh. Wow. Okay, sure. #exp:takenotes #test:complete
     ** I guess so. #player
     --
 * Is that wrong? #player
-There are no right or wrong answers.
+    There are no right or wrong answers.
 -
 
 What about this image?
@@ -598,6 +599,7 @@ Okay, that's it for the advanced questionnaire.
 Wait here while I prepare your next date.
 #clearDialogue
 #exit:other
+Very well. #player #clearDialogue
 -> Waiting_In_The_Waiting_Room ->
 -> Date_2
 
@@ -700,7 +702,7 @@ I am here, at your service.  #exp:ribbit
     The pleasure is mine. #exp:ribbit
 - 
 
-* {askedAboutFlies} What's your favourite fly?
+* {askedAboutFlies} What's your favourite fly? #player
     Ah, I could not possibly choose!
     The humble blowfly, so sweet and delightful.
     A crafty scavenger, born to find the tastiest morsels.
@@ -710,53 +712,53 @@ I am here, at your service.  #exp:ribbit
     It takes what it wants, even from giants!
     How could I possibly choose between these glorious insects? #exp:ribbit
     Each hold a special place in my heart!
-* [Where are you from?] Are you from around here?
+* [Where are you from?] Are you from around here? #player
     I am from the world! 
     To the edges of the sea, wherever flies can be found!
     Those beautiful creatures, everywhere.
     I can't stop thinking about them! #exp:ribbit
-    ** So you've travelled a lot[?] then?
+    ** So you've travelled a lot[?] then? #player
         Oh, I've seen so many flies!
         Blowflies, horseflies, fruitflies.
         Fleshflies, cranefiles, sandflies.
         Ah. #exp:ribbit
-    ** But do you live here?
+    ** But do you live here? #player
         There are flies everywhere!
         Living in harmony with the world.
         Flying about in a beautiful dance.
         Ah. #exp:ribbit
     -- 
-    ** You sure do like flies[.], huh? 
+    ** You sure do like flies[.], huh?  #player
         Of course!
         How could I not! #exp:ribbit
         They are the most incredible thing!
     --
 //* question about the matchmakers etc.
 -
-* {insight > 8} [This place is coming apart.] By the way, have you noticed that this place is coming apart? 
+* {insight > 6} [This place is coming apart.] By the way, have you noticed that this place is coming apart?  #player
     Not at all!
     It is sturdy and entirely normal! #exp:glitch
-    ** Do you know something?
+    ** Do you know something? #player
         {Inc_Insight()}
         N-not at all! There is nothing to know, you see!
         Did you know that flies taste with their feet?
-        *** Tell me the truth.
+        *** Tell me the truth. #player
             I-I have to go!
             ->Toad_Runs_Away(->Waiting_In_Cafe)
-    ** You're lying!
+    ** You're lying! #player
         {Inc_Insight()}
         I am most certainly not! #exp:frown
         If I'm lying, then you're lying! #exp:glitch #destroy
-        *** What am I lying about?
+        *** What am I lying about? #player
             I didn't say you're lying.
             I would never lie to you! #replace
-            **** Tell me what's going on!
+            **** Tell me what's going on! #player
                 N-nothing is going on! Leave me be!
                 ->Toad_Runs_Away(->Waiting_In_Cafe)
-        *** Tell me the truth.
+        *** Tell me the truth. #player
             I-I have to go!
             ->Toad_Runs_Away(->Waiting_In_Cafe)
-    ** I guess you're right.
+    ** I guess you're right. #player
         Well, I guess I should get back. #player
         -> End_Of_Date_2
     --
@@ -769,7 +771,7 @@ I am here, at your service.  #exp:ribbit
 =Toad_Runs_Away(->return_to)
 The toad runs away, leaving you alone in the cafe. #narrator 
 #exit:other
-Okay? #player
+Okay? #player #clearDialogue
 -> Waiting_In_Cafe
 
 ==Waiting_In_Cafe
@@ -781,11 +783,11 @@ Okay? #player
         -> End_Of_Date_3
 }
 * {not hasCafeBottle} [Look around]
-    The cafe is small, but nice. On a shelf, you find a small glass bottle with a piece of paper rolled up inside.
+    The cafe is small, but nice. On a shelf, you find a tiny glass bottle with a piece of paper rolled up inside. #narrator
     ** [Take bottle]
-    - You take the bottle. Unrolling the paper inside, you see it reads "Help me, I'm stranded". 
+    - You take the bottle. Unrolling the paper inside, you see it reads "Help me, I'm stranded". #narrator
     {Inc_Insight()}
-    You return the paper and put the bottle in your pocket.
+    You return the paper and put the bottle in your pocket. #narrator
     ~hasCafeBottle = true
     ~bottlesCollected = bottlesCollected + 1
     ->Waiting_In_Cafe
@@ -922,7 +924,7 @@ I hope you are having a good time? #exp:ribbit
 =Toad_Runs_Away(->return_to)
 The toad runs away, leaving you alone in the cafe. #narrator
 #exit:other
-Weird... #player
+Weird... #player #clearDialogue
 -> return_to
 
 
@@ -955,7 +957,7 @@ You return to the reception with the date fresh in mind. #narrator
         Let me check some files. Wait here.
 }
 #exit:other
-I know the drill... #player
+I know the drill... #player #clearDialogue
 -> Waiting_In_The_Waiting_Room->
 #entrance:deer
 
@@ -1008,7 +1010,7 @@ Where are you going? #exp:frown
 + [Just looking around.] Nowhere. I'm just looking around. #player
 - You are in a very fragile state, so we can't let you leave at this moment. Please stay in the waiting room until we call you.
 #exit:other
-Fine... #player 
+Fine... #player #clearDialogue
 ->->
 ->return_to
 }

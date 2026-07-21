@@ -146,6 +146,11 @@ public class InkManager : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        if (story == null)
+        {
+            return;
+        }
+
         if (isSceneTransitioning)
         {
             return;
@@ -390,10 +395,37 @@ public class InkManager : MonoBehaviour
 
     private IEnumerator SceneTransition(string sceneName)
     {
+        if (sceneName == "start" || sceneName == "reception" || sceneName == "wedding")
+        {
+            musicManager.SetLocation(Location.Lobby);
+        }
+        else if (sceneName == "cafe")
+        {
+            musicManager.SetLocation(Location.Cafe);
+        }
+        else if (sceneName == "psychic")
+        {
+            musicManager.SetLocation(Location.Psychic);
+        }
+        else if (sceneName == "island")
+        {
+            musicManager.SetLocation(Location.Beach);
+        }
+
         if (sceneName == "start")
         {
             yield return ReturnToStartScreen();
             yield break;
+        }
+
+        if (sceneName == "wedding" || sceneName == "island")
+        {
+            musicManager.SetWeirdFactor(0);
+        }
+
+        if (sceneName == "island")
+        {
+            musicManager.FadeOutMusic(5f);
         }
 
         Sprite newBackground;
@@ -476,6 +508,7 @@ public class InkManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         ClearBackground();
+        musicManager.RestoreMusic();
         ResetInkStory();
         startScreen.DOKill();
         startScreen.alpha = 1f;
@@ -904,13 +937,21 @@ public class InkManager : MonoBehaviour
         if (choice.tags.Contains("test:hoverPlane"))
         {
             EventTrigger.Entry enter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
-            enter.callback.AddListener(_ => rorschachTest.FadeImageB());
+            enter.callback.AddListener(_ =>
+            {
+                musicManager.PlayTestHoverSFX();
+                rorschachTest.FadeImageB();
+            });
             trigger.triggers.Add(enter);
         }
         else if (choice.tags.Contains("test:hoverPuppy"))
         {
             EventTrigger.Entry enter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
-            enter.callback.AddListener(_ => rorschachTest.FadeImageA());
+            enter.callback.AddListener(_ =>
+            {
+                musicManager.PlayTestHoverSFX();
+                rorschachTest.FadeImageA();
+            });
             trigger.triggers.Add(enter);
         }
     }

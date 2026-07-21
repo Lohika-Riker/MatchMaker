@@ -8,6 +8,7 @@ public class Card : MonoBehaviour
     [SerializeField] private Graphic cardImage;
     [SerializeField] private Color selectedColor = Color.white;
     [SerializeField] private float selectionDuration = 1f;
+    [SerializeField, Range(0f, 0.5f)] private float straightenDurationRatio = 0.2f;
     [SerializeField] private Sprite hangedManCard, loversCard;
 
     private bool raised = false;
@@ -18,11 +19,14 @@ public class Card : MonoBehaviour
     private Vector2 restingAnchoredPosition;
     private bool hasRestingAnchoredPosition;
     private int selectedNumber;
+    private MusicManager musicManager;
 
     public bool IsSelected => selected;
 
     private void Awake()
     {
+        musicManager = FindFirstObjectByType<MusicManager>();
+
         if (cardImage == null)
         {
             cardImage = transform.childCount > 0
@@ -55,6 +59,15 @@ public class Card : MonoBehaviour
         raised = false;
         previewTween?.Kill();
 
+        if (selectedNumber == 0)
+        {
+            musicManager?.PlayBadCardFlipSFX();
+        }
+        else
+        {
+            musicManager?.PlayGoodCardFlipSFX();
+        }
+
         // UI elements later in the panel hierarchy render on top of earlier siblings.
         transform.SetAsLastSibling();
 
@@ -62,14 +75,21 @@ public class Card : MonoBehaviour
         Vector2 centeredPosition = GetCenteredPosition(cardRect);
         centeredPosition.y = -100;
 
+        // A direct tween from the card's Z fan angle to a 180-degree Y rotation
+        // can interpolate around an arbitrary-looking diagonal axis. Straighten
+        // the card first so the reveal always reads as a deliberate Y-axis flip.
+        float straightenDuration = selectionDuration * straightenDurationRatio;
+        float flipDuration = selectionDuration - straightenDuration;
+
         selectionSequence?.Kill();
         selectionSequence = DOTween.Sequence()
             .Join(cardRect.DOAnchorPos(centeredPosition, selectionDuration).SetEase(Ease.InOutQuad))
-            .Join(cardRect.DOLocalRotate(
-                new Vector3(0f, 180f, 0f),
-                selectionDuration,
-                RotateMode.FastBeyond360).SetEase(Ease.InOutQuad))
-            .InsertCallback(selectionDuration * 0.5f, ChangeCardImage);
+            .Join(cardRect.DOLocalRotate(Vector3.zero, straightenDuration, RotateMode.Fast)
+                .SetEase(Ease.OutQuad))
+            .Insert(straightenDuration, cardRect.DOLocalRotateQuaternion(
+                Quaternion.Euler(0f, 180f, 0f),
+                flipDuration).SetEase(Ease.InOutQuad))
+            .InsertCallback(straightenDuration + flipDuration * 0.5f, ChangeCardImage);
 
         return true;
     }
@@ -120,6 +140,7 @@ public class Card : MonoBehaviour
 
         Vector2 raiseOffset = cardRect.localRotation * (Vector3.up * distance);
         previewTween?.Kill();
+        musicManager?.PlayCardSlideSFX();
         previewTween = cardRect.DOAnchorPos(restingAnchoredPosition + raiseOffset, 0.2f);
         raised = true;
     }
@@ -131,6 +152,7 @@ public class Card : MonoBehaviour
 
         RectTransform cardRect = (RectTransform)transform;
         previewTween?.Kill();
+        musicManager?.PlayCardSlideSFX();
         previewTween = cardRect.DOAnchorPos(restingAnchoredPosition, 0.2f);
         raised = false;
     }

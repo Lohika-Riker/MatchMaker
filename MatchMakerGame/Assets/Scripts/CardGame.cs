@@ -5,6 +5,7 @@ using UnityEngine;
 public class CardGame : MonoBehaviour
 {
     [SerializeField] private GameObject cardPrefab;
+    [SerializeField] private MusicManager musicManager;
     [SerializeField] private float angle = 7f;
     [SerializeField] private float gap = 10f;
     [SerializeField] private int cardsCount = 22;
@@ -83,6 +84,7 @@ public class CardGame : MonoBehaviour
     {
         fanSequence?.Kill();
         isDeckAnimating = true;
+        musicManager.PlayDeckFanSFX();
 
         for (int i = 0; i < cardsCount; i++)
         {
@@ -286,6 +288,7 @@ public class CardGame : MonoBehaviour
     private IEnumerator CollapseDeckRoutine()
     {
         isDeckAnimating = true;
+        musicManager.PlayDeckCollapseSFX();
 
         // Move each card onto its left neighbour and remove it once it lands.
         for (int slot = cardsCount - 1; slot > 0; slot--)
