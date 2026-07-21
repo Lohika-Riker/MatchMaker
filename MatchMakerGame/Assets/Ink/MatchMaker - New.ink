@@ -191,9 +191,9 @@ Which of these speak to you?
 + From the left #cards:hoverLeft
     #cards:selectLeft
 + From the middle #cards:hoverMiddle
-    #cards:selectLeft
+    #cards:selectMiddle
 + From the right #cards:hoverRight
-    #cards:selectLeft
+    #cards:selectRight
 - Let's see... #clearDialogue
 The card reads: {Imprisonment|Life}. #narrator
 // {cardPicked == true: -> After_Card_Picks | Oh, I don't know how that got in there. Let me do that again.} 
@@ -779,14 +779,14 @@ Okay? #player #clearDialogue
 -> Waiting_In_Cafe
 
 ==Waiting_In_Cafe
-* [Return to reception]
++ [Return to reception]
 {
     -nrDates==2:
         -> End_Of_Date_2
     -nrDates==3:
         -> End_Of_Date_3
 }
-* {not hasCafeBottle} [Look around]
++ {not hasCafeBottle} [Look around]
     The cafe is small, but nice. On a shelf, you find a tiny glass bottle with a piece of paper rolled up inside. #narrator
     ** [Take bottle]
     - You take the bottle. Unrolling the paper inside, you see it reads "Help me, I'm stranded". #narrator
@@ -795,6 +795,8 @@ Okay? #player #clearDialogue
     ~hasCafeBottle = true
     ~bottlesCollected = bottlesCollected + 1
     ->Waiting_In_Cafe
+
+
 
 ->DONE
 
