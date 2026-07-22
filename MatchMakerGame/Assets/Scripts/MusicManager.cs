@@ -66,6 +66,20 @@ public class MusicManager : MonoBehaviour
         clickEmitter.Play();
     }
 
+    public void EnsureBackgroundAudioPlaying()
+    {
+        PlayIfStopped(musicEmitter);
+        PlayIfStopped(locationEmitter);
+    }
+
+    private static void PlayIfStopped(StudioEventEmitter emitter)
+    {
+        if (emitter != null && !emitter.IsPlaying())
+        {
+            emitter.Play();
+        }
+    }
+
     public void PlayGoodCardFlipSFX()
     {
         cardFlipGoodEmitter.Play();

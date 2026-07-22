@@ -82,6 +82,7 @@ public class InkManager : MonoBehaviour
 
     public void StartGame()
     {
+        musicManager.EnsureBackgroundAudioPlaying();
         musicManager.PlayClickSFX();
         startScreen.DOFade(0,0.3f);
         startScreen.interactable= false;
