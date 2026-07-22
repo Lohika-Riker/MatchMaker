@@ -304,7 +304,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6775244438754098041}
   cacheVersion: 131860
-  cacheTime: 639202349900000000
+  cacheTime: 639203341817995465
   SerializableEventsDict:
   - key: event:/Dialogue/Dialogue_Doe
     index: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639202349900000000
+  lastModified: 639203341817995465
   FileSizes:
   - Name: Desktop
     Value: 2034
@@ -672,10 +672,10 @@ MonoBehaviour:
   Path: Assets/Audio/Dating Sim/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639202349900000000
+  lastModified: 639203341817932287
   FileSizes:
   - Name: Desktop
-    Value: 22490400
+    Value: 22490176
   Exists: 1
 --- !u!114 &7288715476215668291
 MonoBehaviour:

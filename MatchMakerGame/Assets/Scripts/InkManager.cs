@@ -726,8 +726,8 @@ public class InkManager : MonoBehaviour
         {
             characterSpriteHolder.StartTalkingAnimation();
             if (currentCharacter == character.owl) musicManager.StartOwlTalk();
-            else if (currentCharacter == character.doe) musicManager.StartDoeTalk();
-            else if (IsToad(currentCharacter)) musicManager.StartToadTalk();
+            else if (currentCharacter == character.doe) musicManager.StartDoeTalk(freaky: true);
+            else if (IsToad(currentCharacter)) musicManager.StartToadTalk(freaky: true);
         }
 
         string previousText = activeDialogueText.text;

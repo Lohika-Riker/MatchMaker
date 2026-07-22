@@ -24,6 +24,7 @@ public enum Location
 
 public class MusicManager : MonoBehaviour
 {
+    private const string DialogueFreakyParameter = "Dialogue freaky";
 
     [SerializeField] private StudioEventEmitter musicEmitter;
     [SerializeField] private StudioEventEmitter locationEmitter;
@@ -119,8 +120,9 @@ public class MusicManager : MonoBehaviour
         owlTalkEmitter.Stop();
     }
 
-    public void StartDoeTalk()
+    public void StartDoeTalk(bool freaky = false)
     {
+        SetDialogueFreaky(freaky);
         doeTalkEmitter.Play();
     }
 
@@ -129,14 +131,29 @@ public class MusicManager : MonoBehaviour
         doeTalkEmitter.Stop();
     }
 
-    public void StartToadTalk()
+    public void StartToadTalk(bool freaky = false)
     {
+        SetDialogueFreaky(freaky);
         toadTalkEmitter.Play();
     }
 
     public void StopToadTalk()
     {
         toadTalkEmitter.Stop();
+    }
+
+    private void SetDialogueFreaky(bool freaky)
+    {
+        float value = freaky ? 1f : 0f;
+        FMOD.RESULT result = RuntimeManager.StudioSystem.setParameterByName(
+            DialogueFreakyParameter,
+            value,
+            true);
+
+        if (result != FMOD.RESULT.OK)
+        {
+            Debug.LogWarning($"Could not set FMOD parameter '{DialogueFreakyParameter}' to {value}: {result}.");
+        }
     }
 
     public void IncreaseWeirdFactor()
