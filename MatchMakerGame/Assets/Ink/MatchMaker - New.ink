@@ -347,9 +347,9 @@ There are a couple of plants here, some of them coming out of the walls. #narrat
     //{insight >= 8:
         Between two chairs, you find a small glass bottle, filled with white sand. #narrator
         ** [Take bottle of sand.]
+            ~hasReceptionBottle = true
             The sand smells like the ocean. #narrator
             You put the bottle in your pocket. #narrator
-            ~hasReceptionBottle = true
             ~bottlesCollected = bottlesCollected + 1
             ->Look_Around_Loop
         
@@ -643,9 +643,9 @@ Do you wish to know the truth, or live in the lie?
     Ah!
     You have taken the first step already.
     Then take this.
+    ~hasPsychicBottle = true
     The Great Glaucus hands you a small bottle with a model airplane inside, both wings torn off. #narrator
     ~bottlesCollected = bottlesCollected + 1
-    ~hasPsychicBottle = true
     
 * {bottlesCollected == 0} What is the truth? #player
     The truth begins in a bottle.
@@ -789,10 +789,11 @@ Okay? #player #clearDialogue
 + {not hasCafeBottle} [Look around]
     The cafe is small, but nice. On a shelf, you find a tiny glass bottle with a piece of paper rolled up inside. #narrator
     ** [Take bottle]
-    - You take the bottle. Unrolling the paper inside, you see it reads "Help me, I'm stranded". #narrator
+    - 
+    ~hasCafeBottle = true
+    You take the bottle. Unrolling the paper inside, you see it reads "Help me, I'm stranded". #narrator
     {Inc_Insight()}
     You return the paper and put the bottle in your pocket. #narrator
-    ~hasCafeBottle = true
     ~bottlesCollected = bottlesCollected + 1
     ->Waiting_In_Cafe
 

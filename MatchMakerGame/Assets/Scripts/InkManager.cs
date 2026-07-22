@@ -11,6 +11,9 @@ using System;
 public class InkManager : MonoBehaviour
 {
     private const string WeirdFactorVariableName = "weirdFactor";
+    private const string HasCafeBottleVariableName = "hasCafeBottle";
+    private const string HasPsychicBottleVariableName = "hasPsychicBottle";
+    private const string HasReceptionBottleVariableName = "hasReceptionBottle";
 
     [SerializeField] private TextAsset inkJsonAsset;
     [SerializeField] private string startKnotName = "Start";
@@ -46,6 +49,9 @@ public class InkManager : MonoBehaviour
     private GameObject dialogueToReplace;
     private character currentCharacter;
     private int currentWeirdFactor;
+    private bool hasCafeBottle;
+    private bool hasPsychicBottle;
+    private bool hasReceptionBottle;
     private GameObject backgroundOverlay;
     private Sprite backgroundOverlaySprite;
 
@@ -101,6 +107,7 @@ public class InkManager : MonoBehaviour
         if (story != null)
         {
             story.RemoveVariableObserver(OnWeirdFactorChanged, WeirdFactorVariableName);
+            RemoveBottleVariableObservers();
         }
 
         story = new Story(inkJsonAsset.text);
@@ -119,8 +126,14 @@ public class InkManager : MonoBehaviour
                 Debug.LogError($"Cannot reset the Ink story to knot '{startKnotName}': {exception.Message}");
             }
         }
-        story.ObserveVariable(WeirdFactorVariableName, OnWeirdFactorChanged);
         currentWeirdFactor = Convert.ToInt32(story.variablesState[WeirdFactorVariableName]);
+        hasCafeBottle = Convert.ToBoolean(story.variablesState[HasCafeBottleVariableName]);
+        hasPsychicBottle = Convert.ToBoolean(story.variablesState[HasPsychicBottleVariableName]);
+        hasReceptionBottle = Convert.ToBoolean(story.variablesState[HasReceptionBottleVariableName]);
+        story.ObserveVariable(WeirdFactorVariableName, OnWeirdFactorChanged);
+        story.ObserveVariable(HasCafeBottleVariableName, OnBottleVariableChanged);
+        story.ObserveVariable(HasPsychicBottleVariableName, OnBottleVariableChanged);
+        story.ObserveVariable(HasReceptionBottleVariableName, OnBottleVariableChanged);
         musicManager?.SetWeirdFactor(currentWeirdFactor);
     }
 
@@ -129,6 +142,7 @@ public class InkManager : MonoBehaviour
         if (story != null)
         {
             story.RemoveVariableObserver(OnWeirdFactorChanged, WeirdFactorVariableName);
+            RemoveBottleVariableObservers();
         }
     }
 
@@ -143,6 +157,42 @@ public class InkManager : MonoBehaviour
         }
 
         musicManager.SetWeirdFactor(currentWeirdFactor);
+    }
+
+    private void RemoveBottleVariableObservers()
+    {
+        story.RemoveVariableObserver(OnBottleVariableChanged, HasCafeBottleVariableName);
+        story.RemoveVariableObserver(OnBottleVariableChanged, HasPsychicBottleVariableName);
+        story.RemoveVariableObserver(OnBottleVariableChanged, HasReceptionBottleVariableName);
+    }
+
+    private void OnBottleVariableChanged(string variableName, object newValue)
+    {
+        bool hasBottle = Convert.ToBoolean(newValue);
+        bool previouslyHadBottle;
+
+        switch (variableName)
+        {
+            case HasCafeBottleVariableName:
+                previouslyHadBottle = hasCafeBottle;
+                hasCafeBottle = hasBottle;
+                break;
+            case HasPsychicBottleVariableName:
+                previouslyHadBottle = hasPsychicBottle;
+                hasPsychicBottle = hasBottle;
+                break;
+            case HasReceptionBottleVariableName:
+                previouslyHadBottle = hasReceptionBottle;
+                hasReceptionBottle = hasBottle;
+                break;
+            default:
+                return;
+        }
+
+        if (hasBottle && !previouslyHadBottle)
+        {
+            musicManager?.PlayBottlePickUpSFX();
+        }
     }
 
     public void DisplayNextLine()

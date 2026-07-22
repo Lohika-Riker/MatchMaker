@@ -32,6 +32,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private StudioEventEmitter clickEmitter;
     [SerializeField] private StudioEventEmitter cardFlipGoodEmitter, cardFlipBadEmitter, cardSlideEmitter;
     [SerializeField] private StudioEventEmitter deckFanEmitter, deckCollapseEmitter, testHoverEmitter;
+    [SerializeField] private StudioEventEmitter bottlePickUpEmitter;
     private WeirdFactor currentWeirdFactor;
     private Coroutine musicFadeCoroutine;
 
@@ -92,6 +93,11 @@ public class MusicManager : MonoBehaviour
     public void PlayTestHoverSFX()
     {
         testHoverEmitter.Play();
+    }
+
+    public void PlayBottlePickUpSFX()
+    {
+        bottlePickUpEmitter.Play();
     }
 
     public void PlayCharacterMoveInSFX()
